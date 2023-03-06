@@ -1,3 +1,5 @@
+system "dnd5e"
+
 /*
 Aarakocra
 One of your birth parents is an aarakocra. You have feathered wings and can fly, and you gain natural weapons in the form of talons.
@@ -14,27 +16,27 @@ lineage name="Aarakocra" {
 	- Your height increases by 26 + 1d8 inches.
 	- Your base walking speed is 25 feet."
 	can_select_twice
-	mutator extend_life_expectancy 15
-	mutator add_max_height 30
-	mutator add_max_height (Roll)1d4
-	mutator add_max_speed Walking 25
+	mutator "extend_life_expectancy" 15
+	mutator "add_max_height" 30
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_speed" "Walking" 25
 	feature name="Flight" {
 		description "You have a flying speed of 20 feet. To use this speed, you can’t be wearing medium or heavy armor. If you already have a flying speed, increase it by 20 feet."
-		mutator add_speed Flying 20
-		criteria has_armor_equipped inverted=true {
-			kind Medium
-			kind Heavy
+		mutator "add_speed" "Flying" 20
+		criteria "has_armor_equipped" inverted=true {
+			kind "Medium"
+			kind "Heavy"
 		}
 	}
 	feature name="Talons" {
 		description "Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
 		unique // Can only be added once, even if lineage is selected twice
 		action name="Talons" {
-			activation Action
+			activation "Action"
 			attack {
-				kind Melee reach=5
-				check AttackRoll ability=Strength proficient=True
-				damage roll=(Roll)1d4 type=Slashing
+				kind "Melee" reach=5
+				check "AttackRoll" ability="Strength" proficient=true
+				damage roll=(Roll)"1d4" type="Slashing"
 			}
 		}
 	}
@@ -53,17 +55,17 @@ lineage name="Celestial I" {
 	- Your life expectancy increases by 80 years.
 	- Your height increases by 28 + 1d10 inches.
 	- Your base walking speed is 30 feet."
-	mutator extend_life_expectancy 80
-	mutator add_max_height 28
-	mutator add_max_height (Roll)1d10
-	mutator add_max_speed Walking 30
-	mutator add_sense "Darkvision" 60
+	mutator "extend_life_expectancy" 80
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "add_max_speed" "Walking" 30
+	mutator "add_max_sense" "Darkvision" 60
 	feature name="Healing Hands" {
 		description "As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can't use it again until you finish a long rest."
-		action Action
+		action "Action"
 		limited_use {
 			max_uses 1
-			reset_on (Rest)Long
+			reset_on (Rest)"Long"
 		}
 	}
 }
@@ -81,20 +83,14 @@ lineage name="Celestial II" {
 	- Your life expectancy increases by 80 years.
 	- Your height increases by 28 + 1d10 inches.
 	- Your base walking speed is 30 feet."
-	mutator extend_life_expectancy 80
-	mutator add_max_height 28
-	mutator add_max_height (Roll)1d10
-	mutator add_max_speed Walking 30
+	mutator "extend_life_expectancy" 80
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "add_max_speed" "Walking" 30
 	feature name="Celestial Resistance" {
 		description "You have resistance to necrotic damage and radiant damage."
-		mutator add_defense {
-			defense Resistance
-			damage_type (DamageType)Necrotic
-		}
-		mutator add_defense {
-			defense Resistance
-			damage_type (DamageType)Radiant
-		}
+		mutator "add_defense" "Resistance" (DamageType)"Necrotic"
+		mutator "add_defense" "Resistance" (DamageType)"Radiant"
 	}
 	feature name="Light Bearer" {
 		description "You know the light cantrip. Charisma is your spellcasting ability for it."
@@ -114,13 +110,13 @@ lineage name="Changeling I" {
 	- Your life expectancy increases by 50 years.
 	- Your height increases by 30 + 1d4 inches.
 	- Your base walking speed is 30 feet."
-	mutator extend_life_expectancy 50
-	mutator add_max_height 30
-	mutator add_max_height (Roll)1d4
-	mutator add_max_speed Walking 30
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 30
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_speed" "Walking" 30
 	feature name="Shapechanger" {
 		description "As an action, you can change your appearance. You determine the specifics of the changes, including your coloration, hair length, and sex. You can also adjust your height and weight, but not so much that your size changes. While shapechanged, none of your game statistics change. You can't duplicate the appearance of a creature you've never seen, and you must adopt a form that has the same basic arrangement of limbs that you have. Your voice, clothing, and equipment aren't changed by this trait. You stay in the new form until you use an action to revert to your true form or until you die."
-		action Action
+		action "Action"
 	}
 }
 
@@ -136,13 +132,13 @@ lineage name="Changeling I" {
 	- Your life expectancy increases by 50 years.
 	- Your height increases by 30 + 1d4 inches.
 	- Your base walking speed is 30 feet."
-	mutator extend_life_expectancy 50
-	mutator add_max_height 30
-	mutator add_max_height (Roll)1d4
-	mutator add_max_speed Walking 30
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 30
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_speed" "Walking" 30
 	feature name="Voice Change" {
 		description "As an action, you can change your voice. You can't duplicate the voice of a creature you've never heard. Your appearance remains the same. You keep your mimicked voice until you use an action to revert to your true voice."
-		action Action
+		action "Action"
 	}
 }
 
@@ -170,11 +166,11 @@ lineage name="Draconic I" {
 	- Your life expectancy increases by 40 years.
 	- Your height increases by 33 + 1d8 inches.
 	- Your base walking speed is 30 feet."
-	mutator extend_life_expectancy 40
-	mutator add_max_height 33
-	mutator add_max_height (Roll)1d8
-	mutator add_max_speed Walking 30
-	selection "Dragon" AnyOf {
+	mutator "extend_life_expectancy" 40
+	mutator "add_max_height" 33
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "add_max_speed" "Walking" 30
+	selection "Dragon" "AnyOf" {
 		option "Black"
 		option "Blue"
 		option "Brass"
@@ -189,62 +185,62 @@ lineage name="Draconic I" {
 	feature name="Breath Weapon" {
 		description "You can use your action to exhale destructive energy. Your draconic parentage determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic parentage. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest."
 		action name="Breath Weapon" {
-			activation Action
+			activation "Action"
 			description "As an action, you can exhale destructive energy based on your draconic ancestroy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest."
 			attack {
-				check SavingThrow base=8 {
-					dc_ability (Ability)Constitution
+				check "SavingThrow" base=8 {
+					dc_ability (Ability)"Constitution"
 					proficient true
-					save_ability evaluator by_selection key="Draconic II/Dragon" {
-						option "Black" (Ability)Dexterity
-						option "Blue" (Ability)Dexterity
-						option "Brass" (Ability)Dexterity
-						option "Bronze" (Ability)Dexterity
-						option "Copper" (Ability)Dexterity
-						option "Gold" (Ability)Dexterity
-						option "Green" (Ability)Constitution
-						option "Red" (Ability)Dexterity
-						option "Silver" (Ability)Constitution
-						option "White" (Ability)Constitution
+					save_ability (Evaluator)"by_selection" key="Draconic II/Dragon" {
+						option "Black" (Ability)"Dexterity"
+						option "Blue" (Ability)"Dexterity"
+						option "Brass" (Ability)"Dexterity"
+						option "Bronze" (Ability)"Dexterity"
+						option "Copper" (Ability)"Dexterity"
+						option "Gold" (Ability)"Dexterity"
+						option "Green" (Ability)"Constitution"
+						option "Red" (Ability)"Dexterity"
+						option "Silver" (Ability)"Constitution"
+						option "White" (Ability)"Constitution"
 					}
 				}
-				area_of_effect evaluator by_selection key="Draconic II/Dragon" {
-						option "Black" (AreaOfEffect)Line width=5 length=30
-						option "Blue" (AreaOfEffect)Line width=5 length=30
-						option "Brass" (AreaOfEffect)Line width=5 length=30
-						option "Bronze" (AreaOfEffect)Line width=5 length=30
-						option "Copper" (AreaOfEffect)Line width=5 length=30
-						option "Gold" (AreaOfEffect)Cone width=15
-						option "Green" (AreaOfEffect)Cone width=15
-						option "Red" (AreaOfEffect)Cone width=15
-						option "Silver" (AreaOfEffect)Cone width=15
-						option "White" (AreaOfEffect)Cone width=15
+				area_of_effect (Evaluator)"by_selection" key="Draconic II/Dragon" {
+						option "Black" (AreaOfEffect)"Line" width=5 length=30
+						option "Blue" (AreaOfEffect)"Line" width=5 length=30
+						option "Brass" (AreaOfEffect)"Line" width=5 length=30
+						option "Bronze" (AreaOfEffect)"Line" width=5 length=30
+						option "Copper" (AreaOfEffect)"Line" width=5 length=30
+						option "Gold" (AreaOfEffect)"Cone" width=15
+						option "Green" (AreaOfEffect)"Cone" width=15
+						option "Red" (AreaOfEffect)"Cone" width=15
+						option "Silver" (AreaOfEffect)"Cone" width=15
+						option "White" (AreaOfEffect)"Cone" width=15
 				}
 				damage {
-					roll evaluator by_character_level {
-						option 1 (Roll)2d6
-						option 3 (Roll)3d6
-						option 11 (Roll)4d6
-						option 16 (Roll)5d6
+					roll (Evaluator)"by_character_level" {
+						option 1 (Roll)"2d6"
+						option 3 (Roll)"3d6"
+						option 11 (Roll)"4d6"
+						option 16 (Roll)"5d6"
 					}
-					damage_type evaluator by_selection key="Draconic II/Dragon" {
-						option "Black" (DamageType)Acid
-						option "Blue" (DamageType)Lightning
-						option "Brass" (DamageType)Fire
-						option "Bronze" (DamageType)Lightning
-						option "Copper" (DamageType)Acid
-						option "Gold" (DamageType)Fire
-						option "Green" (DamageType)Poison
-						option "Red" (DamageType)Fire
-						option "Silver" (DamageType)Cold
-						option "White" (DamageType)Cold
+					damage_type (Evaluator)"by_selection" key="Draconic II/Dragon" {
+						option "Black" (DamageType)"Acid"
+						option "Blue" (DamageType)"Lightning"
+						option "Brass" (DamageType)"Fire"
+						option "Bronze" (DamageType)"Lightning"
+						option "Copper" (DamageType)"Acid"
+						option "Gold" (DamageType)"Fire"
+						option "Green" (DamageType)"Poison"
+						option "Red" (DamageType)"Fire"
+						option "Silver" (DamageType)"Cold"
+						option "White" (DamageType)"Cold"
 					}
 				}
 			}
 		}
 		limited_use {
 			max_uses 1
-			reset_on (Rest)Short
+			reset_on (Rest)"Short"
 		}
 	}
 }
@@ -263,12 +259,12 @@ lineage name="Draconic II" {
 	- Your height increases by 33 + 1d8 inches.
 	- Your base walking speed is 30 feet.
 	- You have resistance to the damage type associated with your draconic parentage."
-	mutator extend_life_expectancy 40
-	mutator add_max_height 33
-	mutator add_max_height (Roll)1d8
-	mutator add_max_speed Walking 30
-	mutator add_sense "Darkvision" 60
-	selection "Dragon" AnyOf {
+	mutator "extend_life_expectancy" 40
+	mutator "add_max_height" 33
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "add_max_speed" "Walking" 30
+	mutator "add_max_sense" "Darkvision" 60
+	selection "Dragon" "AnyOf" {
 		option "Black"
 		option "Blue"
 		option "Brass"
@@ -280,19 +276,19 @@ lineage name="Draconic II" {
 		option "Silver"
 		option "White"
 	}
-	mutator add_defense {
-		defense Resistance
-		damage_type evaluator by_selection key="Dragon" {
-			option "Black" (DamageType)Acid
-			option "Blue" (DamageType)Lightning
-			option "Brass" (DamageType)Fire
-			option "Bronze" (DamageType)Lightning
-			option "Copper" (DamageType)Acid
-			option "Gold" (DamageType)Fire
-			option "Green" (DamageType)Poison
-			option "Red" (DamageType)Fire
-			option "Silver" (DamageType)Cold
-			option "White" (DamageType)Cold
+	// TODO: add_defense must support evaluator for damage type
+	mutator "add_defense" "Resistance" (Evaluator)"by_selection" {
+		damage_type (Evaluator)"by_selection" key="Dragon" {
+			option "Black" (DamageType)"Acid"
+			option "Blue" (DamageType)"Lightning"
+			option "Brass" (DamageType)"Fire"
+			option "Bronze" (DamageType)"Lightning"
+			option "Copper" (DamageType)"Acid"
+			option "Gold" (DamageType)"Fire"
+			option "Green" (DamageType)"Poison"
+			option "Red" (DamageType)"Fire"
+			option "Silver" (DamageType)"Cold"
+			option "White" (DamageType)"Cold"
 		}
 	}
 }
@@ -312,21 +308,20 @@ lineage name="Dwarven" {
 	- Your height increases by 23 + 1d4 inches.
 	- Your base walking speed is 25 feet.
 	- Your speed is not further reduced by wearing heavy armor." // TODO: Add a mutator for this
-	mutator extend_life_expectancy 175
-	mutator add_max_height 23
-	mutator add_max_height (Roll)1d4
-	mutator add_max_speed Walking 25
-	mutator add_sense "Darkvision" 60
+	mutator "extend_life_expectancy" 175
+	mutator "add_max_height" 23
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_speed" "Walking" 25
+	mutator "add_max_sense" "Darkvision" 60
 	feature name="Dwarven Resilience" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
-		mutator add_saving_throw Advantage {
+		/* TODO: Optional ability for saving throw (can apply to all)
+		mutator "add_saving_throw_modifier" "" "Advantage" {
 			// NOTE: No ability here, it covers all abilities
 			target "Poison"
 		}
-		mutator add_defense {
-			defense (Defense)Resistance
-			damage_type (DamageType)Poison
-		}
+		*/
+		mutator "add_defense" "Resistance" (DamageType)"Poison"
 	}
 }
 
@@ -345,14 +340,14 @@ lineage name="Hill Dwarven" {
 	- Your height increases by 22 + 1d4 inches.
 	- Your base walking speed is 25 feet.
 	- Your speed is not further reduced by wearing heavy armor." // TODO: Add a mutator for this
-	mutator extend_life_expectancy 175
-	mutator add_max_height 22
-	mutator add_max_height (Roll)1d4
-	mutator add_max_speed Walking 25
-	mutator add_sense "Darkvision" 60
+	mutator "extend_life_expectancy" 175
+	mutator "add_max_height" 22
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_speed" "Walking" 25
+	mutator "add_max_sense" "Darkvision" 60
 	feature name="Dwarven Toughness" {
 		description "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
-		mutator add_max_hit_points evaluator character_level // add n to max hit points where n is the character level
+		// TODO: mutator "add_max_hit_points" (Evaluator)"character_level" // add n to max hit points where n is the character level
 	}
 }
 
@@ -822,3 +817,4 @@ Constructed Resilience. You were created to have remarkable fortitude, represent
 - You don’t need to eat, drink, or breathe.
 - You are immune to disease.
 - You don’t need to sleep, and magic can’t put you to sleep.
+*/
