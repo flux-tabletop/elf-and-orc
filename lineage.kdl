@@ -21,8 +21,8 @@ lineage name="Aarakocra" {
 	mutator "add_max_height" (Roll)"1d4"
 	mutator "add_max_speed" "Walking" 25
 	feature name="Flight" {
-		description "You have a flying speed of 20 feet. To use this speed, you can’t be wearing medium or heavy armor. If you already have a flying speed, increase it by 20 feet."
-		mutator "add_speed" "Flying" 20
+		description "You have a flying speed of 20 feet. To use this speed, you can't be wearing medium or heavy armor. If you already have a flying speed, increase it by 20 feet."
+		// TODO: mutator "add_speed" "Flying" 20
 		criteria "has_armor_equipped" inverted=true {
 			kind "Medium"
 			kind "Heavy"
@@ -315,12 +315,7 @@ lineage name="Dwarven" {
 	mutator "add_max_sense" "Darkvision" 60
 	feature name="Dwarven Resilience" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
-		/* TODO: Optional ability for saving throw (can apply to all)
-		mutator "add_saving_throw_modifier" "" "Advantage" {
-			// NOTE: No ability here, it covers all abilities
-			target "Poison"
-		}
-		*/
+		mutator "add_saving_throw_modifier" target="Poison"
 		mutator "add_defense" "Resistance" (DamageType)"Poison"
 	}
 }
