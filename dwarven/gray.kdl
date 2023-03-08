@@ -1,0 +1,25 @@
+system "dnd5e"
+lineage name="Gray Dwarven" {
+	description "One of your birth parents is a gray dwarf. You have inherited keen darkvision and innate magical ability.
+	- Your life expectancy increases by 175 years.
+	- Your height increases by 23 + 1d4 inches.
+	- Your base walking speed is 25 feet.
+	- Your speed is not reduced by wearing heavy armor." // TODO: Add a mutator for this
+	mutator "extend_life_expectancy" 175
+	mutator "add_max_height" 23
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_speed" "Walking" 25
+	// TODO: Superior Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray. If you already have darkvision inherited from your other birth parent, increase your darkvision's range by 60 feet.
+	//mutator "add_max_sense" "Darkvision" 60
+	feature name="Duergar Resilience" {
+		description "You have advantage on saving throws against illusions and against being charmed or paralyzed."
+	}
+	feature name="Duergar Magic" {
+		// TODO: Spellcasting
+		description "When you reach 3rd level, you can cast the enlarge/reduce spell on yourself once with this trait, using only the spell's enlarge option. When you reach 5th level, you can cast the invisibility spell on yourself once with this trait. You don't need material components for either spell, and you can't cast them while you're in direct sunlight, although sunlight has no effect on them once cast. You regain the ability to cast these spells with this trait when you finish a long rest. Intelligence is your spellcasting ability for these spells."
+	}
+	feature name="Sunlight Sensitivity" {
+		// TODO: Disadvantage on attack rolls and skill for condition
+		description "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+	}
+}

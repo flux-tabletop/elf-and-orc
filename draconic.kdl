@@ -1,0 +1,131 @@
+system "dnd5e"
+
+/*
+	Draconic I
+	One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited a destructive breath weapon.
+	Age. Your life expectancy increases by 40 years.
+	Size. Your height increases by 33 + 1d8 inches.
+	Breath Weapon. You can use your action to exhale destructive energy. Your draconic parentage determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic parentage. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.
+	Draconic Parentage
+	Dragon	Damage Type		Breath Weapon
+	Black		Acid					5 by 30 ft. line (Dex. save)
+	Blue		Lightning			5 by 30 ft. line (Dex. save)
+	Brass		Fire					5 by 30 ft. line (Dex. save)
+	Bronze	Lightning			5 by 30 ft. line (Dex. save)
+	Copper	Acid					5 by 30 ft. line (Dex. save)
+	Gold		Fire					15 ft. cone (Dex. save)
+	Green		Poison				15 ft. cone (Con. save)
+	Red			Fire					15 ft. cone (Dex. save)
+	Silver	Cold					15 ft. cone (Con. save)
+	White		Cold					15 ft. cone (Con. save)
+*/
+/* TODO: Need to break down into distinct subtype lineages because evaluators cannot get the degree of complexity this would require
+	DRAGON_AREA_OF_EFFECT
+		"Black" (AreaOfEffect)"Line" width=5 length=30
+		"Blue" (AreaOfEffect)"Line" width=5 length=30
+		"Brass" (AreaOfEffect)"Line" width=5 length=30
+		"Bronze" (AreaOfEffect)"Line" width=5 length=30
+		"Copper" (AreaOfEffect)"Line" width=5 length=30
+		"Gold" (AreaOfEffect)"Cone" length=15
+		"Green" (AreaOfEffect)"Cone" length=15
+		"Red" (AreaOfEffect)"Cone" length=15
+		"Silver" (AreaOfEffect)"Cone" length=15
+		"White" (AreaOfEffect)"Cone" length=15
+	DRAGON_SAVE_ABILITY
+		"Black" (Ability)"Dexterity"
+		"Blue" (Ability)"Dexterity"
+		"Brass" (Ability)"Dexterity"
+		"Bronze" (Ability)"Dexterity"
+		"Copper" (Ability)"Dexterity"
+		"Gold" (Ability)"Dexterity"
+		"Green" (Ability)"Constitution"
+		"Red" (Ability)"Dexterity"
+		"Silver" (Ability)"Constitution"
+		"White" (Ability)"Constitution"
+	DRAGON_DMG_TYPE
+		"Black" (DamageType)"Acid"
+		"Blue" (DamageType)"Lightning"
+		"Brass" (DamageType)"Fire"
+		"Bronze" (DamageType)"Lightning"
+		"Copper" (DamageType)"Acid"
+		"Gold" (DamageType)"Fire"
+		"Green" (DamageType)"Poison"
+		"Red" (DamageType)"Fire"
+		"Silver" (DamageType)"Cold"
+		"White" (DamageType)"Cold"
+lineage name="Draconic I" {
+	description "One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited a destructive breath weapon.
+	- Your life expectancy increases by 40 years.
+	- Your height increases by 33 + 1d8 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 40
+	mutator "add_max_height" 33
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "add_max_speed" "Walking" 30
+	feature name="Breath Weapon" {
+		description "You can use your action to exhale DRAGON_DMG_TYPE damage in a DRAGON_AREA_OF_EFFECT. When you use your breath weapon, each creature in the area of the exhalation must make a DRAGON_SAVING_THROW saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest."
+		action name="Breath Weapon" {
+			activation "Action"
+			description "As an action, you can exhale destructive energy based on your draconic ancestroy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest."
+			attack {
+				check "SavingThrow" {
+					difficulty_class 8 {
+						ability_bonus (Ability)"Constitution"
+						proficiency_bonus true
+					}
+					save_ability "DRAGON_SAVE_ABILITY"
+				}
+				area_of_effect "DRAGON_AREA_OF_EFFECT"
+				damage {
+					// TODO: Need scaling damage
+					roll (Evaluator)"by_character_level" {
+						option 1 (Roll)"2d6"
+						option 3 (Roll)"3d6"
+						option 11 (Roll)"4d6"
+						option 16 (Roll)"5d6"
+					}
+					damage_type "DRAGON_DMG_TYPE"
+				}
+			}
+		}
+		limited_use {
+			max_uses 1
+			reset_on (Rest)"Short"
+		}
+	}
+}
+*/
+
+/*
+	Draconic II
+	One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited the ability to see in the dark and stand against breath weapons
+	Age. Your life expectancy increases by 40 years.
+	Size. Your height increases by 33 + 1d8 inches.
+	Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+	Damage Resistance. You have resistance to the damage type associated with your draconic parentage.
+*/
+/* TODO: Need to break down into distinct subtype lineages because evaluators cannot get the degree of complexity this would require
+	"Black" (DamageType)"Acid"
+	"Blue" (DamageType)"Lightning"
+	"Brass" (DamageType)"Fire"
+	"Bronze" (DamageType)"Lightning"
+	"Copper" (DamageType)"Acid"
+	"Gold" (DamageType)"Fire"
+	"Green" (DamageType)"Poison"
+	"Red" (DamageType)"Fire"
+	"Silver" (DamageType)"Cold"
+	"White" (DamageType)"Cold"
+lineage name="Draconic II" {
+	description "One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited the ability to see in the dark and stand against breath weapons.
+	- Your life expectancy increases by 40 years.
+	- Your height increases by 33 + 1d8 inches.
+	- Your base walking speed is 30 feet.
+	- You have resistance to DRAGON_DMG_TYPE damage."
+	mutator "extend_life_expectancy" 40
+	mutator "add_max_height" 33
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "add_max_speed" "Walking" 30
+	mutator "add_max_sense" "Darkvision" 60
+	mutator "add_defense" "Resistance" "DRAGON_DMG_TYPE"
+}
+*/

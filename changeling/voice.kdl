@@ -1,0 +1,14 @@
+system "dnd5e"
+lineage name="Changeling I" {
+	description "One of your birth parents is a changeling. You can perfectly mimic another person's voice.
+	- Your life expectancy increases by 50 years.
+	- Your height increases by 30 + 1d4 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 30
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_speed" "Walking" 30
+	feature name="Voice Change" {
+		description "As an action, you can change your voice. You can't duplicate the voice of a creature you've never heard. Your appearance remains the same. You keep your mimicked voice until you use an action to revert to your true voice."
+	}
+}
