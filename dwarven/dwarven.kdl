@@ -9,7 +9,7 @@ lineage name="Dwarven" {
 	mutator "add_max_height" 23
 	mutator "add_max_height" (Roll)"1d4"
 	mutator "increase_min_speed" "Walking" 25
-	mutator "increase_min_sense" "Darkvision" 60
+	mutator "sense" "Darkvision" (Minimum)60
 	feature name="Dwarven Resilience" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
 		mutator "add_saving_throw_modifier" target="Poison"

@@ -8,7 +8,7 @@ lineage name="Celestial I" {
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"
 	mutator "increase_min_speed" "Walking" 30
-	mutator "increase_min_sense" "Darkvision" 60
+	mutator "sense" "Darkvision" (Minimum)60
 	feature name="Healing Hands" {
 		description "As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can't use it again until you finish a long rest."
 		limited_use {

@@ -9,8 +9,10 @@ lineage name="Gray Dwarven" {
 	mutator "add_max_height" 23
 	mutator "add_max_height" (Roll)"1d4"
 	mutator "increase_min_speed" "Walking" 25
-	// TODO: Superior Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray. If you already have darkvision inherited from your other birth parent, increase your darkvision's range by 60 feet.
-	//mutator "increase_min_sense" "Darkvision" 60
+	feature name="Superior Darkvision" {
+		description "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray. Increase your darkvision's range by 60 feet."
+		mutator "sense" "Darkvision" (Additive)60
+	}
 	feature name="Duergar Resilience" {
 		description "You have advantage on saving throws against illusions and against being charmed or paralyzed."
 	}

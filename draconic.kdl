@@ -125,7 +125,7 @@ lineage name="Draconic II" {
 	mutator "add_max_height" 33
 	mutator "add_max_height" (Roll)"1d8"
 	mutator "increase_min_speed" "Walking" 30
-	mutator "increase_min_sense" "Darkvision" 60
+	mutator "sense" "Darkvision" (Minimum)60
 	mutator "add_defense" "Resistance" "DRAGON_DMG_TYPE"
 }
 */
