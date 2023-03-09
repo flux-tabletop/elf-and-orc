@@ -8,8 +8,8 @@ lineage name="Mountain Dwarven" {
 	mutator "extend_life_expectancy" 175
 	mutator "add_max_height" 22
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "add_max_speed" "Walking" 25
-	mutator "add_max_sense" "Darkvision" 60
+	mutator "increase_min_speed" "Walking" 25
+	mutator "increase_min_sense" "Darkvision" 60
 	feature name="Ability Score Increase" {
 		description "Your Strength score increases by 1. You can't increase an ability score above 17 using this trait."
 		/* TODO: If the total score (other bonuses included) is >17, do not apply this bonus

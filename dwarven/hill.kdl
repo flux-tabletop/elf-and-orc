@@ -8,8 +8,8 @@ lineage name="Hill Dwarven" {
 	mutator "extend_life_expectancy" 175
 	mutator "add_max_height" 22
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "add_max_speed" "Walking" 25
-	mutator "add_max_sense" "Darkvision" 60
+	mutator "increase_min_speed" "Walking" 25
+	mutator "increase_min_sense" "Darkvision" 60
 	feature name="Dwarven Toughness" {
 		description "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
 		mutator "add_max_hit_points" (Evaluator)"get_level"

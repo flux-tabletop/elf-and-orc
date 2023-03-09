@@ -19,7 +19,7 @@ lineage name="Aarakocra" {
 	mutator "extend_life_expectancy" 15
 	mutator "add_max_height" 30
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "add_max_speed" "Walking" 25
+	mutator "increase_min_speed" "Walking" 25
 	feature name="Flight" {
 		description "You have a flying speed of 20 feet. To use this speed, you can't be wearing medium or heavy armor. If you already have a flying speed, increase it by 20 feet."
 		// TODO: mutator "add_speed" "Flying" 20
