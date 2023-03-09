@@ -61,7 +61,7 @@ lineage name="Draconic I" {
 	mutator "extend_life_expectancy" 40
 	mutator "add_max_height" 33
 	mutator "add_max_height" (Roll)"1d8"
-	mutator "increase_min_speed" "Walking" 30
+	mutator "speed" "Walking" (Minimum)30
 	feature name="Breath Weapon" {
 		description "You can use your action to exhale DRAGON_DMG_TYPE damage in a DRAGON_AREA_OF_EFFECT. When you use your breath weapon, each creature in the area of the exhalation must make a DRAGON_SAVING_THROW saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest."
 		action name="Breath Weapon" {
@@ -124,7 +124,7 @@ lineage name="Draconic II" {
 	mutator "extend_life_expectancy" 40
 	mutator "add_max_height" 33
 	mutator "add_max_height" (Roll)"1d8"
-	mutator "increase_min_speed" "Walking" 30
+	mutator "speed" "Walking" (Minimum)30
 	mutator "sense" "Darkvision" (Minimum)60
 	mutator "add_defense" "Resistance" "DRAGON_DMG_TYPE"
 }
