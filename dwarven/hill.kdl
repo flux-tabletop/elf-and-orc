@@ -4,12 +4,13 @@ lineage name="Hill Dwarven" {
 	- Your life expectancy increases by 175 years.
 	- Your height increases by 22 + 1d4 inches.
 	- Your base walking speed is 25 feet.
-	- Your speed is not reduced by wearing heavy armor." // TODO: Add a mutator for this
+	- Your speed is not reduced by wearing armor with a minimum required strength."
 	mutator "extend_life_expectancy" 175
 	mutator "add_max_height" 22
 	mutator "add_max_height" (Roll)"1d4"
 	mutator "speed" "Walking" (Minimum)25
 	mutator "sense" "Darkvision" (Minimum)60
+	// TODO: mutator "flag" (ArmorStrengthRequirement)false
 	feature name="Dwarven Toughness" {
 		description "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
 		mutator "add_max_hit_points" (Evaluator)"get_level"

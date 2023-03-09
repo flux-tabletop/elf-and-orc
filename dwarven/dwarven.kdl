@@ -4,12 +4,13 @@ lineage name="Dwarven" {
 	- Your life expectancy increases by 175 years.
 	- Your height increases by 23 + 1d4 inches.
 	- Your base walking speed is 25 feet.
-	- Your speed is not further reduced by wearing heavy armor." // TODO: Add a mutator for this
+	- Your speed is not further reduced by wearing armor with a minimum required strength."
 	mutator "extend_life_expectancy" 175
 	mutator "add_max_height" 23
 	mutator "add_max_height" (Roll)"1d4"
 	mutator "speed" "Walking" (Minimum)25
 	mutator "sense" "Darkvision" (Minimum)60
+	// TODO: mutator "flag" (ArmorStrengthRequirement)false
 	feature name="Dwarven Resilience" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
 		mutator "add_saving_throw_modifier" target="Poison"
