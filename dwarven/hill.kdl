@@ -10,7 +10,7 @@ lineage name="Hill Dwarven" {
 	mutator "add_max_height" (Roll)"1d4"
 	mutator "speed" "Walking" (Minimum)25
 	mutator "sense" "Darkvision" (Minimum)60
-	// TODO: mutator "flag" (ArmorStrengthRequirement)false
+	mutator "flag" "ArmorStrengthRequirement" false
 	feature name="Dwarven Toughness" {
 		description "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
 		mutator "add_max_hit_points" (Evaluator)"get_level"
