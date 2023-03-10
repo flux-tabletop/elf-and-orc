@@ -1,0 +1,16 @@
+system "dnd5e"
+lineage name="Wood Eleven" {
+	description "One of your birth parents is a wood elf. You have keen senses and quick feet.
+	- Your life expectancy increases by 375 years.
+	- Your height increases by 27 + 1d8 inches.
+	- Your base walking speed is 35 feet."
+	mutator "extend_life_expectancy" 375
+	mutator "add_max_height" 27
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Minimum)35
+	mutator "sense" "Darkvision" (Minimum)60
+	feature name="Sylvan Magic" {
+		// TODO: Spellcasting
+		description "When you reach 5th level, you can cast the pass without trace spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Wisdom is your spellcasting ability for this spell."
+	}
+}

@@ -15,7 +15,7 @@ lineage name="Mountain Dwarven" {
 		description "Your Strength score increases by 1. You can't increase an ability score above 17 using this trait."
 		/* TODO: If the total score (other bonuses included) is >17, do not apply this bonus
 		mutator "add_ability_score" {
-			ability (Specific)"Strength"
+			ability "Specific" "Strength"
 			bonus 1
 			max_total_score 17
 		}

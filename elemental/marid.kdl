@@ -1,0 +1,16 @@
+system "dnd5e"
+lineage name="Elemental (Marid)" {
+	description "One of your birth parents is a water genasi, marid, or other elemental from the Elemental Plane of Water. You have inherited thick skin and an affinity with seas and rivers.
+	- Your life expectancy increases by 60 years.
+	- Your height increases by 30 + 1d12 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 30
+	mutator "add_max_height" (Roll)"1d12"
+	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Swimming" (Minimum)30
+	mutator "add_defense" "Resistance" (DamageType)"Acid"
+	feature name="Amphibious" {
+		description "You can breathe air and water."
+	}
+}

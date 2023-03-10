@@ -1,0 +1,24 @@
+system "dnd5e"
+lineage name="Elemental (Dao)" {
+	description "One of your birth parents is an earth genasi, dao, or creature from the Elemental Plane of Earth. You have inherited thick skin and an affinity with earth and stone.
+	- Your life expectancy increases by 60 years.
+	- Your height increases by 28 + 1d10 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Earth Walk" {
+		description "You can move across difficult terrain made of earth or stone without expending extra movement."
+	}
+	feature name="Natural Armor" {
+		description "When you aren't wearing armor, your AC is 12 + your Constitution modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor."
+		mutator "add_armor_class_formula" base=12 {
+			bonus "Constitution"
+		}
+	}
+	feature name="Petrification Resistance" {
+		description "You have advantage on saving throws against being petrified."
+		mutator "add_saving_throw_modifier" target="being petrified"
+	}
+}

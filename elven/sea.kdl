@@ -1,0 +1,16 @@
+system "dnd5e"
+lineage name="Sea Elven" {
+	description "One of your birth parents is a sea elf. You have inherited aquatic adaptations.
+	- Your life expectancy increases by 375 years.
+	- Your height increases by 27 + 1d8 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 375
+	mutator "add_max_height" 27
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Minimum)30
+	mutator "sense" "Darkvision" (Minimum)60
+	feature name="Child of the Sea" {
+		description "You have a swimming speed of 30 feet, and you can breathe air and water."
+		mutator "speed" "SWimming" (Minimum)30
+	}
+}

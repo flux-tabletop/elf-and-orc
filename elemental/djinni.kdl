@@ -1,0 +1,16 @@
+system "dnd5e"
+lineage name="Elemental (Djinni)" {
+	description "One of your birth parents is an air genasi, djinni, or creature from the Elemental Plane of Air. You never want for air and can weather virtually any storm.
+	- Your life expectancy increases by 60 years.
+	- Your height increases by 28 + 1d10 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Minimum)30
+	mutator "add_defense" "Resistance" (DamageType)"Lightning"
+	mutator "add_defense" "Resistance" (DamageType)"Thunder"
+	feature name="Unending Breath" {
+		description "You can hold your breath indefinitely while you're not incapacitated."
+	}
+}

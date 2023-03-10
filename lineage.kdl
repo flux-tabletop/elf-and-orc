@@ -45,298 +45,388 @@ lineage name="Aarakocra" {
 	}
 }
 
-/*
-Dao (Elemental)
-One of your birth parents is an earth genasi, dao, or creature from the Elemental Plane of Earth. You have inherited thick skin and an affinity with earth and stone.
-Age. Your life expectancy increases by 60 years.
-Size. Your height increases by 28 + 1d10 inches.
-Earth Walk. You can move across difficult terrain made of earth or stone without expending extra movement.
-Natural Armor. When you aren’t wearing armor, your AC is 12 + your Constitution modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you use your natural armor. Petrification Resistance. You have advantage on saving throws against being petrified.
-*/
+system "dnd5e"
+lineage name="Firbolg I" {
+	description "One of your birth parents is a firbolg. You have inherited a big stature and short bursts of invisibility.
+	- Your life expectancy increases by 250 years.
+	- Your height increases by 37 + 1d12 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 250
+	mutator "add_max_height" 37
+	mutator "add_max_height" (Roll)"1d12"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Hidden Step" {
+		description "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest."
+		// TODO: Action
+	}
+	feature name="Powerful Build" {
+		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+	}
+}
 
-/*
-Efreeti (Elemental)
-One of your birth parents is a fire genasi, efreeti, or creature from the Elemental Plane of Fire. You can see in the dark and take the heat.
-Age. Your life expectancy increases by 60 years.
-Size. Your height increases by 28 + 1d10 inches.
-Darkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Your ties to the Elemental Plane of Fire make your darkvision unusual: everything you see in darkness is in a shade of red.
-Fire Resistance. You have resistance to fire damage.
-*/
+system "dnd5e"
+lineage name="Firbolg II" {
+	description "One of your birth parents is a firbolg. You have inherited innate magicks that help you stay undetected.
+	- Your life expectancy increases by 250 years.
+	- Your height increases by 37 + 1d12 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 250
+	mutator "add_max_height" 37
+	mutator "add_max_height" (Roll)"1d12"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Firbolg Magic" {
+		description "You can cast detect magic and disguise self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem to be the height of humans or elves, allowing you to more easily blend in."
+		// TODO: Spellcasting
+	}
+}
 
-/*
-Djinni (Elemental)
-One of your birth parents is an air genasi, djinni, or creature from the Elemental Plane of Air. You never want for air and can weather virtually any storm.
-Age. Your life expectancy increases by 60 years.
-Size. Your height increases by 28 + 1d10 inches.
-Djinni Resistances. You have resistance to lightning and thunder damage.
-Unending Breath. You can hold your breath indefinitely while you’re not incapacitated.
-*/
+system "dnd5e"
+lineage name="Gnomish" {
+	description "One of your birth parents is a gnome of any type or a mix of gnomish parentages. From your parentage, you have inherited magic resistance luck and can see in the dark.
+	- Your life expectancy increases by 225 years.
+	- Your height increases by 18 + 1d4 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 225
+	mutator "add_max_height" 18
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "sense" "Darkvision" (Minimum)60
+	feature name="Gnome Cunning" {
+		description "You have advantage on all Intelligence and Charisma saving throws against magic."
+		mutator "add_saving_throw_modifier" ability="Intelligence" target="magic"
+		mutator "add_saving_throw_modifier" ability="Charisma" target="magic"
+	}
+}
 
-/*
-Marid (Elemental)
-One of your birth parents is a water genasi, marid, or other elemental from the Elemental Plane of Water. You have inherited thick skin and an affinity with seas and rivers.
-Age. Your life expectancy increases by 60 years.
-Size. Your height increases by 30 + 1d12 inches.
-Acid Resistance. You have resistance to acid damage.
-Amphibious. You can breathe air and water.
-Swim. You have a swimming speed of 30 feet.
-*/
+system "dnd5e"
+lineage name="Deep Gnomish" {
+	description "One of your birth parents is a deep gnome. You have inherited keen darkvision and resilience against hostile magic.
+	- Your life expectancy increases by 120 years.
+	- Your height increases by 18 + 1d4 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 120
+	mutator "add_max_height" 18
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "sense" "Darkvision" (Minimum)60
+	feature name="Superior Darkvision" {
+		description "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray. Increase your darkvision's range by 60 feet."
+		mutator "sense" "Darkvision" (Additive)60
+	}
+	feature name="Gnome Cunning" {
+		description "You have advantage on all Wisdom saving throws against magic."
+		mutator "add_saving_throw_modifier" ability="Wisdom" target="magic"
+	}
+}
 
-/*
-Elven I
-One of your birth parents is an elf of any type or a mix of elven parentages. You see in the dark and are resistant to fey magic.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 27 + 1d8 inches.
-Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Fey Ancestry. You have advantage on saving throws against being charmed, and magic can’t put you to sleep.
-*/
+system "dnd5e"
+lineage name="Forest Gnomish" {
+	description "One of your birth parents is a forest gnome. You have innate illusionist magic.
+	- Your life expectancy increases by 225 years.
+	- Your height increases by 18 + 1d4 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 225
+	mutator "add_max_height" 18
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "sense" "Darkvision" (Minimum)60
+	feature name="Gnome Cunning" {
+		description "You have advantage on all Wisdom saving throws against magic."
+		mutator "add_saving_throw_modifier" ability="Wisdom" target="magic"
+	}
+	feature name="Natural Illusionist" {
+		description "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
+		// TODO: Spellcasting
+	}
+}
 
-/*
-Elven II
-One of your birth parents is an elf of any type or a mix of elven parentages. You don't need sleep and have keen senses.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 27 + 1d8 inches.
-Keen Senses. You have proficiency in the Perception skill.
-Sylvan Magic. When you reach 5th level, you can cast the pass without trace spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Wisdom is your spellcasting ability for this spell.
-Trance. You don’t need to sleep. Instead, you meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.
-*/
+system "dnd5e"
+lineage name="Rock Gnomish" {
+	description "One of your birth parents is a rock gnome. You have a restless mind and resistance to magic.
+	- Your life expectancy increases by 225 years.
+	- Your height increases by 18 + 1d4 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 225
+	mutator "add_max_height" 18
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "sense" "Darkvision" (Minimum)60
+	feature name="Gnome Cunning" {
+		description "You have advantage on all Wisdom saving throws against magic."
+		mutator "add_saving_throw_modifier" ability="Wisdom" target="magic"
+	}
+	feature name="Restless" {
+		description "When taking a long rest, you need only 2 hours of sleep and can spend the other 6 hours performing light activity."
+	}
+}
 
-/*
-Dark Elven
-One of your birth parents is a dark elf. You have drow magic and don't need sleep but suffer in sunlight.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 27 + 1d6 inches.
-Superior Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray. If you already have darkvision inherited from your other birth parent, increase your darkvision's range by 60 feet.
-Drow Magic. You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
-Fey Ancestry. You have advantage on saving throws against being charmed, and magic can’t put you to sleep.
-Sunlight Sensitivity. You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
-Trance. You don’t need to sleep. Instead, you meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.
-*/
+system "dnd5e"
+lineage name="Goblinoid" {
+	description "One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur.
+	- Your life expectancy is doubled.
+	- Your height increases by 18 + 1d4 inches.
+	- Your base walking speed is 30 feet."
+	// Age. Double the life expectancy increase from your other birth parent to determine your total life expectancy.
+	// Size. Double the height increase from your other birth parent to determine your total height.
+	// TODO: Implement double expectancy
+	//mutator "extend_life_expectancy" 225
+	// TODO: Implement double max height
+	//mutator "add_max_height" 18
+	//mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)30
+	mutator "sense" "Darkvision" (Minimum)60
+	feature name="Ability Score Increase" {
+		description "Your Dexterity or Constitution score increases by 1. You can't increase an ability score above 17 using this trait."
+		/* TODO: add_ability_score
+		mutator "add_ability_score" {
+			ability "AnyOf" {
+				option "Dexterity"
+				option "Constitution"
+			}
+			bonus 1
+			max_total_score 17
+		}
+		*/
+	}
+}
 
-/*
-Eladrin
-One of your birth parents is an eladrin. You are associated with one of the four seasons and have innate magic reminiscent of that season.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 27 + 1d12 inches.
-Fey Step. As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can’t do so again until you finish a long rest.When you reach 3rd level, your Fey Step gains an additional effect based on your season; if the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Charisma modifier:Autumn. Immediately after you use your Fey Step, up to two creatures of your choice that you can see within 10 feet of you must succeed on a Wisdom saving throw or be charmed by you for 1 minute, or until you or your companions deal any damage to it.Winter. When you use your Fey Step, one creature of your choice that you can see within 5 feet of you before you teleport must succeed on a Wisdom saving throw or be frightened of you until the end of your next turn.Spring. When you use your Fey Step, you can touch one willing creature within 5 feet of you. That creature then teleports instead of you, appearing in an unoccupied space of your choice that you can see within 30 feet of you.Summer. Immediately after you use your Fey Step, each creature of your choice that you can see within 5 feet of you takes fire damage equal to your Charisma modifier (minimum of 1 damage)
-*/
+system "dnd5e"
+lineage name="Goblin" {
+	description "One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small.
+	- Your life expectancy increases by 30 years.
+	- Your height increases by 21 + 1d4 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 30
+	mutator "add_max_height" 21
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Nimble Escape" {
+		description "You can take the Disengage action as a bonus action on each of your turns."
+		// TODO: List Disengage as a Bonus Action
+	}
+}
 
-/*
-Sea Elven
-One of your birth parents is a sea elf. You have inherited aquatic adaptations.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 27 + 1d8 inches.
-Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Child of the Sea. You have a swimming speed of 30 feet, and you can breathe air and water
-*/
+system "dnd5e"
+lineage name="Hobgoblin" {
+	description "One of your birth parents is a hobgoblin. You have a wellspring of strength that powers your blows.
+	- Your life expectancy increases by 50 years.
+	- Your height increases by 28 + 1d10 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Reserves of Strength" {
+		description "When you hit with a Strength-based melee weapon on your turn, you deal extra damage equal to your character level."
+		// TODO: bonus to melee weapon w/ strength based on character level
+	}
+}
 
-/*
-Shadar-Kai I
-One of your birth parents is a shadar-kai. You are adapted to the Shadowfell and can see in the dark.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 28 + 1d8 inches.
-Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Necrotic Resistance. You have resistance to necrotic damage
-*/
+system "dnd5e"
+lineage name="Bugbear" {
+	description "One of your birth parents is a bugbear. You have extraordinarily long and sinewy arms.
+	- Your life expectancy increases by 40 years.
+	- Your height increases by 36 + 1d12 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 40
+	mutator "add_max_height" 36
+	mutator "add_max_height" (Roll)"1d12"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Long-Limbed" {
+		description "When you make a melee attack on your turn, your reach for it is 5 feet greater than normal."
+		// TODO: increase reach for melee attacks
+	}
+	feature name="Powerful Build" {
+		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+	}
+}
 
-/*
-Shader-Kai II
-One of your birth parents is a shadar-kai. You are adapted to the Shadowfell and don't need to sleep.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 28 + 1d8 inches.
-Fey Ancestry. You have advantage on saving throws against being charmed, and magic can’t put you to sleep.
-Keen Senses. You have proficiency in the Perception skill.
-Necrotic Resistance. You have resistance to necrotic damage.
-Trance. You don’t need to sleep. Instead, you meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.
-*/
+system "dnd5e"
+lineage name="Goliath I" {
+	description "One of your birth parents is a goliath. You have a hardy body and towering stature.
+	- Your life expectancy increases by 50 years.
+	- Your height increases by 37 + 1d10 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 37
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Stone's Endurance" {
+		description "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest."
+		// TODO: limited use reaction
+	}
+}
 
-/*
-Wood Eleven
-One of your birth parents is a wood elf. You have keen senses and quick feet.
-Age. Your life expectancy increases by 375 years.
-Size. Your height increases by 27 + 1d10 inches.
-Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Fleet of Foot. Your base walking speed increases by 5 feet.
-Sylvan Magic. When you reach 5th level, you can cast the pass without trace spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Wisdom is your spellcasting ability for this spell.
-*/
+system "dnd5e"
+lineage name="Goliath II" {
+	description "One of your birth parents is a goliath. You have inherited adaptations to extreme climates and a strong frame.
+	- Your life expectancy increases by 50 years.
+	- Your height increases by 37 + 1d10 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 37
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Minimum)30
+	mutator "add_proficiency" (Skill)"Specific" "Athletics"
+	feature name="Mountain Adaptation" {
+		description "You're acclimated to high altitude, including elevations above 20,000 feet. You're also naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master's Guide. In addition, you are resistant to cold damage."
+		mutator "add_defense" "Resistance" (DamageType)"Cold"
+	}
+	feature name="Powerful Build" {
+		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+	}
+}
 
-/*
-Firbolg I
-One of your birth parents is a firbolg. You have inherited a big stature and short bursts of invisibility.
-Age. Your life expectancy increases by 250 years.
-Size. Your height increases by 37 + 1d12 inches.
-Hidden Step. As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can’t use it again until you finish a short or long rest.
-Powerful Build. You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
-*/
+system "dnd5e"
+lineage name="Grung I" {
+	description "One of your birth parents is a grung. You have a powerful jump and poison glands.
+	- Your life expectancy increases by 25 years.
+	- Your height increases by 15 + 1d6 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 15
+	mutator "add_max_height" (Roll)"1d6"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "speed" "Climbing" (Minimum)25
+	feature name="Amphibious" {
+		description "You can breathe air and water."
+		unique
+	}
+	feature name="Water Dependency" {
+		description "If you fail to immerse yourself in water for at least 1 hour during a day, you suffer one level of exhaustion at the end of that day. You can only recover from this exhaustion through magic or by immersing yourself in water for at least 1 hour."
+		unique
+	}
+	feature name="Standing Leap" {
+		description "Your long jump is up to 25 feet and your high jump is up to 15 feet, with or without a running start."
+	}
+	feature name="Poison Dart" {
+		description "As an action, you can apply the poison of your skin to any piercing weapon. The target must succeed on a DC 12 Constitution saving throw or take 2d4 poison damage."
+		// TODO: show feature as an action
+	}
+}
 
-/*
-Firbolg II
-One of your birth parents is a firbolg. You have inherited innate magicks that help you stay undetected.
-Age. Your life expectancy increases by 250 years.
-Size. Your height increases by 37 + 1d12 inches.
-Firbolg Magic. You can cast detect magic and disguise self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can’t cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem to be the height of humans or elves, allowing you to more easily blend in.
-*/
+system "dnd5e"
+lineage name="Grung II" {
+	description "One of your birth parents is a grung. You have inherited skin that's poisonous to the touch.
+	- Your life expectancy increases by 25 years.
+	- Your height increases by 15 + 1d6 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 15
+	mutator "add_max_height" (Roll)"1d6"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "speed" "Climbing" (Minimum)25
+	feature name="Amphibious" {
+		description "You can breathe air and water."
+		unique
+	}
+	feature name="Water Dependency" {
+		description "If you fail to immerse yourself in water for at least 1 hour during a day, you suffer one level of exhaustion at the end of that day. You can only recover from this exhaustion through magic or by immersing yourself in water for at least 1 hour."
+		unique
+	}
+	feature name="Poisonous Skin" {
+		description "Any creature that grapples you or otherwise comes into direct contact with your skin must succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. A poisoned creature no longer in direct contact with you can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+	}
+}
 
-/*
-Gnomish
-One of your birth parents is a gnome of any type or a mix of gnomish parentages. From your parentage, you have inherited magic resistance luck and can see in the dark.
-Age. Your life expectancy increases by 225 years.
-Size. Your height increases by 18 + 1d4 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Gnome Cunning. You have advantage on all Intelligence and Charisma saving throws against magic
-*/
+system "dnd5e"
+lineage name="Halfling" {
+	description "One of your birth parents is a halfling of any type or a mix of halfling parentages. You have inherited innate luck and diminutive form.
+	- Your life expectancy increases by 75 years.
+	- Your height increases by 16 + 1d4 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 75
+	mutator "add_max_height" 16
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	feature name="Childlike Appearance" {
+		description "You have advantage on Deception or Persuasion skill checks (your choice) against creatures of Medium size or larger."
+		// TODO: skill adv with selector
+	}
+	feature name="Halfling Nimbleness" {
+		description "You can move through the space of any creature that is of a size larger than yours."
+	}
+	feature name="Lucky" {
+		description "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+	}
+}
 
-/*
-Deep Gnomish
-One of your birth parents is a deep gnome. You have inherited keen darkvision and resilience against hostile magic.
-Age. Your life expectancy increases by 120 years.
-Size. Your height increases by 18 + 1d4 inches. Speed. Your base walking speed reduces to 25 feet.
-Superior Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray. If you already have darkvision inherited from your other birth parent, increase your darkvision's range by 60 feet.
-Improved Gnome Cunning. You have advantage on all Wisdom saving throws against magic.
-*/
+system "dnd5e"
+lineage name="Ghostwise Halfling" {
+	description "One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically.
+	- Your life expectancy increases by 75 years.
+	- Your height increases by 16 + 1d4 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 75
+	mutator "add_max_height" 16
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "speed" "Climbing" (Minimum)20
+	feature name="Silent Speech" {
+		description "You can speak telepathically to any creatures of your choice within 60 feet of you. A creature understands you only if the two of you share a language."
+	}
+}
 
-/*
-Forest Gnomish
-One of your birth parents is a forest gnome. You have innate illusionist magic.
-Age. Your life expectancy increases by 225 years.
-Size. Your height increases by 18 + 1d4 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Improved Gnome Cunning. You have advantage on all Wisdom saving throws against magic. Natural Illusionist. You know the minor illusion cantrip. Intellige
-*/
+system "dnd5e"
+lineage name="Lightfoot Halfling" {
+	description "One of your birth parents is a lightfoot halfling. You inherited instinctive stealth.
+	- Your life expectancy increases by 75 years.
+	- Your height increases by 16 + 1d4 inches.
+	- Your base walking speed is 25 feet."
+	mutator "extend_life_expectancy" 75
+	mutator "add_max_height" 16
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	feature name="Naturally Stealthy" {
+		description "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+	}
+}
 
-/*
-Rock Gnomish
-One of your birth parents is a rock gnome. You have a restless mind and resistance to magic.
-Age. Your life expectancy increases by 225 years.
-Size. Your height increases by 18 + 1d4 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Improved Gnome Cunning. You have advantage on all Wisdom saving throws against magic.
-Restless. When taking a long rest, you need only 2 hours of sleep and can spend the other 6 hours performing light activity.
-*/
+system "dnd5e"
+lineage name="Stout Halfling" {
+	description "One of your birth parents is a stout halfling. You inherited vaguely dwarven traits but with a halfling stature.
+	- Your life expectancy increases by 75 years.
+	- Your height increases by 16 + 1d4 inches.
+	- Your base walking speed is 25 feet.
+	- Your speed is not further reduced by wearing armor with a minimum required strength."
+	mutator "extend_life_expectancy" 75
+	mutator "add_max_height" 16
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Minimum)25
+	mutator "flag" "ArmorStrengthRequirement" false
+	feature name="Stout Resilience" {
+		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
+	}
+}
 
-/*
-Goblinoid
-One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur.
-Age. Double the life expectancy increase from your other birth parent to determine your total life expectancy.
-Size. Double the height increase from your other birth parent to determine your total height.
-Ability Score Increase. Your Dexterity or Constitution score increases by 1. You can’t increase an ability score above 17 using this trait.
-Darkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-*/
-
-/*
-Goblin
-One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small.
-Age. Your life expectancy increases by 30 years.
-Size. Your height increases by 21 + 1d4 inches.
-Nimble Escape. You can take the Disengage action as a bonus action on each of your turns.
-*/
-
-/*
-Hobgoblin
-One of your birth parents is a hobgoblin. You have a wellspring of strength that powers your blows.
-Age. Your life expectancy increases by 50 years.
-Size. Your height increases by 28 + 1d10 inches.
-Reserves of Strength. When you hit with a Strength-based melee weapon on your turn, you deal extra damage equal to your character level.
-*/
-
-/*
-Bugbear
-One of your birth parents is a bugbear. You have extraordinarily long and sinewy arms.
-Age. Your life expectancy increases by 40 years.
-Size. Your height increases by 36 + 1d12 inches.
-Long-Limbed. When you make a melee attack on your turn, your reach for it is 5 feet greater than normal.
-Powerful Build. You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
-*/
-
-/*
-Goliath I
-One of your birth parents is a goliath. You have a hardy body and towering stature.
-Age. Your life expectancy increases by 50 years.
-Size. Your height increases by 37 + 1d10 inches.
-Stone’s Endurance. You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can’t use it again until you finish a short or long rest.
-*/
-
-/*
-Goliath II
-One of your birth parents is a goliath. You have inherited adaptations to extreme climates and a strong frame.
-Age. Your life expectancy increases by 50 years.
-Size. Your height increases by 37 + 1d10 inches.
-Mountain Adaptation. You’re acclimated to high altitude, including elevations above 20,000 feet. You’re also naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master’s Guide. In addition, you are resistant to cold damage.
-Natural Athlete. You have proficiency in the Athletics skill.
-Powerful Build. You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
-*/
-
-/*
-Grung I
-One of your birth parents is a grung. You have a powerful jump and poison glands.
-Age. Your life expectancy increases by 25 years.
-Size. Your height increases by 15 + 1d6 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Amphibious. You can breathe air and water.
-Climb. You have a climbing speed of 25 feet.
-Standing Leap. Your long jump is up to 25 feet and your high jump is up to 15 feet, with or without a running start.
-Poison Dart. As an action, you can apply the poison of your skin to any piercing weapon. The target must succeed on a DC 12 Constitution saving throw or take 2d4 poison damage.
-Water Dependency. If you fail to immerse yourself in water for at least 1 hour during a day, you suffer one level of exhaustion at the end of that day. You can only recover from this exhaustion through magic or by immersing yourself in water for at least 1 hour.
-*/
-
-/*
-Grung II
-One of your birth parents is a grung. You have inherited skin that's poisonous to the touch.
-Age. Your life expectancy increases by 25 years.
-Size. Your height increases by 15 + 1d6 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Amphibious. You can breathe air and water.
-Poisonous Skin. Any creature that grapples you or otherwise comes into direct contact with your skin must succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. A poisoned creature no longer in direct contact with you can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
-Water Dependency. If you fail to immerse yourself in water for at least 1 hour during a day, you suffer one level of exhaustion at the end of that day. You can only recover from this exhaustion through magic or by immersing yourself in water for at least 1 hour.
-*/
-
-/*
-Halfling
-One of your birth parents is a halfling of any type or a mix of halfling parentages. You have inherited innate luck and diminutive form.
-Age. Your life expectancy increases by 75 years.
-Size. Your height increases by 16 + 1d4 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Childlike Appearance. You have advantage on Deception or Persuasion skill checks (your choice) against creatures of Medium size or larger.
-Halfling Nimbleness. You can move through the space of any creature that is of a size larger than yours.
-Lucky. When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.
-*/
-
-/*
-Ghostwise Halfling
-One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically.
-Age. Your life expectancy increases by 75 years.
-Size. Your height increases by 16 + 1d4 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Climb. You have a climbing speed of 20 feet.
-Silent Speech. You can speak telepathically to any creatures of your choice within 60 feet of you. A creature understands you only if the two of you share a language.
-*/
-
-/*
-Lightfoot Halfling
-One of your birth parents is a lightfoot halfling. You inherited instinctive stealth.
-Age. Your life expectancy increases by 75 years.
-Size. Your height increases by 16 + 1d4 inches.
-Speed. Your base walking speed reduces to 25 feet.
-Naturally Stealthy. You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.
-*/
-
-/*
-Stout Halfling
-One of your birth parents is a stout halfling. You inherited vaguely dwarven traits but with a halfling stature.
-Age. Your life expectancy increases by 75 years.
-Size. Your height increases by 16 + 1d4 inches.
-Speed. Your base walking speed reduces to 25 feet. Your speed is not further reduced by wearing armor with a minimum required strength.
-Stout Resilience. You have advantage on saving throws against poison, and you have resistance against poison damage.
-*/
-
-/*
-Human I
-One of your birth parents is a human. You are adaptable.
-Ability Score Increase. Choose three ability scores that do not benefit from an Ability Score Increase due to upbringing. These three scores each increase by 1.
-Age. Your life expectancy increases by 50 years.
-Size. Your height increases by 28 + 1d10 inches.
-*/
+system "dnd5e"
+lineage name="Human I" {
+	description "One of your birth parents is a human. You are adaptable.
+	- Your life expectancy increases by 50 years.
+	- Your height increases by 28 + 1d10 inches.
+	- Your base walking speed is 30 feet."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Minimum)30
+	feature name="Ability Score Increase" {
+		description "Choose three ability scores to each increase by 1."
+		/* TODO: add_ability_score with 3 selections that cannot repeat
+		mutator "add_ability_score" {
+			ability "Any" id="skillA"
+			bonus 1
+		}
+		mutator "add_ability_score" {
+			ability "Any" id="skillB"
+			bonus 1
+		}
+		mutator "add_ability_score" {
+			ability "Any" id="skillC"
+			bonus 1
+		}
+		*/
+	}
+}
 
 /*
 Human II
