@@ -1,4 +1,3 @@
-system "dnd5e"
 lineage name="Dark Elven" {
 	description "One of your birth parents is a dark elf. You have drow magic and don't need sleep but suffer in sunlight.
 	- Your life expectancy increases by 375 years.

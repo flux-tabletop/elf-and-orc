@@ -1,18 +1,16 @@
-system "dnd5e"
-lineage name="Shadar-Kai II" {
-	description "One of your birth parents is a shadar-kai. You are adapted to the Shadowfell and don't need to sleep.
+lineage name="Elven II" {
+	description "One of your birth parents is an elf of any type or a mix of elven parentages. You don't need sleep and have keen senses.
 	- Your life expectancy increases by 375 years.
-	- Your height increases by 28 + 1d8 inches.
+	- Your height increases by 27 + 1d8 inches.
 	- Your base walking speed is 30 feet."
 	mutator "extend_life_expectancy" 375
-	mutator "add_max_height" 28
+	mutator "add_max_height" 27
 	mutator "add_max_height" (Roll)"1d8"
 	mutator "speed" "Walking" (Minimum)30
 	mutator "add_proficiency" (Skill)"Specific" "Perception"
-	mutator "add_defense" "Resistance" (DamageType)"Necrotic"
-	feature name="Fey Ancestry" {
-		description "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
-		mutator "add_saving_throw_modifier" target="being charmed"
+	feature name="Sylvan Magic" {
+		// TODO: Spellcasting
+		description "When you reach 5th level, you can cast the pass without trace spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Wisdom is your spellcasting ability for this spell."
 	}
 	feature name="Trance" {
 		description "You don't need to sleep. Instead, you meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."

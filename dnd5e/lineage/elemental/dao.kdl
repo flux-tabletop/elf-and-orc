@@ -1,4 +1,3 @@
-system "dnd5e"
 lineage name="Elemental (Dao)" {
 	description "One of your birth parents is an earth genasi, dao, or creature from the Elemental Plane of Earth. You have inherited thick skin and an affinity with earth and stone.
 	- Your life expectancy increases by 60 years.
@@ -13,9 +12,11 @@ lineage name="Elemental (Dao)" {
 	}
 	feature name="Natural Armor" {
 		description "When you aren't wearing armor, your AC is 12 + your Constitution modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor."
+		/* TODO: add_armor_class_formula
 		mutator "add_armor_class_formula" base=12 {
 			bonus "Constitution"
 		}
+		*/
 	}
 	feature name="Petrification Resistance" {
 		description "You have advantage on saving throws against being petrified."
