@@ -1,8 +1,3 @@
-Abjurer
-You were raised among those gifted with the school of abjuration magic and trained at their feet.
-Abjurer's Resistance. You have advantage on one your choice of one from among Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma saving throws against magic and other magical effects.
-Mind Trick. Starting at 3rd level, you can cast the suggestion spell with this trait. Once you cast it, you can’t do so again until you finish a long rest. Charisma is your spellcasting ability for this spell.
-Languages. You can speak, read, and write Common and two other languages of your choice.
 
 Acrobatic
 You were raised among acrobats or revelers.
@@ -256,12 +251,6 @@ You were raised among a people that taught you to hunt or simply stay alert.
 Ability Score Increase. Your Wisdom score increases by 2, and your Dexterity score increases by 1.
 Natural Tracker. You have proficiency in the Survival skill.
 Languages. You can speak, read, and write Common
-
-Incognito
-You were brought up by those who were not what they seemed.
-Ability Score Increase. Your Charisma score increases by 2. In addition, one ability score of your choice increases by 1.
-Good with People. You gain proficiency with two of the following skills of your choice: Deception, Insight, Intimidation, and Persuasion.
-Languages. You can speak, read, and write Common and two other languages of your choice.
 
 Inquistive
 You were raised among bodyguards and investigators and were trained from a young age in their skills.
