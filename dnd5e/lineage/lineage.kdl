@@ -10,13 +10,10 @@
 	Talons. Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
 */
 lineage name="Aarakocra" limit=2 {
-	description "One of your birth parents is an aarakocra. You have feathered wings and can fly, and you gain natural weapons in the form of talons.
-	- Your life expectancy increases by 15 years.
-	- Your height increases by 26 + 1d8 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is an aarakocra. You have feathered wings and can fly, and you gain natural weapons in the form of talons."
 	mutator "extend_life_expectancy" 15
-	mutator "add_max_height" 30
-	mutator "add_max_height" (Roll)"1d4"
+	mutator "add_max_height" 26
+	mutator "add_max_height" (Roll)"1d8"
 	mutator "speed" "Walking" (Minimum)25
 	feature name="Flight" {
 		description "You have a flying speed of 20 feet. To use this speed, you can't be wearing medium or heavy armor. If you already have a flying speed, increase it by 20 feet."
@@ -44,10 +41,7 @@ lineage name="Aarakocra" limit=2 {
 }
 
 lineage name="Firbolg I" {
-	description "One of your birth parents is a firbolg. You have inherited a big stature and short bursts of invisibility.
-	- Your life expectancy increases by 250 years.
-	- Your height increases by 37 + 1d12 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a firbolg. You have inherited a big stature and short bursts of invisibility."
 	mutator "extend_life_expectancy" 250
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d12"
@@ -62,10 +56,7 @@ lineage name="Firbolg I" {
 }
 
 lineage name="Firbolg II" {
-	description "One of your birth parents is a firbolg. You have inherited innate magicks that help you stay undetected.
-	- Your life expectancy increases by 250 years.
-	- Your height increases by 37 + 1d12 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a firbolg. You have inherited innate magicks that help you stay undetected."
 	mutator "extend_life_expectancy" 250
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d12"
@@ -77,10 +68,7 @@ lineage name="Firbolg II" {
 }
 
 lineage name="Gnomish" {
-	description "One of your birth parents is a gnome of any type or a mix of gnomish parentages. From your parentage, you have inherited magic resistance luck and can see in the dark.
-	- Your life expectancy increases by 225 years.
-	- Your height increases by 18 + 1d4 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a gnome of any type or a mix of gnomish parentages. From your parentage, you have inherited magic resistance luck and can see in the dark."
 	mutator "extend_life_expectancy" 225
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
@@ -94,10 +82,7 @@ lineage name="Gnomish" {
 }
 
 lineage name="Deep Gnomish" {
-	description "One of your birth parents is a deep gnome. You have inherited keen darkvision and resilience against hostile magic.
-	- Your life expectancy increases by 120 years.
-	- Your height increases by 18 + 1d4 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a deep gnome. You have inherited keen darkvision and resilience against hostile magic."
 	mutator "extend_life_expectancy" 120
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
@@ -114,10 +99,7 @@ lineage name="Deep Gnomish" {
 }
 
 lineage name="Forest Gnomish" {
-	description "One of your birth parents is a forest gnome. You have innate illusionist magic.
-	- Your life expectancy increases by 225 years.
-	- Your height increases by 18 + 1d4 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a forest gnome. You have innate illusionist magic."
 	mutator "extend_life_expectancy" 225
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
@@ -134,10 +116,7 @@ lineage name="Forest Gnomish" {
 }
 
 lineage name="Rock Gnomish" {
-	description "One of your birth parents is a rock gnome. You have a restless mind and resistance to magic.
-	- Your life expectancy increases by 225 years.
-	- Your height increases by 18 + 1d4 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a rock gnome. You have a restless mind and resistance to magic."
 	mutator "extend_life_expectancy" 225
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
@@ -154,9 +133,7 @@ lineage name="Rock Gnomish" {
 
 lineage name="Goblinoid" {
 	description "One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur.
-	- Your life expectancy is doubled.
-	- Your height increases by 18 + 1d4 inches.
-	- Your base walking speed is 30 feet."
+	- Your life expectancy is doubled."
 	// Age. Double the life expectancy increase from your other birth parent to determine your total life expectancy.
 	// Size. Double the height increase from your other birth parent to determine your total height.
 	// TODO: Implement double expectancy
@@ -182,10 +159,7 @@ lineage name="Goblinoid" {
 }
 
 lineage name="Goblin" {
-	description "One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small.
-	- Your life expectancy increases by 30 years.
-	- Your height increases by 21 + 1d4 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small."
 	mutator "extend_life_expectancy" 30
 	mutator "add_max_height" 21
 	mutator "add_max_height" (Roll)"1d4"
@@ -197,10 +171,7 @@ lineage name="Goblin" {
 }
 
 lineage name="Hobgoblin" {
-	description "One of your birth parents is a hobgoblin. You have a wellspring of strength that powers your blows.
-	- Your life expectancy increases by 50 years.
-	- Your height increases by 28 + 1d10 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a hobgoblin. You have a wellspring of strength that powers your blows."
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"
@@ -212,10 +183,7 @@ lineage name="Hobgoblin" {
 }
 
 lineage name="Bugbear" {
-	description "One of your birth parents is a bugbear. You have extraordinarily long and sinewy arms.
-	- Your life expectancy increases by 40 years.
-	- Your height increases by 36 + 1d12 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a bugbear. You have extraordinarily long and sinewy arms."
 	mutator "extend_life_expectancy" 40
 	mutator "add_max_height" 36
 	mutator "add_max_height" (Roll)"1d12"
@@ -230,10 +198,7 @@ lineage name="Bugbear" {
 }
 
 lineage name="Goliath I" {
-	description "One of your birth parents is a goliath. You have a hardy body and towering stature.
-	- Your life expectancy increases by 50 years.
-	- Your height increases by 37 + 1d10 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a goliath. You have a hardy body and towering stature."
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d10"
@@ -245,10 +210,7 @@ lineage name="Goliath I" {
 }
 
 lineage name="Goliath II" {
-	description "One of your birth parents is a goliath. You have inherited adaptations to extreme climates and a strong frame.
-	- Your life expectancy increases by 50 years.
-	- Your height increases by 37 + 1d10 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a goliath. You have inherited adaptations to extreme climates and a strong frame."
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d10"
@@ -264,10 +226,7 @@ lineage name="Goliath II" {
 }
 
 lineage name="Grung I" {
-	description "One of your birth parents is a grung. You have a powerful jump and poison glands.
-	- Your life expectancy increases by 25 years.
-	- Your height increases by 15 + 1d6 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a grung. You have a powerful jump and poison glands."
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 15
 	mutator "add_max_height" (Roll)"1d6"
@@ -291,10 +250,7 @@ lineage name="Grung I" {
 }
 
 lineage name="Grung II" {
-	description "One of your birth parents is a grung. You have inherited skin that's poisonous to the touch.
-	- Your life expectancy increases by 25 years.
-	- Your height increases by 15 + 1d6 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a grung. You have inherited skin that's poisonous to the touch."
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 15
 	mutator "add_max_height" (Roll)"1d6"
@@ -314,10 +270,7 @@ lineage name="Grung II" {
 }
 
 lineage name="Halfling" {
-	description "One of your birth parents is a halfling of any type or a mix of halfling parentages. You have inherited innate luck and diminutive form.
-	- Your life expectancy increases by 75 years.
-	- Your height increases by 16 + 1d4 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a halfling of any type or a mix of halfling parentages. You have inherited innate luck and diminutive form."
 	mutator "extend_life_expectancy" 75
 	mutator "add_max_height" 16
 	mutator "add_max_height" (Roll)"1d4"
@@ -335,10 +288,7 @@ lineage name="Halfling" {
 }
 
 lineage name="Ghostwise Halfling" {
-	description "One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically.
-	- Your life expectancy increases by 75 years.
-	- Your height increases by 16 + 1d4 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically."
 	mutator "extend_life_expectancy" 75
 	mutator "add_max_height" 16
 	mutator "add_max_height" (Roll)"1d4"
@@ -350,10 +300,7 @@ lineage name="Ghostwise Halfling" {
 }
 
 lineage name="Lightfoot Halfling" {
-	description "One of your birth parents is a lightfoot halfling. You inherited instinctive stealth.
-	- Your life expectancy increases by 75 years.
-	- Your height increases by 16 + 1d4 inches.
-	- Your base walking speed is 25 feet."
+	description "One of your birth parents is a lightfoot halfling. You inherited instinctive stealth."
 	mutator "extend_life_expectancy" 75
 	mutator "add_max_height" 16
 	mutator "add_max_height" (Roll)"1d4"
@@ -365,8 +312,6 @@ lineage name="Lightfoot Halfling" {
 
 lineage name="Stout Halfling" {
 	description "One of your birth parents is a stout halfling. You inherited vaguely dwarven traits but with a halfling stature.
-	- Your life expectancy increases by 75 years.
-	- Your height increases by 16 + 1d4 inches.
 	- Your base walking speed is 25 feet.
 	- Your speed is not further reduced by wearing armor with a minimum required strength."
 	mutator "extend_life_expectancy" 75
@@ -380,10 +325,7 @@ lineage name="Stout Halfling" {
 }
 
 lineage name="Human I" {
-	description "One of your birth parents is a human. You are adaptable.
-	- Your life expectancy increases by 50 years.
-	- Your height increases by 28 + 1d10 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a human. You are adaptable."
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"

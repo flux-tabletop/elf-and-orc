@@ -1,7 +1,5 @@
 lineage name="Dwarven" {
 	description "One of your birth parents is a dwarf of any type or a mix of dwarven parentages. You are sturdy and resistant to poison.
-	- Your life expectancy increases by 175 years.
-	- Your height increases by 23 + 1d4 inches.
 	- Your base walking speed is 25 feet.
 	- Your speed is not further reduced by wearing armor with a minimum required strength."
 	mutator "extend_life_expectancy" 175

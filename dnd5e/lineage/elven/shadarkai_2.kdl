@@ -1,8 +1,5 @@
 lineage name="Shadar-Kai II" {
-	description "One of your birth parents is a shadar-kai. You are adapted to the Shadowfell and don't need to sleep.
-	- Your life expectancy increases by 375 years.
-	- Your height increases by 28 + 1d8 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a shadar-kai. You are adapted to the Shadowfell and don't need to sleep."
 	mutator "extend_life_expectancy" 375
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d8"

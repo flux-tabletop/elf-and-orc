@@ -1,11 +1,8 @@
 lineage name="Wood Eleven" {
-	description "One of your birth parents is a wood elf. You have keen senses and quick feet.
-	- Your life expectancy increases by 375 years.
-	- Your height increases by 27 + 1d8 inches.
-	- Your base walking speed is 35 feet."
+	description "One of your birth parents is a wood elf. You have keen senses and quick feet."
 	mutator "extend_life_expectancy" 375
 	mutator "add_max_height" 27
-	mutator "add_max_height" (Roll)"1d10"
+	mutator "add_max_height" (Roll)"1d8"
 	mutator "speed" "Walking" (Minimum)35
 	mutator "sense" "Darkvision" (Minimum)60
 	feature name="Sylvan Magic" {

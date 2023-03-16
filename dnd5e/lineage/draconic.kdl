@@ -53,10 +53,7 @@
 		"Silver" (DamageType)"Cold"
 		"White" (DamageType)"Cold"
 lineage name="Draconic I" {
-	description "One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited a destructive breath weapon.
-	- Your life expectancy increases by 40 years.
-	- Your height increases by 33 + 1d8 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited a destructive breath weapon."
 	mutator "extend_life_expectancy" 40
 	mutator "add_max_height" 33
 	mutator "add_max_height" (Roll)"1d8"
@@ -116,9 +113,6 @@ lineage name="Draconic I" {
 	"White" (DamageType)"Cold"
 lineage name="Draconic II" {
 	description "One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited the ability to see in the dark and stand against breath weapons.
-	- Your life expectancy increases by 40 years.
-	- Your height increases by 33 + 1d8 inches.
-	- Your base walking speed is 30 feet.
 	- You have resistance to DRAGON_DMG_TYPE damage."
 	mutator "extend_life_expectancy" 40
 	mutator "add_max_height" 33

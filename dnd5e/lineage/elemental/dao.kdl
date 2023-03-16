@@ -1,8 +1,5 @@
 lineage name="Elemental (Dao)" {
-	description "One of your birth parents is an earth genasi, dao, or creature from the Elemental Plane of Earth. You have inherited thick skin and an affinity with earth and stone.
-	- Your life expectancy increases by 60 years.
-	- Your height increases by 28 + 1d10 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is an earth genasi, dao, or creature from the Elemental Plane of Earth. You have inherited thick skin and an affinity with earth and stone."
 	mutator "extend_life_expectancy" 60
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"

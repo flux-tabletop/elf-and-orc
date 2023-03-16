@@ -1,8 +1,5 @@
 lineage name="Eladrin" {
-	description "One of your birth parents is an eladrin. You are associated with one of the four seasons and have innate magic reminiscent of that season.
-	- Your life expectancy increases by 375 years.
-	- Your height increases by 27 + 1d12 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is an eladrin. You are associated with one of the four seasons and have innate magic reminiscent of that season."
 	mutator "extend_life_expectancy" 375
 	mutator "add_max_height" 27
 	mutator "add_max_height" (Roll)"1d12"

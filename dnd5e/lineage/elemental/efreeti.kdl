@@ -1,8 +1,5 @@
 lineage name="Elemental (Efreeti)" {
-	description "One of your birth parents is a fire genasi, efreeti, or creature from the Elemental Plane of Fire. You can see in the dark and take the heat.
-	- Your life expectancy increases by 60 years.
-	- Your height increases by 28 + 1d10 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a fire genasi, efreeti, or creature from the Elemental Plane of Fire. You can see in the dark and take the heat."
 	mutator "extend_life_expectancy" 60
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"

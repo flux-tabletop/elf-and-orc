@@ -1,8 +1,5 @@
 lineage name="Changeling (Shape)" {
-	description "One of your birth parents is a changeling. You can change your appearance at will.
-	- Your life expectancy increases by 50 years.
-	- Your height increases by 30 + 1d4 inches.
-	- Your base walking speed is 30 feet."
+	description "One of your birth parents is a changeling. You can change your appearance at will."
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 30
 	mutator "add_max_height" (Roll)"1d4"
