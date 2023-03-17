@@ -230,13 +230,11 @@ lineage name="Grung I" {
 	mutator "add_max_height" (Roll)"1d6"
 	mutator "speed" "Walking" (Minimum)25
 	mutator "speed" "Climbing" (Minimum)25
-	feature name="Amphibious" {
+	feature name="Amphibious" unique=true {
 		description "You can breathe air and water."
-		unique
 	}
-	feature name="Water Dependency" {
+	feature name="Water Dependency" unique=true {
 		description "If you fail to immerse yourself in water for at least 1 hour during a day, you suffer one level of exhaustion at the end of that day. You can only recover from this exhaustion through magic or by immersing yourself in water for at least 1 hour."
-		unique
 	}
 	feature name="Standing Leap" {
 		description "Your long jump is up to 25 feet and your high jump is up to 15 feet, with or without a running start."
@@ -254,13 +252,11 @@ lineage name="Grung II" {
 	mutator "add_max_height" (Roll)"1d6"
 	mutator "speed" "Walking" (Minimum)25
 	mutator "speed" "Climbing" (Minimum)25
-	feature name="Amphibious" {
+	feature name="Amphibious" unique=true {
 		description "You can breathe air and water."
-		unique
 	}
-	feature name="Water Dependency" {
+	feature name="Water Dependency" unique=true {
 		description "If you fail to immerse yourself in water for at least 1 hour during a day, you suffer one level of exhaustion at the end of that day. You can only recover from this exhaustion through magic or by immersing yourself in water for at least 1 hour."
-		unique
 	}
 	feature name="Poisonous Skin" {
 		description "Any creature that grapples you or otherwise comes into direct contact with your skin must succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. A poisoned creature no longer in direct contact with you can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
