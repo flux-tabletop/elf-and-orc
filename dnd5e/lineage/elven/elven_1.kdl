@@ -7,6 +7,6 @@ lineage name="Elven I" {
 	mutator "sense" "Darkvision" (Minimum)60
 	feature name="Fey Ancestry" {
 		description "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
-		mutator "add_saving_throw_modifier" target="being charmed"
+		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being charmed"
 	}
 }

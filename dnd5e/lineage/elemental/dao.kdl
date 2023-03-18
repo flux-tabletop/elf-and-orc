@@ -18,6 +18,6 @@ lineage name="Elemental (Dao)" {
 	}
 	feature name="Petrification Resistance" {
 		description "You have advantage on saving throws against being petrified."
-		mutator "add_saving_throw_modifier" target="being petrified"
+		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being petrified"
 	}
 }
