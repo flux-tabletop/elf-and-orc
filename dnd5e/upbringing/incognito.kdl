@@ -2,11 +2,11 @@ upbringing name="Incognito" {
 	description "You were brought up by those who were not what they seemed."
 	feature name="Ability Score Increase" {
 		description "Your Charisma score increases by 2. In addition, one ability score of your choice increases by 1."
-		mutator "add_ability_score" {
+		mutator "ability_score" {
 			ability "Specific" "Charisma"
 			bonus 2
 		}
-		mutator "add_ability_score" {
+		mutator "ability_score" {
 			ability "AnyOf" {
 				option "Strength"
 				option "Dexterity"

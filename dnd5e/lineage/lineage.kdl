@@ -145,13 +145,12 @@ lineage name="Goblinoid" {
 	mutator "sense" "Darkvision" (Minimum)60
 	feature name="Ability Score Increase" {
 		description "Your Dexterity or Constitution score increases by 1. You can't increase an ability score above 17 using this trait."
-		mutator "add_ability_score" {
+		mutator "ability_score" {
 			ability "AnyOf" {
 				option "Dexterity"
 				option "Constitution"
 			}
-			bonus 1
-			max_total_score 17
+			bonus 1 max-total=17
 		}
 	}
 }
@@ -326,21 +325,21 @@ lineage name="Human I" {
 	mutator "speed" "Walking" (Minimum)30
 	feature name="Ability Score Increase" {
 		description "Choose three ability scores to each increase by 1."
-		mutator "add_ability_score" {
+		mutator "ability_score" {
 			ability "Any" id="skillA" {
 				cannot-match "skillB"
 				cannot-match "skillC"
 			}
 			bonus 1
 		}
-		mutator "add_ability_score" {
+		mutator "ability_score" {
 			ability "Any" id="skillB" {
 				cannot-match "skillA"
 				cannot-match "skillC"
 			}
 			bonus 1
 		}
-		mutator "add_ability_score" {
+		mutator "ability_score" {
 			ability "Any" id="skillC" {
 				cannot-match "skillA"
 				cannot-match "skillB"
