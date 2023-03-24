@@ -2,7 +2,7 @@ upbringing name="Abjurer" {
 	description "You were raised among those gifted with the school of abjuration magic and trained at their feet."
 	feature name="Abjurer's Resistance" {
 		description "You have advantage on any single ability saving throws against magic and other magical effects."
-		mutator "add_modifier" "Advantage" (SavingThrow)"Any" context="Magic"
+		mutator "add_modifier" "Advantage" (SavingThrow)"Any" context="magic and other magical effects"
 	}
 	feature name="Mind Trick" {
 		description "Starting at 3rd level, you can cast the suggestion spell with this trait. Once you cast it, you can't do so again until you finish a long rest. Charisma is your spellcasting ability for this spell."
