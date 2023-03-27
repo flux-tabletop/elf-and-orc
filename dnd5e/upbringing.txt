@@ -1,8 +1,14 @@
 
 upbringing name="Acrobatic" {
 	description "You were raised among acrobats or revelers."
-	asi Charisma 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+skill Performance
@@ -15,8 +21,14 @@ upbringing name="Acrobatic" {
 
 upbringing name="Aerial" {
 	description "You were raised among a people that can fly or glide, whether by biology, invention, or magic."
-	asi Dexterity 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+lang Any
@@ -27,8 +39,14 @@ upbringing name="Aerial" {
 
 upbringing name="Agressive" {
 	description "You were raised among a people who value and reward strength, ferocity, and aggression."
-	asi Strength 1
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+skill Intimidation
@@ -39,8 +57,14 @@ upbringing name="Agressive" {
 
 upbringing name="Airship" {
 	description "You were raised aboard on an airship among its captains and sailors."
-	asi Charisma 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Windwright's Intuition" {
@@ -50,8 +74,14 @@ upbringing name="Airship" {
 
 upbringing name="Aquatic" {
 	description "You were raised among a people that live near or in the sea."
-	asi Dexterity 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+weapon Spear
@@ -65,16 +95,34 @@ upbringing name="Aquatic" {
 
 upbringing name="Arboreal" {
 	description "You were raised among a people who live high in the forest or jungle canopy."
-	asi Dexterity 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Any
 	+skill Perception
 }
 
 upbringing name="Artificer" {
 	description "You were raised among artificers or other magical manufacturers."
-	asi Intelligence 2
-	asi NotInt 1
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Str"
+			option "Dex"
+			option "Con"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Artisan's Intuition" {
@@ -84,8 +132,14 @@ upbringing name="Artificer" {
 
 upbringing name="Astral" {
 	description "You were raised in the Astral Plane, where time stands still, or among a people who hail from there."
-	asi Strength 1
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+lang Any
@@ -99,8 +153,14 @@ upbringing name="Astral" {
 
 upbringing name="Athletic" {
 	description "From a very young age, you were trained to stay in peak physical shape."
-	asi Strength 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+skill [Athletics or Perception]
@@ -108,8 +168,14 @@ upbringing name="Athletic" {
 
 upbringing name="Avernus" {
 	description "You were raised in Avernus, the First Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Strength 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Avernus" {
@@ -119,8 +185,14 @@ upbringing name="Avernus" {
 
 upbringing name="Banker" {
 	description "You were trained from a young age to keep things safe—jewels, secrets, prisoners."
-	asi Constitution 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Warder's Intuition" {
@@ -130,8 +202,14 @@ upbringing name="Banker" {
 
 upbringing name="Battle Savant" {
 	description "You were trained to wield swords and bows from an early age and tutored in battle strategy."
-	asi Dexterity 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+lang Any
@@ -143,8 +221,14 @@ upbringing name="Battle Savant" {
 
 upbringing name="Beastrider" {
 	description "You were raised among a people who train and ride mounts, whether they be mundane like horses or fantastical like hippogriffs."
-	asi Wisdom 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="The Bigger They Are" {
@@ -157,8 +241,14 @@ upbringing name="Beastrider" {
 
 upbringing name="Cania" {
 	description "You were raised in Cania, the Eighth Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Cania" {
@@ -168,8 +258,20 @@ upbringing name="Cania" {
 
 upbringing name="Caravaneer" {
 	description "You were raised among caravaneers, teamsters, wainwrights, wheelwrights, or others invested in overland travel or trade."
-	asi Dexterity 2
-	asi NotDex 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Str"
+			option "Con"
+			option "Wis"
+			option "Int"
+			option "Cha"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Intuitive Motion" {
@@ -179,8 +281,14 @@ upbringing name="Caravaneer" {
 
 upbringing name="Combative" {
 	description "You were raised among a people that highly value physical strength and valor."
-	asi Strength 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+skill Intimidation
@@ -191,8 +299,18 @@ upbringing name="Combative" {
 
 upbringing name="Common Defense" {
 	description "You spent your formative years strengthening your throwing arm and striving to be brave when facing overwhelming odds."
-	asi Dexterity 2
-	asi [Con Wis or Cha] 1	
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Con"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+modify-save Adv "being frightened"
@@ -203,8 +321,14 @@ upbringing name="Common Defense" {
 
 upbringing name="Competitive" {
 	description "You were raised among people who value contests of strength and friendly competition."
-	asi Strength 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Competitive" {
@@ -214,7 +338,10 @@ upbringing name="Competitive" {
 
 upbringing name="Consular" {
 	description "You were raised among diplomats, ambassadors, or arbiters."
-	asi Charisma 2
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
 	+lang Common
 	+lang Any
 	+lang Any
@@ -225,8 +352,14 @@ upbringing name="Consular" {
 
 upbringing name="Cunning" {
 	description "You were raised among a devout people who prize cunning and nimbleness."
-	asi Dexterity 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Infernal Legacy(?)" {
@@ -236,8 +369,14 @@ upbringing name="Cunning" {
 
 upbringing name="Dao" {
 	description "You were raised on the Elemental Plane of Earth or in a dao's palace on the Material Plane."
-	asi Strength 1
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang Primordial
 	feature name="Merge with Stone" {
@@ -247,8 +386,14 @@ upbringing name="Dao" {
 
 upbringing name="Defender" {
 	description "You were raised to know how to defend yourself and your people."
-	asi Constitution 2
-	asi Strength 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+armor Light
@@ -257,8 +402,14 @@ upbringing name="Defender" {
 
 upbringing name="Defiant" {
 	description "You were raised to stand up to others, even those bigger and stronger than you."
-	asi Dexterity 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Fury of the Small" {
@@ -268,8 +419,14 @@ upbringing name="Defiant" {
 
 upbringing name="Dexterous Soldier" {
 	description "You were raised to value personal devotion and trained in weapons meant for the nimble and lithe."
-	asi Dexterity 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+weapon Rapier
@@ -279,8 +436,14 @@ upbringing name="Dexterous Soldier" {
 
 upbringing name="Djinni" {
 	description "You were raised on the Elemental Plane of Air or in a djinni's palace on the Material Plane."
-	asi Dexterity 1
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang Primordial
 	feature name="Mingle with the Wind" {
@@ -290,8 +453,14 @@ upbringing name="Djinni" {
 
 upbringing name="Dis" {
 	description "You were raised in Dis, the Second Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Dis" {
@@ -301,8 +470,14 @@ upbringing name="Dis" {
 
 upbringing name="Draconic" {
 	description "You were raised among dragonborn or even in the company of dragons."
-	asi Strength 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang Draconic
 	feature name="Dragon Whelp" {
@@ -321,8 +496,14 @@ upbringing name="Dramatic" {
 
 upbringing name="Efretti" {
 	description "You were raised on the Elemental Plane of Fire or in an efreeti's palace on the Material Plane."
-	asi Constitution 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Primordial
 	feature name="Reach to the Blaze" {
@@ -332,8 +513,14 @@ upbringing name="Efretti" {
 
 upbringing name="Fallen" {
 	description "You were touched by dark powers as a youth, replacing any inner light with shadow."
-	asi Strength 1
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Necrotic Shroud" {
@@ -343,16 +530,28 @@ upbringing name="Fallen" {
 
 upbringing name="Fierce" {
 	description "You were raised among a people that taught you to stand up for yourself and not back down."
-	asi Strength 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+skill Intimidation
 }
 
 upbringing name="Forest" {
 	description "You were raised among a people who live at peace with the animals that make their homes in or among trees."
-	asi Intelligence 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Speak with Small Beasts" {
@@ -362,8 +561,14 @@ upbringing name="Forest" {
 
 upbringing name="Forger" {
 	description "You were raised among forgers and impersonators."
-	asi Dexterity 1
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Charlatan Training" {
@@ -376,16 +581,28 @@ upbringing name="Forger" {
 
 upbringing name="Graceful" {
 	description "You were raised among those who value runners, dancers, and acrobats."
-	asi Dexterity 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+skill Acrobatics
 }
 
 upbringing name="Guardian" {
 	description "You were raised among bodyguards, city watch, soldiers, mercenaries, or those employed in other martial trades."
-	asi Constitution 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Sentinel's Intuition" {
@@ -395,8 +612,14 @@ upbringing name="Guardian" {
 
 upbringing name="Guerrilla" {
 	description "You were raised among those skilled in ambushes, snares, or guerrilla warfare."
-	asi Strength 1
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+skill Stealth
@@ -407,16 +630,28 @@ upbringing name="Guerrilla" {
 
 upbringing name="Handy" {
 	description "You were raised among a people that fed you heartily and made sure you exercised."
-	asi Constitution 2
-	asi Strength 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
 	+lang Common
 	+skill Athletics
 }
 
 upbringing name="Healer" {
 	description "You were trained from a young age in the art of healing and medicine."
-	asi Dexterity 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Medical Intuition" {
@@ -426,8 +661,14 @@ upbringing name="Healer" {
 
 upbringing name="Hinterland" {
 	description "You were raised among people who live far from any cities or villages and struggle mightily to survive."
-	asi Strength 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Primal Intuition" {
@@ -437,8 +678,14 @@ upbringing name="Hinterland" {
 
 upbringing name="Hosteler" {
 	description "You were raised among innkeepers or tavern owners."
-	asi Dexterity 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Ever Hospitable" {
@@ -448,16 +695,34 @@ upbringing name="Hosteler" {
 
 upbringing name="Hunter" {
 	description "You were raised among a people that taught you to hunt or simply stay alert."
-	asi Wisdom 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+skill Survival
 }
 
 upbringing name="Inquistive" {
 	description "You were raised among bodyguards and investigators and were trained from a young age in their skills."
-	asi Wisdom 2
-	asi NotWis 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Str"
+			option "Dex"
+			option "Con"
+			option "Int"
+			option "Cha"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Deductive Intuition" {
@@ -467,8 +732,14 @@ upbringing name="Inquistive" {
 
 upbringing name="Insightful" {
 	description "You were trained from a young age to read people and situations like books."
-	asi Wisdom 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+lang Any
@@ -477,8 +748,20 @@ upbringing name="Insightful" {
 
 upbringing name="Laborer" {
 	description "You were brought up to perform a specific task or take up a specialized trade."
-	asi Constitution 2
-	asi NotCon 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Str"
+			option "Dex"
+			option "Int"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Specialization" {
@@ -488,8 +771,14 @@ upbringing name="Laborer" {
 
 upbringing name="Labor Soldier" {
 	description "You were raised among a militant, industrious people whose weapons also serve as work tools."
-	asi Constitution 2
-	asi Strength 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Combat Training" {
@@ -505,8 +794,14 @@ upbringing name="Labor Soldier" {
 
 upbringing name="Limbo" {
 	description "You were raised in the ever - turbulent churn of the plane of Limbo or among a people who hail from there."
-	asi Wisdom 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Mental Discipline" {
@@ -516,8 +811,14 @@ upbringing name="Limbo" {
 
 upbringing name="Mage" {
 	description "You were raised among a people who value arcane studies and, as a result, you know some rudimentary magic."
-	asi Dexterity 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Cantrip" {
@@ -527,8 +828,14 @@ upbringing name="Mage" {
 
 upbringing name="Malbolge" {
 	description "You were raised in Malbolge, the Sixth Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Malbolge" {
@@ -538,8 +845,14 @@ upbringing name="Malbolge" {
 
 upbringing name="Maladomini" {
 	description "You were raised in Maladomini, the Seventh Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Maladomini" {
@@ -549,8 +862,14 @@ upbringing name="Maladomini" {
 
 upbringing name="Marid" {
 	description "You were raised on the Elemental Plane of Water or in a marid's palace on the Material Plane."
-	asi Constitution 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Primordial
 	feature name="Call to the Wave" {
@@ -560,9 +879,18 @@ upbringing name="Marid" {
 
 upbringing name="Maritime" {
 	description "You were raised among sea creatures with whom you have an affinity."
-	asi Strength 1
-	asi Constitution 1
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Emissary of the Sea" {
@@ -572,8 +900,14 @@ upbringing name="Maritime" {
 
 upbringing name="Minauros" {
 	description "You were raised in Minauros, the Third Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Minauros" {
@@ -583,8 +917,14 @@ upbringing name="Minauros" {
 
 upbringing name="Natural Artisan" {
 	description "You were raised among hunters who eat or make their living on meat."
-	asi Constitution 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Cunning Artisan" {
@@ -594,8 +934,14 @@ upbringing name="Natural Artisan" {
 
 upbringing name="Nessus" {
 	description "You were raised in Nessus, the Ninth Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Nessus" {
@@ -605,8 +951,14 @@ upbringing name="Nessus" {
 
 upbringing name="Nomadic" {
 	description "You were raised among a people constantly on the move, whether by choice or at swordpoint."
-	asi Strength 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Survivor" {
@@ -616,7 +968,10 @@ upbringing name="Nomadic" {
 
 upbringing name="Pack" {
 	description "You were raised by pack animals or by a people who foster a pack mentality."
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Pack Tactics" {
@@ -626,8 +981,14 @@ upbringing name="Pack" {
 
 upbringing name="Phlegethos" {
 	description "You were raised in Phlegethos, the Fourth Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Phlegethos" {
@@ -637,8 +998,14 @@ upbringing name="Phlegethos" {
 
 upbringing name="Predator" {
 	description "From a young age, you were taught to hunt using your strength, wits, and power to bring down prey."
-	asi Constitution 2
-	asi Strength 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Hunter's Instincts" {
@@ -648,8 +1015,14 @@ upbringing name="Predator" {
 
 upbringing name="Prospector" {
 	description "You were raised among prospectors, investigators, or bounty hunters."
-	asi Wisdom 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Hunter's Intuition" {
@@ -659,8 +1032,14 @@ upbringing name="Prospector" {
 
 upbringing name="Protector" {
 	description "From a young age, a celestial offered you advice and directives and urged you to stand against evil."
-	asi Wisdom 1
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang Celestial
 	feature name="Radiant Soul" {
@@ -670,8 +1049,14 @@ upbringing name="Protector" {
 
 upbringing name="Pyromanic" {
 	description "You were raised among devil worshippers or charismatic pyromaniacs."
-	asi Charisma 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Hellfire" {
@@ -681,7 +1066,13 @@ upbringing name="Pyromanic" {
 
 upbringing name="Raven Queen (Ally)" {
 	description "You were raised among a people who personally serve the Raven Queen in the Shadowfell."
-	asi DexOrCon 1
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Dex"
+			option "Con"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Improved Blessing of the Raven Queen" {
@@ -691,8 +1082,14 @@ upbringing name="Raven Queen (Ally)" {
 
 upbringing name="Raven Queen (Worshiper)" {
 	description "You were raised among a people who venerate the Raven Queen in the Shadowfell."
-	asi Dexterity 1
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Blessing of the Raven Queen" {
@@ -702,8 +1099,14 @@ upbringing name="Raven Queen (Worshiper)" {
 
 upbringing name="Scourge" {
 	description "At a young age, a celestial imbued you with divine energy that blazes intensely within you."
-	asi Constitution 1
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang Celestial
 	feature name="Radiant Consumption" {
@@ -713,8 +1116,14 @@ upbringing name="Scourge" {
 
 upbringing name="Scout" {
 	description "You were trained from a young age to be aware of your surroundings and to wield a sword and bow."
-	asi Dexterity 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+weapon Longsword
@@ -728,8 +1137,14 @@ upbringing name="Scout" {
 
 upbringing name="Scribe" {
 	description "You were raised among scribes, notaries, interpreters, cartographers, barristers, heralds, bookbinders, and others who work with words."
-	asi Intelligence 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Gifted Scribe" {
@@ -739,8 +1154,14 @@ upbringing name="Scribe" {
 
 upbringing name="Sharp-Witted" {
 	description "You were raised among a people who prize biting wit and no-holds-barred wordplay."
-	asi Charisma 2
-	asi Intelligence 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Devil's Tongue" {
@@ -750,8 +1171,20 @@ upbringing name="Sharp-Witted" {
 
 upbringing name="Skilled Labor" {
 	description "You were trained from a young age in a very specialized craft or trade."
-	asi Constitution 2
-	asi NotCon 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Str"
+			option "Dex"
+			option "Int"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Specialized" {
@@ -761,8 +1194,20 @@ upbringing name="Skilled Labor" {
 
 upbringing name="Sleuth" {
 	description "You were raised among people who solve puzzles or baffling crimes for a living."
-	asi Constitution 2
-	asi NotCon 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" {
+			option "Str"
+			option "Dex"
+			option "Int"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Sleuthing" {
@@ -772,8 +1217,14 @@ upbringing name="Sleuth" {
 
 upbringing name="Spy" {
 	description "You were raised among elite spies or assassins who trained you from an early age in their secret skills."
-	asi Dexterity 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Cunning Intuition" {
@@ -783,8 +1234,14 @@ upbringing name="Spy" {
 
 upbringing name="Stoneworker" {
 	description "You were raised among stoneworkers who taught you to value vigilance and trained you with weapons that also serve as work tools."
-	asi Constitution 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+weapon Battleaxe
@@ -801,8 +1258,14 @@ upbringing name="Stoneworker" {
 
 upbringing name="Stony Ground" {
 	description "You were raised among a people who live beneath or among the rocks."
-	asi Intelligence 2
-	asi Dexterity 1
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+lang Any
@@ -813,8 +1276,14 @@ upbringing name="Stony Ground" {
 
 upbringing name="Story Collector" {
 	description "You were raised among a curious people that value storytelling and barter for lore and history."
-	asi Dexterity 2
-	asi Charisma 1
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Curiosity" {
@@ -824,8 +1293,14 @@ upbringing name="Story Collector" {
 
 upbringing name="Strong and Silent" {
 	description "You were raised among people used to getting their way by dint of being the strongest."
-	asi Strength 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Imposing Presence" {
@@ -835,8 +1310,14 @@ upbringing name="Strong and Silent" {
 
 upbringing name="Stygia" {
 	description "You were raised in Stygia, the Fifth Hell, or among a people who hail from there."
-	asi Charisma 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang Infernal
 	feature name="Legacy of Stygia" {
@@ -846,8 +1327,14 @@ upbringing name="Stygia" {
 
 upbringing name="Survivalist" {
 	description "You were raised among those who have learned to survive in a trackless wilderness."
-	asi Constitution 1
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	feature name="Hunter's Lore" {
@@ -857,8 +1344,14 @@ upbringing name="Survivalist" {
 
 upbringing name="Sylvan" {
 	description "You were raised among a people that live at one with the natural world."
-	asi Wisdom 2
-	asi Strength 1
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	+lang AnyStandard
@@ -869,8 +1362,14 @@ upbringing name="Sylvan" {
 
 upbringing name="Tinker" {
 	description "You were raised among an inquisitive people who endlessly tinker, invent, and create."
-	asi Intelligence 2
-	asi Constitution 1
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
 	+lang Common
 	+lang AnyStandard
 	feature name="Artificer's Lore" {
@@ -883,8 +1382,14 @@ upbringing name="Tinker" {
 
 upbringing name="Tracker" {
 	description "From a young age, you were taught to live in the wild and how to track game or enemies."
-	asi Strength 2
-	asi Wisdom 1
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
 	+lang Common
 	+lang Any
 	+skill Survival
