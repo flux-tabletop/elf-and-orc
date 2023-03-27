@@ -1,573 +1,904 @@
 
 upbringing name="Acrobatic" {
-	You were raised among acrobats or revelers.
-	Ability Score Increase. Your Charisma score increases by 2, and your Dexterity score increases by 1.
-	Mirthful Leaps. Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal.
-	Reveler. You have proficiency in the Performance and Persuasion skills, and you have proficiency with one musical instrument of your choice.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among acrobats or revelers."
+	asi Charisma 2
+	asi Dexterity 1
+	+lang Common
+	+lang Any
+	+skill Performance
+	+skill Persuasion
+	+tool AnyMusicalInstrument
+	feature name="Mirthful Leaps" {
+		description "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal."
+	}
 }
 
 upbringing name="Aerial" {
-	You were raised among a people that can fly or glide, whether by biology, invention, or magic.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Wisdom score increases by 1.
-	Dive Attack. If you are flying and dive at least 30 feet straight toward a target and then hit it with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target.
-	Languages. You can speak, read, and write Common and two other languages of your choice.
+	description "You were raised among a people that can fly or glide, whether by biology, invention, or magic."
+	asi Dexterity 2
+	asi Wisdom 1
+	+lang Common
+	+lang Any
+	+lang Any
+	feature name="Dive Attack" {
+		description "If you are flying and dive at least 30 feet straight toward a target and then hit it with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target."
+	}
 }
 
 upbringing name="Agressive" {
-	You were raised among a people who value and reward strength, ferocity, and aggression.
-	Ability Score Increase. Your Strength and Constitution scores each increase by 1.
-	Aggressive. As a bonus action, you can move up to your speed toward an enemy of your choice that you can see or hear. You must end this move closer to the enemy than you started.
-	Menacing. You are trained in the Intimidation skill.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among a people who value and reward strength, ferocity, and aggression."
+	asi Strength 1
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	+skill Intimidation
+	feature name="Aggressive" {
+		description "As a bonus action, you can move up to your speed toward an enemy of your choice that you can see or hear. You must end this move closer to the enemy than you started."
+	}
 }
 
 upbringing name="Airship" {
-	You were raised aboard on an airship among its captains and sailors.
-	Ability Score Increase. Your Charisma score increases by 2, and your Dexterity score increases by 1.
-	Windwright’s Intuition. When you make a Dexterity (Acrobatics) check or any ability check involving navigator’s tools, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised aboard on an airship among its captains and sailors."
+	asi Charisma 2
+	asi Dexterity 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Windwright's Intuition" {
+		description "When you make a Dexterity (Acrobatics) check or any ability check involving navigator's tools, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Aquatic" {
-	You were raised among a people that live near or in the sea.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Constitution score increases by 1.
-	Friend of the Sea. Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed. 
-	Weapon Training. You have proficiency with the spear, trident, light crossbow, and net.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among a people that live near or in the sea."
+	asi Dexterity 2
+	asi Constitution 1
+	+lang Common
+	+lang Any
+	+weapon Spear
+	+weapon Trident
+	+weapon CrossbowLight
+	+weapon Net
+	feature name="Friend of the Sea" {
+		description "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed. "
+	}
 }
 
 upbringing name="Arboreal" {
-	You were raised among a people who live high in the forest or jungle canopy.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Constitution score increases by 1.
-	Arboreal Alertness. You have proficiency in the Perception skill.
-	Languages. You can speak, read, and write one other language of your choice.
+	description "You were raised among a people who live high in the forest or jungle canopy."
+	asi Dexterity 2
+	asi Constitution 1
+	+lang Any
+	+skill Perception
 }
 
 upbringing name="Artificer" {
-	You were raised among artificers or other magical manufacturers.
-	Ability Score Increase. Your Intelligence score increases by 2, and one other ability score of your choice increases by 1.
-	Artisan’s Intuition. When you make an Arcana check or an ability check involving artisan’s tools, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among artificers or other magical manufacturers."
+	asi Intelligence 2
+	asi NotInt 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Artisan's Intuition" {
+		description "When you make an Arcana check or an ability check involving artisan's tools, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Astral" {
-	You were raised in the Astral Plane, where time stands still, or among a people who hail from there.
-	Ability Score Increase. Your Strength and Intelligence scores each increase by 1. Decadent Mastery. You are proficient with one skill or tool of your choice.
-	Martial Prodigy. You are proficient with light and medium armor and with shortswords, longswords, and greatswords.
-	Languages. You can speak, read, and write Common and two other languages of your choice.
+	description "You were raised in the Astral Plane, where time stands still, or among a people who hail from there."
+	asi Strength 1
+	asi Intelligence 1
+	+lang Common
+	+lang Any
+	+lang Any
+	feature name="Decadent Mastery" {
+		description "You are proficient with one skill or tool of your choice."
+	}
+	feature name="Martial Prodigy" {
+		description "You are proficient with light and medium armor and with shortswords, longswords, and greatswords."
+	}
 }
 
 upbringing name="Athletic" {
-	From a very young age, you were trained to stay in peak physical shape.
-	Ability Score Increase. Your Strength score increases by 2, and your Dexterity score increases by 1.
-	Observant and Athletic. You have proficiency in the Athletics or Perception skills (your choice).
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "From a very young age, you were trained to stay in peak physical shape."
+	asi Strength 2
+	asi Dexterity 1
+	+lang Common
+	+lang Any
+	+skill [Athletics or Perception]
 }
 
 upbringing name="Avernus" {
-	You were raised in Avernus, the First Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Strength score increases by 1.
-	Legacy of Avernus. You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Infernal.
+	description "You were raised in Avernus, the First Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Strength 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Avernus" {
+		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Banker" {
-	You were trained from a young age to keep things safe—jewels, secrets, prisoners.
-	Ability Score Increase. Your Constitution score increases by 2, and your Intelligence score increases by 1.
-	Warder’s Intuition. When you make an Intelligence (Investigation) check or an ability check using thieves’ tools, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were trained from a young age to keep things safe—jewels, secrets, prisoners."
+	asi Constitution 2
+	asi Intelligence 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Warder's Intuition" {
+		description "When you make an Intelligence (Investigation) check or an ability check using thieves' tools, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Battle Savant" {
-	You were trained to wield swords and bows from an early age and tutored in battle strategy.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Intelligence score increases by 1.
-	Weapon Training. You have proficiency with the longsword, shortsword, shortbow, and longbow.
-	Languages. You can speak, read, and write Common and two other languages of your choice.
+	description "You were trained to wield swords and bows from an early age and tutored in battle strategy."
+	asi Dexterity 2
+	asi Intelligence 1
+	+lang Common
+	+lang Any
+	+lang Any
+	+weapon Longsword
+	+weapon Shortsword
+	+weapon Shortbow
+	+weapon Longbow
 }
 
 upbringing name="Beastrider" {
-	You were raised among a people who train and ride mounts, whether they be mundane like horses or fantastical like hippogriffs.
-	Ability Score Increase. Your Wisdom score increases by 2, and your Constitution score increases by 1.
-	The Bigger They Are. Starting at 3rd level, you can target a beast or monstrosity when you cast animal friendship or speak with animals, provided the creature’s Intelligence score is 3 or lower.
-	Wild Intuition. When you make a Wisdom (Animal Handling) or Intelligence (Nature) check, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among a people who train and ride mounts, whether they be mundane like horses or fantastical like hippogriffs."
+	asi Wisdom 2
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	feature name="The Bigger They Are" {
+		description "Starting at 3rd level, you can target a beast or monstrosity when you cast animal friendship or speak with animals, provided the creature's Intelligence score is 3 or lower."
+	}
+	feature name="Wild Intuition" {
+		description "When you make a Wisdom (Animal Handling) or Intelligence (Nature) check, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Cania" {
-	You were raised in Cania, the Eighth Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Intelligence score increases by 1.
-	Legacy of Cania. You know the mage hand cantrip. When you reach 3rd level, you can cast the burning hands spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells.
-	Languages. You can speak, read, and write Common and Infernal.
+	description "You were raised in Cania, the Eighth Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Intelligence 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Cania" {
+		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the burning hands spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
 
 upbringing name="Caravaneer" {
-	You were raised among caravaneers, teamsters, wainwrights, wheelwrights, or others invested in overland travel or trade.
-	Ability Score Increase. Your Dexterity score increases by 2, and one other ability score of your choice increases by 1.
-	Intuitive Motion. When you make a Dexterity (Acrobatics) check or any ability check to operate or maintain a land vehicle, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among caravaneers, teamsters, wainwrights, wheelwrights, or others invested in overland travel or trade."
+	asi Dexterity 2
+	asi NotDex 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Intuitive Motion" {
+		description "When you make a Dexterity (Acrobatics) check or any ability check to operate or maintain a land vehicle, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Combative" {
-	You were raised among a people that highly value physical strength and valor.
-	Ability Score Increase. Your Strength score increases by 2, and your Constitution score increases by 1.
-	Formidable Attacks. When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.
-	Menacing. You gain proficiency in the Intimidation skill.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among a people that highly value physical strength and valor."
+	asi Strength 2
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	+skill Intimidation
+	feature name="Formidable Attacks" {
+		description "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+	}
 }
 
 upbringing name="Common Defense" {
-	You spent your formative years strengthening your throwing arm and striving to be brave when facing overwhelming odds.
-	Ability Score Increase. Your Dexterity score increases by 2. In addition, increase one ability score from among Constitution, Wisdom, or Charisma by 1.
-	Brave. You have advantage on saving throws against being frightened.
-	Slinger. Your throwing arm is a natural weapon that you can use to make ranged attacks as you were wielding a sling, provided you have sling bullets or equivalent.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You spent your formative years strengthening your throwing arm and striving to be brave when facing overwhelming odds."
+	asi Dexterity 2
+	asi [Con Wis or Cha] 1	
+	+lang Common
+	+lang AnyStandard
+	+modify-save Adv "being frightened"
+	feature name="Slinger" {
+		description "Your throwing arm is a natural weapon that you can use to make ranged attacks as you were wielding a sling, provided you have sling bullets or equivalent."
+	}
 }
 
 upbringing name="Competitive" {
-	You were raised among people who value contests of strength and friendly competition.
-	Ability Score Increase. Your Strength score increases by 2, and your Constitution score increases by 1.
-	Competitive. When you see an ally score a critical hit, you can use your reaction to make a melee attack against any one creature within range.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among people who value contests of strength and friendly competition."
+	asi Strength 2
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Competitive" {
+		description "When you see an ally score a critical hit, you can use your reaction to make a melee attack against any one creature within range."
+	}
 }
 
 upbringing name="Consular" {
-	You were raised among diplomats, ambassadors, or arbiters.
-	Ability Score Increase. Your Charisma score increases by 2.
-	Skill Versatility. You gain proficiency in two skills of your choice.
-	Languages. You can speak, read, and write Common and two other languages of your choice.
+	description "You were raised among diplomats, ambassadors, or arbiters."
+	asi Charisma 2
+	+lang Common
+	+lang Any
+	+lang Any
+	feature name="Skill Versatility" {
+		description "You gain proficiency in two skills of your choice."
+	}
 }
 
 upbringing name="Cunning" {
-	You were raised among a devout people who prize cunning and nimbleness.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Intelligence score increases by 1.
-	Infernal Legacy(?). You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among a devout people who prize cunning and nimbleness."
+	asi Dexterity 2
+	asi Intelligence 1
+	+lang Common
+	+lang Any
+	feature name="Infernal Legacy(?)" {
+		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Dao" {
-	You were raised on the Elemental Plane of Earth or in a dao's palace on the Material Plane.
-	Ability Score Increase. Your Strength and Constitution scores each increase by 1.
-	Merge with Stone. You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Primordial.
+	description "You were raised on the Elemental Plane of Earth or in a dao's palace on the Material Plane."
+	asi Strength 1
+	asi Constitution 1
+	+lang Common
+	+lang Primordial
+	feature name="Merge with Stone" {
+		description "You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Defender" {
-	You were raised to know how to defend yourself and your people.
-	Ability Score Increase. Your Constitution score increases by 2, and your Strength score increases by 1.
-	Armor Training. You have proficiency with light and medium armor.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised to know how to defend yourself and your people."
+	asi Constitution 2
+	asi Strength 1
+	+lang Common
+	+lang AnyStandard
+	+armor Light
+	+armor Medium
 }
 
 upbringing name="Defiant" {
-	You were raised to stand up to others, even those bigger and stronger than you.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Constitution score increases by 1.
-	Fury of the Small. When you damage a creature with an attack or a spell and the creature’s size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. Once you use this trait, you can’t use it again until you finish a short or long rest.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised to stand up to others, even those bigger and stronger than you."
+	asi Dexterity 2
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Fury of the Small" {
+		description "When you damage a creature with an attack or a spell and the creature's size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest."
+	}
 }
 
 upbringing name="Dexterous Soldier" {
-	You were raised to value personal devotion and trained in weapons meant for the nimble and lithe.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Charisma score increases by 1.
-	Weapon Training. You have proficiency with rapiers, shortswords, and hand crossbows.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised to value personal devotion and trained in weapons meant for the nimble and lithe."
+	asi Dexterity 2
+	asi Charisma 1
+	+lang Common
+	+lang AnyStandard
+	+weapon Rapier
+	+weapon Shortsword
+	+weapon CrossbowHand
 }
 
 upbringing name="Djinni" {
-	You were raised on the Elemental Plane of Air or in a djinni's palace on the Material Plane.
-	Ability Score Increase. Your Dexterity and Constitution scores each increase by 1.
-	Mingle with the Wind. You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Primordial.
+	description "You were raised on the Elemental Plane of Air or in a djinni's palace on the Material Plane."
+	asi Dexterity 1
+	asi Constitution 1
+	+lang Common
+	+lang Primordial
+	feature name="Mingle with the Wind" {
+		description "You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Dis" {
-	You were raised in Dis, the Second Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Dexterity score increases by 1.
-	Legacy of Dis. You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Infernal.
+	description "You were raised in Dis, the Second Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Dexterity 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Dis" {
+		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Draconic" {
-	You were raised among dragonborn or even in the company of dragons.
-	Ability Score Increase. Your Strength score increases by 2, and your Charisma score increases by 1.
-	Dragon Whelp. You are immune to the Frightful Presence feature of any dragon.
-	Languages. You can speak, read, and write Common and Draconic.
+	description "You were raised among dragonborn or even in the company of dragons."
+	asi Strength 2
+	asi Charisma 1
+	+lang Common
+	+lang Draconic
+	feature name="Dragon Whelp" {
+		description "You are immune to the Frightful Presence feature of any dragon."
+	}
 }
 
 upbringing name="Dramatic" {
-	You were raised by a dramatic people who have the uncanny ability to draw attention to themselves.
-	Draw Attention. As an action on your turn, you can distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can’t use it again until you finish a short or long rest.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised by a dramatic people who have the uncanny ability to draw attention to themselves."
+	+lang Common
+	+lang Any
+	feature name="Draw Attention" {
+		description "As an action on your turn, you can distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest."
+	}
 }
 
 upbringing name="Efretti" {
-	You were raised on the Elemental Plane of Fire or in an efreeti's palace on the Material Plane.
-	Ability Score Increase. Your Constitution score increases by 2, and your Intelligence score increases by 1.
-	Reach to the Blaze. You know the produce flame cantrip. Constitution is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Primordial.
+	description "You were raised on the Elemental Plane of Fire or in an efreeti's palace on the Material Plane."
+	asi Constitution 2
+	asi Intelligence 1
+	+lang Common
+	+lang Primordial
+	feature name="Reach to the Blaze" {
+		description "You know the produce flame cantrip. Constitution is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Fallen" {
-	You were touched by dark powers as a youth, replacing any inner light with shadow.
-	Ability Score Increase. Your Strength and Charisma scores each increase by 1.
-	Necrotic Shroud. Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing your eyes to turn into pools of darkness and two skeletal, ghostly, flightless wings to sprout from your back. The instant you transform, other creatures within 10 feet of you that can see you must each succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become frightened of you until the end of your next turn. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra necrotic damage equals your level. Once you use this trait, you can’t use it again until you finish a long rest.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were touched by dark powers as a youth, replacing any inner light with shadow."
+	asi Strength 1
+	asi Charisma 1
+	+lang Common
+	+lang Any
+	feature name="Necrotic Shroud" {
+		description "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing your eyes to turn into pools of darkness and two skeletal, ghostly, flightless wings to sprout from your back. The instant you transform, other creatures within 10 feet of you that can see you must each succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become frightened of you until the end of your next turn. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra necrotic damage equals your level. Once you use this trait, you can't use it again until you finish a long rest."
+	}
 }
 
 upbringing name="Fierce" {
-	You were raised among a people that taught you to stand up for yourself and not back down.
-	Ability Score Increase. Your Strength score increases by 2, and your Dexterity score increases by 1.
-	Fierce. You have proficiency in the Intimidation skill.
-	Languages. You can speak, read, and write Common.
+	description "You were raised among a people that taught you to stand up for yourself and not back down."
+	asi Strength 2
+	asi Dexterity 1
+	+lang Common
+	+skill Intimidation
 }
 
 upbringing name="Forest" {
-	You were raised among a people who live at peace with the animals that make their homes in or among trees.
-	Ability Score Increase. Your Intelligence score increases by 2, and your Dexterity score increases by 1.
-	Speak with Small Beasts. Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Your people love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among a people who live at peace with the animals that make their homes in or among trees."
+	asi Intelligence 2
+	asi Dexterity 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Speak with Small Beasts" {
+		description "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Your people love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
+	}
 }
 
 upbringing name="Forger" {
-	You were raised among forgers and impersonators.
-	Ability Score Increase. Your Dexterity and Wisdom scores each increase by 1.
-	Expert Forgery. You can duplicate other creatures’ handwriting and craftwork. You have advantage on all checks made to produce forgeries or duplicates of existing objects.
-	Charlatan Training. You are proficient in the Deception and Sleight of Hand skills. Mimicry. You can mimic sounds you have heard, including voices. A creature that hears the sounds you make can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among forgers and impersonators."
+	asi Dexterity 1
+	asi Wisdom 1
+	+lang Common
+	+lang Any
+	feature name="Charlatan Training" {
+		description "You are proficient in the Deception and Sleight of Hand skills. Mimicry. You can mimic sounds you have heard, including voices. A creature that hears the sounds you make can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check."
+	}
+	feature name="Expert Forgery" {
+		description "You can duplicate other creatures' handwriting and craftwork. You have advantage on all checks made to produce forgeries or duplicates of existing objects."
+	}
 }
 
 upbringing name="Graceful" {
-	You were raised among those who value runners, dancers, and acrobats.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Charisma score increases by 1.
-	Graceful. You have proficiency in the Acrobatics skill.
-	Languages. You can speak, read, and write Common.
+	description "You were raised among those who value runners, dancers, and acrobats."
+	asi Dexterity 2
+	asi Charisma 1
+	+lang Common
+	+skill Acrobatics
 }
 
 upbringing name="Guardian" {
-	You were raised among bodyguards, city watch, soldiers, mercenaries, or those employed in other martial trades.
-	Ability Score Increase. Your Constitution score increases by 2, and your Wisdom score increases by 1.
-	Sentinel’s Intuition. When you make a Wisdom (Insight) or Wisdom (Perception) check, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, or write Common and one other standard language of your choice.
+	description "You were raised among bodyguards, city watch, soldiers, mercenaries, or those employed in other martial trades."
+	asi Constitution 2
+	asi Wisdom 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Sentinel's Intuition" {
+		description "When you make a Wisdom (Insight) or Wisdom (Perception) check, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Guerrilla" {
-	You were raised among those skilled in ambushes, snares, or guerrilla warfare.
-	Ability Score Increase. Your Strength and Dexterity scores each increase by 1.
-	Sneaky. You are proficient in the Stealth skill.
-	Surprise Attack. If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra 2d6 damage to it. You can use this trait only once per combat.
-	Language. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among those skilled in ambushes, snares, or guerrilla warfare."
+	asi Strength 1
+	asi Dexterity 1
+	+lang Common
+	+lang AnyStandard
+	+skill Stealth
+	feature name="Surprise Attack" {
+		description "If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra 2d6 damage to it. You can use this trait only once per combat."
+	}
 }
 
 upbringing name="Handy" {
-	You were raised among a people that fed you heartily and made sure you exercised.
-	Ability Score Increase. Your Constitution score increases by 2, and your Strength score increases by 1.
-	Natural Athlete. You have proficiency in the Athletics skill.
-	Languages. You can speak, read, and write Common.
+	description "You were raised among a people that fed you heartily and made sure you exercised."
+	asi Constitution 2
+	asi Strength 1
+	+lang Common
+	+skill Athletics
 }
 
 upbringing name="Healer" {
-	You were trained from a young age in the art of healing and medicine.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Wisdom score increases by 1.
-	Medical Intuition. When you make a Wisdom (Medicine) check or an ability check using an herbalism kit, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice
+	description "You were trained from a young age in the art of healing and medicine."
+	asi Dexterity 2
+	asi Wisdom 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Medical Intuition" {
+		description "When you make a Wisdom (Medicine) check or an ability check using an herbalism kit, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Hinterland" {
-	You were raised among people who live far from any cities or villages and struggle mightily to survive.
-	Ability Score Increase. Your Strength score increases by 2, and your Constitution score increases by 1.
-	Primal Intuition. You have proficiency in two of the following skills of your choice: Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, and Survival.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among people who live far from any cities or villages and struggle mightily to survive."
+	asi Strength 2
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Primal Intuition" {
+		description "You have proficiency in two of the following skills of your choice: Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, and Survival."
+	}
 }
 
 upbringing name="Hosteler" {
-	You were raised among innkeepers or tavern owners.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Charisma score increases by 1.
-	Ever Hospitable. When you make a Charisma (Persuasion) check or an ability check involving brewer’s supplies or cook’s utensils, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among innkeepers or tavern owners."
+	asi Dexterity 2
+	asi Charisma 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Ever Hospitable" {
+		description "When you make a Charisma (Persuasion) check or an ability check involving brewer's supplies or cook's utensils, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Hunter" {
-	You were raised among a people that taught you to hunt or simply stay alert.
-	Ability Score Increase. Your Wisdom score increases by 2, and your Dexterity score increases by 1.
-	Natural Tracker. You have proficiency in the Survival skill.
-	Languages. You can speak, read, and write Common
+	description "You were raised among a people that taught you to hunt or simply stay alert."
+	asi Wisdom 2
+	asi Dexterity 1
+	+lang Common
+	+skill Survival
 }
 
 upbringing name="Inquistive" {
-	You were raised among bodyguards and investigators and were trained from a young age in their skills.
-	Ability Score Increase. Your Wisdom score increases by 2, and one other ability score of your choice increases by 1.
-	Deductive Intuition. When you make an Intelligence (Investigation) or a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among bodyguards and investigators and were trained from a young age in their skills."
+	asi Wisdom 2
+	asi NotWis 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Deductive Intuition" {
+		description "When you make an Intelligence (Investigation) or a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Insightful" {
-	You were trained from a young age to read people and situations like books. 
-	Ability Score Increase. Your Wisdom score increases by 2, and your Charisma score increase by 1.
-	Insightful. You have proficiency in the Insight skill.
-	Languages. You can speak, read, and write Common and two other languages of your choice.
+	description "You were trained from a young age to read people and situations like books."
+	asi Wisdom 2
+	asi Charisma 1
+	+lang Common
+	+lang Any
+	+lang Any
+	+skill Insight
 }
 
 upbringing name="Laborer" {
-	You were brought up to perform a specific task or take up a specialized trade.
-	Ability Score Increase. Your Constitution score increases by 2, and one other ability score of your choice increases by 1.
-	Specialization. You gain one skill proficiency and one tool proficiency of your choice.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were brought up to perform a specific task or take up a specialized trade."
+	asi Constitution 2
+	asi NotCon 1
+	+lang Common
+	+lang Any
+	feature name="Specialization" {
+		description "You gain one skill proficiency and one tool proficiency of your choice."
+	}
 }
 
 upbringing name="Labor Soldier" {
-	You were raised among a militant, industrious people whose weapons also serve as work tools.
-	Ability Score Increase. Your Constitution score increases by 2, and your Strength score increases by 1.
-	Combat Training. You have proficiency with teh battleaxe, handaxe, light hammer, and warhammer.
-	Stonecunning. Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
-	Tool Proficiency. You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among a militant, industrious people whose weapons also serve as work tools."
+	asi Constitution 2
+	asi Strength 1
+	+lang Common
+	+lang Any
+	feature name="Combat Training" {
+		description "You have proficiency with teh battleaxe, handaxe, light hammer, and warhammer."
+	}
+	feature name="Tool Proficiency" {
+		description "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+	}
+	feature name="Stonecunning" {
+		description "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+	}
 }
 
 upbringing name="Limbo" {
-	You were raised in the ever - turbulent churn of the plane of Limbo or among a people who hail from there.
-	Ability Score Increase. Your Wisdom score increases by 2, and your Intelligence score increases by 1.
-	Mental Discipline. You have advantage on saving throws against the charmed and frightened conditions.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised in the ever - turbulent churn of the plane of Limbo or among a people who hail from there."
+	asi Wisdom 2
+	asi Intelligence 1
+	+lang Common
+	+lang Any
+	feature name="Mental Discipline" {
+		description "You have advantage on saving throws against the charmed and frightened conditions."
+	}
 }
 
 upbringing name="Mage" {
-	You were raised among a people who value arcane studies and, as a result, you know some rudimentary magic.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Intelligence score increases by 1.
-	Cantrip. You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among a people who value arcane studies and, as a result, you know some rudimentary magic."
+	asi Dexterity 2
+	asi Intelligence 1
+	+lang Common
+	+lang Any
+	feature name="Cantrip" {
+		description "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+	}
 }
 
 upbringing name="Malbolge" {
-	You were raised in Malbolge, the Sixth Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Dexterity score increases by 1.
-	Legacy of Malbolge. You know the minor illusion cantrip. Charisma is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Infernal
+	description "You were raised in Malbolge, the Sixth Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Dexterity 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Malbolge" {
+		description "You know the minor illusion cantrip. Charisma is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Maladomini" {
-	You were raised in Maladomini, the Seventh Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Intelligence score increases by 1.
-	Legacy of Maladomini. You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the ray of sickness spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
-	Languages. You can speak, read, and write Common and Infernal.
+	description "You were raised in Maladomini, the Seventh Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Intelligence 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Maladomini" {
+		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the ray of sickness spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
 
 upbringing name="Marid" {
-	You were raised on the Elemental Plane of Water or in a marid's palace on the Material Plane.
-	Ability Score Increase. Your Constitution score increases by 2, and your Wisdom score increases by 1.
-	Call to the Wave. You know the shape water cantrip. Constitution is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Primordial.
+	description "You were raised on the Elemental Plane of Water or in a marid's palace on the Material Plane."
+	asi Constitution 2
+	asi Wisdom 1
+	+lang Common
+	+lang Primordial
+	feature name="Call to the Wave" {
+		description "You know the shape water cantrip. Constitution is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Maritime" {
-	You were raised among sea creatures with whom you have an affinity.
-	Ability Score Increase. Your Strength, Constitution, and Charisma scores each increase by 1.
-	Emissary of the Sea. Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water. They can understand the meaning of your words, though you have no special ability to understand them in return.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among sea creatures with whom you have an affinity."
+	asi Strength 1
+	asi Constitution 1
+	asi Charisma 1
+	+lang Common
+	+lang Any
+	feature name="Emissary of the Sea" {
+		description "Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water. They can understand the meaning of your words, though you have no special ability to understand them in return."
+	}
 }
 
 upbringing name="Minauros" {
-	You were raised in Minauros, the Third Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Intelligence score increases by 1.
-	Legacy of Minauros. You know the mage hand cantrip. When you reach 3rd level, you can cast the Tenser’s floating disk spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells.
-	Languages. You can speak, read, and write Common and Infernal.
+	description "You were raised in Minauros, the Third Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Intelligence 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Minauros" {
+		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the Tenser's floating disk spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
 
 upbringing name="Natural Artisan" {
-	You were raised among hunters who eat or make their living on meat.
-	Ability Score Increase. Your Constitution score increases by 2, and your Wisdom score increases by 1.
-	Cunning Artisan. As part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size Small or larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts or blowgun needles. To use this trait, you need a blade, such as a dagger, or appropriate artisan’s tools, such as leatherworker’s tools.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among hunters who eat or make their living on meat."
+	asi Constitution 2
+	asi Wisdom 1
+	+lang Common
+	+lang Any
+	feature name="Cunning Artisan" {
+		description "As part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size Small or larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts or blowgun needles. To use this trait, you need a blade, such as a dagger, or appropriate artisan's tools, such as leatherworker's tools."
+	}
 }
 
 upbringing name="Nessus" {
-	You were raised in Nessus, the Ninth Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Intelligence score increases by 1.
-	Legacy of Nessus. You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
-	Languages. You can speak, read, and write Common and Infernal
+	description "You were raised in Nessus, the Ninth Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Intelligence 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Nessus" {
+		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
 
 upbringing name="Nomadic" {
-	You were raised among a people constantly on the move, whether by choice or at swordpoint.
-	Ability Score Increase. Your Strength score increases by 2, and your Wisdom score increases by 1.
-	Survivor. You have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among a people constantly on the move, whether by choice or at swordpoint."
+	asi Strength 2
+	asi Wisdom 1
+	+lang Common
+	+lang Any
+	feature name="Survivor" {
+		description "You have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival."
+	}
 }
 
 upbringing name="Pack" {
-	You were raised by pack animals or by a people who foster a pack mentality.
-	Ability Score Increase. Your Dexterity score increases by 1.
-	Pack Tactics. You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn’t incapacitated.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised by pack animals or by a people who foster a pack mentality."
+	asi Dexterity 1
+	+lang Common
+	+lang Any
+	feature name="Pack Tactics" {
+		description "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated."
+	}
 }
 
 upbringing name="Phlegethos" {
-	You were raised in Phlegethos, the Fourth Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Wisdom score increases by 1.
-	Legacy of Phlegethos. You know the friends cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
-	Languages. You can speak, read, and write Common and Infernal.
+	description "You were raised in Phlegethos, the Fourth Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Wisdom 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Phlegethos" {
+		description "You know the friends cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
 
 upbringing name="Predator" {
-	From a young age, you were taught to hunt using your strength, wits, and power to bring down prey.
-	Ability Score Increase. Your Constitution score increases by 2, and your Strength score increases by 1.
-	Hunter’s Instincts. You have proficiency in one of the following skills of your choice: Athletics, Intimidation, Perception, or Survival.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "From a young age, you were taught to hunt using your strength, wits, and power to bring down prey."
+	asi Constitution 2
+	asi Strength 1
+	+lang Common
+	+lang Any
+	feature name="Hunter's Instincts" {
+		description "You have proficiency in one of the following skills of your choice: Athletics, Intimidation, Perception, or Survival."
+	}
 }
 
 upbringing name="Prospector" {
-	You were raised among prospectors, investigators, or bounty hunters.
-	Ability Score Increase. Your Wisdom score increases by 2, and your Constitution score increases by 1.
-	Hunter’s Intuition. When you make a Wisdom (Perception) or Wisdom (Survival) check, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice
+	description "You were raised among prospectors, investigators, or bounty hunters."
+	asi Wisdom 2
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Hunter's Intuition" {
+		description "When you make a Wisdom (Perception) or Wisdom (Survival) check, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Protector" {
-	From a young age, a celestial offered you advice and directives and urged you to stand against evil.
-	Ability Score Increase. Your Wisdom and Charisma scores each increase by 1.
-	Radiant Soul. Starting at 3rd level, you can use your action to unleash divine energy, causing your eyes to glimmer and two luminous, incorporeal wings to sprout from your back. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you have a flying speed of 30 feet, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage is equal to half your level (rounded up). Once you use this trait, you can’t use it again until you finish a long rest.
-	Languages. You can speak, read, and write Common and Celestial.
+	description "From a young age, a celestial offered you advice and directives and urged you to stand against evil."
+	asi Wisdom 1
+	asi Charisma 1
+	+lang Common
+	+lang Celestial
+	feature name="Radiant Soul" {
+		description "Starting at 3rd level, you can use your action to unleash divine energy, causing your eyes to glimmer and two luminous, incorporeal wings to sprout from your back. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you have a flying speed of 30 feet, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage is equal to half your level (rounded up). Once you use this trait, you can't use it again until you finish a long rest."
+	}
 }
 
 upbringing name="Pyromanic" {
-	You were raised among devil worshippers or charismatic pyromaniacs.
-	Ability Score Increase. Your Charisma score increases by 2, and your Intelligence score increases by 1.
-	Hellfire. You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among devil worshippers or charismatic pyromaniacs."
+	asi Charisma 2
+	asi Intelligence 1
+	+lang Common
+	+lang Any
+	feature name="Hellfire" {
+		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
 
 upbringing name="Raven Queen (Ally)" {
-	You were raised among a people who personally serve the Raven Queen in the Shadowfell.
-	Ability Score Increase. Your Dexterity or Constitution score increases by 1.
-	Improved Blessing of the Raven Queen. As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can’t do so again until you finish a long rest. Starting at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among a people who personally serve the Raven Queen in the Shadowfell."
+	asi DexOrCon 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Improved Blessing of the Raven Queen" {
+		description "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest. Starting at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent."
+	}
 }
 
 upbringing name="Raven Queen (Worshiper)" {
-	You were raised among a people who venerate the Raven Queen in the Shadowfell.
-	Ability Score Increase. Your Dexterity score increases by 1, and your Constitution score increases by 1.
-	Blessing of the Raven Queen. As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can’t do so again until you finish a long rest.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among a people who venerate the Raven Queen in the Shadowfell."
+	asi Dexterity 1
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Blessing of the Raven Queen" {
+		description "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
+	}
 }
 
 upbringing name="Scourge" {
-	At a young age, a celestial imbued you with divine energy that blazes intensely within you.
-	Ability Score Increase. Your Constitution and Charisma scores each increase by 1.
-	Radiant Consumption. Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing a searing light to radiate from you, pour out of your eyes and mouth, and threaten to char you. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, you and each creature within 10 feet of you take radiant damage equal to half your level (rounded up). In addition, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage equals your level. Once you use this trait, you can’t use it again until you finish a long rest.
-	Languages. You can speak, read, and write Common and Celestial.
+	description "At a young age, a celestial imbued you with divine energy that blazes intensely within you."
+	asi Constitution 1
+	asi Charisma 1
+	+lang Common
+	+lang Celestial
+	feature name="Radiant Consumption" {
+		description "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing a searing light to radiate from you, pour out of your eyes and mouth, and threaten to char you. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, you and each creature within 10 feet of you take radiant damage equal to half your level (rounded up). In addition, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage equals your level. Once you use this trait, you can't use it again until you finish a long rest."
+	}
 }
 
 upbringing name="Scout" {
-	You were trained from a young age to be aware of your surroundings and to wield a sword and bow.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Wisdom score increases by 1.
-	Mask of the Wild. You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.
-	Weapon Training. You have proficiency with the longsword, shortsword, shortbow, and longbow.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were trained from a young age to be aware of your surroundings and to wield a sword and bow."
+	asi Dexterity 2
+	asi Wisdom 1
+	+lang Common
+	+lang AnyStandard
+	+weapon Longsword
+	+weapon Shortsword
+	+weapon Shortbow
+	+weapon Longbow
+	feature name="Mask of the Wild" {
+		description "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+	}
 }
 
 upbringing name="Scribe" {
-	You were raised among scribes, notaries, interpreters, cartographers, barristers, heralds, bookbinders, and others who work with words.
-	Ability Score Increase. Your Intelligence score increases by 2, and your Charisma score increases by 1.
-	Gifted Scribe. When you make an Intelligence (History) check or an ability check using calligrapher’s supplies, you can roll a d4 and add the number rolled to the ability check.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among scribes, notaries, interpreters, cartographers, barristers, heralds, bookbinders, and others who work with words."
+	asi Intelligence 2
+	asi Charisma 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Gifted Scribe" {
+		description "When you make an Intelligence (History) check or an ability check using calligrapher's supplies, you can roll a d4 and add the number rolled to the ability check."
+	}
 }
 
 upbringing name="Sharp-Witted" {
-	You were raised among a people who prize biting wit and no-holds-barred wordplay.
-	Ability Score Increase. Your Charisma score increases by 2, and your Intelligence score increases by 1.
-	Devil's Tongue. You know the vicious mockery cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among a people who prize biting wit and no-holds-barred wordplay."
+	asi Charisma 2
+	asi Intelligence 1
+	+lang Common
+	+lang Any
+	feature name="Devil's Tongue" {
+		description "You know the vicious mockery cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
 
 upbringing name="Skilled Labor" {
-	You were trained from a young age in a very specialized craft or trade.
-	Ability Score Increase. Your Constitution score increases by 2, and one other ability score of your choice increases by 1.
-	Specialized. You gain one skill proficiency or one tool proficiency of your choice.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were trained from a young age in a very specialized craft or trade."
+	asi Constitution 2
+	asi NotCon 1
+	+lang Common
+	+lang Any
+	feature name="Specialized" {
+		description "You gain one skill proficiency or one tool proficiency of your choice."
+	}
 }
 
 upbringing name="Sleuth" {
-	You were raised among people who solve puzzles or baffling crimes for a living.
-	Ability Score Increase. Your Constitution score increases by 2, and one other ability score of your choice increases by 1.
-	Sleuthing. You are proficient in one of the following skills of your choice: Arcana, History, or Investigation. In addition, your proficiency bonus is doubled for any ability check you make that uses the chosen skill.
-	Languages. You can speak, read, and write Common and your choice of one other standard language of your choice.
+	description "You were raised among people who solve puzzles or baffling crimes for a living."
+	asi Constitution 2
+	asi NotCon 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Sleuthing" {
+		description "You are proficient in one of the following skills of your choice: Arcana, History, or Investigation. In addition, your proficiency bonus is doubled for any ability check you make that uses the chosen skill."
+	}
 }
 
 upbringing name="Spy" {
-	You were raised among elite spies or assassins who trained you from an early age in their secret skills.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Charisma score increases by 1.
-	Cunning Intuition. When you make a Charisma (Performance) or Dexterity (Stealth) check, you can roll a d4 and add the number rolled to the ability check. 
-	Languages. You can speak, read, and write Common and your choice of one other standard language of your choice.
+	description "You were raised among elite spies or assassins who trained you from an early age in their secret skills."
+	asi Dexterity 2
+	asi Charisma 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Cunning Intuition" {
+		description "When you make a Charisma (Performance) or Dexterity (Stealth) check, you can roll a d4 and add the number rolled to the ability check. "
+	}
 }
 
 upbringing name="Stoneworker" {
-	You were raised among stoneworkers who taught you to value vigilance and trained you with weapons that also serve as work tools.
-	Ability Score Increase. Your Constitution score increases by 2, and your Wisdom score increases by 1.
-	Combat Training. You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.
-	Stonecunning. Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
-	Tool Proficiency. You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among stoneworkers who taught you to value vigilance and trained you with weapons that also serve as work tools."
+	asi Constitution 2
+	asi Wisdom 1
+	+lang Common
+	+lang Any
+	+weapon Battleaxe
+	+weapon Handaxe
+	+weapon LightHammer
+	+weapon Warhammer
+	feature name="Tool Proficiency" {
+		description "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+	}
+	feature name="Stonecunning" {
+		description "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+	}
 }
 
 upbringing name="Stony Ground" {
-	You were raised among a people who live beneath or among the rocks.
-	Ability Score Increase. Your Intelligence score increases by 2, and your Dexterity score increases by 1.
-	Stone Camouflage. You have advantage on Dexterity (Stealth) checks to hide in rocky terrain and underground.
-	Languages. You can speak, read, and write Common, one other standard language, and one other language of your choice.
+	description "You were raised among a people who live beneath or among the rocks."
+	asi Intelligence 2
+	asi Dexterity 1
+	+lang Common
+	+lang AnyStandard
+	+lang Any
+	feature name="Stone Camouflage" {
+		description "You have advantage on Dexterity (Stealth) checks to hide in rocky terrain and underground."
+	}
 }
 
 upbringing name="Story Collector" {
-	You were raised among a curious people that value storytelling and barter for lore and history.
-	Ability Score Increase. Your Dexterity score increases by 2, and your Charisma score increases by 1.
-	Curiosity. When you encounter a notable object, such as a magic item, you can correctly recall its original purpose and its creators, whether those were dwarves, elves, humans, yuan-ti, or some other known race. In addition, you can determine the monetary value of objects more than a century old.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among a curious people that value storytelling and barter for lore and history."
+	asi Dexterity 2
+	asi Charisma 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Curiosity" {
+		description "When you encounter a notable object, such as a magic item, you can correctly recall its original purpose and its creators, whether those were dwarves, elves, humans, yuan-ti, or some other known race. In addition, you can determine the monetary value of objects more than a century old."
+	}
 }
 
 upbringing name="Strong and Silent" {
-	You were raised among people used to getting their way by dint of being the strongest.
-	Ability Score Increase. Your Strength score increases by 2, and your Constitution score increases by 1.
-	Imposing Presence. You have proficiency in one of the following skills of your choice: Intimidation or Persuasion.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among people used to getting their way by dint of being the strongest."
+	asi Strength 2
+	asi Constitution 1
+	+lang Common
+	+lang Any
+	feature name="Imposing Presence" {
+		description "You have proficiency in one of the following skills of your choice: Intimidation or Persuasion."
+	}
 }
 
 upbringing name="Stygia" {
-	You were raised in Stygia, the Fifth Hell, or among a people who hail from there.
-	Ability Score Increase. Your Charisma score increases by 2, and your Constitution score increases by 1.
-	Legacy of Stygia. You know the ray of frost cantrip. Charisma is your spellcasting ability for this spell.
-	Languages. You can speak, read, and write Common and Infernal
+	description "You were raised in Stygia, the Fifth Hell, or among a people who hail from there."
+	asi Charisma 2
+	asi Constitution 1
+	+lang Common
+	+lang Infernal
+	feature name="Legacy of Stygia" {
+		description "You know the ray of frost cantrip. Charisma is your spellcasting ability for this spell."
+	}
 }
 
 upbringing name="Survivalist" {
-	You were raised among those who have learned to survive in a trackless wilderness.
-	Ability Score Increase. Your Constitution and Wisdom scores each increase by 1.
-	Hunter’s Lore. You gain proficiency with two of the following skills of your choice: Animal Handling, Nature, Perception, Stealth, and Survival.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were raised among those who have learned to survive in a trackless wilderness."
+	asi Constitution 1
+	asi Wisdom 1
+	+lang Common
+	+lang Any
+	feature name="Hunter's Lore" {
+		description "You gain proficiency with two of the following skills of your choice: Animal Handling, Nature, Perception, Stealth, and Survival."
+	}
 }
 
 upbringing name="Sylvan" {
-	You were raised among a people that live at one with the natural world.
-	Ability Score Increase. Your Wisdom score increases by 2, and your Strength score increases by 1.
-	Speech of Beast and Leaf. You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them.
-	Languages. You can speak, read, and write Common and two other standard languages.
+	description "You were raised among a people that live at one with the natural world."
+	asi Wisdom 2
+	asi Strength 1
+	+lang Common
+	+lang AnyStandard
+	+lang AnyStandard
+	feature name="Speech of Beast and Leaf" {
+		description "You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them."
+	}
 }
 
 upbringing name="Tinker" {
-	You were raised among an inquisitive people who endlessly tinker, invent, and create.
-	Ability Score Increase. Your Intelligence score increases by 2, and your Constitution score increases by 1.
-	Artificer’s Lore. Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.
-	Tinker. You have proficiency with artisan’s tools (tinker’s tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. When you create a device, choose one of the following options:Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song’s end or when it is closed.
-	Languages. You can speak, read, and write Common and one other standard language of your choice.
+	description "You were raised among an inquisitive people who endlessly tinker, invent, and create."
+	asi Intelligence 2
+	asi Constitution 1
+	+lang Common
+	+lang AnyStandard
+	feature name="Artificer's Lore" {
+		description "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+	}
+	feature name="Tinker" {
+		description "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. When you create a device, choose one of the following options:Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+	}
 }
 
 upbringing name="Tracker" {
-	From a young age, you were taught to live in the wild and how to track game or enemies.
-	Ability Score Increase. Your Strength score increases by 2, and your Wisdom score increases by 1.
-	Survival Training. You gain proficiency in the Survival skill.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "From a young age, you were taught to live in the wild and how to track game or enemies."
+	asi Strength 2
+	asi Wisdom 1
+	+lang Common
+	+lang Any
+	+skill Survival
 }
 
 upbringing name="Water Mage" {
-	You were taught from a young age to shape the salty air and water of your homeland.
-	Control Air and Water. You can cast fog cloud with this trait. Starting at 3rd level, you can cast gust of wind with it, and starting at 5th level, you can also cast wall of water with it (see the spell below). Once you cast a spell with this trait, you can’t cast that spell with it again until you finish a long rest. Charisma is your spellcasting ability for these spells.
-	Weapon Training. You have proficiency with the spear, trident, light crossbow, and net.
-	Languages. You can speak, read, and write Common and one other language of your choice.
+	description "You were taught from a young age to shape the salty air and water of your homeland."
+	+lang Common
+	+lang Any
+	+weapon Spear
+	+weapon Trident
+	+weapon CrossbowLight
+	+weapon Net
+	feature name="Control Air and Water" {
+		description "You can cast fog cloud with this trait. Starting at 3rd level, you can cast gust of wind with it, and starting at 5th level, you can also cast wall of water with it (see the spell below). Once you cast a spell with this trait, you can't cast that spell with it again until you finish a long rest. Charisma is your spellcasting ability for these spells."
+	}
 }
