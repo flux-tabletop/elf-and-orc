@@ -1,35 +1,26 @@
 upbringing name="Incognito" {
 	description "You were brought up by those who were not what they seemed."
-	feature name="Ability Score Increase" {
-		description "Your Charisma score increases by 2. In addition, one ability score of your choice increases by 1."
-		mutator "ability_score" {
-			ability "Specific" "Charisma"
-			bonus 2
-		}
-		mutator "ability_score" {
-			ability "AnyOf" {
-				option "Strength"
-				option "Dexterity"
-				option "Constitution"
-				option "Intelligence"
-				option "Wisdom"
-			}
-			bonus 1
-		}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
 	}
-	feature name="Good with People" {
-		description "You gain proficiency with two of the following skills of your choice: Deception, Insight, Intimidation, and Persuasion."
-		mutator "add_proficiency" (Skill)"AnyOf" {
-			option "Deception"
-			option "Insight"
-			option "Intimidation"
-			option "Persuasion"
+	mutator "ability_score" {
+		ability "AnyOf" id="ability" {
+			option "Strength"
+			option "Dexterity"
+			option "Constitution"
+			option "Intelligence"
+			option "Wisdom"
 		}
+		bonus 1
 	}
-	feature name="Langauges" {
-		description "You can speak, read, and write Common and two other languages of your choice."
-		mutator "add_proficiency" (Language)"Specific" "Common"
-		mutator "add_proficiency" (Language)"Any" id="langA"
-		mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "Deception"
+		option "Insight"
+		option "Intimidation"
+		option "Persuasion"
 	}
 }
