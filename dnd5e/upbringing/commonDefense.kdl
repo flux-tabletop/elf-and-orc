@@ -23,7 +23,6 @@ upbringing name="Common Defense" {
 		option "Halfling"
 		option "Orc"
 	}
-	mutator "add_modifier" "Advantage"
 	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightened"
 	// TODO: action not feature
 	feature name="Slinger" {

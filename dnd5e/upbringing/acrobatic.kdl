@@ -12,7 +12,19 @@ upbringing name="Acrobatic" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	mutator "add_proficiency" (Skill)"Specific" "Performance"
 	mutator "add_proficiency" (Skill)"Specific" "Persuasion"
-	// TODO: proficiency in any musical instrument
+	// TODO: tool proficiency selector
+	mutator "add_proficiency" (Tool)"AnyOf" id="tool" {
+		option "Bagpipes"
+		option "Drum"
+		option "Dulcimer"
+		option "Flute"
+		option "Lute"
+		option "Lyre"
+		option "Horn"
+		option "Pan flute"
+		option "Shawm"
+		option "Viol"
+	}
 	feature name="Mirthful Leaps" {
 		description "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal."
 	}
