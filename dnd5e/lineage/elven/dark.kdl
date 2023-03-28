@@ -3,9 +3,9 @@ lineage name="Dark Elven" {
 	mutator "extend_life_expectancy" 375
 	mutator "add_max_height" 27
 	mutator "add_max_height" (Roll)"1d6"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Superior Darkvision" {
-		description "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray. Increase your darkvision's range by 60 feet."
+		description "You have superior vision in dark and dim conditions. You can see in dim light within at least 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
 		mutator "sense" "Darkvision" (Additive)60
 	}
 	feature name="Drow Magic" {

@@ -3,8 +3,8 @@ lineage name="Elven I" {
 	mutator "extend_life_expectancy" 375
 	mutator "add_max_height" 27
 	mutator "add_max_height" (Roll)"1d8"
-	mutator "speed" "Walking" (Minimum)30
-	mutator "sense" "Darkvision" (Minimum)60
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
 	feature name="Fey Ancestry" {
 		description "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
 		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being charmed"

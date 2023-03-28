@@ -3,8 +3,8 @@ lineage name="Elemental (Marid)" {
 	mutator "extend_life_expectancy" 60
 	mutator "add_max_height" 30
 	mutator "add_max_height" (Roll)"1d12"
-	mutator "speed" "Walking" (Minimum)30
-	mutator "speed" "Swimming" (Minimum)30
+	mutator "speed" "Walking" (Base)30
+	mutator "speed" "Swimming" (Base)30
 	mutator "add_defense" "Resistance" (DamageType)"Acid"
 	feature name="Amphibious" {
 		description "You can breathe air and water."

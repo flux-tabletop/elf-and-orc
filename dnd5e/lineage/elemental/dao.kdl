@@ -3,7 +3,7 @@ lineage name="Elemental (Dao)" {
 	mutator "extend_life_expectancy" 60
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Earth Walk" {
 		description "You can move across difficult terrain made of earth or stone without expending extra movement."
 	}

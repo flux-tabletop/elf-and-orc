@@ -3,7 +3,7 @@ lineage name="Eladrin" {
 	mutator "extend_life_expectancy" 375
 	mutator "add_max_height" 27
 	mutator "add_max_height" (Roll)"1d12"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Fey Step" {
 		/* TODO: Eladrin subtypes
 		As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can’t do so again until you finish a long rest.When you reach 3rd level, your Fey Step gains an additional effect based on your season; if the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Charisma modifier:

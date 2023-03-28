@@ -14,9 +14,9 @@ lineage name="Aarakocra" limit=2 {
 	mutator "extend_life_expectancy" 15
 	mutator "add_max_height" 26
 	mutator "add_max_height" (Roll)"1d8"
-	mutator "speed" "Walking" (Minimum)25
+	mutator "speed" "Walking" (Base)25
 	feature name="Flight" {
-		description "You have a flying speed of 20 feet. To use this speed, you can't be wearing medium or heavy armor. If you already have a flying speed, increase it by 20 feet."
+		description "If you aren't wearing medium or heavy armor, increase your flying speed by 20 feet."
 		mutator "speed" "Flying" (Additive)20
 		criteria "has_armor_equipped" inverted=true {
 			kind "Medium"
@@ -45,7 +45,7 @@ lineage name="Firbolg I" {
 	mutator "extend_life_expectancy" 250
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d12"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	mutator "add_action" name="Hidden Step" {
 		description "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest."
 		activation "Bonus"		
@@ -65,7 +65,7 @@ lineage name="Firbolg II" {
 	mutator "extend_life_expectancy" 250
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d12"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Firbolg Magic" {
 		description "You can cast detect magic and disguise self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem to be the height of humans or elves, allowing you to more easily blend in."
 		// TODO: Spellcasting
@@ -77,8 +77,8 @@ lineage name="Gnomish" {
 	mutator "extend_life_expectancy" 225
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
-	mutator "sense" "Darkvision" (Minimum)60
+	mutator "speed" "Walking" (Base)25
+	mutator "sense" "Darkvision" (Base)60
 	feature name="Gnome Cunning" {
 		description "You have advantage on all Intelligence and Charisma saving throws against magic."
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Intelligence" context="magic"
@@ -91,10 +91,10 @@ lineage name="Deep Gnomish" {
 	mutator "extend_life_expectancy" 120
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
-	mutator "sense" "Darkvision" (Minimum)60
+	mutator "speed" "Walking" (Base)25
+	mutator "sense" "Darkvision" (Base)60
 	feature name="Superior Darkvision" {
-		description "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray. Increase your darkvision's range by 60 feet."
+		description "You have superior vision in dark and dim conditions. You can see in dim light within at least 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
 		mutator "sense" "Darkvision" (Additive)60
 	}
 	feature name="Gnome Cunning" {
@@ -108,8 +108,8 @@ lineage name="Forest Gnomish" {
 	mutator "extend_life_expectancy" 225
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
-	mutator "sense" "Darkvision" (Minimum)60
+	mutator "speed" "Walking" (Base)25
+	mutator "sense" "Darkvision" (Base)60
 	feature name="Gnome Cunning" {
 		description "You have advantage on all Wisdom saving throws against magic."
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Wisdom" context="magic"
@@ -125,8 +125,8 @@ lineage name="Rock Gnomish" {
 	mutator "extend_life_expectancy" 225
 	mutator "add_max_height" 18
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
-	mutator "sense" "Darkvision" (Minimum)60
+	mutator "speed" "Walking" (Base)25
+	mutator "sense" "Darkvision" (Base)60
 	feature name="Gnome Cunning" {
 		description "You have advantage on all Wisdom saving throws against magic."
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Wisdom" context="magic"
@@ -146,8 +146,8 @@ lineage name="Goblinoid" {
 	// TODO: Implement double max height
 	//mutator "add_max_height" 18
 	//mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)30
-	mutator "sense" "Darkvision" (Minimum)60
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
 	feature name="Ability Score Increase" {
 		description "Your Dexterity or Constitution score increases by 1. You can't increase an ability score above 17 using this trait."
 		mutator "ability_score" {
@@ -165,7 +165,7 @@ lineage name="Goblin" {
 	mutator "extend_life_expectancy" 30
 	mutator "add_max_height" 21
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Nimble Escape" {
 		description "You can take the Disengage action as a bonus action on each of your turns."
 		// TODO: List Disengage as a Bonus Action
@@ -177,7 +177,7 @@ lineage name="Hobgoblin" {
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Reserves of Strength" {
 		description "When you hit with a Strength-based melee weapon on your turn, you deal extra damage equal to your character level."
 		// TODO: bonus to melee weapon w/ strength based on character level
@@ -189,7 +189,7 @@ lineage name="Bugbear" {
 	mutator "extend_life_expectancy" 40
 	mutator "add_max_height" 36
 	mutator "add_max_height" (Roll)"1d12"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Long-Limbed" {
 		description "When you make a melee attack on your turn, your reach for it is 5 feet greater than normal."
 		// TODO: increase reach for melee attacks
@@ -204,7 +204,7 @@ lineage name="Goliath I" {
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d10"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Stone's Endurance" {
 		description "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest."
 		// TODO: limited use reaction
@@ -216,7 +216,7 @@ lineage name="Goliath II" {
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 37
 	mutator "add_max_height" (Roll)"1d10"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	mutator "add_proficiency" (Skill)"Specific" "Athletics"
 	feature name="Mountain Adaptation" {
 		description "You're acclimated to high altitude, including elevations above 20,000 feet. You're also naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master's Guide. In addition, you are resistant to cold damage."
@@ -232,8 +232,8 @@ lineage name="Grung I" {
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 15
 	mutator "add_max_height" (Roll)"1d6"
-	mutator "speed" "Walking" (Minimum)25
-	mutator "speed" "Climbing" (Minimum)25
+	mutator "speed" "Walking" (Base)25
+	mutator "speed" "Climbing" (Base)25
 	feature name="Amphibious" unique=true {
 		description "You can breathe air and water."
 	}
@@ -254,8 +254,8 @@ lineage name="Grung II" {
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 15
 	mutator "add_max_height" (Roll)"1d6"
-	mutator "speed" "Walking" (Minimum)25
-	mutator "speed" "Climbing" (Minimum)25
+	mutator "speed" "Walking" (Base)25
+	mutator "speed" "Climbing" (Base)25
 	feature name="Amphibious" unique=true {
 		description "You can breathe air and water."
 	}
@@ -272,7 +272,7 @@ lineage name="Halfling" {
 	mutator "extend_life_expectancy" 75
 	mutator "add_max_height" 16
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
+	mutator "speed" "Walking" (Base)25
 	feature name="Childlike Appearance" {
 		description "You have advantage on Deception or Persuasion skill checks (your choice) against creatures of Medium size or larger."
 		// TODO: skill adv with selector
@@ -290,8 +290,8 @@ lineage name="Ghostwise Halfling" {
 	mutator "extend_life_expectancy" 75
 	mutator "add_max_height" 16
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
-	mutator "speed" "Climbing" (Minimum)20
+	mutator "speed" "Walking" (Base)25
+	mutator "speed" "Climbing" (Base)20
 	feature name="Silent Speech" {
 		description "You can speak telepathically to any creatures of your choice within 60 feet of you. A creature understands you only if the two of you share a language."
 	}
@@ -302,7 +302,7 @@ lineage name="Lightfoot Halfling" {
 	mutator "extend_life_expectancy" 75
 	mutator "add_max_height" 16
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
+	mutator "speed" "Walking" (Base)25
 	feature name="Naturally Stealthy" {
 		description "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
 	}
@@ -315,7 +315,7 @@ lineage name="Stout Halfling" {
 	mutator "extend_life_expectancy" 75
 	mutator "add_max_height" 16
 	mutator "add_max_height" (Roll)"1d4"
-	mutator "speed" "Walking" (Minimum)25
+	mutator "speed" "Walking" (Base)25
 	mutator "flag" "ArmorStrengthRequirement" false
 	feature name="Stout Resilience" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
@@ -327,7 +327,7 @@ lineage name="Human I" {
 	mutator "extend_life_expectancy" 50
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	feature name="Ability Score Increase" {
 		description "Choose three ability scores to each increase by 1."
 		mutator "ability_score" {

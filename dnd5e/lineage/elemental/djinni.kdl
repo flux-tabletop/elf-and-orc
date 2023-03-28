@@ -3,7 +3,7 @@ lineage name="Elemental (Djinni)" {
 	mutator "extend_life_expectancy" 60
 	mutator "add_max_height" 28
 	mutator "add_max_height" (Roll)"1d10"
-	mutator "speed" "Walking" (Minimum)30
+	mutator "speed" "Walking" (Base)30
 	mutator "add_defense" "Resistance" (DamageType)"Lightning"
 	mutator "add_defense" "Resistance" (DamageType)"Thunder"
 	feature name="Unending Breath" {
