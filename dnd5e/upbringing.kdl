@@ -1,4 +1,4 @@
-
+//!acrobatic
 upbringing name="Acrobatic" {
 	description "You were raised among acrobats or revelers."
 	mutator "ability_score" {
@@ -18,7 +18,7 @@ upbringing name="Acrobatic" {
 		description "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal."
 	}
 }
-
+//!aerial
 upbringing name="Aerial" {
 	description "You were raised among a people that can fly or glide, whether by biology, invention, or magic."
 	mutator "ability_score" {
@@ -36,7 +36,7 @@ upbringing name="Aerial" {
 		description "If you are flying and dive at least 30 feet straight toward a target and then hit it with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target."
 	}
 }
-
+//!agressive
 upbringing name="Agressive" {
 	description "You were raised among a people who value and reward strength, ferocity, and aggression."
 	mutator "ability_score" {
@@ -59,11 +59,12 @@ upbringing name="Agressive" {
 		option "Orc"
 	}
 	mutator "add_proficiency" (Skill)"Specific" "Intimidation"
+	// TODO: action not feature
 	feature name="Aggressive" {
 		description "As a bonus action, you can move up to your speed toward an enemy of your choice that you can see or hear. You must end this move closer to the enemy than you started."
 	}
 }
-
+//!airship
 upbringing name="Airship" {
 	description "You were raised aboard on an airship among its captains and sailors."
 	mutator "ability_score" {
@@ -89,7 +90,7 @@ upbringing name="Airship" {
 		description "When you make a Dexterity (Acrobatics) check or any ability check involving navigator's tools, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!aquatic
 upbringing name="Aquatic" {
 	description "You were raised among a people that live near or in the sea."
 	mutator "ability_score" {
@@ -110,7 +111,7 @@ upbringing name="Aquatic" {
 		description "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed. "
 	}
 }
-
+//!arboreal
 upbringing name="Arboreal" {
 	description "You were raised among a people who live high in the forest or jungle canopy."
 	mutator "ability_score" {
@@ -124,7 +125,7 @@ upbringing name="Arboreal" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	mutator "add_proficiency" (Skill)"Specific" "Perception"
 }
-
+//!artificer
 upbringing name="Artificer" {
 	description "You were raised among artificers or other magical manufacturers."
 	mutator "ability_score" {
@@ -156,7 +157,7 @@ upbringing name="Artificer" {
 		description "When you make an Arcana check or an ability check involving artisan's tools, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!astral
 upbringing name="Astral" {
 	description "You were raised in the Astral Plane, where time stands still, or among a people who hail from there."
 	mutator "ability_score" {
@@ -170,14 +171,14 @@ upbringing name="Astral" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="langA"
 	mutator "add_proficiency" (Language)"Any" id="langB"
-	feature name="Decadent Mastery" {
-		description "You are proficient with one skill or tool of your choice."
-	}
-	feature name="Martial Prodigy" {
-		description "You are proficient with light and medium armor and with shortswords, longswords, and greatswords."
-	}
+	mutator "add_proficiency" (Armor)"Light"
+	mutator "add_proficiency" (Armor)"Medium"
+	mutator "add_proficiency" (Weapon)"Shortsword"
+	mutator "add_proficiency" (Weapon)"Longsword"
+	mutator "add_proficiency" (Weapon)"Greatsword"
+	// TODO: proficiency with any one skill OR any one tool
 }
-
+//!athletic
 upbringing name="Athletic" {
 	description "From a very young age, you were trained to stay in peak physical shape."
 	mutator "ability_score" {
@@ -195,7 +196,7 @@ upbringing name="Athletic" {
 		option "Perception"
 	}
 }
-
+//!avernus
 upbringing name="Avernus" {
 	description "You were raised in Avernus, the First Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -210,9 +211,10 @@ upbringing name="Avernus" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Avernus" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!banker
 upbringing name="Banker" {
 	description "You were trained from a young age to keep things safe—jewels, secrets, prisoners."
 	mutator "ability_score" {
@@ -238,7 +240,7 @@ upbringing name="Banker" {
 		description "When you make an Intelligence (Investigation) check or an ability check using thieves' tools, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!battleSavant
 upbringing name="Battle Savant" {
 	description "You were trained to wield swords and bows from an early age and tutored in battle strategy."
 	mutator "ability_score" {
@@ -257,7 +259,7 @@ upbringing name="Battle Savant" {
 	mutator "add_proficiency" (Weapon)"Shortbow"
 	mutator "add_proficiency" (Weapon)"Longbow"
 }
-
+//!beastrider
 upbringing name="Beastrider" {
 	description "You were raised among a people who train and ride mounts, whether they be mundane like horses or fantastical like hippogriffs."
 	mutator "ability_score" {
@@ -281,12 +283,13 @@ upbringing name="Beastrider" {
 	}
 	feature name="The Bigger They Are" {
 		description "Starting at 3rd level, you can target a beast or monstrosity when you cast animal friendship or speak with animals, provided the creature's Intelligence score is 3 or lower."
+		// TODO: Spellcasting
 	}
 	feature name="Wild Intuition" {
 		description "When you make a Wisdom (Animal Handling) or Intelligence (Nature) check, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!cania
 upbringing name="Cania" {
 	description "You were raised in Cania, the Eighth Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -301,9 +304,10 @@ upbringing name="Cania" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Cania" {
 		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the burning hands spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
-
+//!caravaneer
 upbringing name="Caravaneer" {
 	description "You were raised among caravaneers, teamsters, wainwrights, wheelwrights, or others invested in overland travel or trade."
 	mutator "ability_score" {
@@ -335,7 +339,7 @@ upbringing name="Caravaneer" {
 		description "When you make a Dexterity (Acrobatics) check or any ability check to operate or maintain a land vehicle, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!combative
 upbringing name="Combative" {
 	description "You were raised among a people that highly value physical strength and valor."
 	mutator "ability_score" {
@@ -362,7 +366,7 @@ upbringing name="Combative" {
 		description "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
 	}
 }
-
+//!commonDefense
 upbringing name="Common Defense" {
 	description "You spent your formative years strengthening your throwing arm and striving to be brave when facing overwhelming odds."
 	mutator "ability_score" {
@@ -390,11 +394,12 @@ upbringing name="Common Defense" {
 	}
 	mutator "add_modifier" "Advantage"
 	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightened"
+	// TODO: action not feature
 	feature name="Slinger" {
 		description "Your throwing arm is a natural weapon that you can use to make ranged attacks as you were wielding a sling, provided you have sling bullets or equivalent."
 	}
 }
-
+//!competitive
 upbringing name="Competitive" {
 	description "You were raised among people who value contests of strength and friendly competition."
 	mutator "ability_score" {
@@ -420,7 +425,7 @@ upbringing name="Competitive" {
 		description "When you see an ally score a critical hit, you can use your reaction to make a melee attack against any one creature within range."
 	}
 }
-
+//!consular
 upbringing name="Consular" {
 	description "You were raised among diplomats, ambassadors, or arbiters."
 	mutator "ability_score" {
@@ -430,11 +435,14 @@ upbringing name="Consular" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="langA"
 	mutator "add_proficiency" (Language)"Any" id="langB"
-	feature name="Skill Versatility" {
-		description "You gain proficiency in two skills of your choice."
+	mutator "add_proficiency" (Skill)"Any" id="skillA" {
+		cannot-match "skillB"
+	}
+	mutator "add_proficiency" (Skill)"Any" id="skillB" {
+		cannot-match "skillA"
 	}
 }
-
+//!cunning
 upbringing name="Cunning" {
 	description "You were raised among a devout people who prize cunning and nimbleness."
 	mutator "ability_score" {
@@ -449,9 +457,10 @@ upbringing name="Cunning" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Infernal Legacy" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!dao
 upbringing name="Dao" {
 	description "You were raised on the Elemental Plane of Earth or in a dao's palace on the Material Plane."
 	mutator "ability_score" {
@@ -466,9 +475,10 @@ upbringing name="Dao" {
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Merge with Stone" {
 		description "You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!defender
 upbringing name="Defender" {
 	description "You were raised to know how to defend yourself and your people."
 	mutator "ability_score" {
@@ -493,7 +503,7 @@ upbringing name="Defender" {
 	mutator "add_proficiency" (Armor)"Light"
 	mutator "add_proficiency" (Armor)"Medium"
 }
-
+//!defiant
 upbringing name="Defiant" {
 	description "You were raised to stand up to others, even those bigger and stronger than you."
 	mutator "ability_score" {
@@ -519,7 +529,7 @@ upbringing name="Defiant" {
 		description "When you damage a creature with an attack or a spell and the creature's size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest."
 	}
 }
-
+//!dexteriousSoldier
 upbringing name="Dexterous Soldier" {
 	description "You were raised to value personal devotion and trained in weapons meant for the nimble and lithe."
 	mutator "ability_score" {
@@ -545,7 +555,7 @@ upbringing name="Dexterous Soldier" {
 	mutator "add_proficiency" (Weapon)"Shortsword"
 	mutator "add_proficiency" (Weapon)"CrossbowHand"
 }
-
+//!djinni
 upbringing name="Djinni" {
 	description "You were raised on the Elemental Plane of Air or in a djinni's palace on the Material Plane."
 	mutator "ability_score" {
@@ -562,7 +572,7 @@ upbringing name="Djinni" {
 		description "You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
 	}
 }
-
+//!dis
 upbringing name="Dis" {
 	description "You were raised in Dis, the Second Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -577,9 +587,10 @@ upbringing name="Dis" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Dis" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!draconic
 upbringing name="Draconic" {
 	description "You were raised among dragonborn or even in the company of dragons."
 	mutator "ability_score" {
@@ -596,16 +607,17 @@ upbringing name="Draconic" {
 		description "You are immune to the Frightful Presence feature of any dragon."
 	}
 }
-
+//!dramatic
 upbringing name="Dramatic" {
 	description "You were raised by a dramatic people who have the uncanny ability to draw attention to themselves."
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
+	// TODO: action not feature
 	feature name="Draw Attention" {
 		description "As an action on your turn, you can distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest."
 	}
 }
-
+//!efretti
 upbringing name="Efretti" {
 	description "You were raised on the Elemental Plane of Fire or in an efreeti's palace on the Material Plane."
 	mutator "ability_score" {
@@ -620,9 +632,10 @@ upbringing name="Efretti" {
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Reach to the Blaze" {
 		description "You know the produce flame cantrip. Constitution is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!fallen
 upbringing name="Fallen" {
 	description "You were touched by dark powers as a youth, replacing any inner light with shadow."
 	mutator "ability_score" {
@@ -635,11 +648,12 @@ upbringing name="Fallen" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
+	// TODO: action not feature
 	feature name="Necrotic Shroud" {
 		description "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing your eyes to turn into pools of darkness and two skeletal, ghostly, flightless wings to sprout from your back. The instant you transform, other creatures within 10 feet of you that can see you must each succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become frightened of you until the end of your next turn. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra necrotic damage equals your level. Once you use this trait, you can't use it again until you finish a long rest."
 	}
 }
-
+//!fierce
 upbringing name="Fierce" {
 	description "You were raised among a people that taught you to stand up for yourself and not back down."
 	mutator "ability_score" {
@@ -653,7 +667,7 @@ upbringing name="Fierce" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Skill)"Specific" "Intimidation"
 }
-
+//!forest
 upbringing name="Forest" {
 	description "You were raised among a people who live at peace with the animals that make their homes in or among trees."
 	mutator "ability_score" {
@@ -679,7 +693,7 @@ upbringing name="Forest" {
 		description "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Your people love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
 	}
 }
-
+//!forger
 upbringing name="Forger" {
 	description "You were raised among forgers and impersonators."
 	mutator "ability_score" {
@@ -694,12 +708,14 @@ upbringing name="Forger" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Charlatan Training" {
 		description "You are proficient in the Deception and Sleight of Hand skills. Mimicry. You can mimic sounds you have heard, including voices. A creature that hears the sounds you make can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check."
+		mutator "add_proficiency" (Skill)"Specific" "Deception"
+		mutator "add_proficiency" (Skill)"Specific" "SleightOfHand"
 	}
 	feature name="Expert Forgery" {
 		description "You can duplicate other creatures' handwriting and craftwork. You have advantage on all checks made to produce forgeries or duplicates of existing objects."
 	}
 }
-
+//!graceful
 upbringing name="Graceful" {
 	description "You were raised among those who value runners, dancers, and acrobats."
 	mutator "ability_score" {
@@ -713,7 +729,7 @@ upbringing name="Graceful" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Skill)"Specific" "Acrobatics"
 }
-
+//!guardian
 upbringing name="Guardian" {
 	description "You were raised among bodyguards, city watch, soldiers, mercenaries, or those employed in other martial trades."
 	mutator "ability_score" {
@@ -739,7 +755,7 @@ upbringing name="Guardian" {
 		description "When you make a Wisdom (Insight) or Wisdom (Perception) check, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!guerrilla
 upbringing name="Guerrilla" {
 	description "You were raised among those skilled in ambushes, snares, or guerrilla warfare."
 	mutator "ability_score" {
@@ -766,7 +782,7 @@ upbringing name="Guerrilla" {
 		description "If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra 2d6 damage to it. You can use this trait only once per combat."
 	}
 }
-
+//!handy
 upbringing name="Handy" {
 	description "You were raised among a people that fed you heartily and made sure you exercised."
 	mutator "ability_score" {
@@ -780,7 +796,7 @@ upbringing name="Handy" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Skill)"Specific" "Athletics"
 }
-
+//!healer
 upbringing name="Healer" {
 	description "You were trained from a young age in the art of healing and medicine."
 	mutator "ability_score" {
@@ -806,7 +822,7 @@ upbringing name="Healer" {
 		description "When you make a Wisdom (Medicine) check or an ability check using an herbalism kit, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!hinterland
 upbringing name="Hinterland" {
 	description "You were raised among people who live far from any cities or villages and struggle mightily to survive."
 	mutator "ability_score" {
@@ -828,11 +844,28 @@ upbringing name="Hinterland" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Primal Intuition" {
-		description "You have proficiency in two of the following skills of your choice: Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, and Survival."
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillA" {
+		cannot-match "skillB"
+		option "AnimalHandling"
+		option "Insight"
+		option "Intimidation"
+		option "Medicine"
+		option "Nature"
+		option "Perception"
+		option "Survival"
+	}
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillB" {
+		cannot-match "skillA"
+		option "AnimalHandling"
+		option "Insight"
+		option "Intimidation"
+		option "Medicine"
+		option "Nature"
+		option "Perception"
+		option "Survival"
 	}
 }
-
+//!hosteler
 upbringing name="Hosteler" {
 	description "You were raised among innkeepers or tavern owners."
 	mutator "ability_score" {
@@ -858,7 +891,7 @@ upbringing name="Hosteler" {
 		description "When you make a Charisma (Persuasion) check or an ability check involving brewer's supplies or cook's utensils, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!hunter
 upbringing name="Hunter" {
 	description "You were raised among a people that taught you to hunt or simply stay alert."
 	mutator "ability_score" {
@@ -872,7 +905,7 @@ upbringing name="Hunter" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Skill)"Specific" "Survival"
 }
-
+//!inquistive
 upbringing name="Inquistive" {
 	description "You were raised among bodyguards and investigators and were trained from a young age in their skills."
 	mutator "ability_score" {
@@ -904,7 +937,7 @@ upbringing name="Inquistive" {
 		description "When you make an Intelligence (Investigation) or a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!insightful
 upbringing name="Insightful" {
 	description "You were trained from a young age to read people and situations like books."
 	mutator "ability_score" {
@@ -920,7 +953,7 @@ upbringing name="Insightful" {
 	mutator "add_proficiency" (Language)"Any" id="langB"
 	mutator "add_proficiency" (Skill)"Specific" "Insight"
 }
-
+//!laborer
 upbringing name="Laborer" {
 	description "You were brought up to perform a specific task or take up a specialized trade."
 	mutator "ability_score" {
@@ -939,11 +972,11 @@ upbringing name="Laborer" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Specialization" {
-		description "You gain one skill proficiency and one tool proficiency of your choice."
-	}
+	mutator "add_proficiency" (Skill)"Any" id="skill"
+	// TODO: Selector for tool
+	mutator "add_proficiency" (Tool)"Any" id="tool"
 }
-
+//!laborSoldier
 upbringing name="Labor Soldier" {
 	description "You were raised among a militant, industrious people whose weapons also serve as work tools."
 	mutator "ability_score" {
@@ -956,17 +989,21 @@ upbringing name="Labor Soldier" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Combat Training" {
-		description "You have proficiency with teh battleaxe, handaxe, light hammer, and warhammer."
-	}
-	feature name="Tool Proficiency" {
-		description "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+	mutator "add_proficiency" (Weapon)"Battlaxe"
+	mutator "add_proficiency" (Weapon)"Handaxe"
+	mutator "add_proficiency" (Weapon)"LightHammer"
+	mutator "add_proficiency" (Weapon)"Warhammer"
+	// TODO: selector for tools
+	mutator "add_proficiency" (Tool)"AnyOf" id="tool" {
+		option "Smith's Tools"
+		option "Brewer's Supplies"
+		option "Mason's Tools"
 	}
 	feature name="Stonecunning" {
 		description "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
 	}
 }
-
+//!limbo
 upbringing name="Limbo" {
 	description "You were raised in the ever - turbulent churn of the plane of Limbo or among a people who hail from there."
 	mutator "ability_score" {
@@ -979,11 +1016,10 @@ upbringing name="Limbo" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Mental Discipline" {
-		description "You have advantage on saving throws against the charmed and frightened conditions."
-	}
+	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being charmed"
+	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightended"
 }
-
+//!mage
 upbringing name="Mage" {
 	description "You were raised among a people who value arcane studies and, as a result, you know some rudimentary magic."
 	mutator "ability_score" {
@@ -998,9 +1034,10 @@ upbringing name="Mage" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Cantrip" {
 		description "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+		// TODO: Spellcasting
 	}
 }
-
+//!malbolge
 upbringing name="Malbolge" {
 	description "You were raised in Malbolge, the Sixth Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -1015,9 +1052,10 @@ upbringing name="Malbolge" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Malbolge" {
 		description "You know the minor illusion cantrip. Charisma is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!maladomini
 upbringing name="Maladomini" {
 	description "You were raised in Maladomini, the Seventh Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -1032,9 +1070,10 @@ upbringing name="Maladomini" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Maladomini" {
 		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the ray of sickness spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
-
+//!marid
 upbringing name="Marid" {
 	description "You were raised on the Elemental Plane of Water or in a marid's palace on the Material Plane."
 	mutator "ability_score" {
@@ -1049,9 +1088,10 @@ upbringing name="Marid" {
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Call to the Wave" {
 		description "You know the shape water cantrip. Constitution is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!maritime
 upbringing name="Maritime" {
 	description "You were raised among sea creatures with whom you have an affinity."
 	mutator "ability_score" {
@@ -1072,7 +1112,7 @@ upbringing name="Maritime" {
 		description "Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water. They can understand the meaning of your words, though you have no special ability to understand them in return."
 	}
 }
-
+//!minauros
 upbringing name="Minauros" {
 	description "You were raised in Minauros, the Third Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -1087,9 +1127,10 @@ upbringing name="Minauros" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Minauros" {
 		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the Tenser's floating disk spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
-
+//!naturalArtisan
 upbringing name="Natural Artisan" {
 	description "You were raised among hunters who eat or make their living on meat."
 	mutator "ability_score" {
@@ -1106,7 +1147,7 @@ upbringing name="Natural Artisan" {
 		description "As part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size Small or larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts or blowgun needles. To use this trait, you need a blade, such as a dagger, or appropriate artisan's tools, such as leatherworker's tools."
 	}
 }
-
+//!nessus
 upbringing name="Nessus" {
 	description "You were raised in Nessus, the Ninth Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -1121,9 +1162,10 @@ upbringing name="Nessus" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Nessus" {
 		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
-
+//!nomadic
 upbringing name="Nomadic" {
 	description "You were raised among a people constantly on the move, whether by choice or at swordpoint."
 	mutator "ability_score" {
@@ -1136,11 +1178,14 @@ upbringing name="Nomadic" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Survivor" {
-		description "You have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival."
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "AnimalHandling"
+		option "Medicine"
+		option "Nature"
+		option "Survival"
 	}
 }
-
+//!pack
 upbringing name="Pack" {
 	description "You were raised by pack animals or by a people who foster a pack mentality."
 	mutator "ability_score" {
@@ -1153,7 +1198,7 @@ upbringing name="Pack" {
 		description "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated."
 	}
 }
-
+//!phlegethos
 upbringing name="Phlegethos" {
 	description "You were raised in Phlegethos, the Fourth Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -1168,9 +1213,10 @@ upbringing name="Phlegethos" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Phlegethos" {
 		description "You know the friends cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
-
+//!predator
 upbringing name="Predator" {
 	description "From a young age, you were taught to hunt using your strength, wits, and power to bring down prey."
 	mutator "ability_score" {
@@ -1183,11 +1229,14 @@ upbringing name="Predator" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Hunter's Instincts" {
-		description "You have proficiency in one of the following skills of your choice: Athletics, Intimidation, Perception, or Survival."
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "Athletics"
+		option "Intimidation"
+		option "Perception"
+		option "Survival"
 	}
 }
-
+//!prospector
 upbringing name="Prospector" {
 	description "You were raised among prospectors, investigators, or bounty hunters."
 	mutator "ability_score" {
@@ -1213,7 +1262,7 @@ upbringing name="Prospector" {
 		description "When you make a Wisdom (Perception) or Wisdom (Survival) check, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!protector
 upbringing name="Protector" {
 	description "From a young age, a celestial offered you advice and directives and urged you to stand against evil."
 	mutator "ability_score" {
@@ -1226,11 +1275,12 @@ upbringing name="Protector" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Specific" "Celestial"
+	// TODO: action not feature
 	feature name="Radiant Soul" {
 		description "Starting at 3rd level, you can use your action to unleash divine energy, causing your eyes to glimmer and two luminous, incorporeal wings to sprout from your back. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you have a flying speed of 30 feet, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage is equal to half your level (rounded up). Once you use this trait, you can't use it again until you finish a long rest."
 	}
 }
-
+//!pyromanic
 upbringing name="Pyromanic" {
 	description "You were raised among devil worshippers or charismatic pyromaniacs."
 	mutator "ability_score" {
@@ -1245,9 +1295,10 @@ upbringing name="Pyromanic" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Hellfire" {
 		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
-
+//!ravenQueenAlly
 upbringing name="Raven Queen (Ally)" {
 	description "You were raised among a people who personally serve the Raven Queen in the Shadowfell."
 	mutator "ability_score" {
@@ -1268,11 +1319,12 @@ upbringing name="Raven Queen (Ally)" {
 		option "Halfling"
 		option "Orc"
 	}
+	// TODO: action not feature
 	feature name="Improved Blessing of the Raven Queen" {
 		description "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest. Starting at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent."
 	}
 }
-
+//!raevnQueenWorshiper
 upbringing name="Raven Queen (Worshiper)" {
 	description "You were raised among a people who venerate the Raven Queen in the Shadowfell."
 	mutator "ability_score" {
@@ -1294,11 +1346,12 @@ upbringing name="Raven Queen (Worshiper)" {
 		option "Halfling"
 		option "Orc"
 	}
+	// TODO: action not feature
 	feature name="Blessing of the Raven Queen" {
 		description "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 	}
 }
-
+//!scourge
 upbringing name="Scourge" {
 	description "At a young age, a celestial imbued you with divine energy that blazes intensely within you."
 	mutator "ability_score" {
@@ -1311,11 +1364,12 @@ upbringing name="Scourge" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Specific" "Celestial"
+	// TODO: action not feature
 	feature name="Radiant Consumption" {
 		description "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing a searing light to radiate from you, pour out of your eyes and mouth, and threaten to char you. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, you and each creature within 10 feet of you take radiant damage equal to half your level (rounded up). In addition, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage equals your level. Once you use this trait, you can't use it again until you finish a long rest."
 	}
 }
-
+//!scout
 upbringing name="Scout" {
 	description "You were trained from a young age to be aware of your surroundings and to wield a sword and bow."
 	mutator "ability_score" {
@@ -1345,7 +1399,7 @@ upbringing name="Scout" {
 		description "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
 	}
 }
-
+//!scribe
 upbringing name="Scribe" {
 	description "You were raised among scribes, notaries, interpreters, cartographers, barristers, heralds, bookbinders, and others who work with words."
 	mutator "ability_score" {
@@ -1371,7 +1425,7 @@ upbringing name="Scribe" {
 		description "When you make an Intelligence (History) check or an ability check using calligrapher's supplies, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
-
+//!sharpWitted
 upbringing name="Sharp-Witted" {
 	description "You were raised among a people who prize biting wit and no-holds-barred wordplay."
 	mutator "ability_score" {
@@ -1386,9 +1440,10 @@ upbringing name="Sharp-Witted" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Devil's Tongue" {
 		description "You know the vicious mockery cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
-
+//!skilledLabor
 upbringing name="Skilled Labor" {
 	description "You were trained from a young age in a very specialized craft or trade."
 	mutator "ability_score" {
@@ -1407,11 +1462,9 @@ upbringing name="Skilled Labor" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Specialized" {
-		description "You gain one skill proficiency or one tool proficiency of your choice."
-	}
+	// TODO: proficiency with any one skill OR tool
 }
-
+//!sleuth
 upbringing name="Sleuth" {
 	description "You were raised among people who solve puzzles or baffling crimes for a living."
 	mutator "ability_score" {
@@ -1439,11 +1492,13 @@ upbringing name="Sleuth" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Sleuthing" {
-		description "You are proficient in one of the following skills of your choice: Arcana, History, or Investigation. In addition, your proficiency bonus is doubled for any ability check you make that uses the chosen skill."
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" level="Double" {
+		option "Arcana"
+		option "History"
+		option "Investigation"
 	}
 }
-
+//!spy
 upbringing name="Spy" {
 	description "You were raised among elite spies or assassins who trained you from an early age in their secret skills."
 	mutator "ability_score" {
@@ -1469,7 +1524,7 @@ upbringing name="Spy" {
 		description "When you make a Charisma (Performance) or Dexterity (Stealth) check, you can roll a d4 and add the number rolled to the ability check. "
 	}
 }
-
+//!stoneworker
 upbringing name="Stoneworker" {
 	description "You were raised among stoneworkers who taught you to value vigilance and trained you with weapons that also serve as work tools."
 	mutator "ability_score" {
@@ -1486,14 +1541,17 @@ upbringing name="Stoneworker" {
 	mutator "add_proficiency" (Weapon)"Handaxe"
 	mutator "add_proficiency" (Weapon)"LightHammer"
 	mutator "add_proficiency" (Weapon)"Warhammer"
-	feature name="Tool Proficiency" {
-		description "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+	// TODO: Selector for tool
+	mutator "add_proficiency" (Tool)"AnyOf" id="tool" {
+		option "Smith's Tools"
+		option "Brewer's Supplies"
+		option "Mason's Tools"
 	}
 	feature name="Stonecunning" {
 		description "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
 	}
 }
-
+//!stonyGround
 upbringing name="Stony Ground" {
 	description "You were raised among a people who live beneath or among the rocks."
 	mutator "ability_score" {
@@ -1518,9 +1576,10 @@ upbringing name="Stony Ground" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Stone Camouflage" {
 		description "You have advantage on Dexterity (Stealth) checks to hide in rocky terrain and underground."
+		mutator "add_modifier" "Advantage" (Skill)"Stealth" context="to hide underground or in rocky terrain"
 	}
 }
-
+//!storyCollector
 upbringing name="Story Collector" {
 	description "You were raised among a curious people that value storytelling and barter for lore and history."
 	mutator "ability_score" {
@@ -1546,7 +1605,7 @@ upbringing name="Story Collector" {
 		description "When you encounter a notable object, such as a magic item, you can correctly recall its original purpose and its creators, whether those were dwarves, elves, humans, yuan-ti, or some other known race. In addition, you can determine the monetary value of objects more than a century old."
 	}
 }
-
+//!strongAndSilent
 upbringing name="Strong and Silent" {
 	description "You were raised among people used to getting their way by dint of being the strongest."
 	mutator "ability_score" {
@@ -1559,11 +1618,12 @@ upbringing name="Strong and Silent" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Imposing Presence" {
-		description "You have proficiency in one of the following skills of your choice: Intimidation or Persuasion."
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "Intimidation"
+		option "Persuasion"
 	}
 }
-
+//!stygia
 upbringing name="Stygia" {
 	description "You were raised in Stygia, the Fifth Hell, or among a people who hail from there."
 	mutator "ability_score" {
@@ -1578,9 +1638,10 @@ upbringing name="Stygia" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Stygia" {
 		description "You know the ray of frost cantrip. Charisma is your spellcasting ability for this spell."
+		// TODO: Spellcasting
 	}
 }
-
+//!survivalist
 upbringing name="Survivalist" {
 	description "You were raised among those who have learned to survive in a trackless wilderness."
 	mutator "ability_score" {
@@ -1593,11 +1654,24 @@ upbringing name="Survivalist" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Hunter's Lore" {
-		description "You gain proficiency with two of the following skills of your choice: Animal Handling, Nature, Perception, Stealth, and Survival."
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillA" {
+		mutator "skillB"
+		option "AnimalHandling"
+		option "Nature"
+		option "Perception"
+		option "Stealth"
+		option "Survival"
+	}
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillB" {
+		mutator "skillA"
+		option "AnimalHandling"
+		option "Nature"
+		option "Perception"
+		option "Stealth"
+		option "Survival"
 	}
 }
-
+//!sylvan
 upbringing name="Sylvan" {
 	description "You were raised among a people that live at one with the natural world."
 	mutator "ability_score" {
@@ -1633,7 +1707,7 @@ upbringing name="Sylvan" {
 		description "You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them."
 	}
 }
-
+//!tinker
 upbringing name="Tinker" {
 	description "You were raised among an inquisitive people who endlessly tinker, invent, and create."
 	mutator "ability_score" {
@@ -1659,10 +1733,12 @@ upbringing name="Tinker" {
 		description "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
 	}
 	feature name="Tinker" {
-		description "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. When you create a device, choose one of the following options:Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+		description "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. When you create a device, choose one of the following options:"
+		description (Section)"Clockwork Toy" "This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action."
+		description (Section)"Music Box" "When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
 	}
 }
-
+//!tracker
 upbringing name="Tracker" {
 	description "From a young age, you were taught to live in the wild and how to track game or enemies."
 	mutator "ability_score" {
@@ -1677,7 +1753,7 @@ upbringing name="Tracker" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	mutator "add_proficiency" (Skill)"Specific" "Survival"
 }
-
+//!waterMage
 upbringing name="Water Mage" {
 	description "You were taught from a young age to shape the salty air and water of your homeland."
 	mutator "add_proficiency" (Language)"Specific" "Common"
@@ -1688,5 +1764,6 @@ upbringing name="Water Mage" {
 	mutator "add_proficiency" (Weapon)"Net"
 	feature name="Control Air and Water" {
 		description "You can cast fog cloud with this trait. Starting at 3rd level, you can cast gust of wind with it, and starting at 5th level, you can also cast wall of water with it (see the spell below). Once you cast a spell with this trait, you can't cast that spell with it again until you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
 	}
 }
