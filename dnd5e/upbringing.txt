@@ -9,11 +9,11 @@ upbringing name="Acrobatic" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+skill Performance
-	+skill Persuasion
-	+tool AnyMusicalInstrument
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"Specific" "Performance"
+	mutator "add_proficiency" (Skill)"Specific" "Persuasion"
+	// TODO: proficiency in any musical instrument
 	feature name="Mirthful Leaps" {
 		description "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal."
 	}
@@ -29,9 +29,9 @@ upbringing name="Aerial" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
 	feature name="Dive Attack" {
 		description "If you are flying and dive at least 30 feet straight toward a target and then hit it with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target."
 	}
@@ -47,9 +47,18 @@ upbringing name="Agressive" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+skill Intimidation
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Skill)"Specific" "Intimidation"
 	feature name="Aggressive" {
 		description "As a bonus action, you can move up to your speed toward an enemy of your choice that you can see or hear. You must end this move closer to the enemy than you started."
 	}
@@ -65,8 +74,17 @@ upbringing name="Airship" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Windwright's Intuition" {
 		description "When you make a Dexterity (Acrobatics) check or any ability check involving navigator's tools, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -82,12 +100,12 @@ upbringing name="Aquatic" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+weapon Spear
-	+weapon Trident
-	+weapon CrossbowLight
-	+weapon Net
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Weapon)"Spear"
+	mutator "add_proficiency" (Weapon)"Trident"
+	mutator "add_proficiency" (Weapon)"CrossbowLight"
+	mutator "add_proficiency" (Weapon)"Net"
 	feature name="Friend of the Sea" {
 		description "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed. "
 	}
@@ -103,8 +121,8 @@ upbringing name="Arboreal" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Any
-	+skill Perception
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"Specific" "Perception"
 }
 
 upbringing name="Artificer" {
@@ -114,7 +132,7 @@ upbringing name="Artificer" {
 		bonus 2
 	}
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Str"
 			option "Dex"
 			option "Con"
@@ -123,8 +141,17 @@ upbringing name="Artificer" {
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Artisan's Intuition" {
 		description "When you make an Arcana check or an ability check involving artisan's tools, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -140,9 +167,9 @@ upbringing name="Astral" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
 	feature name="Decadent Mastery" {
 		description "You are proficient with one skill or tool of your choice."
 	}
@@ -161,9 +188,12 @@ upbringing name="Athletic" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+skill [Athletics or Perception]
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "Athletics"
+		option "Perception"
+	}
 }
 
 upbringing name="Avernus" {
@@ -176,8 +206,8 @@ upbringing name="Avernus" {
 		ability "Specific" "Strength"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Avernus" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
 	}
@@ -193,8 +223,17 @@ upbringing name="Banker" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Warder's Intuition" {
 		description "When you make an Intelligence (Investigation) check or an ability check using thieves' tools, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -210,13 +249,13 @@ upbringing name="Battle Savant" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+lang Any
-	+weapon Longsword
-	+weapon Shortsword
-	+weapon Shortbow
-	+weapon Longbow
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Weapon)"Longsword"
+	mutator "add_proficiency" (Weapon)"Shortsword"
+	mutator "add_proficiency" (Weapon)"Shortbow"
+	mutator "add_proficiency" (Weapon)"Longbow"
 }
 
 upbringing name="Beastrider" {
@@ -229,8 +268,17 @@ upbringing name="Beastrider" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="The Bigger They Are" {
 		description "Starting at 3rd level, you can target a beast or monstrosity when you cast animal friendship or speak with animals, provided the creature's Intelligence score is 3 or lower."
 	}
@@ -249,8 +297,8 @@ upbringing name="Cania" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Cania" {
 		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the burning hands spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
 	}
@@ -263,7 +311,7 @@ upbringing name="Caravaneer" {
 		bonus 2
 	}
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Str"
 			option "Con"
 			option "Wis"
@@ -272,8 +320,17 @@ upbringing name="Caravaneer" {
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Intuitive Motion" {
 		description "When you make a Dexterity (Acrobatics) check or any ability check to operate or maintain a land vehicle, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -289,9 +346,18 @@ upbringing name="Combative" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+skill Intimidation
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Skill)"Specific" "Intimidation"
 	feature name="Formidable Attacks" {
 		description "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
 	}
@@ -304,16 +370,26 @@ upbringing name="Common Defense" {
 		bonus 2
 	}
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Con"
 			option "Wis"
 			option "Cha"
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+modify-save Adv "being frightened"
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_modifier" "Advantage"
+	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightened"
 	feature name="Slinger" {
 		description "Your throwing arm is a natural weapon that you can use to make ranged attacks as you were wielding a sling, provided you have sling bullets or equivalent."
 	}
@@ -329,8 +405,17 @@ upbringing name="Competitive" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Competitive" {
 		description "When you see an ally score a critical hit, you can use your reaction to make a melee attack against any one creature within range."
 	}
@@ -342,9 +427,9 @@ upbringing name="Consular" {
 		ability "Specific" "Charisma"
 		bonus 2
 	}
-	+lang Common
-	+lang Any
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
 	feature name="Skill Versatility" {
 		description "You gain proficiency in two skills of your choice."
 	}
@@ -360,9 +445,9 @@ upbringing name="Cunning" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	feature name="Infernal Legacy(?)" {
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	feature name="Infernal Legacy" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
 	}
 }
@@ -377,8 +462,8 @@ upbringing name="Dao" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang Primordial
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Merge with Stone" {
 		description "You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
 	}
@@ -394,10 +479,19 @@ upbringing name="Defender" {
 		ability "Specific" "Strength"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+armor Light
-	+armor Medium
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Armor)"Light"
+	mutator "add_proficiency" (Armor)"Medium"
 }
 
 upbringing name="Defiant" {
@@ -410,8 +504,17 @@ upbringing name="Defiant" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Fury of the Small" {
 		description "When you damage a creature with an attack or a spell and the creature's size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest."
 	}
@@ -427,11 +530,20 @@ upbringing name="Dexterous Soldier" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+weapon Rapier
-	+weapon Shortsword
-	+weapon CrossbowHand
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Weapon)"Rapier"
+	mutator "add_proficiency" (Weapon)"Shortsword"
+	mutator "add_proficiency" (Weapon)"CrossbowHand"
 }
 
 upbringing name="Djinni" {
@@ -444,8 +556,8 @@ upbringing name="Djinni" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang Primordial
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Mingle with the Wind" {
 		description "You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
 	}
@@ -461,8 +573,8 @@ upbringing name="Dis" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Dis" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
 	}
@@ -478,8 +590,8 @@ upbringing name="Draconic" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang Draconic
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Draconic"
 	feature name="Dragon Whelp" {
 		description "You are immune to the Frightful Presence feature of any dragon."
 	}
@@ -487,8 +599,8 @@ upbringing name="Draconic" {
 
 upbringing name="Dramatic" {
 	description "You were raised by a dramatic people who have the uncanny ability to draw attention to themselves."
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Draw Attention" {
 		description "As an action on your turn, you can distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest."
 	}
@@ -504,8 +616,8 @@ upbringing name="Efretti" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Primordial
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Reach to the Blaze" {
 		description "You know the produce flame cantrip. Constitution is your spellcasting ability for this spell."
 	}
@@ -521,8 +633,8 @@ upbringing name="Fallen" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Necrotic Shroud" {
 		description "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing your eyes to turn into pools of darkness and two skeletal, ghostly, flightless wings to sprout from your back. The instant you transform, other creatures within 10 feet of you that can see you must each succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become frightened of you until the end of your next turn. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra necrotic damage equals your level. Once you use this trait, you can't use it again until you finish a long rest."
 	}
@@ -538,8 +650,8 @@ upbringing name="Fierce" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+skill Intimidation
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Skill)"Specific" "Intimidation"
 }
 
 upbringing name="Forest" {
@@ -552,8 +664,17 @@ upbringing name="Forest" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Speak with Small Beasts" {
 		description "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Your people love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
 	}
@@ -569,8 +690,8 @@ upbringing name="Forger" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Charlatan Training" {
 		description "You are proficient in the Deception and Sleight of Hand skills. Mimicry. You can mimic sounds you have heard, including voices. A creature that hears the sounds you make can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check."
 	}
@@ -589,8 +710,8 @@ upbringing name="Graceful" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+skill Acrobatics
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Skill)"Specific" "Acrobatics"
 }
 
 upbringing name="Guardian" {
@@ -603,8 +724,17 @@ upbringing name="Guardian" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Sentinel's Intuition" {
 		description "When you make a Wisdom (Insight) or Wisdom (Perception) check, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -620,9 +750,18 @@ upbringing name="Guerrilla" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+skill Stealth
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Skill)"Specific" "Stealth"
 	feature name="Surprise Attack" {
 		description "If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra 2d6 damage to it. You can use this trait only once per combat."
 	}
@@ -638,8 +777,8 @@ upbringing name="Handy" {
 		ability "Specific" "Strength"
 		bonus 1
 	}
-	+lang Common
-	+skill Athletics
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Skill)"Specific" "Athletics"
 }
 
 upbringing name="Healer" {
@@ -652,8 +791,17 @@ upbringing name="Healer" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Medical Intuition" {
 		description "When you make a Wisdom (Medicine) check or an ability check using an herbalism kit, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -669,8 +817,17 @@ upbringing name="Hinterland" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Primal Intuition" {
 		description "You have proficiency in two of the following skills of your choice: Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, and Survival."
 	}
@@ -686,8 +843,17 @@ upbringing name="Hosteler" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Ever Hospitable" {
 		description "When you make a Charisma (Persuasion) check or an ability check involving brewer's supplies or cook's utensils, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -703,8 +869,8 @@ upbringing name="Hunter" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+skill Survival
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Skill)"Specific" "Survival"
 }
 
 upbringing name="Inquistive" {
@@ -714,7 +880,7 @@ upbringing name="Inquistive" {
 		bonus 2
 	}
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Str"
 			option "Dex"
 			option "Con"
@@ -723,8 +889,17 @@ upbringing name="Inquistive" {
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Deductive Intuition" {
 		description "When you make an Intelligence (Investigation) or a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -740,10 +915,10 @@ upbringing name="Insightful" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+lang Any
-	+skill Insight
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Skill)"Specific" "Insight"
 }
 
 upbringing name="Laborer" {
@@ -753,7 +928,7 @@ upbringing name="Laborer" {
 		bonus 2
 	}
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Str"
 			option "Dex"
 			option "Int"
@@ -762,8 +937,8 @@ upbringing name="Laborer" {
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Specialization" {
 		description "You gain one skill proficiency and one tool proficiency of your choice."
 	}
@@ -779,8 +954,8 @@ upbringing name="Labor Soldier" {
 		ability "Specific" "Strength"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Combat Training" {
 		description "You have proficiency with teh battleaxe, handaxe, light hammer, and warhammer."
 	}
@@ -802,8 +977,8 @@ upbringing name="Limbo" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Mental Discipline" {
 		description "You have advantage on saving throws against the charmed and frightened conditions."
 	}
@@ -819,8 +994,8 @@ upbringing name="Mage" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Cantrip" {
 		description "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
 	}
@@ -836,8 +1011,8 @@ upbringing name="Malbolge" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Malbolge" {
 		description "You know the minor illusion cantrip. Charisma is your spellcasting ability for this spell."
 	}
@@ -853,8 +1028,8 @@ upbringing name="Maladomini" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Maladomini" {
 		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the ray of sickness spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
 	}
@@ -870,8 +1045,8 @@ upbringing name="Marid" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Primordial
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Call to the Wave" {
 		description "You know the shape water cantrip. Constitution is your spellcasting ability for this spell."
 	}
@@ -891,8 +1066,8 @@ upbringing name="Maritime" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Emissary of the Sea" {
 		description "Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water. They can understand the meaning of your words, though you have no special ability to understand them in return."
 	}
@@ -908,8 +1083,8 @@ upbringing name="Minauros" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Minauros" {
 		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the Tenser's floating disk spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
 	}
@@ -925,8 +1100,8 @@ upbringing name="Natural Artisan" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Cunning Artisan" {
 		description "As part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size Small or larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts or blowgun needles. To use this trait, you need a blade, such as a dagger, or appropriate artisan's tools, such as leatherworker's tools."
 	}
@@ -942,8 +1117,8 @@ upbringing name="Nessus" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Nessus" {
 		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
 	}
@@ -959,8 +1134,8 @@ upbringing name="Nomadic" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Survivor" {
 		description "You have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival."
 	}
@@ -972,8 +1147,8 @@ upbringing name="Pack" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Pack Tactics" {
 		description "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated."
 	}
@@ -989,8 +1164,8 @@ upbringing name="Phlegethos" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Phlegethos" {
 		description "You know the friends cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
 	}
@@ -1006,8 +1181,8 @@ upbringing name="Predator" {
 		ability "Specific" "Strength"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Hunter's Instincts" {
 		description "You have proficiency in one of the following skills of your choice: Athletics, Intimidation, Perception, or Survival."
 	}
@@ -1023,8 +1198,17 @@ upbringing name="Prospector" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Hunter's Intuition" {
 		description "When you make a Wisdom (Perception) or Wisdom (Survival) check, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -1040,8 +1224,8 @@ upbringing name="Protector" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang Celestial
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Celestial"
 	feature name="Radiant Soul" {
 		description "Starting at 3rd level, you can use your action to unleash divine energy, causing your eyes to glimmer and two luminous, incorporeal wings to sprout from your back. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you have a flying speed of 30 feet, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage is equal to half your level (rounded up). Once you use this trait, you can't use it again until you finish a long rest."
 	}
@@ -1057,8 +1241,8 @@ upbringing name="Pyromanic" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Hellfire" {
 		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
 	}
@@ -1067,14 +1251,23 @@ upbringing name="Pyromanic" {
 upbringing name="Raven Queen (Ally)" {
 	description "You were raised among a people who personally serve the Raven Queen in the Shadowfell."
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Dex"
 			option "Con"
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Improved Blessing of the Raven Queen" {
 		description "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest. Starting at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent."
 	}
@@ -1090,8 +1283,17 @@ upbringing name="Raven Queen (Worshiper)" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Blessing of the Raven Queen" {
 		description "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 	}
@@ -1107,8 +1309,8 @@ upbringing name="Scourge" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang Celestial
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Celestial"
 	feature name="Radiant Consumption" {
 		description "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing a searing light to radiate from you, pour out of your eyes and mouth, and threaten to char you. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, you and each creature within 10 feet of you take radiant damage equal to half your level (rounded up). In addition, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage equals your level. Once you use this trait, you can't use it again until you finish a long rest."
 	}
@@ -1124,12 +1326,21 @@ upbringing name="Scout" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+weapon Longsword
-	+weapon Shortsword
-	+weapon Shortbow
-	+weapon Longbow
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Weapon)"Longsword"
+	mutator "add_proficiency" (Weapon)"Shortsword"
+	mutator "add_proficiency" (Weapon)"Shortbow"
+	mutator "add_proficiency" (Weapon)"Longbow"
 	feature name="Mask of the Wild" {
 		description "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
 	}
@@ -1145,8 +1356,17 @@ upbringing name="Scribe" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Gifted Scribe" {
 		description "When you make an Intelligence (History) check or an ability check using calligrapher's supplies, you can roll a d4 and add the number rolled to the ability check."
 	}
@@ -1162,8 +1382,8 @@ upbringing name="Sharp-Witted" {
 		ability "Specific" "Intelligence"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Devil's Tongue" {
 		description "You know the vicious mockery cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
 	}
@@ -1176,7 +1396,7 @@ upbringing name="Skilled Labor" {
 		bonus 2
 	}
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Str"
 			option "Dex"
 			option "Int"
@@ -1185,8 +1405,8 @@ upbringing name="Skilled Labor" {
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Specialized" {
 		description "You gain one skill proficiency or one tool proficiency of your choice."
 	}
@@ -1199,7 +1419,7 @@ upbringing name="Sleuth" {
 		bonus 2
 	}
 	mutator "ability_score" {
-		ability "AnyOf" {
+		ability "AnyOf" id="ability" {
 			option "Str"
 			option "Dex"
 			option "Int"
@@ -1208,8 +1428,17 @@ upbringing name="Sleuth" {
 		}
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Sleuthing" {
 		description "You are proficient in one of the following skills of your choice: Arcana, History, or Investigation. In addition, your proficiency bonus is doubled for any ability check you make that uses the chosen skill."
 	}
@@ -1225,8 +1454,17 @@ upbringing name="Spy" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Cunning Intuition" {
 		description "When you make a Charisma (Performance) or Dexterity (Stealth) check, you can roll a d4 and add the number rolled to the ability check. "
 	}
@@ -1242,12 +1480,12 @@ upbringing name="Stoneworker" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+weapon Battleaxe
-	+weapon Handaxe
-	+weapon LightHammer
-	+weapon Warhammer
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Weapon)"Battleaxe"
+	mutator "add_proficiency" (Weapon)"Handaxe"
+	mutator "add_proficiency" (Weapon)"LightHammer"
+	mutator "add_proficiency" (Weapon)"Warhammer"
 	feature name="Tool Proficiency" {
 		description "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
 	}
@@ -1266,9 +1504,18 @@ upbringing name="Stony Ground" {
 		ability "Specific" "Dexterity"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Stone Camouflage" {
 		description "You have advantage on Dexterity (Stealth) checks to hide in rocky terrain and underground."
 	}
@@ -1284,8 +1531,17 @@ upbringing name="Story Collector" {
 		ability "Specific" "Charisma"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Curiosity" {
 		description "When you encounter a notable object, such as a magic item, you can correctly recall its original purpose and its creators, whether those were dwarves, elves, humans, yuan-ti, or some other known race. In addition, you can determine the monetary value of objects more than a century old."
 	}
@@ -1301,8 +1557,8 @@ upbringing name="Strong and Silent" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Imposing Presence" {
 		description "You have proficiency in one of the following skills of your choice: Intimidation or Persuasion."
 	}
@@ -1318,8 +1574,8 @@ upbringing name="Stygia" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang Infernal
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Stygia" {
 		description "You know the ray of frost cantrip. Charisma is your spellcasting ability for this spell."
 	}
@@ -1335,8 +1591,8 @@ upbringing name="Survivalist" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Hunter's Lore" {
 		description "You gain proficiency with two of the following skills of your choice: Animal Handling, Nature, Perception, Stealth, and Survival."
 	}
@@ -1352,9 +1608,27 @@ upbringing name="Sylvan" {
 		ability "Specific" "Strength"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Speech of Beast and Leaf" {
 		description "You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them."
 	}
@@ -1370,8 +1644,17 @@ upbringing name="Tinker" {
 		ability "Specific" "Constitution"
 		bonus 1
 	}
-	+lang Common
-	+lang AnyStandard
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
 	feature name="Artificer's Lore" {
 		description "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
 	}
@@ -1390,19 +1673,19 @@ upbringing name="Tracker" {
 		ability "Specific" "Wisdom"
 		bonus 1
 	}
-	+lang Common
-	+lang Any
-	+skill Survival
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"Specific" "Survival"
 }
 
 upbringing name="Water Mage" {
 	description "You were taught from a young age to shape the salty air and water of your homeland."
-	+lang Common
-	+lang Any
-	+weapon Spear
-	+weapon Trident
-	+weapon CrossbowLight
-	+weapon Net
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Weapon)"Spear"
+	mutator "add_proficiency" (Weapon)"Trident"
+	mutator "add_proficiency" (Weapon)"CrossbowLight"
+	mutator "add_proficiency" (Weapon)"Net"
 	feature name="Control Air and Water" {
 		description "You can cast fog cloud with this trait. Starting at 3rd level, you can cast gust of wind with it, and starting at 5th level, you can also cast wall of water with it (see the spell below). Once you cast a spell with this trait, you can't cast that spell with it again until you finish a long rest. Charisma is your spellcasting ability for these spells."
 	}
