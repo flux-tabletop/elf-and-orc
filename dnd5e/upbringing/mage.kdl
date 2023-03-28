@@ -1,0 +1,17 @@
+upbringing name="Mage" {
+	description "You were raised among a people who value arcane studies and, as a result, you know some rudimentary magic."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	feature name="Cantrip" {
+		description "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+		// TODO: Spellcasting
+	}
+}

@@ -1,0 +1,17 @@
+upbringing name="Malbolge" {
+	description "You were raised in Malbolge, the Sixth Hell, or among a people who hail from there."
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
+	feature name="Legacy of Malbolge" {
+		description "You know the minor illusion cantrip. Charisma is your spellcasting ability for this spell."
+		// TODO: Spellcasting
+	}
+}

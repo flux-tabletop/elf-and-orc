@@ -1,0 +1,19 @@
+upbringing name="Nomadic" {
+	description "You were raised among a people constantly on the move, whether by choice or at swordpoint."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "AnimalHandling"
+		option "Medicine"
+		option "Nature"
+		option "Survival"
+	}
+}

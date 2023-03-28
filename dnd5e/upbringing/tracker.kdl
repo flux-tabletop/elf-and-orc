@@ -1,0 +1,14 @@
+upbringing name="Tracker" {
+	description "From a young age, you were taught to live in the wild and how to track game or enemies."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"Specific" "Survival"
+}

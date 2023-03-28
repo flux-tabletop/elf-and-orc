@@ -1,0 +1,17 @@
+upbringing name="Athletic" {
+	description "From a very young age, you were trained to stay in peak physical shape."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "Athletics"
+		option "Perception"
+	}
+}

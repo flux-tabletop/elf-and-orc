@@ -1,0 +1,20 @@
+upbringing name="Aquatic" {
+	description "You were raised among a people that live near or in the sea."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Weapon)"Spear"
+	mutator "add_proficiency" (Weapon)"Trident"
+	mutator "add_proficiency" (Weapon)"CrossbowLight"
+	mutator "add_proficiency" (Weapon)"Net"
+	feature name="Friend of the Sea" {
+		description "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed. "
+	}
+}

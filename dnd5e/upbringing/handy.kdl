@@ -1,0 +1,13 @@
+upbringing name="Handy" {
+	description "You were raised among a people that fed you heartily and made sure you exercised."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Skill)"Specific" "Athletics"
+}

@@ -1,0 +1,26 @@
+upbringing name="Guerrilla" {
+	description "You were raised among those skilled in ambushes, snares, or guerrilla warfare."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Skill)"Specific" "Stealth"
+	feature name="Surprise Attack" {
+		description "If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra 2d6 damage to it. You can use this trait only once per combat."
+	}
+}

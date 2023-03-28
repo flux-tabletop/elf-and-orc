@@ -1,0 +1,18 @@
+upbringing name="Battle Savant" {
+	description "You were trained to wield swords and bows from an early age and tutored in battle strategy."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Weapon)"Longsword"
+	mutator "add_proficiency" (Weapon)"Shortsword"
+	mutator "add_proficiency" (Weapon)"Shortbow"
+	mutator "add_proficiency" (Weapon)"Longbow"
+}

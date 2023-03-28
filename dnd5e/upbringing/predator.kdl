@@ -1,0 +1,19 @@
+upbringing name="Predator" {
+	description "From a young age, you were taught to hunt using your strength, wits, and power to bring down prey."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "Athletics"
+		option "Intimidation"
+		option "Perception"
+		option "Survival"
+	}
+}

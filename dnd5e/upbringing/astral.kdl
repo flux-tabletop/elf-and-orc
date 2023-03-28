@@ -1,0 +1,20 @@
+upbringing name="Astral" {
+	description "You were raised in the Astral Plane, where time stands still, or among a people who hail from there."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Armor)"Light"
+	mutator "add_proficiency" (Armor)"Medium"
+	mutator "add_proficiency" (Weapon)"Shortsword"
+	mutator "add_proficiency" (Weapon)"Longsword"
+	mutator "add_proficiency" (Weapon)"Greatsword"
+	// TODO: proficiency with any one skill OR any one tool
+}

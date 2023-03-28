@@ -1,0 +1,20 @@
+upbringing name="Skilled Labor" {
+	description "You were trained from a young age in a very specialized craft or trade."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" id="ability" {
+			option "Str"
+			option "Dex"
+			option "Int"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	// TODO: proficiency with any one skill OR tool
+}

@@ -1,0 +1,22 @@
+upbringing name="Laborer" {
+	description "You were brought up to perform a specific task or take up a specialized trade."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" id="ability" {
+			option "Str"
+			option "Dex"
+			option "Int"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"Any" id="skill"
+	// TODO: Selector for tool
+	mutator "add_proficiency" (Tool)"Any" id="tool"
+}

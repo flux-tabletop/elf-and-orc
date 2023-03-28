@@ -1,0 +1,29 @@
+upbringing name="Survivalist" {
+	description "You were raised among those who have learned to survive in a trackless wilderness."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillA" {
+		mutator "skillB"
+		option "AnimalHandling"
+		option "Nature"
+		option "Perception"
+		option "Stealth"
+		option "Survival"
+	}
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillB" {
+		mutator "skillA"
+		option "AnimalHandling"
+		option "Nature"
+		option "Perception"
+		option "Stealth"
+		option "Survival"
+	}
+}

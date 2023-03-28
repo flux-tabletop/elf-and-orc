@@ -1,0 +1,31 @@
+upbringing name="Inquistive" {
+	description "You were raised among bodyguards and investigators and were trained from a young age in their skills."
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" id="ability" {
+			option "Str"
+			option "Dex"
+			option "Con"
+			option "Int"
+			option "Cha"
+		}
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	feature name="Deductive Intuition" {
+		description "When you make an Intelligence (Investigation) or a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the ability check."
+	}
+}

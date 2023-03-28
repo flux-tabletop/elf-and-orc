@@ -1,0 +1,29 @@
+upbringing name="Scout" {
+	description "You were trained from a young age to be aware of your surroundings and to wield a sword and bow."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Weapon)"Longsword"
+	mutator "add_proficiency" (Weapon)"Shortsword"
+	mutator "add_proficiency" (Weapon)"Shortbow"
+	mutator "add_proficiency" (Weapon)"Longbow"
+	feature name="Mask of the Wild" {
+		description "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+	}
+}

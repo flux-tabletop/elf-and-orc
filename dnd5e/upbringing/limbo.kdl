@@ -1,0 +1,15 @@
+upbringing name="Limbo" {
+	description "You were raised in the ever - turbulent churn of the plane of Limbo or among a people who hail from there."
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being charmed"
+	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightended"
+}

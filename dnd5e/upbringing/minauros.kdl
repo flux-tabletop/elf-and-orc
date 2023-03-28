@@ -1,0 +1,17 @@
+upbringing name="Minauros" {
+	description "You were raised in Minauros, the Third Hell, or among a people who hail from there."
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Infernal"
+	feature name="Legacy of Minauros" {
+		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the Tenser's floating disk spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
+	}
+}

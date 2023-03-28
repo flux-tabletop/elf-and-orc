@@ -1,0 +1,26 @@
+upbringing name="Combative" {
+	description "You were raised among a people that highly value physical strength and valor."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Skill)"Specific" "Intimidation"
+	feature name="Formidable Attacks" {
+		description "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+	}
+}

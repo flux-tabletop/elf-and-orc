@@ -1,0 +1,17 @@
+upbringing name="Marid" {
+	description "You were raised on the Elemental Plane of Water or in a marid's palace on the Material Plane."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Primordial"
+	feature name="Call to the Wave" {
+		description "You know the shape water cantrip. Constitution is your spellcasting ability for this spell."
+		// TODO: Spellcasting
+	}
+}

@@ -1,0 +1,16 @@
+upbringing name="Consular" {
+	description "You were raised among diplomats, ambassadors, or arbiters."
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Skill)"Any" id="skillA" {
+		cannot-match "skillB"
+	}
+	mutator "add_proficiency" (Skill)"Any" id="skillB" {
+		cannot-match "skillA"
+	}
+}

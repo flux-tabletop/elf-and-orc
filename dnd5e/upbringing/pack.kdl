@@ -1,0 +1,12 @@
+upbringing name="Pack" {
+	description "You were raised by pack animals or by a people who foster a pack mentality."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	feature name="Pack Tactics" {
+		description "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated."
+	}
+}

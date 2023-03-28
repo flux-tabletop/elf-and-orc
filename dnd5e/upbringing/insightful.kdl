@@ -1,0 +1,15 @@
+upbringing name="Insightful" {
+	description "You were trained from a young age to read people and situations like books."
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	mutator "add_proficiency" (Skill)"Specific" "Insight"
+}

@@ -1,0 +1,32 @@
+upbringing name="Common Defense" {
+	description "You spent your formative years strengthening your throwing arm and striving to be brave when facing overwhelming odds."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" id="ability" {
+			option "Con"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_modifier" "Advantage"
+	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightened"
+	// TODO: action not feature
+	feature name="Slinger" {
+		description "Your throwing arm is a natural weapon that you can use to make ranged attacks as you were wielding a sling, provided you have sling bullets or equivalent."
+	}
+}

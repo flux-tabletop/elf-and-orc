@@ -1,0 +1,27 @@
+upbringing name="Stony Ground" {
+	description "You were raised among a people who live beneath or among the rocks."
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	feature name="Stone Camouflage" {
+		description "You have advantage on Dexterity (Stealth) checks to hide in rocky terrain and underground."
+		mutator "add_modifier" "Advantage" (Skill)"Stealth" context="to hide underground or in rocky terrain"
+	}
+}

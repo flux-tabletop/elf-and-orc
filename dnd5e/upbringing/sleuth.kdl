@@ -1,0 +1,33 @@
+upbringing name="Sleuth" {
+	description "You were raised among people who solve puzzles or baffling crimes for a living."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" id="ability" {
+			option "Str"
+			option "Dex"
+			option "Int"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" level="Double" {
+		option "Arcana"
+		option "History"
+		option "Investigation"
+	}
+}

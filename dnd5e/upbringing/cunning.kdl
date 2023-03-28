@@ -1,0 +1,17 @@
+upbringing name="Cunning" {
+	description "You were raised among a devout people who prize cunning and nimbleness."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	feature name="Infernal Legacy" {
+		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
+		// TODO: Spellcasting
+	}
+}

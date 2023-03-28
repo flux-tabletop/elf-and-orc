@@ -1,0 +1,26 @@
+upbringing name="Labor Soldier" {
+	description "You were raised among a militant, industrious people whose weapons also serve as work tools."
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Weapon)"Battlaxe"
+	mutator "add_proficiency" (Weapon)"Handaxe"
+	mutator "add_proficiency" (Weapon)"LightHammer"
+	mutator "add_proficiency" (Weapon)"Warhammer"
+	// TODO: selector for tools
+	mutator "add_proficiency" (Tool)"AnyOf" id="tool" {
+		option "Smith's Tools"
+		option "Brewer's Supplies"
+		option "Mason's Tools"
+	}
+	feature name="Stonecunning" {
+		description "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+	}
+}

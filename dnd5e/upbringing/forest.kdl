@@ -1,0 +1,25 @@
+upbringing name="Forest" {
+	description "You were raised among a people who live at peace with the animals that make their homes in or among trees."
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	feature name="Speak with Small Beasts" {
+		description "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Your people love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
+	}
+}

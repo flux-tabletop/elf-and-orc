@@ -1,0 +1,29 @@
+upbringing name="Beastrider" {
+	description "You were raised among a people who train and ride mounts, whether they be mundane like horses or fantastical like hippogriffs."
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	feature name="The Bigger They Are" {
+		description "Starting at 3rd level, you can target a beast or monstrosity when you cast animal friendship or speak with animals, provided the creature's Intelligence score is 3 or lower."
+		// TODO: Spellcasting
+	}
+	feature name="Wild Intuition" {
+		description "When you make a Wisdom (Animal Handling) or Intelligence (Nature) check, you can roll a d4 and add the number rolled to the ability check."
+	}
+}

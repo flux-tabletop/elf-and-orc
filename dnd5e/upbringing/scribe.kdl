@@ -1,0 +1,25 @@
+upbringing name="Scribe" {
+	description "You were raised among scribes, notaries, interpreters, cartographers, barristers, heralds, bookbinders, and others who work with words."
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	feature name="Gifted Scribe" {
+		description "When you make an Intelligence (History) check or an ability check using calligrapher's supplies, you can roll a d4 and add the number rolled to the ability check."
+	}
+}

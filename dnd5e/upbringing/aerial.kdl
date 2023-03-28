@@ -1,0 +1,17 @@
+upbringing name="Aerial" {
+	description "You were raised among a people that can fly or glide, whether by biology, invention, or magic."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="langA"
+	mutator "add_proficiency" (Language)"Any" id="langB"
+	feature name="Dive Attack" {
+		description "If you are flying and dive at least 30 feet straight toward a target and then hit it with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target."
+	}
+}

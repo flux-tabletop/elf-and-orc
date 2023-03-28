@@ -1,0 +1,42 @@
+upbringing name="Hinterland" {
+	description "You were raised among people who live far from any cities or villages and struggle mightily to survive."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillA" {
+		cannot-match "skillB"
+		option "AnimalHandling"
+		option "Insight"
+		option "Intimidation"
+		option "Medicine"
+		option "Nature"
+		option "Perception"
+		option "Survival"
+	}
+	mutator "add_proficiency" (Skill)"AnyOf" id="skillB" {
+		cannot-match "skillA"
+		option "AnimalHandling"
+		option "Insight"
+		option "Intimidation"
+		option "Medicine"
+		option "Nature"
+		option "Perception"
+		option "Survival"
+	}
+}

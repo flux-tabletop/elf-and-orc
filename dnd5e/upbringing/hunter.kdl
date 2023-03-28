@@ -1,0 +1,13 @@
+upbringing name="Hunter" {
+	description "You were raised among a people that taught you to hunt or simply stay alert."
+	mutator "ability_score" {
+		ability "Specific" "Wisdom"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Skill)"Specific" "Survival"
+}

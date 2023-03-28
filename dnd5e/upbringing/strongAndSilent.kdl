@@ -1,0 +1,17 @@
+upbringing name="Strong and Silent" {
+	description "You were raised among people used to getting their way by dint of being the strongest."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Constitution"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"AnyOf" id="skill" {
+		option "Intimidation"
+		option "Persuasion"
+	}
+}

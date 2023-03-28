@@ -1,0 +1,31 @@
+upbringing name="Artificer" {
+	description "You were raised among artificers or other magical manufacturers."
+	mutator "ability_score" {
+		ability "Specific" "Intelligence"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "AnyOf" id="ability" {
+			option "Str"
+			option "Dex"
+			option "Con"
+			option "Wis"
+			option "Cha"
+		}
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	feature name="Artisan's Intuition" {
+		description "When you make an Arcana check or an ability check involving artisan's tools, you can roll a d4 and add the number rolled to the ability check."
+	}
+}

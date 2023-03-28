@@ -1,0 +1,13 @@
+upbringing name="Graceful" {
+	description "You were raised among those who value runners, dancers, and acrobats."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Skill)"Specific" "Acrobatics"
+}

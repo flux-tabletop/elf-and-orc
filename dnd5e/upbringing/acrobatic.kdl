@@ -1,0 +1,19 @@
+upbringing name="Acrobatic" {
+	description "You were raised among acrobats or revelers."
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Any" id="lang"
+	mutator "add_proficiency" (Skill)"Specific" "Performance"
+	mutator "add_proficiency" (Skill)"Specific" "Persuasion"
+	// TODO: proficiency in any musical instrument
+	feature name="Mirthful Leaps" {
+		description "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal."
+	}
+}

@@ -1,0 +1,16 @@
+upbringing name="Draconic" {
+	description "You were raised among dragonborn or even in the company of dragons."
+	mutator "ability_score" {
+		ability "Specific" "Strength"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"Specific" "Draconic"
+	feature name="Dragon Whelp" {
+		description "You are immune to the Frightful Presence feature of any dragon."
+	}
+}

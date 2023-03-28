@@ -1,0 +1,25 @@
+upbringing name="Story Collector" {
+	description "You were raised among a curious people that value storytelling and barter for lore and history."
+	mutator "ability_score" {
+		ability "Specific" "Dexterity"
+		bonus 2
+	}
+	mutator "ability_score" {
+		ability "Specific" "Charisma"
+		bonus 1
+	}
+	mutator "add_proficiency" (Language)"Specific" "Common"
+	mutator "add_proficiency" (Language)"AnyOf" id="lang" {
+		option "Common"
+		option "Dwarvish"
+		option "Elvish"
+		option "Giant"
+		option "Gnomish"
+		option "Goblin"
+		option "Halfling"
+		option "Orc"
+	}
+	feature name="Curiosity" {
+		description "When you encounter a notable object, such as a magic item, you can correctly recall its original purpose and its creators, whether those were dwarves, elves, humans, yuan-ti, or some other known race. In addition, you can determine the monetary value of objects more than a century old."
+	}
+}
