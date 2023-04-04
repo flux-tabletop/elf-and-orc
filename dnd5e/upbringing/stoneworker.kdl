@@ -14,7 +14,6 @@ upbringing name="Stoneworker" {
 	mutator "add_proficiency" (Weapon)"Handaxe"
 	mutator "add_proficiency" (Weapon)"LightHammer"
 	mutator "add_proficiency" (Weapon)"Warhammer"
-	// TODO: Selector for tool
 	mutator "add_proficiency" (Tool)"AnyOf" id="tool" {
 		option "Smith's Tools"
 		option "Brewer's Supplies"

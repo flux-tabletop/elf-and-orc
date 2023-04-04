@@ -12,7 +12,6 @@ upbringing name="Acrobatic" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	mutator "add_proficiency" (Skill)"Specific" "Performance"
 	mutator "add_proficiency" (Skill)"Specific" "Persuasion"
-	// TODO: tool proficiency selector
 	mutator "add_proficiency" (Tool)"AnyOf" id="tool" {
 		option "Bagpipes"
 		option "Drum"

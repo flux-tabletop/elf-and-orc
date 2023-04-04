@@ -17,6 +17,8 @@ upbringing name="Laborer" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	mutator "add_proficiency" (Skill)"Any" id="skill"
-	// TODO: Selector for tool
+	// TODO: Tool and Language "Any" should provide a default list
+	// of languages or tools to select from, in addition to a text field.
+	// This can be driven by data by defining languages and tools (tools are kinda taken care of by items).
 	mutator "add_proficiency" (Tool)"Any" id="tool"
 }
