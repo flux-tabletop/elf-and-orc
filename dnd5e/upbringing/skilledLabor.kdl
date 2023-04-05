@@ -16,14 +16,12 @@ upbringing name="Skilled Labor" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	/* TODO: proficiency with any one skill OR tool
-	mutator "pick_one" id="select-prof" {
-		option "Skill" {
+	mutator-todo "pick_one" name="Proficiency" id="select-prof" {
+		option "Mutators" name="Skill" {
 			mutator "add_proficiency" (Skill)"Any" id="skill"
 		}
-		option "Tool" {
+		option "Mutators" name="Tool" {
 			mutator "add_proficiency" (Tool)"Any" id="tool"
 		}
 	}
-	*/
 }
