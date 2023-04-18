@@ -1,14 +1,4 @@
-
-/*
-	Aarakocra
-	One of your birth parents is an aarakocra. You have feathered wings and can fly, and you gain natural weapons in the form of talons.
-	You can choose this birth parent option twice.
-	Age. Your life expectancy increases by 15 years.
-	Size. Your height increases by 26 + 1d8 inches.
-	Speed. Your base walking speed reduces to 25 feet.
-	Flight. You have a flying speed of 20 feet. To use this speed, you can’t be wearing medium or heavy armor. If you already have a flying speed inherited from your other birth parent, increase your flying speed to 50 feet.
-	Talons. Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
-*/
+//!aarakocra
 lineage name="Aarakocra" limit=2 {
 	description "One of your birth parents is an aarakocra. You have feathered wings and can fly, and you gain natural weapons in the form of talons."
 	mutator "extend_life_expectancy" 15
@@ -23,23 +13,21 @@ lineage name="Aarakocra" limit=2 {
 			kind "Heavy"
 		}
 	}
-	feature name="Talons" {
+	mutator "add_action" name="Talons" {
 		description "Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
 		unique // Can only be added once, even if lineage is selected twice
-		action name="Talons" {
-			activation "Action"
-			attack {
-				kind "Melee" reach=5
-				check "AttackRoll" (Ability)"Strength" proficient=true
-				damage {
-					roll (Roll)"1d4"
-					damage_type "Slashing"
-				}
+		activation "Action"
+		attack {
+			kind "Melee" reach=5
+			check "AttackRoll" (Ability)"Strength" proficient=true
+			damage {
+				roll (Roll)"1d4"
+				damage_type "Slashing"
 			}
 		}
 	}
 }
-
+//!firebolg/build
 lineage name="Firbolg I" {
 	description "One of your birth parents is a firbolg. You have inherited a big stature and short bursts of invisibility."
 	mutator "extend_life_expectancy" 250
@@ -59,7 +47,7 @@ lineage name="Firbolg I" {
 		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 	}
 }
-
+//!firebolg/magic
 lineage name="Firbolg II" {
 	description "One of your birth parents is a firbolg. You have inherited innate magicks that help you stay undetected."
 	mutator "extend_life_expectancy" 250
@@ -71,7 +59,7 @@ lineage name="Firbolg II" {
 		// TODO: Spellcasting
 	}
 }
-
+//!gnomish/gnomish
 lineage name="Gnomish" {
 	description "One of your birth parents is a gnome of any type or a mix of gnomish parentages. From your parentage, you have inherited magic resistance luck and can see in the dark."
 	mutator "extend_life_expectancy" 225
@@ -85,7 +73,7 @@ lineage name="Gnomish" {
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Charisma" context="magic"
 	}
 }
-
+//!gnomish/deep
 lineage name="Deep Gnomish" {
 	description "One of your birth parents is a deep gnome. You have inherited keen darkvision and resilience against hostile magic."
 	mutator "extend_life_expectancy" 120
@@ -102,7 +90,7 @@ lineage name="Deep Gnomish" {
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Wisdom" context="magic"
 	}
 }
-
+//!gnomish/forest
 lineage name="Forest Gnomish" {
 	description "One of your birth parents is a forest gnome. You have innate illusionist magic."
 	mutator "extend_life_expectancy" 225
@@ -119,7 +107,7 @@ lineage name="Forest Gnomish" {
 		// TODO: Spellcasting
 	}
 }
-
+//!gnomish/rock
 lineage name="Rock Gnomish" {
 	description "One of your birth parents is a rock gnome. You have a restless mind and resistance to magic."
 	mutator "extend_life_expectancy" 225
@@ -135,7 +123,7 @@ lineage name="Rock Gnomish" {
 		description "When taking a long rest, you need only 2 hours of sleep and can spend the other 6 hours performing light activity."
 	}
 }
-
+//!goblinoid/goblinoid
 lineage name="Goblinoid" {
 	description "One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur.
 	- Your life expectancy is doubled."
@@ -159,7 +147,7 @@ lineage name="Goblinoid" {
 		}
 	}
 }
-
+//!goblinoid/goblin
 lineage name="Goblin" {
 	description "One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small."
 	mutator "extend_life_expectancy" 30
@@ -171,7 +159,7 @@ lineage name="Goblin" {
 		// TODO: List Disengage as a Bonus Action
 	}
 }
-
+//!goblinoid/hobgoblin
 lineage name="Hobgoblin" {
 	description "One of your birth parents is a hobgoblin. You have a wellspring of strength that powers your blows."
 	mutator "extend_life_expectancy" 50
@@ -183,7 +171,7 @@ lineage name="Hobgoblin" {
 		// TODO: bonus to melee weapon w/ strength based on character level
 	}
 }
-
+//!goblinoid/bugbear
 lineage name="Bugbear" {
 	description "One of your birth parents is a bugbear. You have extraordinarily long and sinewy arms."
 	mutator "extend_life_expectancy" 40
@@ -198,7 +186,7 @@ lineage name="Bugbear" {
 		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 	}
 }
-
+//!goliath/build
 lineage name="Goliath I" {
 	description "One of your birth parents is a goliath. You have a hardy body and towering stature."
 	mutator "extend_life_expectancy" 50
@@ -210,7 +198,7 @@ lineage name="Goliath I" {
 		// TODO: limited use reaction
 	}
 }
-
+//!goliath/adapt
 lineage name="Goliath II" {
 	description "One of your birth parents is a goliath. You have inherited adaptations to extreme climates and a strong frame."
 	mutator "extend_life_expectancy" 50
@@ -226,7 +214,7 @@ lineage name="Goliath II" {
 		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 	}
 }
-
+//!grung/jump
 lineage name="Grung I" {
 	description "One of your birth parents is a grung. You have a powerful jump and poison glands."
 	mutator "extend_life_expectancy" 50
@@ -248,7 +236,7 @@ lineage name="Grung I" {
 		activation "Action"
 	}
 }
-
+//!grung/poisonous
 lineage name="Grung II" {
 	description "One of your birth parents is a grung. You have inherited skin that's poisonous to the touch."
 	mutator "extend_life_expectancy" 50
@@ -266,7 +254,7 @@ lineage name="Grung II" {
 		description "Any creature that grapples you or otherwise comes into direct contact with your skin must succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. A poisoned creature no longer in direct contact with you can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 	}
 }
-
+//!halfling/halfling
 lineage name="Halfling" {
 	description "One of your birth parents is a halfling of any type or a mix of halfling parentages. You have inherited innate luck and diminutive form."
 	mutator "extend_life_expectancy" 75
@@ -284,7 +272,7 @@ lineage name="Halfling" {
 		description "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
 	}
 }
-
+//!halfling/ghostwise
 lineage name="Ghostwise Halfling" {
 	description "One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically."
 	mutator "extend_life_expectancy" 75
@@ -296,7 +284,7 @@ lineage name="Ghostwise Halfling" {
 		description "You can speak telepathically to any creatures of your choice within 60 feet of you. A creature understands you only if the two of you share a language."
 	}
 }
-
+//!halfling/lightfoot
 lineage name="Lightfoot Halfling" {
 	description "One of your birth parents is a lightfoot halfling. You inherited instinctive stealth."
 	mutator "extend_life_expectancy" 75
@@ -307,7 +295,7 @@ lineage name="Lightfoot Halfling" {
 		description "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
 	}
 }
-
+//!halfling/scout
 lineage name="Stout Halfling" {
 	description "One of your birth parents is a stout halfling. You inherited vaguely dwarven traits but with a halfling stature.
 	- Your base walking speed is 25 feet.
@@ -321,7 +309,7 @@ lineage name="Stout Halfling" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
 	}
 }
-
+//!human/adaptable
 lineage name="Human I" {
 	description "One of your birth parents is a human. You are adaptable."
 	mutator "extend_life_expectancy" 50
@@ -353,156 +341,355 @@ lineage name="Human I" {
 		}
 	}
 }
-
-/*
-Human II
-One of your birth parents is a human. You inherited a stubborn resiliency.
-Age. Your life expectancy increases by 50 years.
-Size. Your height increases by 28 + 1d10 inches. Age. Your life expectancy increases by 50 years. Size. Your height increases by 28 + 1d10 inches.
-Relentless Endurance. When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest. If you already have the Relentless Endurance trait inherited from your other birth parent, immediately after using this trait, you can use your reaction to take an action.
-*/
-
-/*
-Infernal I
-One of your birth parents is a tiefling or perhaps even a devil. You can take the heat and see in the dark.
-Age. Your life expectancy increases by 55 years.
-Size. Your height increases by 29 + 1d8 inches.
-Darkvision. You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Hellish Resistance. You have resistance to fire damage.
-*/
-
-/*
-Infernal II
-One of your birth parents is a tiefling or perhaps even a devil. You inherited bat-like wings.
-Age. Your life expectancy increases by 55 years.
-Size. Your height increases by 29 + 1d8 inches.
-Winged. You have bat-like wings sprouting from your shoulder blades. You have a flying speed of 20 feet while you aren’t wearing medium or heavy armor.
-*/
-
-/*
-Kenku I
-One of your birth parents is a kenku. Though kenku no longer fly, they still have instincts that help in case of a great fall.
-Age. Your life expectancy increases by 30 years.
-Size. Your height increases by 26 + 1d8 inches.
-Kenku Reflexes. You are proficient in the Acrobatics and Stealth skills.
-Slow Fall. While falling, you can slow the speed at which you descend and halve the bludgeoning damage taken at the end of the fall.
-*/
-
-/*
-Kenku II
-One of your birth parents is a kenku. You have a keen mind and flight instincts.
-Age. Your life expectancy increases by 30 years.
-Size. Your height increases by 26 + 1d8 inches.
-Instinctive Flight. You have advantage on checks made to use air vehicles and magic items that grant the ability to fly, such as brooms of flying or carpets of flying, as well as on checks to maintain concentration on a fly spell you have cast.
-Perfect Memory. You can accurately recall anything you have seen or heard within the past year.
-Talons. Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
-*/
-
-/*
-Kobold I
-One of your birth parents is a kobold. You have inherited the ability to see in the dark and stand against breath weapons.
-Age. Your life expectancy increases by 60 years.
-Size. Your height increases by 13 + 1d4 inches.
-Darkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Dragon's Resistance. You have resistance to a type of damage based on a color of chromatic dragon (choose or roll a d10): 1–2, acid (black); 3–4, cold (white); 5–6, fire (red); 7–8, lightning (blue); 9–10, poison (green).
-*/
-
-/*
-Kobold II
-One of your birth parents is a kobold. You have grown a pair of draconic wings.
-Age. Your life expectancy increases by 60 years.
-Size. Your height increases by 13 + 1d4 inches.
-Sunlight Sensitivity. You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
-Wings. You have a pair of draconic wings. You have a flying speed of 30 feet. To use this speed, you can’t be wearing heavy armor.
-*/
-
-/*
-Kobold III
-One of your birth parents is a kobold. You inherited a restless mind, keen senses, and the magic of an ancient draconic ancestor.
-Age. Your life expectancy increases by 60 years.
-Size. Your height increases by 13 + 1d4 inches.
-Dragon's Magic. You know the fire bolt cantrip. When you reach 3rd level, you can cast the chromatic orb spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the scorching ray spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
-Keen Senses. You have proficiency in the Perception skill.
-Restless. When taking a long rest, you need only 2 hours of sleep and can spend the other 6 hours performing light activity.
-Sunlight Sensitivity. You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
-*/
-
-/*
-Orc I
-One of your birth parents is an orc. You can see in the dark and carry heavy loads.
-Age. Your life expectancy increases by 35 years.
-Size. Your height increases by 27 + 1d8 inches.
-Darkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Powerful Build. You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
-*/
-
-/*
-Orc II
-One of your birth parents is an orc. You inherited a stubborn resiliency.
-Age. Your life expectancy increases by 35 years.
-Size. Your height increases by 27 + 1d8 inches.
-Relentless Endurance. When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest. If you already have the Relentless Endurance trait inherited from your other birth parent, immediately after using this trait, you can use your reaction to take one action.
-*/
-
-/*
-Tortle I
-One of your birth parents is a tortle. You have a soft shell and claws.
-Age. Your life expectancy increases by 25 years.
-Size. Your height increases by 29 + 1d8 inches.
-Claws. Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
-Natural Armor. Your shell provides some protection, giving you a base AC of 14 + your Dexterity modifier. If you are using a shield, you can apply the shield’s bonus as normal. If you already have the Natural Armor trait inherited from your other birth parent, your shell hardens and thickens. You have a base AC of 17, but your Dexterity modifier no longer affects this number and you gain no benefit from wearing armor.
-Shell Defense. You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can’t increase, you have disadvantage on Dexterity saving throws, you can’t take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait.
-*/
-
-/*
-Tortle II
-One of your birth parents is a tortle. You have a soft shell and can hold your breath for a long time.
-Age. Your life expectancy increases by 25 years.
-Size. Your height increases by 29 + 1d8 inches.
-Hold Breath. You can hold your breath for up to 1 hour at a time. You aren’t a natural swimmer, but you can remain underwater for some time before needing to come up for air.
-Natural Armor. Your shell provides some protection, giving you a base AC of 14 + your Dexterity modifier. If you are using a shield, you can apply the shield’s bonus as normal. If you already have the Natural Armor trait inherited from your other birth parent, your shell hardens and thickens. You have a base AC of 17, but your Dexterity modifier no longer affects this number and you gain no benefit from wearing armor.
-Shell Defense. You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can’t increase, you have disadvantage on Dexterity saving throws, you can’t take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait.
-*/
-
-/*
-Triton I
-One of your birth parents is a triton. You can breathe water and swim like a fish.
-Age. Your life expectancy increases by 100 years.
-Size. Your height increases by 27 + 1d10 inches.
-Amphibious. You can breathe air and water.
-Guardians of the Depths. Adapted to the frigid ocean depths, you have resistance to cold damage.
-Swim. You have a swimming speed of 30 feet.
-*/
-
-/*
-Triton II
-One of your birth parents is a triton. You can see in the dark depths and have inborn acid resistance.
-Age. Your life expectancy increases by 100 years.
-Size. Your height increases by 27 + 1d10 inches.
-Darkvision. You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
-Acid Resistance. You have resistance to acid damage.
-*/
-
-/*
-Warforged I
-One of your birth parents is a warforged. You do not require sleep and have built-in protection.
-Age. Your life expectancy is unknown. You halve the effect of any magical aging. If your other birth parent is a warforged, you are immune to magical aging effects.
-Size. Your height increases by 35 + 1d6 inches.
-Sentry’s Rest. When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn’t render you unconscious, and you can see and hear as normal.
-Integrated Protection. Your body has built-in defensive layers, which can be enhanced with armor:
-- You gain a +1 bonus to Armor Class.
-- You can don only armor with which you have proficiency. To don armor, you must incorporate it into your body over the course of 1 hour, during which you remain in contact with the armor. To doff armor, you must spend 1 hour removing it. You can rest while donning or doffing armor in this way.
-- While you live, your armor can’t be removed from your body against your will.
-*/
-
-/*
-Warforged II
-One of your birth parents is a warforged. You have remarkable fortitude.
-Age. Your life expectancy is unknown. You halve the effect of any magical aging. If your other birth parent is a warforged, you are immune to magical aging effects.
-Size. Your height increases by 35 + 1d6 inches.
-Constructed Resilience. You were created to have remarkable fortitude, represented by the following benefits:
-- You have advantage on saving throws against being poisoned, and you have resistance to poison damage.
-- You don’t need to eat, drink, or breathe.
-- You are immune to disease.
-- You don’t need to sleep, and magic can’t put you to sleep.
-*/
+//!human/resilient
+lineage name="Human II" {
+	description "One of your birth parents is a human. You inherited a stubborn resiliency."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_action" name="Relentless Endurance" unique=true {
+		description "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
+		activation "Special"
+		limited_uses {
+			max_uses 1
+			reset_on "Short"
+		}
+	}
+}
+//!infernal/heat
+lineage name="Infernal I" {
+	description "One of your birth parents is a tiefling or perhaps even a devil. You can take the heat and see in the dark."
+	mutator "extend_life_expectancy" 55
+	mutator "add_max_height" 29
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	mutator "add_defense" "Resistance" (DamageType)"Fire"
+}
+//!infernal/wings
+lineage name="Infernal II" {
+	description "One of your birth parents is a tiefling or perhaps even a devil. You inherited bat-like wings."
+	mutator "extend_life_expectancy" 55
+	mutator "add_max_height" 29
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	feature name="Winged" {
+		description "You have bat-like wings sprouting from your shoulder blades. You have a flying speed of 20 feet while you aren't wearing medium or heavy armor."
+		mutator "speed" "Flying" (Base)20
+		criteria "has_armor_equipped" inverted=true {
+			kind "Medium"
+			kind "Heavy"
+		}
+	}
+}
+//!kenku/reflexive
+lineage name="Kenku I" {
+	description "One of your birth parents is a kenku. Though kenku no longer fly, they still have instincts that help in case of a great fall."
+	mutator "extend_life_expectancy" 30
+	mutator "add_max_height" 26
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_proficiency" (Skill)"Specific" "Acrobatics"
+	mutator "add_proficiency" (Skill)"Specific" "Stealth"
+	feature name="Slow Fall" {
+		description "While falling, you can slow the speed at which you descend and halve the bludgeoning damage taken at the end of the fall."
+	}
+}
+//!kenku/keen
+lineage name="Kenku II" {
+	description "One of your birth parents is a kenku. You have a keen mind and flight instincts."
+	mutator "extend_life_expectancy" 30
+	mutator "add_max_height" 26
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	feature name="Instinctive Flight" {
+		description "You have advantage on checks made to use air vehicles and magic items that grant the ability to fly, such as brooms of flying or carpets of flying, as well as on checks to maintain concentration on a fly spell you have cast."
+	}
+	feature name="Perfect Memory" {
+		description "You can accurately recall anything you have seen or heard within the past year."
+	}
+	mutator "add_action" name="Talons" unique=true {
+		description "Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
+		activation "Action"
+		attack {
+			kind "Melee" reach=5
+			check "AttackRoll" (Ability)"Strength" proficient=true
+			damage {
+				roll (Roll)"1d4"
+				damage_type "Slashing"
+			}
+		}
+	}
+}
+//!kobold/resistant
+lineage name="Kobold I" {
+	description "One of your birth parents is a kobold. You have inherited the ability to see in the dark and stand against breath weapons."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 13
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	feature name="Dragon's Resistance" {
+		description "Dragon's Resistance. You have resistance to a type of damage based on a color of chromatic dragon (choose or roll a d10):" {
+			table {
+				headers "d10" "Damage Type"
+				row "1-2" "acid (black)"
+				row "3-4" "cold (white)"
+				row "5-6" "fire (red)"
+				row "7-8" "lightning (blue)"
+				row "9-10" "poison (green)"
+			}
+		}
+		// TODO: add_defense damage type selector
+		mutator-todo "add_defense" "Resistance" "AnyOf" {
+			option (DamageType)"Acid"
+			option (DamageType)"Cold"
+			option (DamageType)"Fire"
+			option (DamageType)"Lightning"
+			option (DamageType)"Poison"
+		}
+	}
+}
+//!kobold/wings
+lineage name="Kobold II" {
+	description "One of your birth parents is a kobold. You have grown a pair of draconic wings."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 13
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)30
+	feature name="Sunlight Sensitivity" {
+		// TODO: Disadvantage on attack rolls and skill for condition
+		description "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+	}
+	feature name="Wings" {
+		description "You have a pair of draconic wings. You have a flying speed of 30 feet. To use this speed, you can't be wearing heavy armor."
+		mutator "speed" "Flying" (Base)30
+		criteria "has_armor_equipped" inverted=true {
+			kind "Heavy"
+		}
+	}
+}
+//!kobold/keen
+lineage name="Kobold III" {
+	description "One of your birth parents is a kobold. You inherited a restless mind, keen senses, and the magic of an ancient draconic ancestor."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 13
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_proficiency" (Skill)"Specific" "Perception"
+	feature name="Restless" {
+		description "When taking a long rest, you need only 2 hours of sleep and can spend the other 6 hours performing light activity."
+	}
+	feature name="Dragon's Magic" {
+		description "You know the fire bolt cantrip. When you reach 3rd level, you can cast the chromatic orb spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the scorching ray spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
+	}
+	feature name="Sunlight Sensitivity" {
+		// TODO: Disadvantage on attack rolls and skill for condition
+		description "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+	}
+}
+//!orc/build
+lineage name="Orc I" {
+	description "One of your birth parents is an orc. You can see in the dark and carry heavy loads."
+	mutator "extend_life_expectancy" 35
+	mutator "add_max_height" 27
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	mutator "add_proficiency" (Skill)"Specific" "Perception"
+	feature name="Powerful Build" {
+		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+	}
+}
+//!orc/resilient
+lineage name="Orc II" {
+	description "One of your birth parents is an orc. You inherited a stubborn resiliency."
+	mutator "extend_life_expectancy" 35
+	mutator "add_max_height" 27
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_action" name="Relentless Endurance" unique=true {
+		description "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
+		activation "Special"
+		limited_uses {
+			max_uses 1
+			reset_on "Short"
+		}
+	}
+}
+//!tortle/build
+lineage name="Tortle I" {
+	description "One of your birth parents is a tortle. You have a soft shell and claws."
+	mutator "extend_life_expectancy" 25
+	mutator "add_max_height" 29
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_action" name="Claws" unique=true {
+		description "Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
+		activation "Action"
+		attack {
+			kind "Melee" reach=5
+			check "AttackRoll" (Ability)"Strength" proficient=true
+			damage {
+				roll (Roll)"1d4"
+				damage_type "Slashing"
+			}
+		}
+	}
+	feature name="Natural Armor" {
+		description "Your shell provides some protection, giving you a base AC of 14 + your Dexterity modifier. If you are using a shield, you can apply the shield's bonus as normal.
+		If you already have the Natural Armor trait inherited from your other birth parent, your shell hardens and thickens. You have a base AC of 17, but your Dexterity modifier no longer affects this number and you gain no benefit from wearing armor."
+		// TODO: Change mutators depending on how many instances of this feature are granted
+		mutator-todo "stack_instances" "Natural Armor" {
+			size 1 {
+				mutator "add_armor_class_formula" base=14 {
+					bonus "Dexterity"
+				}
+			}
+			size 2 {
+				mutator "add_armor_class_formula" base=17
+				mutator-todo // TODO: flag character to never be able to benefit from armor
+			}
+		}
+	}
+	// TODO: Only ever show 1 instance of features which allow stacking
+	mutator "add_action" name="Shell Defense" {
+		description "You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait." {
+			short "Withdraw into shell to get AC bonus and advantage on Strength and Constitution saving throws. While withdrawn, you are prone, have no speed or reactions, disadvantage on Dexterity saving throws, and can only use a bonus action to emerge from your shell."
+		}
+		activation "Action"
+		condition name="Shell Defense" {
+			// TODO: Conditions can imply other conditions
+			imply "basic-rules@dnd5e/condition/prone.kdl"
+			// TODO: Change mutators depending on how many instances of this feature are granted
+			mutator-todo "stack_instances" "Shell Defense" {
+				size 1 {
+					mutator-todo "bonus_ac" 2
+				}
+				size 2 {
+					mutator-todo "bonus_ac" 4
+				}
+			}
+			mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Strength"
+			mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Constitution"
+			mutator-todo "speed" "All" (Set)0
+			mutator "add_modifier" "Disadvantage" (SavingThrow)"Specific" "Dexterity"
+			mutator-todo "action_budget" "Action" (Set)0
+			mutator-todo "action_budget" "Reaction" (Set)0
+		}
+	}
+}
+//!tortle/breath
+lineage name="Tortle II" {
+	description "One of your birth parents is a tortle. You have a soft shell and can hold your breath for a long time."
+	mutator "extend_life_expectancy" 25
+	mutator "add_max_height" 29
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	feature name="Hold Breath" {
+		description "You can hold your breath for up to 1 hour at a time. You aren't a natural swimmer, but you can remain underwater for some time before needing to come up for air."
+	}
+	feature name="Natural Armor" {
+		description "Your shell provides some protection, giving you a base AC of 14 + your Dexterity modifier. If you are using a shield, you can apply the shield's bonus as normal.
+		If you already have the Natural Armor trait inherited from your other birth parent, your shell hardens and thickens. You have a base AC of 17, but your Dexterity modifier no longer affects this number and you gain no benefit from wearing armor."
+		// TODO: Change mutators depending on how many instances of this feature are granted
+		mutator-todo "stack_instances" "Natural Armor" {
+			size 1 {
+				mutator "add_armor_class_formula" base=14 {
+					bonus "Dexterity"
+				}
+			}
+			size 2 {
+				mutator "add_armor_class_formula" base=17
+				mutator-todo // TODO: flag character to never be able to benefit from armor
+			}
+		}
+	}
+	// TODO: Only ever show 1 instance of features which allow stacking
+	mutator "add_action" name="Shell Defense" {
+		description "You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait." {
+			short "Withdraw into shell to get AC bonus and advantage on Strength and Constitution saving throws. While withdrawn, you are prone, have no speed or reactions, disadvantage on Dexterity saving throws, and can only use a bonus action to emerge from your shell."
+		}
+		activation "Action"
+		condition name="Shell Defense" {
+			// TODO: Conditions can imply other conditions
+			imply "basic-rules@dnd5e/condition/prone.kdl"
+			// TODO: Change mutators depending on how many instances of this feature are granted
+			mutator-todo "stack_instances" "Shell Defense" {
+				size 1 {
+					mutator-todo "bonus_ac" 2
+				}
+				size 2 {
+					mutator-todo "bonus_ac" 4
+				}
+			}
+			mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Strength"
+			mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Constitution"
+			mutator-todo "speed" "All" (Set)0
+			mutator "add_modifier" "Disadvantage" (SavingThrow)"Specific" "Dexterity"
+			mutator-todo "action_budget" "Action" (Set)0
+			mutator-todo "action_budget" "Reaction" (Set)0
+		}
+	}
+}
+//!triton/amphibious
+lineage name="Triton I" {
+	description "One of your birth parents is a triton. You can breathe water and swim like a fish."
+	mutator "extend_life_expectancy" 100
+	mutator "add_max_height" 27
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Base)30
+	mutator "speed" "Swimming" (Base)30
+	mutator "add_defense" "Resistance" (DamageType)"Cold"
+	feature name="Amphibious" {
+		description "You can breathe air and water."
+	}
+}
+//!triton/resistant
+lineage name="Triton II" {
+	description "One of your birth parents is a triton. You can see in the dark depths and have inborn acid resistance."
+	mutator "extend_life_expectancy" 100
+	mutator "add_max_height" 27
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	mutator "add_defense" "Resistance" (DamageType)"Acid"
+}
+//!warforged/protected
+lineage name="Warforged I" {
+	description "One of your birth parents is a warforged. You do not require sleep and have built-in protection."
+	// TODO: Age. Your life expectancy is unknown. You halve the effect of any magical aging. If your other birth parent is a warforged, you are immune to magical aging effects.
+	mutator "add_max_height" 35
+	mutator "add_max_height" (Roll)"1d6"
+	mutator "speed" "Walking" (Base)30
+	feature name="Sentry's Rest" {
+		description "When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn't render you unconscious, and you can see and hear as normal."
+	}
+	feature name="Integrated Protection" {
+		description "Your body has built-in defensive layers, which can be enhanced with armor:
+		- You gain a +1 bonus to Armor Class.
+		- You can don only armor with which you have proficiency. To don armor, you must incorporate it into your body over the course of 1 hour, during which you remain in contact with the armor. To doff armor, you must spend 1 hour removing it. You can rest while donning or doffing armor in this way.
+		- While you live, your armor can't be removed from your body against your will."
+		mutator-todo "bonus_ac" 1
+	}
+}
+//!warforged/fortitude
+lineage name="Warforged II" {
+	description "One of your birth parents is a warforged. You have remarkable fortitude."
+	// TODO: Age. Your life expectancy is unknown. You halve the effect of any magical aging. If your other birth parent is a warforged, you are immune to magical aging effects.
+	mutator "add_max_height" 35
+	mutator "add_max_height" (Roll)"1d6"
+	mutator "speed" "Walking" (Base)30
+	feature name="Constructed Resilience" {
+		description "You were created to have remarkable fortitude, represented by the following benefits:
+		- You have advantage on saving throws against being poisoned, and you have resistance to poison damage.
+		- You don't need to eat, drink, or breathe.
+		- You are immune to disease.
+		- You don't need to sleep, and magic can't put you to sleep."
+		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being poisoned"
+		mutator "add_defense" "Resistance" (DamageType)"Poison"
+		mutator-todo "add_defense" "Immunity" "Disease"
+	}
+}
