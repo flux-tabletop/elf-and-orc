@@ -1,0 +1,16 @@
+lineage name="Forest Gnomish" {
+	description "One of your birth parents is a forest gnome. You have innate illusionist magic."
+	mutator "extend_life_expectancy" 225
+	mutator "add_max_height" 18
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)25
+	mutator "sense" "Darkvision" (Base)60
+	feature name="Gnome Cunning" {
+		description "You have advantage on all Wisdom saving throws against magic."
+		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Wisdom" context="magic"
+	}
+	feature name="Natural Illusionist" {
+		description "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
+		// TODO: Spellcasting
+	}
+}

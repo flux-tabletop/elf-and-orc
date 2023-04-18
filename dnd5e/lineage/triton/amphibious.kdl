@@ -1,0 +1,12 @@
+lineage name="Triton I" {
+	description "One of your birth parents is a triton. You can breathe water and swim like a fish."
+	mutator "extend_life_expectancy" 100
+	mutator "add_max_height" 27
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Base)30
+	mutator "speed" "Swimming" (Base)30
+	mutator "add_defense" "Resistance" (DamageType)"Cold"
+	feature name="Amphibious" {
+		description "You can breathe air and water."
+	}
+}

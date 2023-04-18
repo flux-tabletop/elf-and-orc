@@ -1,0 +1,19 @@
+lineage name="Firbolg I" {
+	description "One of your birth parents is a firbolg. You have inherited a big stature and short bursts of invisibility."
+	mutator "extend_life_expectancy" 250
+	mutator "add_max_height" 37
+	mutator "add_max_height" (Roll)"1d12"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_action" name="Hidden Step" {
+		description "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest."
+		activation "Bonus"		
+		apply-condition "Invisible" // TODO: Apply the invisible condition when used
+		limited_uses {
+			max_uses 1
+			reset_on "Short"
+		}
+	}
+	feature name="Powerful Build" {
+		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+	}
+}

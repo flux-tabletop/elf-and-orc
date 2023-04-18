@@ -1,0 +1,15 @@
+lineage name="Goliath II" {
+	description "One of your birth parents is a goliath. You have inherited adaptations to extreme climates and a strong frame."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 37
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_proficiency" (Skill)"Specific" "Athletics"
+	feature name="Mountain Adaptation" {
+		description "You're acclimated to high altitude, including elevations above 20,000 feet. You're also naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master's Guide. In addition, you are resistant to cold damage."
+		mutator "add_defense" "Resistance" (DamageType)"Cold"
+	}
+	feature name="Powerful Build" {
+		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+	}
+}

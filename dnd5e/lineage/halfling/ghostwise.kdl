@@ -1,0 +1,11 @@
+lineage name="Ghostwise Halfling" {
+	description "One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically."
+	mutator "extend_life_expectancy" 75
+	mutator "add_max_height" 16
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)25
+	mutator "speed" "Climbing" (Base)20
+	feature name="Silent Speech" {
+		description "You can speak telepathically to any creatures of your choice within 60 feet of you. A creature understands you only if the two of you share a language."
+	}
+}

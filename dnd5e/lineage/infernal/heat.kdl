@@ -1,0 +1,9 @@
+lineage name="Infernal I" {
+	description "One of your birth parents is a tiefling or perhaps even a devil. You can take the heat and see in the dark."
+	mutator "extend_life_expectancy" 55
+	mutator "add_max_height" 29
+	mutator "add_max_height" (Roll)"1d8"
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	mutator "add_defense" "Resistance" (DamageType)"Fire"
+}

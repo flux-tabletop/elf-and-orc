@@ -1,0 +1,23 @@
+lineage name="Goblinoid" {
+	description "One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur.
+	- Your life expectancy is doubled."
+	// Age. Double the life expectancy increase from your other birth parent to determine your total life expectancy.
+	// Size. Double the height increase from your other birth parent to determine your total height.
+	// TODO: Implement double expectancy
+	//mutator "extend_life_expectancy" 225
+	// TODO: Implement double max height
+	//mutator "add_max_height" 18
+	//mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	feature name="Ability Score Increase" {
+		description "Your Dexterity or Constitution score increases by 1. You can't increase an ability score above 17 using this trait."
+		mutator "ability_score" {
+			ability "AnyOf" {
+				option "Dexterity"
+				option "Constitution"
+			}
+			bonus 1 max-total=17
+		}
+	}
+}

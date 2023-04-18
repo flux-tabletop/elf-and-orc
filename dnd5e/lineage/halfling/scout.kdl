@@ -1,0 +1,13 @@
+lineage name="Stout Halfling" {
+	description "One of your birth parents is a stout halfling. You inherited vaguely dwarven traits but with a halfling stature.
+	- Your base walking speed is 25 feet.
+	- Your speed is not further reduced by wearing armor with a minimum required strength."
+	mutator "extend_life_expectancy" 75
+	mutator "add_max_height" 16
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)25
+	mutator "flag" "ArmorStrengthRequirement" false
+	feature name="Stout Resilience" {
+		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
+	}
+}

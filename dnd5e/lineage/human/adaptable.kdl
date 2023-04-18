@@ -1,0 +1,31 @@
+lineage name="Human I" {
+	description "One of your birth parents is a human. You are adaptable."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 28
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Base)30
+	feature name="Ability Score Increase" {
+		description "Choose three ability scores to each increase by 1."
+		mutator "ability_score" {
+			ability "Any" id="skillA" {
+				cannot-match "skillB"
+				cannot-match "skillC"
+			}
+			bonus 1
+		}
+		mutator "ability_score" {
+			ability "Any" id="skillB" {
+				cannot-match "skillA"
+				cannot-match "skillC"
+			}
+			bonus 1
+		}
+		mutator "ability_score" {
+			ability "Any" id="skillC" {
+				cannot-match "skillA"
+				cannot-match "skillB"
+			}
+			bonus 1
+		}
+	}
+}

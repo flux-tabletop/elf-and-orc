@@ -1,0 +1,11 @@
+lineage name="Goliath I" {
+	description "One of your birth parents is a goliath. You have a hardy body and towering stature."
+	mutator "extend_life_expectancy" 50
+	mutator "add_max_height" 37
+	mutator "add_max_height" (Roll)"1d10"
+	mutator "speed" "Walking" (Base)30
+	feature name="Stone's Endurance" {
+		description "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest."
+		// TODO: limited use reaction
+	}
+}

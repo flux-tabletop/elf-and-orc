@@ -1,0 +1,19 @@
+lineage name="Kobold III" {
+	description "One of your birth parents is a kobold. You inherited a restless mind, keen senses, and the magic of an ancient draconic ancestor."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 13
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)30
+	mutator "add_proficiency" (Skill)"Specific" "Perception"
+	feature name="Restless" {
+		description "When taking a long rest, you need only 2 hours of sleep and can spend the other 6 hours performing light activity."
+	}
+	feature name="Dragon's Magic" {
+		description "You know the fire bolt cantrip. When you reach 3rd level, you can cast the chromatic orb spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the scorching ray spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		// TODO: Spellcasting
+	}
+	feature name="Sunlight Sensitivity" {
+		// TODO: Disadvantage on attack rolls and skill for condition
+		description "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+	}
+}

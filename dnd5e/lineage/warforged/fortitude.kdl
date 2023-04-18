@@ -1,0 +1,17 @@
+lineage name="Warforged II" {
+	description "One of your birth parents is a warforged. You have remarkable fortitude."
+	// TODO: Age. Your life expectancy is unknown. You halve the effect of any magical aging. If your other birth parent is a warforged, you are immune to magical aging effects.
+	mutator "add_max_height" 35
+	mutator "add_max_height" (Roll)"1d6"
+	mutator "speed" "Walking" (Base)30
+	feature name="Constructed Resilience" {
+		description "You were created to have remarkable fortitude, represented by the following benefits:
+		- You have advantage on saving throws against being poisoned, and you have resistance to poison damage.
+		- You don't need to eat, drink, or breathe.
+		- You are immune to disease.
+		- You don't need to sleep, and magic can't put you to sleep."
+		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being poisoned"
+		mutator "add_defense" "Resistance" (DamageType)"Poison"
+		mutator-todo "add_defense" "Immunity" "Disease"
+	}
+}

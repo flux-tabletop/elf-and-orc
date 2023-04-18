@@ -1,0 +1,18 @@
+lineage name="Kobold II" {
+	description "One of your birth parents is a kobold. You have grown a pair of draconic wings."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 13
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)30
+	feature name="Sunlight Sensitivity" {
+		// TODO: Disadvantage on attack rolls and skill for condition
+		description "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+	}
+	feature name="Wings" {
+		description "You have a pair of draconic wings. You have a flying speed of 30 feet. To use this speed, you can't be wearing heavy armor."
+		mutator "speed" "Flying" (Base)30
+		criteria "has_armor_equipped" inverted=true {
+			kind "Heavy"
+		}
+	}
+}

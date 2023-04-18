@@ -1,0 +1,28 @@
+lineage name="Kobold I" {
+	description "One of your birth parents is a kobold. You have inherited the ability to see in the dark and stand against breath weapons."
+	mutator "extend_life_expectancy" 60
+	mutator "add_max_height" 13
+	mutator "add_max_height" (Roll)"1d4"
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	feature name="Dragon's Resistance" {
+		description "Dragon's Resistance. You have resistance to a type of damage based on a color of chromatic dragon (choose or roll a d10):" {
+			table {
+				headers "d10" "Damage Type"
+				row "1-2" "acid (black)"
+				row "3-4" "cold (white)"
+				row "5-6" "fire (red)"
+				row "7-8" "lightning (blue)"
+				row "9-10" "poison (green)"
+			}
+		}
+		// TODO: add_defense damage type selector
+		mutator-todo "add_defense" "Resistance" "AnyOf" {
+			option (DamageType)"Acid"
+			option (DamageType)"Cold"
+			option (DamageType)"Fire"
+			option (DamageType)"Lightning"
+			option (DamageType)"Poison"
+		}
+	}
+}
