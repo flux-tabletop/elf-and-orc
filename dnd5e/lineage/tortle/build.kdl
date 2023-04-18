@@ -4,15 +4,16 @@ lineage name="Tortle I" {
 	mutator "add_max_height" 29
 	mutator "add_max_height" (Roll)"1d8"
 	mutator "speed" "Walking" (Base)30
-	mutator "add_action" name="Claws" unique=true {
+	feature name="Claws" unique=true {
 		description "Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
-		activation "Action"
-		attack {
-			kind "Melee" reach=5
-			check "AttackRoll" (Ability)"Strength" proficient=true
-			damage {
-				roll (Roll)"1d4"
-				damage_type "Slashing"
+		action "Action" {
+			attack {
+				kind "Melee" reach=5
+				check "AttackRoll" (Ability)"Strength" proficient=true
+				damage {
+					roll (Roll)"1d4"
+					damage_type "Slashing"
+				}
 			}
 		}
 	}
@@ -33,29 +34,30 @@ lineage name="Tortle I" {
 		}
 	}
 	// TODO: Only ever show 1 instance of features which allow stacking
-	mutator "add_action" name="Shell Defense" {
+	feature name="Shell Defense" {
 		description "You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait." {
 			short "Withdraw into shell to get AC bonus and advantage on Strength and Constitution saving throws. While withdrawn, you are prone, have no speed or reactions, disadvantage on Dexterity saving throws, and can only use a bonus action to emerge from your shell."
 		}
-		activation "Action"
-		condition "Custom" name="Shell Defense" {
-			// TODO: Conditions can imply other conditions
-			imply "basic-rules@dnd5e/condition/prone.kdl"
-			// TODO: Change mutators depending on how many instances of this feature are granted
-			mutator-todo "stack_instances" "Shell Defense" {
-				size 1 {
-					mutator-todo "bonus_ac" 2
+		action "Action" {
+			condition "Custom" name="Shell Defense" {
+				// TODO: Conditions can imply other conditions
+				imply "basic-rules@dnd5e/condition/prone.kdl"
+				// TODO: Change mutators depending on how many instances of this feature are granted
+				mutator-todo "stack_instances" "Shell Defense" {
+					size 1 {
+						mutator-todo "bonus_ac" 2
+					}
+					size 2 {
+						mutator-todo "bonus_ac" 4
+					}
 				}
-				size 2 {
-					mutator-todo "bonus_ac" 4
-				}
+				mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Strength"
+				mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Constitution"
+				mutator-todo "speed" "All" (Set)0
+				mutator "add_modifier" "Disadvantage" (SavingThrow)"Specific" "Dexterity"
+				mutator-todo "action_budget" "Action" (Set)0
+				mutator-todo "action_budget" "Reaction" (Set)0
 			}
-			mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Strength"
-			mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Constitution"
-			mutator-todo "speed" "All" (Set)0
-			mutator "add_modifier" "Disadvantage" (SavingThrow)"Specific" "Dexterity"
-			mutator-todo "action_budget" "Action" (Set)0
-			mutator-todo "action_budget" "Reaction" (Set)0
 		}
 	}
 }

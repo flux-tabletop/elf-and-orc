@@ -14,8 +14,8 @@ lineage name="Grung I" {
 	feature name="Standing Leap" {
 		description "Your long jump is up to 25 feet and your high jump is up to 15 feet, with or without a running start."
 	}
-	mutator "add_action" name="Poison Weapons" {
+	feature name="Poison Weapons" {
 		description "As an action, you can apply the poison of your skin to any piercing weapon. The next time the weapon sucessfully hits, the target must succeed on a DC 12 Constitution saving throw or take 2d4 poison damage."
-		activation "Action"
+		action "Action"
 	}
 }

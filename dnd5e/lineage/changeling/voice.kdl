@@ -4,8 +4,8 @@ lineage name="Changeling (Voice)" {
 	mutator "add_max_height" 30
 	mutator "add_max_height" (Roll)"1d4"
 	mutator "speed" "Walking" (Base)30
-	mutator "add_action" name="Voice Change" {
+	feature name="Voice Change" {
 		description "As an action, you can change your voice. You can't duplicate the voice of a creature you've never heard. Your appearance remains the same. You keep your mimicked voice until you use an action to revert to your true voice."
-		activation "Action"
+		action "Action"
 	}
 }

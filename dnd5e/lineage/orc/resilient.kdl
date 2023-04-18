@@ -4,12 +4,13 @@ lineage name="Orc II" {
 	mutator "add_max_height" 27
 	mutator "add_max_height" (Roll)"1d8"
 	mutator "speed" "Walking" (Base)30
-	mutator "add_action" name="Relentless Endurance" unique=true {
+	feature name="Relentless Endurance" unique=true {
 		description "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
-		activation "Special"
-		limited_uses {
-			max_uses 1
-			reset_on "Short"
+		action "Special" {
+			limited_uses {
+				max_uses 1
+				reset_on "Short"
+			}
 		}
 	}
 }
