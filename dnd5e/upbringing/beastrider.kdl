@@ -21,7 +21,6 @@ upbringing name="Beastrider" {
 	}
 	feature name="The Bigger They Are" {
 		description "Starting at 3rd level, you can target a beast or monstrosity when you cast animal friendship or speak with animals, provided the creature's Intelligence score is 3 or lower."
-		// TODO: Spellcasting
 	}
 	feature name="Wild Intuition" {
 		description "When you make a Wisdom (Animal Handling) or Intelligence (Nature) check, you can roll a d4 and add the number rolled to the ability check."

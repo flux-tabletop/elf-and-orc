@@ -15,8 +15,27 @@ lineage name="Gray Dwarven" {
 		description "You have advantage on saving throws against illusions and against being charmed or paralyzed."
 	}
 	feature name="Duergar Magic" {
-		// TODO: Spellcasting
 		description "When you reach 3rd level, you can cast the enlarge/reduce spell on yourself once with this trait, using only the spell's enlarge option. When you reach 5th level, you can cast the invisibility spell on yourself once with this trait. You don't need material components for either spell, and you can't cast them while you're in direct sunlight, although sunlight has no effect on them once cast. You regain the ability to cast these spells with this trait when you finish a long rest. Intelligence is your spellcasting ability for these spells."
+		mutator-todo "by_level" {
+			level 3 {
+				mutator-todo "spellcasting" "add_prepared" ability="Intelligence" {
+					spell "basic-rules@dnd5e/spells/enlargeReduce.kdl"
+					limited_use {
+						max_uses 1
+						reset_on "Long"
+					}
+				}
+			}
+			level 5 {
+				mutator-todo "spellcasting" "add_prepared" ability="Intelligence" {
+					spell "basic-rules@dnd5e/spells/invisibility.kdl"
+					limited_use {
+						max_uses 1
+						reset_on "Long"
+					}
+				}
+			}
+		}
 	}
 	feature name="Sunlight Sensitivity" {
 		// TODO: Disadvantage on attack rolls and skill for condition
