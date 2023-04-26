@@ -11,7 +11,7 @@ lineage name="Forest Gnomish" {
 	}
 	feature name="Natural Illusionist" {
 		description "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
-		mutator-todo "spellcasting" "add_prepared" ability="Intelligence" {
+		mutator "spellcasting" "add_prepared" ability="Intelligence" {
 			spell "basic-rules@dnd5e/spells/minorIllusion.kdl"
 		}
 	}
