@@ -12,14 +12,14 @@ upbringing name="Cania" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Cania" {
 		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the burning hands spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
-		mutator-todo "by_level" {
+		mutator "by_level" {
 			level 1 {
-				mutator-todo "spellcasting" "add_prepared" ability="Charisma" {
+				mutator "spellcasting" "add_prepared" ability="Charisma" {
 					spell "basic-rules@dnd5e/spells/mageHand.kdl"
 				}
 			}
 			level 3 {
-				mutator-todo "spellcasting" "add_prepared" ability="Charisma" {
+				mutator "spellcasting" "add_prepared" ability="Charisma" {
 					spell "basic-rules@dnd5e/spells/burningHands.kdl"
 					limited_use {
 						max_uses 1
