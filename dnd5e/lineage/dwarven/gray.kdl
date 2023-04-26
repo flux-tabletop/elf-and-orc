@@ -19,7 +19,7 @@ lineage name="Gray Dwarven" {
 		mutator "by_level" {
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Intelligence" {
-					spell "basic-rules@dnd5e/spells/enlargeReduce.kdl"
+					spell "local://basic-rules@dnd5e/spells/enlargeReduce.kdl"
 					limited_use {
 						max_uses 1
 						reset_on "Long"
@@ -28,7 +28,7 @@ lineage name="Gray Dwarven" {
 			}
 			level 5 {
 				mutator "spellcasting" "add_prepared" ability="Intelligence" {
-					spell "basic-rules@dnd5e/spells/invisibility.kdl"
+					spell "local://basic-rules@dnd5e/spells/invisibility.kdl"
 					limited_use {
 						max_uses 1
 						reset_on "Long"

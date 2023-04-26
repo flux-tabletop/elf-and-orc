@@ -9,7 +9,7 @@ upbringing name="Abjurer" {
 		mutator "by_level" {
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
-					spell "basic-rules@dnd5e/spells/suggestion.kdl"
+					spell "local://basic-rules@dnd5e/spells/suggestion.kdl"
 					limited_use {
 						max_uses 1
 						reset_on "Long"

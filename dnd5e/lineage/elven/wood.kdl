@@ -10,7 +10,7 @@ lineage name="Wood Eleven" {
 		mutator "by_level" {
 			level 5 {
 				mutator "spellcasting" "add_prepared" ability="Wisdom" {
-					spell "basic-rules@dnd5e/spells/passWithoutTrace.kdl"
+					spell "local://basic-rules@dnd5e/spells/passWithoutTrace.kdl"
 					limited_use {
 						max_uses 1
 						reset_on "Long"

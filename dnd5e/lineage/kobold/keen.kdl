@@ -13,7 +13,7 @@ lineage name="Kobold III" {
 		mutator "by_level" {
 			level 1 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
-					spell "basic-rules@dnd5e/spells/fireBolt.kdl"
+					spell "local://basic-rules@dnd5e/spells/fireBolt.kdl"
 				}
 			}
 			level 3 {
@@ -27,7 +27,7 @@ lineage name="Kobold III" {
 			}
 			level 5 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
-					spell "basic-rules@dnd5e/spells/scorchingRay.kdl"
+					spell "local://basic-rules@dnd5e/spells/scorchingRay.kdl"
 					limited_use {
 						max_uses 1
 						reset_on "Long"

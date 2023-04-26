@@ -13,7 +13,7 @@ upbringing name="Avernus" {
 	feature name="Legacy of Avernus" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
-			spell "basic-rules@dnd5e/spells/thaumaturgy.kdl"
+			spell "local://basic-rules@dnd5e/spells/thaumaturgy.kdl"
 		}
 	}
 }
