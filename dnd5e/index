@@ -3,7 +3,8 @@ lineage/celestial/celestial_1.kdl
 lineage/celestial/celestial_2.kdl
 lineage/changeling/shape.kdl
 lineage/changeling/voice.kdl
-lineage/draconic.kdl
+lineage/draconic/breath_weapon.kdl
+lineage/draconic/resistant.kdl
 lineage/dwarven/dwarven.kdl
 lineage/dwarven/gray.kdl
 lineage/dwarven/hill.kdl

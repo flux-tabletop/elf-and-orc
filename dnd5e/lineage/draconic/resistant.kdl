@@ -1,0 +1,44 @@
+lineage name="Draconic I" {
+	description "One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited the ability to see in the dark and stand against breath weapons."
+	mutator "extend_life_expectancy" 40
+	mutator-todo "add_size" {
+		// height: 35"+[1,8]" = [36,43] = [3', 3'7"]
+		height base=35 bonus=(Roll)"1d8"
+		// weight: 55lb+([1,8]*[2,12])+[3,36] = [60, 187]lb
+		weight base=55 multiplier=(Roll)"2d6" bonus=(Roll)"3d12"
+	}
+	mutator "speed" "Walking" (Base)30
+	mutator "sense" "Darkvision" (Base)60
+	mutator-todo "pick_one" {
+		option "Mutators" name="Black Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Acid"
+		}
+		option "Mutators" name="Blue Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Lightning"
+		}
+		option "Mutators" name="Brass Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Fire"
+		}
+		option "Mutators" name="Bronze Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Lightning"
+		}
+		option "Mutators" name="Copper Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Acid"
+		}
+		option "Mutators" name="Gold Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Fire"
+		}
+		option "Mutators" name="Green Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Poison"
+		}
+		option "Mutators" name="Red Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Fire"
+		}
+		option "Mutators" name="Silver Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Cold"
+		}
+		option "Mutators" name="White Dragon Ancestry" {
+			mutator "add_defense" "Resistance" (DamageType)"Cold"
+		}
+	}
+}
