@@ -1,8 +1,12 @@
 lineage name="Gnomish" {
 	description "One of your birth parents is a gnome of any type or a mix of gnomish parentages. From your parentage, you have inherited magic resistance luck and can see in the dark."
 	mutator "extend_life_expectancy" 225
-	mutator "add_max_height" 18
-	mutator "add_max_height" (Roll)"1d4"
+	mutator-todo "add_size" {
+		// height: 18"+[1,4]" = [19,22] = [1'7', 1'10"]
+		height base=18 bonus=(Roll)"1d4"
+		// weight: 15lb+([1,4]*[1,6]) = [16, 39]lb
+		weight base=15 multiplier=(Roll)"1d6"
+	}
 	mutator "speed" "Walking" (Base)25
 	mutator "sense" "Darkvision" (Base)60
 	feature name="Gnome Cunning" {

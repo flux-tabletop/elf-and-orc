@@ -1,8 +1,12 @@
 lineage name="Human II" {
 	description "One of your birth parents is a human. You inherited a stubborn resiliency."
 	mutator "extend_life_expectancy" 50
-	mutator "add_max_height" 28
-	mutator "add_max_height" (Roll)"1d10"
+	mutator-todo "add_size" {
+		// height: 28"+[1,10]" = [29,38] = [2'5", 3'2"]
+		height base=28 bonus=(Roll)"1d10"
+		// weight: 55lb+([2,20]*[1,4]) = [57, 135]lb
+		weight base=55 multiplier=(Roll)"1d4"
+	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Relentless Endurance" unique=true {
 		description "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."

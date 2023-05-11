@@ -1,8 +1,12 @@
 lineage name="Shadar-Kai I" {
 	description "One of your birth parents is a shadar-kai. You are adapted to the Shadowfell and can see in the dark."
 	mutator "extend_life_expectancy" 375
-	mutator "add_max_height" 28
-	mutator "add_max_height" (Roll)"1d8"
+	mutator-todo "add_size" {
+		// height: 28"+[1,8]" = [29,36] = [2'5", 3']
+		height base=28 bonus=(Roll)"1d8"
+		// weight: 50lb+([1,8]*[1,4]) = [51, 82]lb
+		weight base=50 multiplier=(Roll)"1d4"
+	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
 	mutator "add_defense" "Resistance" (DamageType)"Necrotic"

@@ -1,13 +1,12 @@
 lineage name="Goblinoid" {
-	description "One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur.
-	- Your life expectancy is doubled."
+	description "One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur."
 	// Age. Double the life expectancy increase from your other birth parent to determine your total life expectancy.
 	// Size. Double the height increase from your other birth parent to determine your total height.
-	// TODO: Implement double expectancy
-	//mutator "extend_life_expectancy" 225
-	// TODO: Implement double max height
-	//mutator "add_max_height" 18
-	//mutator "add_max_height" (Roll)"1d4"
+	mutator-todo "extend_life_expectancy" "Multiply" 2
+	mutator-todo "add_size" {
+		height "Multiply" 2
+		weight "Multiply" 2
+	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
 	feature name="Ability Score Increase" {

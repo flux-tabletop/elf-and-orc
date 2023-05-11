@@ -1,8 +1,12 @@
 lineage name="Triton I" {
 	description "One of your birth parents is a triton. You can breathe water and swim like a fish."
 	mutator "extend_life_expectancy" 100
-	mutator "add_max_height" 27
-	mutator "add_max_height" (Roll)"1d10"
+	mutator-todo "add_size" {
+		// height: 27"+[1,10]" = [28,37] = [2'4", 3'1"]
+		height base=27 bonus=(Roll)"1d10"
+		// weight: 55lb+([2,20]*[1,4]) = [57, 135]lb
+		weight base=55 multiplier=(Roll)"1d4"
+	}
 	mutator "speed" "Walking" (Base)30
 	mutator "speed" "Swimming" (Base)30
 	mutator "add_defense" "Resistance" (DamageType)"Cold"

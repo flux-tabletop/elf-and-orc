@@ -1,8 +1,12 @@
 lineage name="Eladrin" {
 	description "One of your birth parents is an eladrin. You are associated with one of the four seasons and have innate magic reminiscent of that season."
 	mutator "extend_life_expectancy" 375
-	mutator "add_max_height" 27
-	mutator "add_max_height" (Roll)"1d12"
+	mutator-todo "add_size" {
+		// height: 27"+[1,12]" = [28,39] = [2'4", 3'3"]
+		height base=27 bonus=(Roll)"1d12"
+		// weight: 50lb+([1,12]) = [51, 62]lb
+		weight base=50 multiplier=1
+	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Fey Step" {
 		/* TODO: Eladrin subtypes

@@ -1,8 +1,12 @@
 lineage name="Kenku II" {
 	description "One of your birth parents is a kenku. You have a keen mind and flight instincts."
 	mutator "extend_life_expectancy" 30
-	mutator "add_max_height" 26
-	mutator "add_max_height" (Roll)"1d8"
+	mutator-todo "add_size" {
+		// height: 26"+[1,8]" = [27,34] = [2'3", 2'10"]
+		height base=26 bonus=(Roll)"1d8"
+		// weight: 40lb+([1,8]*[1,4]) = [41, 72]lb
+		weight base=40 multiplier=(Roll)"1d4"
+	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Instinctive Flight" {
 		description "You have advantage on checks made to use air vehicles and magic items that grant the ability to fly, such as brooms of flying or carpets of flying, as well as on checks to maintain concentration on a fly spell you have cast."

@@ -1,8 +1,12 @@
 lineage name="Firbolg II" {
 	description "One of your birth parents is a firbolg. You have inherited innate magicks that help you stay undetected."
 	mutator "extend_life_expectancy" 250
-	mutator "add_max_height" 37
-	mutator "add_max_height" (Roll)"1d12"
+	mutator-todo "add_size" {
+		// height: 37"+[1,12]" = [38,49] = [3'2", 4'1"]
+		height base=37 bonus=(Roll)"1d12"
+		// weight: 109lb+([1,12]*[1,4]) = [110, 157]lb
+		weight base=109 multiplier=(Roll)"1d4"
+	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Firbolg Magic" {
 		description "You can cast detect magic and disguise self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem to be the height of humans or elves, allowing you to more easily blend in."

@@ -1,8 +1,12 @@
 lineage name="Tortle I" {
 	description "One of your birth parents is a tortle. You have a soft shell and claws."
 	mutator "extend_life_expectancy" 25
-	mutator "add_max_height" 29
-	mutator "add_max_height" (Roll)"1d8"
+	mutator-todo "add_size" {
+		// height: 29"+[1,8]" = [30,37] = [2'6", 3'1"]
+		height base=29 bonus=(Roll)"1d8"
+		// weight: 200lb+([1,8]*[1,8]) = [201, 264]lb
+		weight base=200 multiplier=(Roll)"1d8"
+	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Claws" unique=true {
 		description "Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."

@@ -3,8 +3,12 @@ lineage name="Hill Dwarven" {
 	- Your base walking speed is 25 feet.
 	- Your speed is not reduced by wearing armor with a minimum required strength."
 	mutator "extend_life_expectancy" 175
-	mutator "add_max_height" 22
-	mutator "add_max_height" (Roll)"1d4"
+	mutator-todo "add_size" {
+		// height: 22"+[1,4]" = [23,26] = [1'11', 2'2"]
+		height base=22 bonus=(Roll)"1d4"
+		// weight: 58lb+([1,4]*[2,12]) = [60, 106]lb
+		weight base=58 multiplier=(Roll)"2d6"
+	}
 	mutator "speed" "Walking" (Base)25
 	mutator "sense" "Darkvision" (Base)60
 	mutator "flag" "ArmorStrengthRequirement" false

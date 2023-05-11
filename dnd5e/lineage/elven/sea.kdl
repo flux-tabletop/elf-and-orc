@@ -1,8 +1,12 @@
 lineage name="Sea Elven" {
 	description "One of your birth parents is a sea elf. You have inherited aquatic adaptations."
 	mutator "extend_life_expectancy" 375
-	mutator "add_max_height" 27
-	mutator "add_max_height" (Roll)"1d8"
+	mutator-todo "add_size" {
+		// height: 27"+[1,8]" = [28,35] = [2'4", 2'11"]
+		height base=27 bonus=(Roll)"1d8"
+		// weight: 50lb+([1,8]*[1,4]) = [51, 82]lb
+		weight base=50 multiplier=(Roll)"1d4"
+	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
 	feature name="Child of the Sea" {

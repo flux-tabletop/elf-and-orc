@@ -1,8 +1,12 @@
 lineage name="Goblin" {
 	description "One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small."
 	mutator "extend_life_expectancy" 30
-	mutator "add_max_height" 21
-	mutator "add_max_height" (Roll)"1d4"
+	mutator-todo "add_size" {
+		// height: 21"+[1,4]" = [22,25] = [1'10', 2'1"]
+		height base=21 bonus=(Roll)"1d4"
+		// weight: 18lb+([1,4]*[1,6]) = [19, 42]lb
+		weight base=18 multiplier=(Roll)"1d6"
+	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Nimble Escape" {
 		description "You can take the Disengage action as a bonus action on each of your turns."

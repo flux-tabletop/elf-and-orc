@@ -1,8 +1,12 @@
 lineage name="Grung II" {
 	description "One of your birth parents is a grung. You have inherited skin that's poisonous to the touch."
 	mutator "extend_life_expectancy" 50
-	mutator "add_max_height" 15
-	mutator "add_max_height" (Roll)"1d6"
+	mutator-todo "add_size" {
+		// height: 13"+[1,6]" = [14,19] = [1'2", 1'7"]
+		height base=13 bonus=(Roll)"1d6"
+		// weight: 13lb+([1,6]) = [14, 19]lb
+		weight base=13 multiplier=1
+	}
 	mutator "speed" "Walking" (Base)25
 	mutator "speed" "Climbing" (Base)25
 	feature name="Amphibious" unique=true {

@@ -1,8 +1,12 @@
 lineage name="Aarakocra" limit=2 {
 	description "One of your birth parents is an aarakocra. You have feathered wings and can fly, and you gain natural weapons in the form of talons."
 	mutator "extend_life_expectancy" 15
-	mutator "add_max_height" 26
-	mutator "add_max_height" (Roll)"1d8"
+	mutator-todo "add_size" {
+		// height: 26"+[1,8]" = [27,34] = [2'3", 2'10"] (4'6"-5'8")
+		height base=26 bonus=(Roll)"1d8"
+		// weight: 40lb+([1,8]*1) = [40, 48]lb (80-96lb)
+		weight base=40 multiplier=1
+	}
 	mutator "speed" "Walking" (Base)25
 	feature name="Flight" {
 		description "If you aren't wearing medium or heavy armor, increase your flying speed by 20 feet."
