@@ -1,11 +1,11 @@
 lineage name="Goblin" {
 	description "One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small."
 	mutator "extend_life_expectancy" 30
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 21"+[1,4]" = [22,25] = [1'10', 2'1"]
 		height base=21 bonus=(Roll)"1d4"
-		// weight: 18lb+([1,4]*[1,6]) = [19, 42]lb
-		weight base=18 multiplier=(Roll)"1d6"
+		// weight: 26lb+([2,8]*[2,8]) = [30, 90]lb
+		weight base=18 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Nimble Escape" {

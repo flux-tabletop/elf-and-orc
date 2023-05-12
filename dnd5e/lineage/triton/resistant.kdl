@@ -1,10 +1,10 @@
 lineage name="Triton II" {
 	description "One of your birth parents is a triton. You can see in the dark depths and have inborn acid resistance."
 	mutator "extend_life_expectancy" 100
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 27"+[1,10]" = [28,37] = [2'4", 3'1"]
 		height base=27 bonus=(Roll)"1d10"
-		// weight: 55lb+([2,20]*[1,4]) = [57, 135]lb
+		// weight: 110lb+([2,20]*[2,8]) = [114, 270]lb
 		weight base=55 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30

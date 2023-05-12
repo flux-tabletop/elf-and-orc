@@ -1,11 +1,11 @@
 lineage name="Tortle I" {
 	description "One of your birth parents is a tortle. You have a soft shell and claws."
 	mutator "extend_life_expectancy" 25
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 29"+[1,8]" = [30,37] = [2'6", 3'1"]
 		height base=29 bonus=(Roll)"1d8"
-		// weight: 200lb+([1,8]*[1,8]) = [201, 264]lb
-		weight base=200 multiplier=(Roll)"1d8"
+		// weight: 394lb+([2,16]*[2,8])+[2,24] = [400, 546]lb
+		weight base=197 multiplier=(Roll)"1d4" bonus=(Roll)"1d12"
 	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Claws" unique=true {

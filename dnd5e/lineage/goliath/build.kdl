@@ -1,11 +1,11 @@
 lineage name="Goliath I" {
 	description "One of your birth parents is a goliath. You have a hardy body and towering stature."
 	mutator "extend_life_expectancy" 50
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 37"+[1,10]" = [38,47] = [3'2', 3'11"]
 		height base=37 bonus=(Roll)"1d10"
-		// weight: 135lb+([1,10]*[1,4]) = [136, 175]lb
-		weight base=135 multiplier=(Roll)"1d4"
+		// weight: 270lb+([2,20]*2)+[4,40] = [278, 350]lb
+		weight base=135 multiplier=1 bonus=(Roll)"2d10"
 	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Stone's Endurance" {

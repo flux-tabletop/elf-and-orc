@@ -1,11 +1,11 @@
 lineage name="Changeling (Shape)" {
 	description "One of your birth parents is a changeling. You can change your appearance at will."
 	mutator "extend_life_expectancy" 50
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 30"+[1,4]" = [31,34] = [2'7", 2'9"]
 		height base=30 bonus=(Roll)"1d4"
-		// weight: 58lb+([1,4]*[2,8]) = [60, 90]lb
-		weight base=58 multiplier=(Roll)"2d4"
+		// weight: 116lb+([2,8]*[2,8]) = [124, 180]lb
+		weight base=58 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Shapechanger" {

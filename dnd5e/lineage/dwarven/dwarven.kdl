@@ -3,11 +3,11 @@ lineage name="Dwarven" {
 	- Your base walking speed is 25 feet.
 	- Your speed is not further reduced by wearing armor with a minimum required strength."
 	mutator "extend_life_expectancy" 175
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 23"+[1,4]" = [24,27] = [2', 2'3"]
 		height base=23 bonus=(Roll)"1d4"
-		// weight: 58lb+([1,4]*[2,12]) = [60, 106]lb
-		weight base=58 multiplier=(Roll)"2d6"
+		// weight: 116lb+([2,8]*[2,12]) = [122, 212]lb
+		weight base=58 multiplier=(Roll)"1d6"
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "sense" "Darkvision" (Base)60

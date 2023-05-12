@@ -1,11 +1,11 @@
 lineage name="Hobgoblin" {
 	description "One of your birth parents is a hobgoblin. You have a wellspring of strength that powers your blows."
 	mutator "extend_life_expectancy" 50
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 28"+[1,10]" = [29,38] = [2'5', 3'2"]
 		height base=28 bonus=(Roll)"1d10"
-		// weight: 70lb+([1,10]*[1,4]) = [71, 110]lb
-		weight base=70 multiplier=(Roll)"1d4"
+		// weight: 120lb+([2,20]*4)+[2,20] = [130, 220]lb
+		weight base=60 multiplier=2 bonus=(Roll)"1d10"
 	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Reserves of Strength" {

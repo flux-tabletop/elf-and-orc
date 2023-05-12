@@ -1,11 +1,11 @@
 lineage name="Ghostwise Halfling" {
 	description "One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically."
 	mutator "extend_life_expectancy" 75
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 16"+[1,4]" = [17,20] = [1'5', 1'8"]
 		height base=16 bonus=(Roll)"1d4"
-		// weight: 17lb+([1,4]) = [18, 21]lb
-		weight base=17 multiplier=1
+		// weight: 30lb+([2,8]*2) = [34, 46]lb
+		weight base=15 multiplier=1
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "speed" "Climbing" (Base)20

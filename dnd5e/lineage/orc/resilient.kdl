@@ -1,11 +1,11 @@
 lineage name="Orc II" {
 	description "One of your birth parents is an orc. You inherited a stubborn resiliency."
 	mutator "extend_life_expectancy" 35
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 35"+[1,8]" = [36,43] = [3', 3'7"]
 		height base=35 bonus=(Roll)"1d8"
-		// weight: 112lb+([1,8]*[1,4]) = [113, 144]lb
-		weight base=112 multiplier=(Roll)"1d4"
+		// weight: 200lb+([2,16]*2)+[4,48] = [204, 280]lb
+		weight base=100 multiplier=1 bonus=(Roll)"2d12"
 	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Relentless Endurance" unique=true {

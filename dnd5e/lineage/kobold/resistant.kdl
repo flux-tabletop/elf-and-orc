@@ -1,11 +1,11 @@
 lineage name="Kobold I" {
 	description "One of your birth parents is a kobold. You have inherited the ability to see in the dark and stand against breath weapons."
 	mutator "extend_life_expectancy" 60
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 11"+[1,8]" = [12,19] = [1', 1'7"]
 		height base=11 bonus=(Roll)"1d8"
-		// weight: 10lb+([1,8]) = [11, 18]lb
-		weight base=10 multiplier=1
+		// weight: 18lb+[2,24] = [20, 42]lb
+		weight base=9 bonus=(Roll)"1d12"
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60

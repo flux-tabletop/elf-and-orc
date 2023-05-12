@@ -1,11 +1,11 @@
 lineage name="Kenku I" {
 	description "One of your birth parents is a kenku. Though kenku no longer fly, they still have instincts that help in case of a great fall."
 	mutator "extend_life_expectancy" 30
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 26"+[1,8]" = [27,34] = [2'3", 2'10"]
 		height base=26 bonus=(Roll)"1d8"
-		// weight: 40lb+([1,8]*[1,4]) = [41, 72]lb
-		weight base=40 multiplier=(Roll)"1d4"
+		// weight: 72lb+([2,16]*4) = [80, 136]lb
+		weight base=36 multiplier=2
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "add_proficiency" (Skill)"Specific" "Acrobatics"

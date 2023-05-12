@@ -1,11 +1,11 @@
 lineage name="Warforged II" {
 	description "One of your birth parents is a warforged. You have remarkable fortitude."
 	// TODO: Age. Your life expectancy is unknown. You halve the effect of any magical aging. If your other birth parent is a warforged, you are immune to magical aging effects.
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 35"+[1,6]" = [36,41] = [3', 3'5"]
 		height base=35 bonus=(Roll)"1d6"
-		// weight: 130lb+([1,6]*[1,6]) = [132, 166]lb
-		weight base=130 multiplier=(Roll)"1d6"
+		// weight: 256lb+([2,12]*[2,8]) = [260, 352]lb
+		weight base=128 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
 	feature name="Constructed Resilience" {

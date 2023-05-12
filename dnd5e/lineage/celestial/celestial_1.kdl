@@ -1,10 +1,10 @@
 lineage name="Celestial I" {
 	description "One of your birth parents is an aasimar or perhaps even a celestial. You can see in the dark and heal others with a touch."
 	mutator "extend_life_expectancy" 80
-	mutator-todo "add_size" {
+	mutator "add_size" {
 		// height: 28"+[1,10]" = [29,38] = [2'5", 3'2"]
 		height base=28 bonus=(Roll)"1d10"
-		// weight: 55lb+([2,20]*[1,4]) = [57, 135]lb
+		// weight: 110lb+([2,20]*[2,8]) = [114, 270]lb
 		weight base=55 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
