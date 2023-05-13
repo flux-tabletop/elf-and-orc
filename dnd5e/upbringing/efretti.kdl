@@ -12,6 +12,8 @@ upbringing name="Efretti" {
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Reach to the Blaze" {
 		description "You know the produce flame cantrip. Constitution is your spellcasting ability for this spell."
-		// TODO: Spellcasting
+		mutator-todo "spellcasting" "add_prepared" ability="Constitution" {
+			spell "local://basic-rules@dnd5e/spells/produceFlame.kdl"
+		}
 	}
 }

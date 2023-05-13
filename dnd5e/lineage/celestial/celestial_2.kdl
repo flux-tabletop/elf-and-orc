@@ -15,6 +15,8 @@ lineage name="Celestial II" {
 	}
 	feature name="Light Bearer" {
 		description "You know the light cantrip. Charisma is your spellcasting ability for it."
-		// TODO: mutator for adding a cantrip with a particular spellcasting ability
+		mutator-todo "spellcasting" "add_prepared" ability="Charisma" {
+			spell "local://basic-rules@dnd5e/spells/light.kdl"
+		}
 	}
 }

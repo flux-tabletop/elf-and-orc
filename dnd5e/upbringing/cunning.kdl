@@ -12,6 +12,8 @@ upbringing name="Cunning" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Infernal Legacy" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
-		// TODO: Spellcasting
+		mutator-todo "spellcasting" "add_prepared" ability="Charisma" {
+			spell "local://basic-rules@dnd5e/spells/thaumaturgy.kdl"
+		}
 	}
 }

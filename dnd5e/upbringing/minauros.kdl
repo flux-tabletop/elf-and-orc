@@ -12,6 +12,19 @@ upbringing name="Minauros" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Minauros" {
 		description "You know the mage hand cantrip. When you reach 3rd level, you can cast the Tenser's floating disk spell once with this trait and regain the ability to do so when you finish a short or long rest. Charisma is your spellcasting ability for these spells."
-		// TODO: Spellcasting
+		mutator-todo "spellcasting" "add_prepared" ability="Charisma" {
+			spell "local://basic-rules@dnd5e/spells/mageHand.kdl"
+		}
+		mutator "by_level" {
+			level 3 {
+				mutator "spellcasting" "add_prepared" ability="Charisma" {
+					spell "local://wotc-phb@dnd5e/spells/floatingDisk.kdl"
+					limited_use {
+						max_uses 1
+						reset_on "Short"
+					}
+				}
+			}
+		}
 	}
 }
