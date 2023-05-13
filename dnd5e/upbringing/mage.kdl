@@ -12,10 +12,12 @@ upbringing name="Mage" {
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	feature name="Cantrip" {
 		description "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
-		mutator-todo "spellcasting" "add_prepared" ability="Intelligence" {
+		mutator "spellcasting" "add_prepared" ability="Intelligence" {
 			spell "Any" {
-				rank 0
-				tag "Wizard"
+				filter {
+					rank 0
+					tag "Wizard"
+				}
 			}
 		}
 	}

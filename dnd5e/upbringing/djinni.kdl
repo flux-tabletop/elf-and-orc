@@ -12,7 +12,7 @@ upbringing name="Djinni" {
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	feature name="Mingle with the Wind" {
 		description "You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
-		mutator-todo "spellcasting" "add_prepared" ability="Constitution" {
+		mutator "spellcasting" "add_prepared" ability="Constitution" {
 			spell "local://basic-rules@dnd5e/spells/levitate.kdl"
 			limited_use {
 				max_uses 1

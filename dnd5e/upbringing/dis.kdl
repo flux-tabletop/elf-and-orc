@@ -12,7 +12,7 @@ upbringing name="Dis" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	feature name="Legacy of Dis" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
-		mutator-todo "spellcasting" "add_prepared" ability="Charisma" {
+		mutator "spellcasting" "add_prepared" ability="Charisma" {
 			spell "local://basic-rules@dnd5e/spells/thaumaturgy.kdl"
 		}
 	}

@@ -8,14 +8,14 @@ upbringing name="Water Mage" {
 	mutator "add_proficiency" (Weapon)"Net"
 	feature name="Control Air and Water" {
 		description "You can cast fog cloud with this trait. Starting at 3rd level, you can cast gust of wind with it, and starting at 5th level, you can also cast wall of water with it. Once you cast a spell with this trait, you can't cast that spell with it again until you finish a long rest. Charisma is your spellcasting ability for these spells."
-		mutator-todo "spellcasting" "add_prepared" ability="Charisma" {
+		mutator "spellcasting" "add_prepared" ability="Charisma" {
 			spell "local://basic-rules@dnd5e/spells/fogCloud.kdl"
 			limited_use {
 				max_uses 1
 				reset_on "Long"
 			}
 		}
-		mutator-todo "by_level" exclusive=true {
+		mutator "by_level" {
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
 					spell "local://basic-rules@dnd5e/spells/gustOfWind.kdl"
