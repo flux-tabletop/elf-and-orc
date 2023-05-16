@@ -9,35 +9,35 @@ lineage name="Draconic I" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
-	mutator-todo "pick_one" {
-		option "Mutators" name="Black Dragon Ancestry" {
+	mutator "pick" 1 name="Draconic Ancestry" {
+		option "Black Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Acid"
 		}
-		option "Mutators" name="Blue Dragon Ancestry" {
+		option "Blue Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Lightning"
 		}
-		option "Mutators" name="Brass Dragon Ancestry" {
+		option "Brass Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Fire"
 		}
-		option "Mutators" name="Bronze Dragon Ancestry" {
+		option "Bronze Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Lightning"
 		}
-		option "Mutators" name="Copper Dragon Ancestry" {
+		option "Copper Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Acid"
 		}
-		option "Mutators" name="Gold Dragon Ancestry" {
+		option "Gold Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Fire"
 		}
-		option "Mutators" name="Green Dragon Ancestry" {
+		option "Green Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Poison"
 		}
-		option "Mutators" name="Red Dragon Ancestry" {
+		option "Red Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Fire"
 		}
-		option "Mutators" name="Silver Dragon Ancestry" {
+		option "Silver Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Cold"
 		}
-		option "Mutators" name="White Dragon Ancestry" {
+		option "White Dragon Ancestry" {
 			mutator "add_defense" "Resistance" (DamageType)"Cold"
 		}
 	}

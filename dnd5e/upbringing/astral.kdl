@@ -16,11 +16,11 @@ upbringing name="Astral" {
 	mutator "add_proficiency" (Weapon)"Shortsword"
 	mutator "add_proficiency" (Weapon)"Longsword"
 	mutator "add_proficiency" (Weapon)"Greatsword"
-	mutator-todo "pick_one" name="Proficiency" id="select-prof" {
-		option "Mutators" name="Skill" {
+	mutator "pick" 1 name="Proficiency" id="select-prof" {
+		option "Skill" {
 			mutator "add_proficiency" (Skill)"Any" id="skill"
 		}
-		option "Mutators" name="Tool" {
+		option "Tool" {
 			mutator "add_proficiency" (Tool)"Any" id="tool"
 		}
 	}

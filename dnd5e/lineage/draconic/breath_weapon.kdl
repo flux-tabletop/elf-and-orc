@@ -8,8 +8,8 @@ lineage name="Draconic I" {
 		weight base=55 multiplier=(Roll)"1d6" bonus=(Roll)"3d12"
 	}
 	mutator "speed" "Walking" (Base)30
-	mutator-todo "pick_one" {
-		option "Mutators" name="Black Dragon Ancestry" {
+	mutator "pick" 1 name="Draconic Ancestry" {
+		option "Black Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Black dragon ancestry, you emit Acid damage in a 5 by 30 ft. line.
 				
@@ -44,7 +44,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Blue Dragon Ancestry" {
+		option "Blue Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Blue dragon ancestry, you emit Lightning damage in a 5 by 30 ft. line.
 				
@@ -79,7 +79,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Brass Dragon Ancestry" {
+		option "Brass Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Brass dragon ancestry, you emit Fire damage in a 5 by 30 ft. line.
 				
@@ -114,7 +114,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Bronze Dragon Ancestry" {
+		option "Bronze Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Bronze dragon ancestry, you emit Lightning damage in a 5 by 30 ft. line.
 				
@@ -149,7 +149,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Copper Dragon Ancestry" {
+		option "Copper Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Copper dragon ancestry, you emit Acid damage in a 5 by 30 ft. line.
 				
@@ -184,7 +184,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Gold Dragon Ancestry" {
+		option "Gold Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Gold dragon ancestry, you emit Fire damage in a 15 ft. cone.
 				
@@ -219,7 +219,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Green Dragon Ancestry" {
+		option "Green Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Green dragon ancestry, you emit Poison damage in a 15 ft. cone.
 				
@@ -254,7 +254,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Red Dragon Ancestry" {
+		option "Red Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Red dragon ancestry, you emit Fire damage in a 15 ft. cone.
 				
@@ -289,7 +289,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="Silver Dragon Ancestry" {
+		option "Silver Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your Silver dragon ancestry, you emit Cold damage in a 15 ft. cone.
 				
@@ -324,7 +324,7 @@ lineage name="Draconic I" {
 				}
 			}
 		}
-		option "Mutators" name="White Dragon Ancestry" {
+		option "White Dragon Ancestry" {
 			mutator-todo "feature" name="Breath Weapon" {
 				description "You can use your action to exhale destructive energy. With your White dragon ancestry, you emit Cold damage in a 15 ft. cone.
 				
