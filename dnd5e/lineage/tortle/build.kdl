@@ -39,8 +39,9 @@ lineage name="Tortle I" {
 	}
 	// TODO: Only ever show 1 instance of features which allow stacking
 	feature name="Shell Defense" {
-		description "You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait." {
+		description {
 			short "Withdraw into shell to get AC bonus and advantage on Strength and Constitution saving throws. While withdrawn, you are prone, have no speed or reactions, disadvantage on Dexterity saving throws, and can only use a bonus action to emerge from your shell."
+			section "You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait."
 		}
 		action "Action" {
 			condition "Custom" name="Shell Defense" {
