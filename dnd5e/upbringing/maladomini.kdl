@@ -19,7 +19,7 @@ upbringing name="Maladomini" {
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
 					spell "local://wotc-phb@dnd5espells/rayOfSickness.kdl" rank=2
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Long"
 					}

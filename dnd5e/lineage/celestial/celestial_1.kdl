@@ -12,7 +12,7 @@ lineage name="Celestial I" {
 	feature name="Healing Hands" {
 		description "As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can't use it again until you finish a long rest."
 		action "Action" {
-			limited_use {
+			limited_uses {
 				max_uses 1
 				reset_on (Rest)"Long"
 			}

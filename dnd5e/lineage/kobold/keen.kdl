@@ -23,7 +23,7 @@ lineage name="Kobold III" {
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
 					spell "wotc-phb@dnd5e/spells/chromaticOrb.kdl" rank=2
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Long"
 					}
@@ -32,7 +32,7 @@ lineage name="Kobold III" {
 			level 5 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
 					spell "local://basic-rules@dnd5e/spells/scorchingRay.kdl"
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Long"
 					}

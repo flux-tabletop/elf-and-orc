@@ -37,7 +37,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Acid"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -72,7 +72,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Lightning"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -107,7 +107,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Fire"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -142,7 +142,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Lightning"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -177,7 +177,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Acid"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -212,7 +212,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Fire"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -247,7 +247,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Poison"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -282,7 +282,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Fire"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -317,7 +317,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Cold"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}
@@ -352,7 +352,7 @@ lineage name="Draconic I" {
 							damage_type (DamageType)"Cold"
 						}
 					}
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Short"
 					}

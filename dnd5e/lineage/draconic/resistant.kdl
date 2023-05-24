@@ -1,4 +1,4 @@
-lineage name="Draconic I" {
+lineage name="Draconic II" {
 	description "One of your birth parents is a dragonborn or perhaps even a dragon. You have inherited the ability to see in the dark and stand against breath weapons."
 	mutator "extend_life_expectancy" 40
 	mutator "add_size" {

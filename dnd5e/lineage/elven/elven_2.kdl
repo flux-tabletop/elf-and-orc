@@ -15,7 +15,7 @@ lineage name="Elven II" {
 			level 5 {
 				mutator "spellcasting" "add_prepared" ability="Wisdom" {
 					spell "local://basic-rules@dnd5e/spells/passWithoutTrace.kdl"
-					limited_use {
+					limited_uses {
 						max_uses 1
 						reset_on "Long"
 					}
