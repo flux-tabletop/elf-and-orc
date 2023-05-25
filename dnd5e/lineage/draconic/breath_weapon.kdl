@@ -40,13 +40,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Acid"
 						}
@@ -89,13 +91,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Lightning"
 						}
@@ -138,13 +142,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Fire"
 						}
@@ -187,13 +193,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Lightning"
 						}
@@ -236,13 +244,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Acid"
 						}
@@ -285,13 +295,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Cone" length=15
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Fire"
 						}
@@ -334,13 +346,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Constitution"
 						}
 						area_of_effect "Cone" length=15
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Poison"
 						}
@@ -383,13 +397,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Cone" length=15
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Fire"
 						}
@@ -432,13 +448,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Constitution"
 						}
 						area_of_effect "Cone" length=15
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Cold"
 						}
@@ -481,13 +499,15 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Constitution"
 						}
 						area_of_effect "Cone" length=15
-						damage-todo {
-							// TODO: Need scaling damage
-							roll (Evaluator)"by_character_level" {
-								option 1 (Roll)"2d6"
-								option 6 (Roll)"3d6"
-								option 11 (Roll)"4d6"
-								option 16 (Roll)"5d6"
+						damage {
+							roll {
+								amount (Evaluator)"get_level" {
+									level 1 2
+									level 6 3
+									level 11 4
+									level 16 5
+								}
+								die 6
 							}
 							damage_type (DamageType)"Cold"
 						}
