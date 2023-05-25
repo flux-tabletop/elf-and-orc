@@ -10,14 +10,28 @@ lineage name="Draconic I" {
 	mutator "speed" "Walking" (Base)30
 	mutator "pick" 1 name="Draconic Ancestry" {
 		option "Black Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Black dragon ancestry, you emit Acid damage in a 5 by 30 ft. line.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 5 by 30 ft. line. All creatures in the area must make a Dexterity saving throw (DC {DC}), taking {amt}d6 Acid damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Black dragon ancestry, you emit Acid damage in a 5 by 30 ft. line.
 				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -26,11 +40,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -45,14 +59,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Blue Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Blue dragon ancestry, you emit Lightning damage in a 5 by 30 ft. line.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 5 by 30 ft. line. All creatures in the area must make a Dexterity saving throw (DC {DC}), taking {amt}d6 Lightning damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Blue dragon ancestry, you emit Lightning damage in a 5 by 30 ft. line.
 				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -61,11 +89,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -80,14 +108,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Brass Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Brass dragon ancestry, you emit Fire damage in a 5 by 30 ft. line.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 5 by 30 ft. line. All creatures in the area must make a Dexterity saving throw (DC {DC}), taking {amt}d6 Fire damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Brass dragon ancestry, you emit Fire damage in a 5 by 30 ft. line.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -96,11 +138,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -115,14 +157,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Bronze Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Bronze dragon ancestry, you emit Lightning damage in a 5 by 30 ft. line.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 5 by 30 ft. line. All creatures in the area must make a Dexterity saving throw (DC {DC}), taking {amt}d6 Lightning damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Bronze dragon ancestry, you emit Lightning damage in a 5 by 30 ft. line.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -131,11 +187,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -150,14 +206,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Copper Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Copper dragon ancestry, you emit Acid damage in a 5 by 30 ft. line.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 5 by 30 ft. line. All creatures in the area must make a Dexterity saving throw (DC {DC}), taking {amt}d6 Acid damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Copper dragon ancestry, you emit Acid damage in a 5 by 30 ft. line.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -166,11 +236,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Line" width=5 length=30
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -185,14 +255,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Gold Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Gold dragon ancestry, you emit Fire damage in a 15 ft. cone.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 15 ft. cone. All creatures in the area must make a Dexterity saving throw (DC {DC}), taking {amt}d6 Fire damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Gold dragon ancestry, you emit Fire damage in a 15 ft. cone.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -201,11 +285,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Cone" length=15
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -220,14 +304,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Green Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Green dragon ancestry, you emit Poison damage in a 15 ft. cone.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 15 ft. cone. All creatures in the area must make a Constitution saving throw (DC {DC}), taking {amt}d6 Poison damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Green dragon ancestry, you emit Poison damage in a 15 ft. cone.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -236,11 +334,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Constitution"
 						}
 						area_of_effect "Cone" length=15
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -255,14 +353,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Red Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Red dragon ancestry, you emit Fire damage in a 15 ft. cone.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 15 ft. cone. All creatures in the area must make a Dexterity saving throw (DC {DC}), taking {amt}d6 Fire damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Red dragon ancestry, you emit Fire damage in a 15 ft. cone.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -271,11 +383,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Dexterity"
 						}
 						area_of_effect "Cone" length=15
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -290,14 +402,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "Silver Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your Silver dragon ancestry, you emit Cold damage in a 15 ft. cone.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 15 ft. cone. All creatures in the area must make a Constitution saving throw (DC {DC}), taking {amt}d6 Cold damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your Silver dragon ancestry, you emit Cold damage in a 15 ft. cone.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -306,11 +432,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Constitution"
 						}
 						area_of_effect "Cone" length=15
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
@@ -325,14 +451,28 @@ lineage name="Draconic I" {
 			}
 		}
 		option "White Dragon Ancestry" {
-			mutator-todo "feature" name="Breath Weapon" {
-				description "You can use your action to exhale destructive energy. With your White dragon ancestry, you emit Cold damage in a 15 ft. cone.
-				
-				When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+			mutator "feature" name="Breath Weapon" {
+				description {
+					short "You emit destructive energy in a 15 ft. cone. All creatures in the area must make a Constitution saving throw (DC {DC}), taking {amt}d6 Cold damage on a failed save and half as much on a successful one."
+					section "You can use your action to exhale destructive energy. With your White dragon ancestry, you emit Cold damage in a 15 ft. cone.
+					
+					When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
-				After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					After you use your breath weapon, you can't use it again until you complete a short or long rest."
+					format-arg "DC" (Evaluator)"math" "Add" {
+						value 8
+						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
+						value (Evaluator)"get_proficiency_bonus"
+					}
+					format-arg "amt" (Evaluator)"get_level" {
+						level 1 2
+						level 6 3
+						level 11 4
+						level 16 5
+					}
+				}
 				action "Action" {
-					attack-todo /*no kind*/ {
+					attack {
 						check "SavingThrow" {
 							difficulty_class 8 {
 								ability_bonus "Constitution"
@@ -341,11 +481,11 @@ lineage name="Draconic I" {
 							save_ability (Ability)"Constitution"
 						}
 						area_of_effect "Cone" length=15
-						damage {
+						damage-todo {
 							// TODO: Need scaling damage
 							roll (Evaluator)"by_character_level" {
 								option 1 (Roll)"2d6"
-								option 3 (Roll)"3d6"
+								option 6 (Roll)"3d6"
 								option 11 (Roll)"4d6"
 								option 16 (Roll)"5d6"
 							}
