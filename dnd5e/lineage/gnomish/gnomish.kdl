@@ -1,4 +1,4 @@
-lineage name="Gnomish" {
+bundle category="Lineage" name="Gnomish" {
 	description "One of your birth parents is a gnome of any type or a mix of gnomish parentages. From your parentage, you have inherited magic resistance luck and can see in the dark."
 	mutator "extend_life_expectancy" 225
 	mutator "add_size" {

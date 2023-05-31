@@ -1,4 +1,4 @@
-lineage name="Hill Dwarven" {
+bundle category="Lineage" name="Hill Dwarven" {
 	description "One of your birth parents is a hill dwarf. You have inherited remarkable physical resilience.
 	- Your base walking speed is 25 feet.
 	- Your speed is not reduced by wearing armor with a minimum required strength."

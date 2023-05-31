@@ -1,4 +1,4 @@
-upbringing name="Story Collector" {
+bundle category="Upbringing" name="Story Collector" {
 	description "You were raised among a curious people that value storytelling and barter for lore and history."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

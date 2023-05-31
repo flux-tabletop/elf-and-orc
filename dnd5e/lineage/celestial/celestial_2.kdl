@@ -1,4 +1,4 @@
-lineage name="Celestial II" {
+bundle category="Lineage" name="Celestial II" {
 	description "One of your birth parents is an aasimar or perhaps even a celestial. You are shielded from dark powers and can conjure light."
 	mutator "extend_life_expectancy" 80
 	mutator "add_size" {

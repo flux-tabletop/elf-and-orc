@@ -1,4 +1,4 @@
-lineage name="Ghostwise Halfling" {
+bundle category="Lineage" name="Ghostwise Halfling" {
 	description "One of your birth parents is a ghostwise halfling. You instinctively know how to climb and can communicate telepathically."
 	mutator "extend_life_expectancy" 75
 	mutator "add_size" {

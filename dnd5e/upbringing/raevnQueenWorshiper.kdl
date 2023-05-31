@@ -1,4 +1,4 @@
-upbringing name="Raven Queen (Worshiper)" {
+bundle category="Upbringing" name="Raven Queen (Worshiper)" {
 	description "You were raised among a people who venerate the Raven Queen in the Shadowfell."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

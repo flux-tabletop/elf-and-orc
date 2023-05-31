@@ -1,4 +1,4 @@
-lineage name="Triton I" {
+bundle category="Lineage" name="Triton I" {
 	description "One of your birth parents is a triton. You can breathe water and swim like a fish."
 	mutator "extend_life_expectancy" 100
 	mutator "add_size" {

@@ -1,4 +1,4 @@
-lineage name="Orc II" {
+bundle category="Lineage" name="Orc II" {
 	description "One of your birth parents is an orc. You inherited a stubborn resiliency."
 	mutator "extend_life_expectancy" 35
 	mutator "add_size" {

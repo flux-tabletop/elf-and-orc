@@ -1,4 +1,4 @@
-upbringing name="Abjurer" {
+bundle category="Upbringing" name="Abjurer" {
 	description "You were raised among those gifted with the school of abjuration magic and trained at their feet."
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="langA"

@@ -1,4 +1,4 @@
-upbringing name="Dis" {
+bundle category="Upbringing" name="Dis" {
 	description "You were raised in Dis, the Second Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

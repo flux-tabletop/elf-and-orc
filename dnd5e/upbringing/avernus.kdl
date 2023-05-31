@@ -1,4 +1,4 @@
-upbringing name="Avernus" {
+bundle category="Upbringing" name="Avernus" {
 	description "You were raised in Avernus, the First Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

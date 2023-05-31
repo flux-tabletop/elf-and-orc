@@ -1,4 +1,4 @@
-lineage name="Kobold I" {
+bundle category="Lineage" name="Kobold I" {
 	description "One of your birth parents is a kobold. You have inherited the ability to see in the dark and stand against breath weapons."
 	mutator "extend_life_expectancy" 60
 	mutator "add_size" {

@@ -1,4 +1,4 @@
-upbringing name="Maladomini" {
+bundle category="Upbringing" name="Maladomini" {
 	description "You were raised in Maladomini, the Seventh Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

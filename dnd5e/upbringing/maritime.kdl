@@ -1,4 +1,4 @@
-upbringing name="Maritime" {
+bundle category="Upbringing" name="Maritime" {
 	description "You were raised among sea creatures with whom you have an affinity."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

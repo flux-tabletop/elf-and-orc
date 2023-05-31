@@ -1,4 +1,4 @@
-lineage name="Goblinoid" {
+bundle category="Lineage" name="Goblinoid" {
 	description "One of your birth parents is a goblinoid of any type (bugbear, goblin, or hobgoblin) or a mix of goblinoid parentages. You have goblinoid facial features and a thin coat of fur."
 	// Age. Double the life expectancy increase from your other birth parent to determine your total life expectancy.
 	// Size. Double the height increase from your other birth parent to determine your total height.

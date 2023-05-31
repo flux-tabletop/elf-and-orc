@@ -1,4 +1,4 @@
-lineage name="Firbolg II" {
+bundle category="Lineage" name="Firbolg II" {
 	description "One of your birth parents is a firbolg. You have inherited innate magicks that help you stay undetected."
 	mutator "extend_life_expectancy" 250
 	mutator "add_size" {

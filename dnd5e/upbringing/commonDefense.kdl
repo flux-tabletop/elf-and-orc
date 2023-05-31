@@ -1,4 +1,4 @@
-upbringing name="Common Defense" {
+bundle category="Upbringing" name="Common Defense" {
 	description "You spent your formative years strengthening your throwing arm and striving to be brave when facing overwhelming odds."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

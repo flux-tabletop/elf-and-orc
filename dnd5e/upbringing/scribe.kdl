@@ -1,4 +1,4 @@
-upbringing name="Scribe" {
+bundle category="Upbringing" name="Scribe" {
 	description "You were raised among scribes, notaries, interpreters, cartographers, barristers, heralds, bookbinders, and others who work with words."
 	mutator "ability_score" {
 		ability "Specific" "Intelligence"

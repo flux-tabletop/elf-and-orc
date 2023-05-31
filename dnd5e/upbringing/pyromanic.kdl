@@ -1,4 +1,4 @@
-upbringing name="Pyromanic" {
+bundle category="Upbringing" name="Pyromanic" {
 	description "You were raised among devil worshippers or charismatic pyromaniacs."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

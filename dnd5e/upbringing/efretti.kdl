@@ -1,4 +1,4 @@
-upbringing name="Efretti" {
+bundle category="Upbringing" name="Efretti" {
 	description "You were raised on the Elemental Plane of Fire or in an efreeti's palace on the Material Plane."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

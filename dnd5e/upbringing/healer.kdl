@@ -1,4 +1,4 @@
-upbringing name="Healer" {
+bundle category="Upbringing" name="Healer" {
 	description "You were trained from a young age in the art of healing and medicine."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

@@ -1,4 +1,4 @@
-upbringing name="Hosteler" {
+bundle category="Upbringing" name="Hosteler" {
 	description "You were raised among innkeepers or tavern owners."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

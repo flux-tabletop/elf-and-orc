@@ -1,4 +1,4 @@
-upbringing name="Sylvan" {
+bundle category="Upbringing" name="Sylvan" {
 	description "You were raised among a people that live at one with the natural world."
 	mutator "ability_score" {
 		ability "Specific" "Wisdom"

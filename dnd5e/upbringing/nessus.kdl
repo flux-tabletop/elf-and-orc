@@ -1,4 +1,4 @@
-upbringing name="Nessus" {
+bundle category="Upbringing" name="Nessus" {
 	description "You were raised in Nessus, the Ninth Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

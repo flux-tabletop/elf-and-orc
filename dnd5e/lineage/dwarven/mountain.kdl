@@ -1,4 +1,4 @@
-lineage name="Mountain Dwarven" {
+bundle category="Lineage" name="Mountain Dwarven" {
 	description "One of your birth parents is a mountain dwarf. You are strong and hardy.
 	- Your base walking speed is 25 feet.
 	- Your speed is not reduced by wearing armor with a minimum required strength."

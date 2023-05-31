@@ -1,4 +1,4 @@
-upbringing name="Defender" {
+bundle category="Upbringing" name="Defender" {
 	description "You were raised to know how to defend yourself and your people."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

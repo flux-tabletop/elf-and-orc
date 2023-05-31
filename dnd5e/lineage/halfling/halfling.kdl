@@ -1,4 +1,4 @@
-lineage name="Halfling" {
+bundle category="Lineage" name="Halfling" {
 	description "One of your birth parents is a halfling of any type or a mix of halfling parentages. You have inherited innate luck and diminutive form."
 	mutator "extend_life_expectancy" 75
 	mutator "add_size" {

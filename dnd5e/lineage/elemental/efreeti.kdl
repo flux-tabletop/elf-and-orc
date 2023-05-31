@@ -1,4 +1,4 @@
-lineage name="Elemental (Efreeti)" {
+bundle category="Lineage" name="Elemental (Efreeti)" {
 	description "One of your birth parents is a fire genasi, efreeti, or creature from the Elemental Plane of Fire. You can see in the dark and take the heat."
 	mutator "extend_life_expectancy" 60
 	mutator "add_size" {

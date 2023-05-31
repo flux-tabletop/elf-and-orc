@@ -1,4 +1,4 @@
-upbringing name="Spy" {
+bundle category="Upbringing" name="Spy" {
 	description "You were raised among elite spies or assassins who trained you from an early age in their secret skills."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

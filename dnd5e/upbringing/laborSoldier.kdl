@@ -1,4 +1,4 @@
-upbringing name="Labor Soldier" {
+bundle category="Upbringing" name="Labor Soldier" {
 	description "You were raised among a militant, industrious people whose weapons also serve as work tools."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

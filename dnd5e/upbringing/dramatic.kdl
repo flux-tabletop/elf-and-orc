@@ -1,4 +1,4 @@
-upbringing name="Dramatic" {
+bundle category="Upbringing" name="Dramatic" {
 	description "You were raised by a dramatic people who have the uncanny ability to draw attention to themselves."
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"

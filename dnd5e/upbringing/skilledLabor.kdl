@@ -1,4 +1,4 @@
-upbringing name="Skilled Labor" {
+bundle category="Upbringing" name="Skilled Labor" {
 	description "You were trained from a young age in a very specialized craft or trade."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

@@ -1,4 +1,4 @@
-lineage name="Kobold II" {
+bundle category="Lineage" name="Kobold II" {
 	description "One of your birth parents is a kobold. You have grown a pair of draconic wings."
 	mutator "extend_life_expectancy" 60
 	mutator "add_size" {

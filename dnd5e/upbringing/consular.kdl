@@ -1,4 +1,4 @@
-upbringing name="Consular" {
+bundle category="Upbringing" name="Consular" {
 	description "You were raised among diplomats, ambassadors, or arbiters."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

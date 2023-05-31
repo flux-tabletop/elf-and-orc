@@ -1,4 +1,4 @@
-upbringing name="Arboreal" {
+bundle category="Upbringing" name="Arboreal" {
 	description "You were raised among a people who live high in the forest or jungle canopy."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

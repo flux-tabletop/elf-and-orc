@@ -1,4 +1,4 @@
-lineage name="Rock Gnomish" {
+bundle category="Lineage" name="Rock Gnomish" {
 	description "One of your birth parents is a rock gnome. You have a restless mind and resistance to magic."
 	mutator "extend_life_expectancy" 225
 	mutator "add_size" {

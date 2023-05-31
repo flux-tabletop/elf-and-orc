@@ -1,4 +1,4 @@
-lineage name="Stout Halfling" {
+bundle category="Lineage" name="Stout Halfling" {
 	description "One of your birth parents is a stout halfling. You inherited vaguely dwarven traits but with a halfling stature.
 	- Your base walking speed is 25 feet.
 	- Your speed is not further reduced by wearing armor with a minimum required strength."

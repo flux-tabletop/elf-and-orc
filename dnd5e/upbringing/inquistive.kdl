@@ -1,4 +1,4 @@
-upbringing name="Inquistive" {
+bundle category="Upbringing" name="Inquistive" {
 	description "You were raised among bodyguards and investigators and were trained from a young age in their skills."
 	mutator "ability_score" {
 		ability "Specific" "Wisdom"

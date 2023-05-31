@@ -1,4 +1,4 @@
-upbringing name="Scourge" {
+bundle category="Upbringing" name="Scourge" {
 	description "At a young age, a celestial imbued you with divine energy that blazes intensely within you."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

@@ -1,4 +1,4 @@
-lineage name="Kobold III" {
+bundle category="Lineage" name="Kobold III" {
 	description "One of your birth parents is a kobold. You inherited a restless mind, keen senses, and the magic of an ancient draconic ancestor."
 	mutator "extend_life_expectancy" 60
 	mutator "add_size" {

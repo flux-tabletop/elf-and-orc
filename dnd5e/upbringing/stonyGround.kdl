@@ -1,4 +1,4 @@
-upbringing name="Stony Ground" {
+bundle category="Upbringing" name="Stony Ground" {
 	description "You were raised among a people who live beneath or among the rocks."
 	mutator "ability_score" {
 		ability "Specific" "Intelligence"

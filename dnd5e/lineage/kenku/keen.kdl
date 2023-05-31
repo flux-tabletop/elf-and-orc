@@ -1,4 +1,4 @@
-lineage name="Kenku II" {
+bundle category="Lineage" name="Kenku II" {
 	description "One of your birth parents is a kenku. You have a keen mind and flight instincts."
 	mutator "extend_life_expectancy" 30
 	mutator "add_size" {

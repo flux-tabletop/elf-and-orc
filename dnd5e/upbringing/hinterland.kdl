@@ -1,4 +1,4 @@
-upbringing name="Hinterland" {
+bundle category="Upbringing" name="Hinterland" {
 	description "You were raised among people who live far from any cities or villages and struggle mightily to survive."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

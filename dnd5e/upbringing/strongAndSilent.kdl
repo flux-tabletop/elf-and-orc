@@ -1,4 +1,4 @@
-upbringing name="Strong and Silent" {
+bundle category="Upbringing" name="Strong and Silent" {
 	description "You were raised among people used to getting their way by dint of being the strongest."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

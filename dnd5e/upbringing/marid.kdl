@@ -1,4 +1,4 @@
-upbringing name="Marid" {
+bundle category="Upbringing" name="Marid" {
 	description "You were raised on the Elemental Plane of Water or in a marid's palace on the Material Plane."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

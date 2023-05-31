@@ -1,4 +1,4 @@
-upbringing name="Protector" {
+bundle category="Upbringing" name="Protector" {
 	description "From a young age, a celestial offered you advice and directives and urged you to stand against evil."
 	mutator "ability_score" {
 		ability "Specific" "Wisdom"

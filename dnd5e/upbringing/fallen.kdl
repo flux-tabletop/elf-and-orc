@@ -1,4 +1,4 @@
-upbringing name="Fallen" {
+bundle category="Upbringing" name="Fallen" {
 	description "You were touched by dark powers as a youth, replacing any inner light with shadow."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

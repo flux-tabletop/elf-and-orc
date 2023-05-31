@@ -1,4 +1,4 @@
-upbringing name="Draconic" {
+bundle category="Upbringing" name="Draconic" {
 	description "You were raised among dragonborn or even in the company of dragons."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

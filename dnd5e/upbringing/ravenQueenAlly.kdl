@@ -1,4 +1,4 @@
-upbringing name="Raven Queen (Ally)" {
+bundle category="Upbringing" name="Raven Queen (Ally)" {
 	description "You were raised among a people who personally serve the Raven Queen in the Shadowfell."
 	mutator "ability_score" {
 		ability "AnyOf" id="ability" {

@@ -1,4 +1,4 @@
-lineage name="Changeling (Shape)" {
+bundle category="Lineage" name="Changeling (Shape)" {
 	description "One of your birth parents is a changeling. You can change your appearance at will."
 	mutator "extend_life_expectancy" 50
 	mutator "add_size" {

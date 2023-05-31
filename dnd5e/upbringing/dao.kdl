@@ -1,4 +1,4 @@
-upbringing name="Dao" {
+bundle category="Upbringing" name="Dao" {
 	description "You were raised on the Elemental Plane of Earth or in a dao's palace on the Material Plane."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

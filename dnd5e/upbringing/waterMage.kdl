@@ -1,4 +1,4 @@
-upbringing name="Water Mage" {
+bundle category="Upbringing" name="Water Mage" {
 	description "You were taught from a young age to shape the salty air and water of your homeland."
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"

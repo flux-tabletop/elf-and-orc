@@ -1,4 +1,4 @@
-lineage name="Lightfoot Halfling" {
+bundle category="Lineage" name="Lightfoot Halfling" {
 	description "One of your birth parents is a lightfoot halfling. You inherited instinctive stealth."
 	mutator "extend_life_expectancy" 75
 	mutator "add_size" {

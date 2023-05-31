@@ -1,4 +1,4 @@
-upbringing name="Survivalist" {
+bundle category="Upbringing" name="Survivalist" {
 	description "You were raised among those who have learned to survive in a trackless wilderness."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

@@ -1,4 +1,4 @@
-upbringing name="Astral" {
+bundle category="Upbringing" name="Astral" {
 	description "You were raised in the Astral Plane, where time stands still, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

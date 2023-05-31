@@ -1,4 +1,4 @@
-lineage name="Goliath II" {
+bundle category="Lineage" name="Goliath II" {
 	description "One of your birth parents is a goliath. You have inherited adaptations to extreme climates and a strong frame."
 	mutator "extend_life_expectancy" 50
 	mutator "add_size" {

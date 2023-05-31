@@ -1,4 +1,4 @@
-upbringing name="Sharp-Witted" {
+bundle category="Upbringing" name="Sharp-Witted" {
 	description "You were raised among a people who prize biting wit and no-holds-barred wordplay."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

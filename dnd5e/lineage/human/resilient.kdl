@@ -1,4 +1,4 @@
-lineage name="Human II" {
+bundle category="Lineage" name="Human II" {
 	description "One of your birth parents is a human. You inherited a stubborn resiliency."
 	mutator "extend_life_expectancy" 50
 	mutator "add_size" {

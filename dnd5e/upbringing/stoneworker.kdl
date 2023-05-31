@@ -1,4 +1,4 @@
-upbringing name="Stoneworker" {
+bundle category="Upbringing" name="Stoneworker" {
 	description "You were raised among stoneworkers who taught you to value vigilance and trained you with weapons that also serve as work tools."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

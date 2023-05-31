@@ -1,4 +1,4 @@
-upbringing name="Stygia" {
+bundle category="Upbringing" name="Stygia" {
 	description "You were raised in Stygia, the Fifth Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

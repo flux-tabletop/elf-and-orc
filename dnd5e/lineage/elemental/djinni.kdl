@@ -1,4 +1,4 @@
-lineage name="Elemental (Djinni)" {
+bundle category="Lineage" name="Elemental (Djinni)" {
 	description "One of your birth parents is an air genasi, djinni, or creature from the Elemental Plane of Air. You never want for air and can weather virtually any storm."
 	mutator "extend_life_expectancy" 60
 	mutator "add_size" {

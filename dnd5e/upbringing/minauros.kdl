@@ -1,4 +1,4 @@
-upbringing name="Minauros" {
+bundle category="Upbringing" name="Minauros" {
 	description "You were raised in Minauros, the Third Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

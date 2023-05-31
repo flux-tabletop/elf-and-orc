@@ -1,4 +1,4 @@
-lineage name="Infernal I" {
+bundle category="Lineage" name="Infernal I" {
 	description "One of your birth parents is a tiefling or perhaps even a devil. You can take the heat and see in the dark."
 	mutator "extend_life_expectancy" 55
 	mutator "add_size" {

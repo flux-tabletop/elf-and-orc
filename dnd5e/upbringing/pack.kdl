@@ -1,4 +1,4 @@
-upbringing name="Pack" {
+bundle category="Upbringing" name="Pack" {
 	description "You were raised by pack animals or by a people who foster a pack mentality."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

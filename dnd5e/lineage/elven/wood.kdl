@@ -1,4 +1,4 @@
-lineage name="Wood Eleven" {
+bundle category="Lineage" name="Wood Eleven" {
 	description "One of your birth parents is a wood elf. You have keen senses and quick feet."
 	mutator "extend_life_expectancy" 375
 	mutator "add_size" {

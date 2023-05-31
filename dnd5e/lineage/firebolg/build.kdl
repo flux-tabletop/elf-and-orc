@@ -1,4 +1,4 @@
-lineage name="Firbolg I" {
+bundle category="Lineage" name="Firbolg I" {
 	description "One of your birth parents is a firbolg. You have inherited a big stature and short bursts of invisibility."
 	mutator "extend_life_expectancy" 250
 	mutator "add_size" {

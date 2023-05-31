@@ -1,4 +1,4 @@
-upbringing name="Handy" {
+bundle category="Upbringing" name="Handy" {
 	description "You were raised among a people that fed you heartily and made sure you exercised."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

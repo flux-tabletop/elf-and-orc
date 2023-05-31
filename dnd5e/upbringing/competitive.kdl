@@ -1,4 +1,4 @@
-upbringing name="Competitive" {
+bundle category="Upbringing" name="Competitive" {
 	description "You were raised among people who value contests of strength and friendly competition."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

@@ -1,4 +1,4 @@
-upbringing name="Agressive" {
+bundle category="Upbringing" name="Agressive" {
 	description "You were raised among a people who value and reward strength, ferocity, and aggression."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

@@ -1,4 +1,4 @@
-upbringing name="Malbolge" {
+bundle category="Upbringing" name="Malbolge" {
 	description "You were raised in Malbolge, the Sixth Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

@@ -1,4 +1,4 @@
-upbringing name="Guardian" {
+bundle category="Upbringing" name="Guardian" {
 	description "You were raised among bodyguards, city watch, soldiers, mercenaries, or those employed in other martial trades."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

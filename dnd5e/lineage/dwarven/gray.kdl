@@ -1,4 +1,4 @@
-lineage name="Gray Dwarven" {
+bundle category="Lineage" name="Gray Dwarven" {
 	description "One of your birth parents is a gray dwarf. You have inherited keen darkvision and innate magical ability.
 	- Your base walking speed is 25 feet.
 	- Your speed is not reduced by wearing armor with a minimum required strength."

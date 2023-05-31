@@ -1,4 +1,4 @@
-lineage name="Dwarven" {
+bundle category="Lineage" name="Dwarven" {
 	description "One of your birth parents is a dwarf of any type or a mix of dwarven parentages. You are sturdy and resistant to poison.
 	- Your base walking speed is 25 feet.
 	- Your speed is not further reduced by wearing armor with a minimum required strength."

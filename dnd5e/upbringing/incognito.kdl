@@ -1,4 +1,4 @@
-upbringing name="Incognito" {
+bundle category="Upbringing" name="Incognito" {
 	description "You were brought up by those who were not what they seemed."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

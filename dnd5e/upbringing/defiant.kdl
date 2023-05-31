@@ -1,4 +1,4 @@
-upbringing name="Defiant" {
+bundle category="Upbringing" name="Defiant" {
 	description "You were raised to stand up to others, even those bigger and stronger than you."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

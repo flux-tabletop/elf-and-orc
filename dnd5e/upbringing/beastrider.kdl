@@ -1,4 +1,4 @@
-upbringing name="Beastrider" {
+bundle category="Upbringing" name="Beastrider" {
 	description "You were raised among a people who train and ride mounts, whether they be mundane like horses or fantastical like hippogriffs."
 	mutator "ability_score" {
 		ability "Specific" "Wisdom"

@@ -1,4 +1,4 @@
-lineage name="Elemental (Dao)" {
+bundle category="Lineage" name="Elemental (Dao)" {
 	description "One of your birth parents is an earth genasi, dao, or creature from the Elemental Plane of Earth. You have inherited thick skin and an affinity with earth and stone."
 	mutator "extend_life_expectancy" 60
 	mutator "add_size" {

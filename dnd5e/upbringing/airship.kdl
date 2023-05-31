@@ -1,4 +1,4 @@
-upbringing name="Airship" {
+bundle category="Upbringing" name="Airship" {
 	description "You were raised aboard on an airship among its captains and sailors."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

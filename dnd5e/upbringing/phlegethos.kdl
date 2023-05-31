@@ -1,4 +1,4 @@
-upbringing name="Phlegethos" {
+bundle category="Upbringing" name="Phlegethos" {
 	description "You were raised in Phlegethos, the Fourth Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

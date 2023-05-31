@@ -1,4 +1,4 @@
-upbringing name="Guerrilla" {
+bundle category="Upbringing" name="Guerrilla" {
 	description "You were raised among those skilled in ambushes, snares, or guerrilla warfare."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

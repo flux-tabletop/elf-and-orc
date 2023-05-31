@@ -1,4 +1,4 @@
-upbringing name="Caravaneer" {
+bundle category="Upbringing" name="Caravaneer" {
 	description "You were raised among caravaneers, teamsters, wainwrights, wheelwrights, or others invested in overland travel or trade."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

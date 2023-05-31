@@ -1,4 +1,4 @@
-upbringing name="Laborer" {
+bundle category="Upbringing" name="Laborer" {
 	description "You were brought up to perform a specific task or take up a specialized trade."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

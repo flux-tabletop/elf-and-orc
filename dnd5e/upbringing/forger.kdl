@@ -1,4 +1,4 @@
-upbringing name="Forger" {
+bundle category="Upbringing" name="Forger" {
 	description "You were raised among forgers and impersonators."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

@@ -1,4 +1,4 @@
-upbringing name="Sleuth" {
+bundle category="Upbringing" name="Sleuth" {
 	description "You were raised among people who solve puzzles or baffling crimes for a living."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

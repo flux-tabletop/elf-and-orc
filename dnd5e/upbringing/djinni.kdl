@@ -1,4 +1,4 @@
-upbringing name="Djinni" {
+bundle category="Upbringing" name="Djinni" {
 	description "You were raised on the Elemental Plane of Air or in a djinni's palace on the Material Plane."
 	mutator "ability_score" {
 		ability "Specific" "Dexterity"

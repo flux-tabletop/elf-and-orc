@@ -1,4 +1,4 @@
-lineage name="Forest Gnomish" {
+bundle category="Lineage" name="Forest Gnomish" {
 	description "One of your birth parents is a forest gnome. You have innate illusionist magic."
 	mutator "extend_life_expectancy" 225
 	mutator "add_size" {

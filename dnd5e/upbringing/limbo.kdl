@@ -1,4 +1,4 @@
-upbringing name="Limbo" {
+bundle category="Upbringing" name="Limbo" {
 	description "You were raised in the ever - turbulent churn of the plane of Limbo or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Wisdom"

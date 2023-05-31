@@ -1,4 +1,4 @@
-upbringing name="Cania" {
+bundle category="Upbringing" name="Cania" {
 	description "You were raised in Cania, the Eighth Hell, or among a people who hail from there."
 	mutator "ability_score" {
 		ability "Specific" "Charisma"

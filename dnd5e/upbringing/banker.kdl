@@ -1,4 +1,4 @@
-upbringing name="Banker" {
+bundle category="Upbringing" name="Banker" {
 	description "You were trained from a young age to keep things safe—jewels, secrets, prisoners."
 	mutator "ability_score" {
 		ability "Specific" "Constitution"

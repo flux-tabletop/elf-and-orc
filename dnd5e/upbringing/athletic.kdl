@@ -1,4 +1,4 @@
-upbringing name="Athletic" {
+bundle category="Upbringing" name="Athletic" {
 	description "From a very young age, you were trained to stay in peak physical shape."
 	mutator "ability_score" {
 		ability "Specific" "Strength"

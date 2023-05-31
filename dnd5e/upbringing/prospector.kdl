@@ -1,4 +1,4 @@
-upbringing name="Prospector" {
+bundle category="Upbringing" name="Prospector" {
 	description "You were raised among prospectors, investigators, or bounty hunters."
 	mutator "ability_score" {
 		ability "Specific" "Wisdom"

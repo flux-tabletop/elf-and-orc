@@ -1,4 +1,4 @@
-lineage name="Goblin" {
+bundle category="Lineage" name="Goblin" {
 	description "One of your birth parents is a goblin. Your reflexes are naturally quick and your stature small."
 	mutator "extend_life_expectancy" 30
 	mutator "add_size" {

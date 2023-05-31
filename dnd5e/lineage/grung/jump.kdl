@@ -1,4 +1,4 @@
-lineage name="Grung I" {
+bundle category="Lineage" name="Grung I" {
 	description "One of your birth parents is a grung. You have a powerful jump and poison glands."
 	mutator "extend_life_expectancy" 50
 	mutator "add_size" {

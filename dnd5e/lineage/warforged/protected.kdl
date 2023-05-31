@@ -1,4 +1,4 @@
-lineage name="Warforged I" {
+bundle category="Lineage" name="Warforged I" {
 	description "One of your birth parents is a warforged. You do not require sleep and have built-in protection."
 	// TODO: Age. Your life expectancy is unknown. You halve the effect of any magical aging. If your other birth parent is a warforged, you are immune to magical aging effects.
 	mutator "add_size" {

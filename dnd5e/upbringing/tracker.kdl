@@ -1,4 +1,4 @@
-upbringing name="Tracker" {
+bundle category="Upbringing" name="Tracker" {
 	description "From a young age, you were taught to live in the wild and how to track game or enemies."
 	mutator "ability_score" {
 		ability "Specific" "Strength"
