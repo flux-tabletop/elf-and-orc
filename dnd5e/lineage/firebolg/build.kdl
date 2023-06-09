@@ -11,7 +11,7 @@ bundle category="Lineage" name="Firbolg I" {
 	feature name="Hidden Step" {
 		description "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest."
 		action "Bonus" {
-			condition "basic-rules@dnd5e/condition/invisible.kdl"
+			condition "github://flux-tabletop:dnd5e-basic-rules@dnd5e/condition/invisible.kdl"
 			limited_uses {
 				max_uses 1
 				reset_on "Short"
