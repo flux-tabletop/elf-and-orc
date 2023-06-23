@@ -10,6 +10,9 @@ bundle category="Lineage" name="Goblin" {
 	mutator "speed" "Walking" (Base)30
 	feature name="Nimble Escape" {
 		description "You can take the Disengage action as a bonus action on each of your turns."
-		// TODO: List Disengage as a Bonus Action
+		mutator "feature" name="Disengage" collapsed=true {
+			description "Your movement doesn't provoke opportunity attacks for the rest of the turn."
+			action "Bonus"
+		}
 	}
 }

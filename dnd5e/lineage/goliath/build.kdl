@@ -10,6 +10,11 @@ bundle category="Lineage" name="Goliath I" {
 	mutator "speed" "Walking" (Base)30
 	feature name="Stone's Endurance" {
 		description "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest."
-		// TODO: limited use reaction
+		action "Reaction" {
+			limited_uses {
+				max_uses 1
+				reset_on "Short"
+			}
+		}
 	}
 }
