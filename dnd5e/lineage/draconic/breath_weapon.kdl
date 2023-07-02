@@ -18,12 +18,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -69,12 +69,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -120,12 +120,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -171,12 +171,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -222,12 +222,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -273,12 +273,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -324,12 +324,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -375,12 +375,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -426,12 +426,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
@@ -477,12 +477,12 @@ bundle category="Lineage" name="Draconic I" {
 					When you use your breath weapon, each creature in the area of the exhalation must make a Constitution saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
 
 					After you use your breath weapon, you can't use it again until you complete a short or long rest."
-					format-arg "DC" (Evaluator)"math" "Add" {
+					format-arg "DC" "int" (Evaluator)"math" "Add" {
 						value 8
 						value (Evaluator)"get_ability_modifier" (Ability)"Constitution"
 						value (Evaluator)"get_proficiency_bonus"
 					}
-					format-arg "amt" (Evaluator)"get_level" {
+					format-arg "amt" "int" (Evaluator)"get_level" {
 						level 1 2
 						level 6 3
 						level 11 4
