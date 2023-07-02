@@ -11,14 +11,14 @@ bundle category="Lineage" name="Gray Dwarven" {
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "flag" "ArmorStrengthRequirement" false
-	feature name="Superior Darkvision" {
+	mutator "feature" name="Superior Darkvision" {
 		description "You have superior vision in dark and dim conditions. You can see in dim light within at least 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
 		mutator "sense" "Darkvision" (Additive)60
 	}
-	feature name="Duergar Resilience" {
+	mutator "feature" name="Duergar Resilience" {
 		description "You have advantage on saving throws against illusions and against being charmed or paralyzed."
 	}
-	feature name="Duergar Magic" {
+	mutator "feature" name="Duergar Magic" {
 		description "When you reach 3rd level, you can cast the enlarge/reduce spell on yourself once with this trait, using only the spell's enlarge option. When you reach 5th level, you can cast the invisibility spell on yourself once with this trait. You don't need material components for either spell, and you can't cast them while you're in direct sunlight, although sunlight has no effect on them once cast. You regain the ability to cast these spells with this trait when you finish a long rest. Intelligence is your spellcasting ability for these spells."
 		mutator "by_level" {
 			level 3 {
@@ -41,7 +41,7 @@ bundle category="Lineage" name="Gray Dwarven" {
 			}
 		}
 	}
-	feature name="Sunlight Sensitivity" {
+	mutator "feature" name="Sunlight Sensitivity" {
 		// TODO: Disadvantage on attack rolls and skill for condition
 		description "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
 	}

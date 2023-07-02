@@ -9,7 +9,7 @@ bundle category="Lineage" name="Sea Elven" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
-	feature name="Child of the Sea" {
+	mutator "feature" name="Child of the Sea" {
 		description "You have a swimming speed of 30 feet, and you can breathe air and water."
 		mutator "speed" "SWimming" (Base)30
 	}

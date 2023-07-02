@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Banker" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Warder's Intuition" {
+	mutator "feature" name="Warder's Intuition" {
 		description "When you make an Intelligence (Investigation) check or an ability check using thieves' tools, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

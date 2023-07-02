@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Story Collector" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Curiosity" {
+	mutator "feature" name="Curiosity" {
 		description "When you encounter a notable object, such as a magic item, you can correctly recall its original purpose and its creators, whether those were dwarves, elves, humans, yuan-ti, or some other known race. In addition, you can determine the monetary value of objects more than a century old."
 	}
 }

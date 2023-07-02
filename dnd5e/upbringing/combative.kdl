@@ -20,7 +20,7 @@ bundle category="Upbringing" name="Combative" {
 		option "Orc"
 	}
 	mutator "add_proficiency" (Skill)"Specific" "Intimidation"
-	feature name="Formidable Attacks" {
+	mutator "feature" name="Formidable Attacks" {
 		description "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
 	}
 }

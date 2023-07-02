@@ -8,11 +8,11 @@ bundle category="Lineage" name="Bugbear" {
 		weight base=117 multiplier=1 bonus=(Roll)"1d6"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Long-Limbed" {
+	mutator "feature" name="Long-Limbed" {
 		description "When you make a melee attack on your turn, your reach for it is 5 feet greater than normal."
 		// TODO: increase reach for melee attacks
 	}
-	feature name="Powerful Build" {
+	mutator "feature" name="Powerful Build" {
 		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 	}
 }

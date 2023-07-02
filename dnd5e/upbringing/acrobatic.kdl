@@ -24,7 +24,7 @@ bundle category="Upbringing" name="Acrobatic" {
 		option "Shawm"
 		option "Viol"
 	}
-	feature name="Mirthful Leaps" {
+	mutator "feature" name="Mirthful Leaps" {
 		description "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal."
 	}
 }

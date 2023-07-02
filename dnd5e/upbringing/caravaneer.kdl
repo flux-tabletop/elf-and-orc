@@ -25,7 +25,7 @@ bundle category="Upbringing" name="Caravaneer" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Intuitive Motion" {
+	mutator "feature" name="Intuitive Motion" {
 		description "When you make a Dexterity (Acrobatics) check or any ability check to operate or maintain a land vehicle, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

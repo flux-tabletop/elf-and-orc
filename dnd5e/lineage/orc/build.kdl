@@ -10,7 +10,7 @@ bundle category="Lineage" name="Orc I" {
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
 	mutator "add_proficiency" (Skill)"Specific" "Perception"
-	feature name="Powerful Build" {
+	mutator "feature" name="Powerful Build" {
 		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 	}
 }

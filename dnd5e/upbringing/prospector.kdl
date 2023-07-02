@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Prospector" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Hunter's Intuition" {
+	mutator "feature" name="Hunter's Intuition" {
 		description "When you make a Wisdom (Perception) or Wisdom (Survival) check, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

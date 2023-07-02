@@ -14,7 +14,7 @@ bundle category="Upbringing" name="Maritime" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Emissary of the Sea" {
+	mutator "feature" name="Emissary of the Sea" {
 		description "Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water. They can understand the meaning of your words, though you have no special ability to understand them in return."
 	}
 }

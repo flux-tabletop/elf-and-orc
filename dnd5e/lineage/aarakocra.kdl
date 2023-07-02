@@ -8,7 +8,7 @@ bundle category="Lineage" name="Aarakocra" limit=2 {
 		weight base=40 multiplier=1
 	}
 	mutator "speed" "Walking" (Base)25
-	feature name="Flight" {
+	mutator "feature" name="Flight" {
 		description "If you aren't wearing medium or heavy armor, increase your flying speed by 20 feet."
 		mutator "speed" "Flying" (Additive)20
 		criteria "has_armor_equipped" inverted=true {
@@ -16,7 +16,7 @@ bundle category="Lineage" name="Aarakocra" limit=2 {
 			kind "Heavy"
 		}
 	}
-	feature name="Talons" unique=true {
+	mutator "feature" name="Talons" unique=true {
 		description "Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
 		action "Action" {
 			attack {

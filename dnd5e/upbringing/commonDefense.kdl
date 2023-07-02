@@ -25,7 +25,7 @@ bundle category="Upbringing" name="Common Defense" {
 	}
 	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightened"
 	// TODO: action not feature
-	feature name="Slinger" {
+	mutator "feature" name="Slinger" {
 		description "Your throwing arm is a natural weapon that you can use to make ranged attacks as you were wielding a sling, provided you have sling bullets or equivalent."
 	}
 }

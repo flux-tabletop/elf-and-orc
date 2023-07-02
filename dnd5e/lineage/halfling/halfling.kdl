@@ -8,14 +8,14 @@ bundle category="Lineage" name="Halfling" {
 		weight base=15 multiplier=1
 	}
 	mutator "speed" "Walking" (Base)25
-	feature name="Childlike Appearance" {
+	mutator "feature" name="Childlike Appearance" {
 		description "You have advantage on Deception or Persuasion skill checks (your choice) against creatures of Medium size or larger."
 		// TODO: skill adv with selector
 	}
-	feature name="Halfling Nimbleness" {
+	mutator "feature" name="Halfling Nimbleness" {
 		description "You can move through the space of any creature that is of a size larger than yours."
 	}
-	feature name="Lucky" {
+	mutator "feature" name="Lucky" {
 		description "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
 	}
 }

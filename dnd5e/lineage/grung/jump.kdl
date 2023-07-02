@@ -9,16 +9,16 @@ bundle category="Lineage" name="Grung I" {
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "speed" "Climbing" (Base)25
-	feature name="Amphibious" unique=true {
+	mutator "feature" name="Amphibious" unique=true {
 		description "You can breathe air and water."
 	}
-	feature name="Water Dependency" unique=true {
+	mutator "feature" name="Water Dependency" unique=true {
 		description "If you fail to immerse yourself in water for at least 1 hour during a day, you suffer one level of exhaustion at the end of that day. You can only recover from this exhaustion through magic or by immersing yourself in water for at least 1 hour."
 	}
-	feature name="Standing Leap" {
+	mutator "feature" name="Standing Leap" {
 		description "Your long jump is up to 25 feet and your high jump is up to 15 feet, with or without a running start."
 	}
-	feature name="Poison Weapons" {
+	mutator "feature" name="Poison Weapons" {
 		description "As an action, you can apply the poison of your skin to any piercing weapon. The next time the weapon sucessfully hits, the target must succeed on a DC 12 Constitution saving throw or take 2d4 poison damage."
 		action "Action"
 	}

@@ -9,7 +9,7 @@ bundle category="Lineage" name="Goblinoid" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
-	feature name="Ability Score Increase" {
+	mutator "feature" name="Ability Score Increase" {
 		description "Your Dexterity or Constitution score increases by 1. You can't increase an ability score above 17 using this trait."
 		mutator "ability_score" {
 			ability "AnyOf" {

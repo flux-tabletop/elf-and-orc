@@ -8,13 +8,13 @@ bundle category="Lineage" name="Kenku II" {
 		weight base=36 multiplier=2
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Instinctive Flight" {
+	mutator "feature" name="Instinctive Flight" {
 		description "You have advantage on checks made to use air vehicles and magic items that grant the ability to fly, such as brooms of flying or carpets of flying, as well as on checks to maintain concentration on a fly spell you have cast."
 	}
-	feature name="Perfect Memory" {
+	mutator "feature" name="Perfect Memory" {
 		description "You can accurately recall anything you have seen or heard within the past year."
 	}
-	feature name="Talons" unique=true {
+	mutator "feature" name="Talons" unique=true {
 		description "Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
 		action "Action" {
 			attack {

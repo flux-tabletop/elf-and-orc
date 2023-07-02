@@ -10,7 +10,7 @@ bundle category="Lineage" name="Elemental (Djinni)" {
 	mutator "speed" "Walking" (Base)30
 	mutator "add_defense" "Resistance" (DamageType)"Lightning"
 	mutator "add_defense" "Resistance" (DamageType)"Thunder"
-	feature name="Unending Breath" {
+	mutator "feature" name="Unending Breath" {
 		description "You can hold your breath indefinitely while you're not incapacitated."
 	}
 }

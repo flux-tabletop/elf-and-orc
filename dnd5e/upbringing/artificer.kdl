@@ -25,7 +25,7 @@ bundle category="Upbringing" name="Artificer" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Artisan's Intuition" {
+	mutator "feature" name="Artisan's Intuition" {
 		description "When you make an Arcana check or an ability check involving artisan's tools, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

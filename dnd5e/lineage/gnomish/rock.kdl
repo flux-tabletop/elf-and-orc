@@ -9,11 +9,11 @@ bundle category="Lineage" name="Rock Gnomish" {
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "sense" "Darkvision" (Base)60
-	feature name="Gnome Cunning" {
+	mutator "feature" name="Gnome Cunning" {
 		description "You have advantage on all Wisdom saving throws against magic."
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Wisdom" context="magic"
 	}
-	feature name="Restless" {
+	mutator "feature" name="Restless" {
 		description "When taking a long rest, you need only 2 hours of sleep and can spend the other 6 hours performing light activity."
 	}
 }

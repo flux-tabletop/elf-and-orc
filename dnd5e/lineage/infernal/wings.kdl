@@ -8,7 +8,7 @@ bundle category="Lineage" name="Infernal II" {
 		weight base=56 multiplier=(Roll)"1d4" bonus=(Roll)"2d10"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Winged" {
+	mutator "feature" name="Winged" {
 		description "You have bat-like wings sprouting from your shoulder blades. You have a flying speed of 20 feet while you aren't wearing medium or heavy armor."
 		mutator "speed" "Flying" (Base)20
 		criteria "has_armor_equipped" inverted=true {

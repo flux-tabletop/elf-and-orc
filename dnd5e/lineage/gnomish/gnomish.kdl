@@ -9,7 +9,7 @@ bundle category="Lineage" name="Gnomish" {
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "sense" "Darkvision" (Base)60
-	feature name="Gnome Cunning" {
+	mutator "feature" name="Gnome Cunning" {
 		description "You have advantage on all Intelligence and Charisma saving throws against magic."
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Intelligence" context="magic"
 		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Charisma" context="magic"

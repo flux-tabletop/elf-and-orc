@@ -8,7 +8,7 @@ bundle category="Lineage" name="Lightfoot Halfling" {
 		weight base=15 multiplier=1
 	}
 	mutator "speed" "Walking" (Base)25
-	feature name="Naturally Stealthy" {
+	mutator "feature" name="Naturally Stealthy" {
 		description "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
 	}
 }

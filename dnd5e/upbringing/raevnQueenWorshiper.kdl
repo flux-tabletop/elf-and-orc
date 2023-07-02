@@ -20,7 +20,7 @@ bundle category="Upbringing" name="Raven Queen (Worshiper)" {
 		option "Orc"
 	}
 	// TODO: action not feature
-	feature name="Blessing of the Raven Queen" {
+	mutator "feature" name="Blessing of the Raven Queen" {
 		description "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 	}
 }

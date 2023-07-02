@@ -8,7 +8,7 @@ bundle category="Lineage" name="Firbolg II" {
 		weight base=117 multiplier=1 bonus=(Roll)"2d8"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Firbolg Magic" {
+	mutator "feature" name="Firbolg Magic" {
 		description "You can cast detect magic and disguise self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem to be the height of humans or elves, allowing you to more easily blend in."
 		mutator "spellcasting" "add_prepared" ability="Wisdom" {
 			spell "local://basic-rules@dnd5e/spells/detectMagic.kdl"

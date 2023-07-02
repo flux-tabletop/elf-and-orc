@@ -10,7 +10,7 @@ bundle category="Upbringing" name="Cunning" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Infernal Legacy" {
+	mutator "feature" name="Infernal Legacy" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
 			spell "local://basic-rules@dnd5e/spells/thaumaturgy.kdl"

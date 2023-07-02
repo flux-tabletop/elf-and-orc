@@ -10,7 +10,7 @@ bundle category="Lineage" name="Kenku I" {
 	mutator "speed" "Walking" (Base)30
 	mutator "add_proficiency" (Skill)"Specific" "Acrobatics"
 	mutator "add_proficiency" (Skill)"Specific" "Stealth"
-	feature name="Slow Fall" {
+	mutator "feature" name="Slow Fall" {
 		description "While falling, you can slow the speed at which you descend and halve the bludgeoning damage taken at the end of the fall."
 	}
 }

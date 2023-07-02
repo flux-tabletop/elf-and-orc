@@ -10,7 +10,7 @@ bundle category="Upbringing" name="Draconic" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Specific" "Draconic"
-	feature name="Dragon Whelp" {
+	mutator "feature" name="Dragon Whelp" {
 		description "You are immune to the Frightful Presence feature of any dragon."
 	}
 }

@@ -9,7 +9,7 @@ bundle category="Lineage" name="Ghostwise Halfling" {
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "speed" "Climbing" (Base)20
-	feature name="Silent Speech" {
+	mutator "feature" name="Silent Speech" {
 		description "You can speak telepathically to any creatures of your choice within 60 feet of you. A creature understands you only if the two of you share a language."
 	}
 }

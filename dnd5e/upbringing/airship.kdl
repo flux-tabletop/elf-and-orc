@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Airship" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Windwright's Intuition" {
+	mutator "feature" name="Windwright's Intuition" {
 		description "When you make a Dexterity (Acrobatics) check or any ability check involving navigator's tools, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

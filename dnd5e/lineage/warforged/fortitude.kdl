@@ -8,7 +8,7 @@ bundle category="Lineage" name="Warforged II" {
 		weight base=128 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Constructed Resilience" {
+	mutator "feature" name="Constructed Resilience" {
 		description "You were created to have remarkable fortitude, represented by the following benefits:
 		- You have advantage on saving throws against being poisoned, and you have resistance to poison damage.
 		- You don't need to eat, drink, or breathe.

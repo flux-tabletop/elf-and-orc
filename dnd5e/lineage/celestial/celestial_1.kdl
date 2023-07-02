@@ -9,7 +9,7 @@ bundle category="Lineage" name="Celestial I" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
-	feature name="Healing Hands" {
+	mutator "feature" name="Healing Hands" {
 		description "As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can't use it again until you finish a long rest."
 		action "Action" {
 			limited_uses {

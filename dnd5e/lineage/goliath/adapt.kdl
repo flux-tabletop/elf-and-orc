@@ -9,11 +9,11 @@ bundle category="Lineage" name="Goliath II" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "add_proficiency" (Skill)"Specific" "Athletics"
-	feature name="Mountain Adaptation" {
+	mutator "feature" name="Mountain Adaptation" {
 		description "You're acclimated to high altitude, including elevations above 20,000 feet. You're also naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master's Guide. In addition, you are resistant to cold damage."
 		mutator "add_defense" "Resistance" (DamageType)"Cold"
 	}
-	feature name="Powerful Build" {
+	mutator "feature" name="Powerful Build" {
 		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 	}
 }

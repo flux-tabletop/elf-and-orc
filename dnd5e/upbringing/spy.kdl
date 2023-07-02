@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Spy" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Cunning Intuition" {
+	mutator "feature" name="Cunning Intuition" {
 		description "When you make a Charisma (Performance) or Dexterity (Stealth) check, you can roll a d4 and add the number rolled to the ability check. "
 	}
 }

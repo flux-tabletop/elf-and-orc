@@ -9,7 +9,7 @@ bundle category="Lineage" name="Elven II" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "add_proficiency" (Skill)"Specific" "Perception"
-	feature name="Sylvan Magic" {
+	mutator "feature" name="Sylvan Magic" {
 		description "When you reach 5th level, you can cast the pass without trace spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Wisdom is your spellcasting ability for this spell."
 		mutator "by_level" {
 			level 5 {
@@ -23,7 +23,7 @@ bundle category="Lineage" name="Elven II" {
 			}
 		}
 	}
-	feature name="Trance" {
+	mutator "feature" name="Trance" {
 		description "You don't need to sleep. Instead, you meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
 	}
 }

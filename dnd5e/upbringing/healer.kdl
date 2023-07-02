@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Healer" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Medical Intuition" {
+	mutator "feature" name="Medical Intuition" {
 		description "When you make a Wisdom (Medicine) check or an ability check using an herbalism kit, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

@@ -8,11 +8,11 @@ bundle category="Lineage" name="Kobold II" {
 		weight base=9 bonus=(Roll)"1d12"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Sunlight Sensitivity" {
+	mutator "feature" name="Sunlight Sensitivity" {
 		// TODO: Disadvantage on attack rolls and skill for condition
 		description "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
 	}
-	feature name="Wings" {
+	mutator "feature" name="Wings" {
 		description "You have a pair of draconic wings. You have a flying speed of 30 feet. To use this speed, you can't be wearing heavy armor."
 		mutator "speed" "Flying" (Base)30
 		criteria "has_armor_equipped" inverted=true {

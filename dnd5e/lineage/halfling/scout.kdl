@@ -11,7 +11,7 @@ bundle category="Lineage" name="Stout Halfling" {
 	}
 	mutator "speed" "Walking" (Base)25
 	mutator "flag" "ArmorStrengthRequirement" false
-	feature name="Stout Resilience" {
+	mutator "feature" name="Stout Resilience" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
 	}
 }

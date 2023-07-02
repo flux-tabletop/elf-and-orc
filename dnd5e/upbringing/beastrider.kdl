@@ -19,10 +19,10 @@ bundle category="Upbringing" name="Beastrider" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="The Bigger They Are" {
+	mutator "feature" name="The Bigger They Are" {
 		description "Starting at 3rd level, you can target a beast or monstrosity when you cast animal friendship or speak with animals, provided the creature's Intelligence score is 3 or lower."
 	}
-	feature name="Wild Intuition" {
+	mutator "feature" name="Wild Intuition" {
 		description "When you make a Wisdom (Animal Handling) or Intelligence (Nature) check, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

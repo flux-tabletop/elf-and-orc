@@ -29,7 +29,7 @@ bundle category="Upbringing" name="Sylvan" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Speech of Beast and Leaf" {
+	mutator "feature" name="Speech of Beast and Leaf" {
 		description "You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them."
 	}
 }

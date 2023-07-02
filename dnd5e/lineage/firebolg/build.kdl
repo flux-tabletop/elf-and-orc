@@ -8,7 +8,7 @@ bundle category="Lineage" name="Firbolg I" {
 		weight base=117 multiplier=1 bonus=(Roll)"2d8"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Hidden Step" {
+	mutator "feature" name="Hidden Step" {
 		description "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest."
 		action "Bonus" {
 			condition "github://flux-tabletop:dnd5e-basic-rules@dnd5e/condition/invisible.kdl"
@@ -18,7 +18,7 @@ bundle category="Lineage" name="Firbolg I" {
 			}
 		}
 	}
-	feature name="Powerful Build" {
+	mutator "feature" name="Powerful Build" {
 		description "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 	}
 }

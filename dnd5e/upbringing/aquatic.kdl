@@ -14,7 +14,7 @@ bundle category="Upbringing" name="Aquatic" {
 	mutator "add_proficiency" (Weapon)"Trident"
 	mutator "add_proficiency" (Weapon)"CrossbowLight"
 	mutator "add_proficiency" (Weapon)"Net"
-	feature name="Friend of the Sea" {
+	mutator "feature" name="Friend of the Sea" {
 		description "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed. "
 	}
 }

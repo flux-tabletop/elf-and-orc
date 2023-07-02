@@ -6,7 +6,7 @@ bundle category="Upbringing" name="Pack" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Pack Tactics" {
+	mutator "feature" name="Pack Tactics" {
 		description "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated."
 	}
 }

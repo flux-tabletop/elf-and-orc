@@ -12,7 +12,7 @@ bundle category="Lineage" name="Mountain Dwarven" {
 	mutator "speed" "Walking" (Base)25
 	mutator "sense" "Darkvision" (Base)60
 	mutator "flag" "ArmorStrengthRequirement" false
-	feature name="Ability Score Increase" {
+	mutator "feature" name="Ability Score Increase" {
 		description "Your Strength score increases by 1. You can't increase an ability score above 17 using this trait."
 		mutator "ability_score" {
 			ability "Specific" "Strength"

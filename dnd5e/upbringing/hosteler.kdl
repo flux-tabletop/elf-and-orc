@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Hosteler" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Ever Hospitable" {
+	mutator "feature" name="Ever Hospitable" {
 		description "When you make a Charisma (Persuasion) check or an ability check involving brewer's supplies or cook's utensils, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

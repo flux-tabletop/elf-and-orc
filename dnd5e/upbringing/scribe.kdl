@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Scribe" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Gifted Scribe" {
+	mutator "feature" name="Gifted Scribe" {
 		description "When you make an Intelligence (History) check or an ability check using calligrapher's supplies, you can roll a d4 and add the number rolled to the ability check."
 	}
 }

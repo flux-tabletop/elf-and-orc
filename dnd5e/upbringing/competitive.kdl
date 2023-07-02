@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Competitive" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Competitive" {
+	mutator "feature" name="Competitive" {
 		description "When you see an ally score a critical hit, you can use your reaction to make a melee attack against any one creature within range."
 	}
 }

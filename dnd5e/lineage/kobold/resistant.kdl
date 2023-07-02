@@ -9,7 +9,7 @@ bundle category="Lineage" name="Kobold I" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
-	feature name="Dragon's Resistance" {
+	mutator "feature" name="Dragon's Resistance" {
 		description {
 			section "Dragon's Resistance. You have resistance to a type of damage based on a color of chromatic dragon (choose or roll a d10):"
 			section table=true {

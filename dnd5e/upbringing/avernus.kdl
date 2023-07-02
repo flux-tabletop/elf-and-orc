@@ -10,7 +10,7 @@ bundle category="Upbringing" name="Avernus" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
-	feature name="Legacy of Avernus" {
+	mutator "feature" name="Legacy of Avernus" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
 			spell "local://basic-rules@dnd5e/spells/thaumaturgy.kdl"

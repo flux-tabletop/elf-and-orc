@@ -8,7 +8,7 @@ bundle category="Lineage" name="Human I" {
 		weight base=55 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Ability Score Increase" {
+	mutator "feature" name="Ability Score Increase" {
 		description "Choose three ability scores to each increase by 1."
 		mutator "ability_score" {
 			ability "Any" id="skillA" {

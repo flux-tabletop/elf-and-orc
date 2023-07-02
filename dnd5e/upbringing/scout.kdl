@@ -23,7 +23,7 @@ bundle category="Upbringing" name="Scout" {
 	mutator "add_proficiency" (Weapon)"Shortsword"
 	mutator "add_proficiency" (Weapon)"Shortbow"
 	mutator "add_proficiency" (Weapon)"Longbow"
-	feature name="Mask of the Wild" {
+	mutator "feature" name="Mask of the Wild" {
 		description "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
 	}
 }

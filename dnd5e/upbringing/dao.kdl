@@ -10,7 +10,7 @@ bundle category="Upbringing" name="Dao" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
-	feature name="Merge with Stone" {
+	mutator "feature" name="Merge with Stone" {
 		description "You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Constitution" {
 			spell "local://basic-rules@dnd5e/spells/passWithoutTrace.kdl"

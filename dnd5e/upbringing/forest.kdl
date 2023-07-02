@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Forest" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Speak with Small Beasts" {
+	mutator "feature" name="Speak with Small Beasts" {
 		description "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Your people love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
 	}
 }

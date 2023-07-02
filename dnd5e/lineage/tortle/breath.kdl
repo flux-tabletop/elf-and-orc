@@ -8,10 +8,10 @@ bundle category="Lineage" name="Tortle II" {
 		weight base=197 multiplier=(Roll)"1d4" bonus=(Roll)"1d12"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Hold Breath" {
+	mutator "feature" name="Hold Breath" {
 		description "You can hold your breath for up to 1 hour at a time. You aren't a natural swimmer, but you can remain underwater for some time before needing to come up for air."
 	}
-	feature name="Natural Armor" {
+	mutator "feature" name="Natural Armor" {
 		description "Your shell provides some protection, giving you a base AC of 14 + your Dexterity modifier. If you are using a shield, you can apply the shield's bonus as normal.
 		If you already have the Natural Armor trait inherited from your other birth parent, your shell hardens and thickens. You have a base AC of 17, but your Dexterity modifier no longer affects this number and you gain no benefit from wearing armor."
 		// TODO: Change mutators depending on how many instances of this feature are granted
@@ -28,7 +28,7 @@ bundle category="Lineage" name="Tortle II" {
 		}
 	}
 	// TODO: Only ever show 1 instance of features which allow stacking
-	feature name="Shell Defense" {
+	mutator "feature" name="Shell Defense" {
 		description {
 			short "Withdraw into shell to get AC bonus and advantage on Strength and Constitution saving throws. While withdrawn, you are prone, have no speed or reactions, disadvantage on Dexterity saving throws, and can only use a bonus action to emerge from your shell."
 			section "You can withdraw into your shell as an action. Until you emerge, you gain a +2 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell. If you already have the Shell Defense trait inherited from your other birth parent, you gain a +4 bonus to AC with this trait."

@@ -10,7 +10,7 @@ bundle category="Upbringing" name="Stygia" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
-	feature name="Legacy of Stygia" {
+	mutator "feature" name="Legacy of Stygia" {
 		description "You know the ray of frost cantrip. Charisma is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
 			spell "local://basic-rules@dnd5e/spells/rayOfFrost.kdl"

@@ -20,7 +20,7 @@ bundle category="Upbringing" name="Stony Ground" {
 		option "Orc"
 	}
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	feature name="Stone Camouflage" {
+	mutator "feature" name="Stone Camouflage" {
 		description "You have advantage on Dexterity (Stealth) checks to hide in rocky terrain and underground."
 		mutator "add_modifier" "Advantage" (Skill)"Specific" "Stealth" context="to hide underground or in rocky terrain"
 	}

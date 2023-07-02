@@ -8,7 +8,7 @@ bundle category="Lineage" name="Human II" {
 		weight base=55 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
-	feature name="Relentless Endurance" unique=true {
+	mutator "feature" name="Relentless Endurance" unique=true {
 		description "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
 		action "Special" {
 			limited_uses {

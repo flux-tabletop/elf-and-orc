@@ -3,7 +3,7 @@ bundle category="Upbringing" name="Dramatic" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	// TODO: action not feature
-	feature name="Draw Attention" {
+	mutator "feature" name="Draw Attention" {
 		description "As an action on your turn, you can distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest."
 	}
 }

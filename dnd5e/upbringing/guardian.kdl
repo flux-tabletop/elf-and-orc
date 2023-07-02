@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Guardian" {
 		option "Halfling"
 		option "Orc"
 	}
-	feature name="Sentinel's Intuition" {
+	mutator "feature" name="Sentinel's Intuition" {
 		description "When you make a Wisdom (Insight) or Wisdom (Perception) check, you can roll a d4 and add the number rolled to the ability check."
 	}
 }
