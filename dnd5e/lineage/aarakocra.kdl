@@ -10,10 +10,12 @@ bundle category="Lineage" name="Aarakocra" limit=2 {
 	mutator "speed" "Walking" (Base)25
 	mutator "feature" name="Flight" {
 		description "If you aren't wearing medium or heavy armor, increase your flying speed by 20 feet."
-		mutator "speed" "Flying" (Additive)20
-		criteria "has_armor_equipped" inverted=true {
-			kind "Medium"
-			kind "Heavy"
+		mutator "apply_if" {
+			criteria (Evaluator)"has_armor_equipped" inverted=true {
+				kind "Medium"
+				kind "Heavy"
+			}
+			mutator "speed" "Flying" (Additive)20
 		}
 	}
 	mutator "feature" name="Talons" unique=true {

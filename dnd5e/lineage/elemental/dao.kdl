@@ -13,13 +13,15 @@ bundle category="Lineage" name="Elemental (Dao)" {
 	}
 	mutator "feature" name="Natural Armor" {
 		description "When you aren't wearing armor, your AC is 12 + your Constitution modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor."
-		criteria "has_armor_equipped" inverted=true {
-			kind "Light"
-			kind "Medium"
-			kind "Heavy"
-		}
-		mutator "add_armor_class_formula" base=12 {
-			bonus "Constitution"
+		mutator "apply_if" {
+			criteria (Evaluator)"has_armor_equipped" inverted=true {
+				kind "Light"
+				kind "Medium"
+				kind "Heavy"
+			}
+			mutator "add_armor_class_formula" base=12 {
+				bonus "Constitution"
+			}
 		}
 	}
 	mutator "feature" name="Petrification Resistance" {
