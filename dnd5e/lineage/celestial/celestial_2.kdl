@@ -10,8 +10,8 @@ bundle category="Lineage" name="Celestial II" {
 	mutator "speed" "Walking" (Base)30
 	mutator "feature" name="Celestial Resistance" {
 		description "You have resistance to necrotic damage and radiant damage."
-		mutator "add_defense" "Resistance" (DamageType)"Necrotic"
-		mutator "add_defense" "Resistance" (DamageType)"Radiant"
+		mutator "add_defense" "Resistance" (DamageType)"Specific" "Necrotic"
+		mutator "add_defense" "Resistance" (DamageType)"Specific" "Radiant"
 	}
 	mutator "feature" name="Light Bearer" {
 		description "You know the light cantrip. Charisma is your spellcasting ability for it."

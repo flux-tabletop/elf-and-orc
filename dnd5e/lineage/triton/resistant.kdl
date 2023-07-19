@@ -9,5 +9,5 @@ bundle category="Lineage" name="Triton II" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
-	mutator "add_defense" "Resistance" (DamageType)"Acid"
+	mutator "add_defense" "Resistance" (DamageType)"Specific" "Acid"
 }

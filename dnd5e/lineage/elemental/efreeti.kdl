@@ -8,7 +8,7 @@ bundle category="Lineage" name="Elemental (Efreeti)" {
 		weight base=55 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
-	mutator "add_defense" "Resistance" (DamageType)"Fire"
+	mutator "add_defense" "Resistance" (DamageType)"Specific" "Fire"
 	mutator "feature" name="Darkvision" {
 		description "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Your ties to the Elemental Plane of Fire make your darkvision unusual: everything you see in darkness is in a shade of red."
 		mutator "sense" "Darkvision" (Base)60

@@ -15,6 +15,6 @@ bundle category="Lineage" name="Dwarven" {
 	mutator "feature" name="Dwarven Resilience" {
 		description "You have advantage on saving throws against poison, and you have resistance against poison damage."
 		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="Poison"
-		mutator "add_defense" "Resistance" (DamageType)"Poison"
+		mutator "add_defense" "Resistance" (DamageType)"Specific" "Poison"
 	}
 }

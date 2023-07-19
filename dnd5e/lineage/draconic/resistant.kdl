@@ -11,34 +11,34 @@ bundle category="Lineage" name="Draconic II" {
 	mutator "sense" "Darkvision" (Base)60
 	mutator "pick" 1 name="Draconic Ancestry" {
 		option "Black Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Acid"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Acid"
 		}
 		option "Blue Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Lightning"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Lightning"
 		}
 		option "Brass Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Fire"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Fire"
 		}
 		option "Bronze Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Lightning"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Lightning"
 		}
 		option "Copper Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Acid"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Acid"
 		}
 		option "Gold Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Fire"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Fire"
 		}
 		option "Green Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Poison"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Poison"
 		}
 		option "Red Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Fire"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Fire"
 		}
 		option "Silver Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Cold"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Cold"
 		}
 		option "White Dragon Ancestry" {
-			mutator "add_defense" "Resistance" (DamageType)"Cold"
+			mutator "add_defense" "Resistance" (DamageType)"Specific" "Cold"
 		}
 	}
 }

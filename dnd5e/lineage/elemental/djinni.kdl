@@ -8,8 +8,8 @@ bundle category="Lineage" name="Elemental (Djinni)" {
 		weight base=55 multiplier=(Roll)"1d4"
 	}
 	mutator "speed" "Walking" (Base)30
-	mutator "add_defense" "Resistance" (DamageType)"Lightning"
-	mutator "add_defense" "Resistance" (DamageType)"Thunder"
+	mutator "add_defense" "Resistance" (DamageType)"Specific" "Lightning"
+	mutator "add_defense" "Resistance" (DamageType)"Specific" "Thunder"
 	mutator "feature" name="Unending Breath" {
 		description "You can hold your breath indefinitely while you're not incapacitated."
 	}

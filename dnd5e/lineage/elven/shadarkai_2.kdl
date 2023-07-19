@@ -9,7 +9,7 @@ bundle category="Lineage" name="Shadar-Kai II" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "add_proficiency" (Skill)"Specific" "Perception"
-	mutator "add_defense" "Resistance" (DamageType)"Necrotic"
+	mutator "add_defense" "Resistance" (DamageType)"Specific" "Necrotic"
 	mutator "feature" name="Fey Ancestry" {
 		description "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
 		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being charmed"

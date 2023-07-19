@@ -9,7 +9,7 @@ bundle category="Lineage" name="Elemental (Marid)" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "speed" "Swimming" (Base)30
-	mutator "add_defense" "Resistance" (DamageType)"Acid"
+	mutator "add_defense" "Resistance" (DamageType)"Specific" "Acid"
 	mutator "feature" name="Amphibious" {
 		description "You can breathe air and water."
 	}

@@ -15,7 +15,7 @@ bundle category="Lineage" name="Warforged II" {
 		- You are immune to disease.
 		- You don't need to sleep, and magic can't put you to sleep."
 		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being poisoned"
-		mutator "add_defense" "Resistance" (DamageType)"Poison"
+		mutator "add_defense" "Resistance" (DamageType)"Specific" "Poison"
 		mutator-todo "add_defense" "Immunity" "Disease"
 	}
 }

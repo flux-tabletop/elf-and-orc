@@ -21,8 +21,7 @@ bundle category="Lineage" name="Kobold I" {
 				row "9-10" "poison (green)"
 			}
 		}
-		// TODO: add_defense damage type selector
-		mutator-todo "add_defense" "Resistance" "AnyOf" {
+		mutator "add_defense" "Resistance" "AnyOf" {
 			option (DamageType)"Acid"
 			option (DamageType)"Cold"
 			option (DamageType)"Fire"

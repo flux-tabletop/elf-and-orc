@@ -9,5 +9,5 @@ bundle category="Lineage" name="Shadar-Kai I" {
 	}
 	mutator "speed" "Walking" (Base)30
 	mutator "sense" "Darkvision" (Base)60
-	mutator "add_defense" "Resistance" (DamageType)"Necrotic"
+	mutator "add_defense" "Resistance" (DamageType)"Specific" "Necrotic"
 }
