@@ -13,12 +13,12 @@ bundle category="Upbringing" name="Pyromanic" {
 	mutator "feature" name="Hellfire" {
 		description "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
-			spell "local://basic-rules@dnd5e/spells/thaumaturgy.kdl"
+			spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/thaumaturgy.kdl"
 		}
 		mutator "by_level" {
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
-					spell "local://basic-rules@dnd5e/spells/burningHands.kdl" rank=2
+					spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/burningHands.kdl" rank=2
 					limited_uses {
 						max_uses 1
 						reset_on "Long"

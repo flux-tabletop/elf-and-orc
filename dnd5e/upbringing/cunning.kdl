@@ -13,7 +13,7 @@ bundle category="Upbringing" name="Cunning" {
 	mutator "feature" name="Infernal Legacy" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
-			spell "local://basic-rules@dnd5e/spells/thaumaturgy.kdl"
+			spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/thaumaturgy.kdl"
 		}
 	}
 }

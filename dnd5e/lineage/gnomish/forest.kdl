@@ -16,7 +16,7 @@ bundle category="Lineage" name="Forest Gnomish" {
 	mutator "feature" name="Natural Illusionist" {
 		description "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
 		mutator "spellcasting" "add_prepared" ability="Intelligence" {
-			spell "local://basic-rules@dnd5e/spells/minorIllusion.kdl"
+			spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/minorIllusion.kdl"
 		}
 	}
 }

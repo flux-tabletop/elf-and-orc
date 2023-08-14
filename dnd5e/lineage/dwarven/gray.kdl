@@ -23,7 +23,7 @@ bundle category="Lineage" name="Gray Dwarven" {
 		mutator "by_level" {
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Intelligence" {
-					spell "local://basic-rules@dnd5e/spells/enlargeReduce.kdl"
+					spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/enlargeReduce.kdl"
 					limited_uses {
 						max_uses 1
 						reset_on "Long"
@@ -32,7 +32,7 @@ bundle category="Lineage" name="Gray Dwarven" {
 			}
 			level 5 {
 				mutator "spellcasting" "add_prepared" ability="Intelligence" {
-					spell "local://basic-rules@dnd5e/spells/invisibility.kdl"
+					spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/invisibility.kdl"
 					limited_uses {
 						max_uses 1
 						reset_on "Long"
