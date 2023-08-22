@@ -11,23 +11,23 @@ bundle category="Lineage" name="Human I" {
 	mutator "feature" name="Ability Score Increase" {
 		description "Choose three ability scores to each increase by 1."
 		mutator "ability_score" {
-			ability "Any" id="skillA" {
-				cannot-match "skillB"
-				cannot-match "skillC"
+			ability "Any" id="abilityA" {
+				cannot_match "abilityB"
+				cannot_match "abilityC"
 			}
 			bonus 1
 		}
 		mutator "ability_score" {
-			ability "Any" id="skillB" {
-				cannot-match "skillA"
-				cannot-match "skillC"
+			ability "Any" id="abilityB" {
+				cannot_match "abilityA"
+				cannot_match "abilityC"
 			}
 			bonus 1
 		}
 		mutator "ability_score" {
-			ability "Any" id="skillC" {
-				cannot-match "skillA"
-				cannot-match "skillB"
+			ability "Any" id="abilityC" {
+				cannot_match "abilityA"
+				cannot_match "abilityB"
 			}
 			bonus 1
 		}

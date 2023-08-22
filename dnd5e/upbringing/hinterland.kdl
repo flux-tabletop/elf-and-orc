@@ -20,7 +20,6 @@ bundle category="Upbringing" name="Hinterland" {
 		option "Orc"
 	}
 	mutator "add_proficiency" (Skill)"AnyOf" id="skillA" {
-		cannot-match "skillB"
 		option "AnimalHandling"
 		option "Insight"
 		option "Intimidation"
@@ -30,7 +29,6 @@ bundle category="Upbringing" name="Hinterland" {
 		option "Survival"
 	}
 	mutator "add_proficiency" (Skill)"AnyOf" id="skillB" {
-		cannot-match "skillA"
 		option "AnimalHandling"
 		option "Insight"
 		option "Intimidation"

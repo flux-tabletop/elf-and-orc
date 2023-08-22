@@ -7,10 +7,6 @@ bundle category="Upbringing" name="Consular" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="langA"
 	mutator "add_proficiency" (Language)"Any" id="langB"
-	mutator "add_proficiency" (Skill)"Any" id="skillA" {
-		cannot-match "skillB"
-	}
-	mutator "add_proficiency" (Skill)"Any" id="skillB" {
-		cannot-match "skillA"
-	}
+	mutator "add_proficiency" (Skill)"Any" id="skillA"
+	mutator "add_proficiency" (Skill)"Any" id="skillB"
 }
