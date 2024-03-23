@@ -16,6 +16,6 @@ bundle category="Lineage" name="Warforged I" {
 		- You gain a +1 bonus to Armor Class.
 		- You can don only armor with which you have proficiency. To don armor, you must incorporate it into your body over the course of 1 hour, during which you remain in contact with the armor. To doff armor, you must spend 1 hour removing it. You can rest while donning or doffing armor in this way.
 		- While you live, your armor can't be removed from your body against your will."
-		mutator-todo "bonus_ac" 1
+		mutator "modify" "ArmorClass" 1
 	}
 }

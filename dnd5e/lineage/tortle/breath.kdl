@@ -40,10 +40,10 @@ bundle category="Lineage" name="Tortle II" {
 				// TODO: Change mutators depending on how many instances of this feature are granted
 				mutator-todo "stack_instances" "Shell Defense" {
 					size 1 {
-						mutator-todo "bonus_ac" 2
+						mutator "modify" "ArmorClass" 2
 					}
 					size 2 {
-						mutator-todo "bonus_ac" 4
+						mutator "modify" "ArmorClass" 4
 					}
 				}
 				mutator "modify" (SavingThrow)"Specific" "Strength" "Advantage"
