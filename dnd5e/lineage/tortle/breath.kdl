@@ -46,10 +46,10 @@ bundle category="Lineage" name="Tortle II" {
 						mutator-todo "bonus_ac" 4
 					}
 				}
-				mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Strength"
-				mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Constitution"
+				mutator "modify" (SavingThrow)"Specific" "Strength" "Advantage"
+				mutator "modify" (SavingThrow)"Specific" "Constitution" "Advantage"
 				mutator-todo "speed" "All" (Set)0
-				mutator "add_modifier" "Disadvantage" (SavingThrow)"Specific" "Dexterity"
+				mutator "modify" (SavingThrow)"Specific" "Dexterity" "Disadvantage"
 				mutator-todo "action_budget" "Action" (Set)0
 				mutator-todo "action_budget" "Reaction" (Set)0
 			}

@@ -17,7 +17,7 @@ bundle category="Lineage" name="Dark Elven" {
 	}
 	mutator "feature" name="Fey Ancestry" {
 		description "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
-		mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being charmed"
+		mutator "modify" (SavingThrow)"All" "Advantage" context="being charmed"
 	}
 	mutator "feature" name="Sunlight Sensitivity" {
 		// TODO: Disadvantage on attack rolls and skill for condition

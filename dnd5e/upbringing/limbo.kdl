@@ -10,6 +10,6 @@ bundle category="Upbringing" name="Limbo" {
 	}
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
-	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being charmed"
-	mutator "add_modifier" "Advantage" (SavingThrow)"All" context="being frightended"
+	mutator "modify" (SavingThrow)"All" "Advantage" context="being charmed"
+	mutator "modify" (SavingThrow)"All" "Advantage" context="being frightended"
 }

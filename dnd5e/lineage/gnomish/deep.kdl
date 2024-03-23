@@ -15,6 +15,6 @@ bundle category="Lineage" name="Deep Gnomish" {
 	}
 	mutator "feature" name="Gnome Cunning" {
 		description "You have advantage on all Wisdom saving throws against magic."
-		mutator "add_modifier" "Advantage" (SavingThrow)"Specific" "Wisdom" context="magic"
+		mutator "modify" (SavingThrow)"Specific" "Wisdom" "Advantage" context="magic"
 	}
 }
