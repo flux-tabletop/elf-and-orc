@@ -26,6 +26,6 @@ bundle category="Lineage" name="Elemental (Dao)" {
 	}
 	mutator "feature" name="Petrification Resistance" {
 		description "You have advantage on saving throws against being petrified."
-		mutator "modify" (SavingThrow)"All" "Advantage" context="being petrified"
+		mutator "modify" (SavingThrow)"All" modifier="Advantage" context="being petrified"
 	}
 }

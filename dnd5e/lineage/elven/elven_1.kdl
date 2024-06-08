@@ -11,6 +11,6 @@ bundle category="Lineage" name="Elven I" {
 	mutator "sense" "Darkvision" (Base)60
 	mutator "feature" name="Fey Ancestry" {
 		description "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
-		mutator "modify" (SavingThrow)"All" "Advantage" context="being charmed"
+		mutator "modify" (SavingThrow)"All" modifier="Advantage" context="being charmed"
 	}
 }

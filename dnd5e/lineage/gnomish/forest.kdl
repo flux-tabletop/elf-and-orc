@@ -11,7 +11,7 @@ bundle category="Lineage" name="Forest Gnomish" {
 	mutator "sense" "Darkvision" (Base)60
 	mutator "feature" name="Gnome Cunning" {
 		description "You have advantage on all Wisdom saving throws against magic."
-		mutator "modify" (SavingThrow)"Specific" "Wisdom" "Advantage" context="magic"
+		mutator "modify" (SavingThrow)"Specific" "Wisdom" modifier="Advantage" context="magic"
 	}
 	mutator "feature" name="Natural Illusionist" {
 		description "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
