@@ -58,7 +58,7 @@ bundle category="Lineage" name="Tortle I" {
 				}
 				mutator "modify" (SavingThrow)"Specific" "Strength" modifier="Advantage"
 				mutator "modify" (SavingThrow)"Specific" "Constitution" modifier="Advantage"
-				mutator-todo "speed" "All" (Set)0
+				mutator "speed" "All" (Maximum)0
 				mutator "modify" (SavingThrow)"Specific" "Dexterity" modifier="Disadvantage"
 				mutator-todo "action_budget" "Action" (Set)0
 				mutator-todo "action_budget" "Reaction" (Set)0
