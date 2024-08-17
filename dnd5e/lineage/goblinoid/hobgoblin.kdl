@@ -10,6 +10,15 @@ bundle category="Lineage" name="Hobgoblin" {
 	mutator "speed" "Walking" (Base)30
 	mutator "feature" name="Reserves of Strength" {
 		description "When you hit with a Strength-based melee weapon on your turn, you deal extra damage equal to your character level."
-		// TODO: bonus to melee weapon w/ strength based on character level
+		mutator "modify" (Attack)"Damage" {
+			damage {
+				amount (Evaluator)"get_level"
+			}
+			query {
+				weapon "Simple" "Martial"
+				attack "Melee"
+				ability "Strength"
+			}
+		}
 	}
 }
