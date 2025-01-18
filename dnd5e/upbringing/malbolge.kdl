@@ -13,7 +13,7 @@ bundle category="Upbringing" name="Malbolge" {
 	mutator "feature" name="Legacy of Malbolge" {
 		description "You know the minor illusion cantrip. Charisma is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
-			spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/minorIllusion.kdl"
+			spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/minorIllusion.kdl"
 		}
 	}
 }

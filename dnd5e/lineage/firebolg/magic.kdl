@@ -11,14 +11,14 @@ bundle category="Lineage" name="Firbolg II" {
 	mutator "feature" name="Firbolg Magic" {
 		description "You can cast detect magic and disguise self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem to be the height of humans or elves, allowing you to more easily blend in."
 		mutator "spellcasting" "add_prepared" ability="Wisdom" {
-			spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/detectMagic.kdl"
+			spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/detectMagic.kdl"
 			limited_uses {
 				max_uses 1
 				reset_on "Short"
 			}
 		}
 		mutator "spellcasting" "add_prepared" ability="Wisdom" {
-			spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/disguiseSelf.kdl"
+			spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/disguiseSelf.kdl"
 			limited_uses {
 				max_uses 1
 				reset_on "Short"

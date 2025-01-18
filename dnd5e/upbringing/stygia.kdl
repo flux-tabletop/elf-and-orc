@@ -13,7 +13,7 @@ bundle category="Upbringing" name="Stygia" {
 	mutator "feature" name="Legacy of Stygia" {
 		description "You know the ray of frost cantrip. Charisma is your spellcasting ability for this spell."
 		mutator "spellcasting" "add_prepared" ability="Charisma" {
-			spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/rayOfFrost.kdl"
+			spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/rayOfFrost.kdl"
 		}
 	}
 }

@@ -15,12 +15,12 @@ bundle category="Upbringing" name="Cania" {
 		mutator "by_level" {
 			level 1 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
-					spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/mageHand.kdl"
+					spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/mageHand.kdl"
 				}
 			}
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
-					spell "github://flux-tabletop:dnd5e-basic-rules@dnd5e/spells/burningHands.kdl"
+					spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/burningHands.kdl"
 					limited_uses {
 						max_uses 1
 						reset_on "Short"
