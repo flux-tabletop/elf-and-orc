@@ -22,7 +22,7 @@ bundle category="Lineage" name="Kobold III" {
 			}
 			level 3 {
 				mutator "spellcasting" "add_prepared" ability="Charisma" {
-					spell "github://flux-tabletop:dnd5e-wotc-phb-2014@dnd5e/spells/chromaticOrb.kdl" rank=2
+					spell "github://flux-tabletop:wotc-phb-2014@dnd5e/spells/chromaticOrb.kdl" rank=2
 					limited_uses {
 						max_uses 1
 						reset_on "Long"
