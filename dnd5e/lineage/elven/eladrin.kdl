@@ -16,10 +16,10 @@ bundle category="Lineage" name="Eladrin" {
 						description {
 							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
 							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
-							}
+						}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
 						}
 					}
 				}
@@ -34,10 +34,71 @@ bundle category="Lineage" name="Eladrin" {
 								value (Evaluator)"get_proficiency_bonus"
 								value (Evaluator)"get_ability_modifier" (Ability)"Charisma"
 							}
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
+						}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
+						}
+					}
+				}
+			}
+		}
+		option "Spring" {
+			mutator "by_level" {
+				level 1 {
+					mutator "feature" name="Fey Step" {
+						description {
+							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
+							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
+						}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
+						}
+					}
+				}
+				level 3 {
+					mutator "feature" name="Fey Step" {
+						description {
+							short "Magically teleport yourself, or a willing creature you can touch within 5 feet of you, up to 30 feet to an unoccupied space you can see."
+							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
+							section "When you use your Fey Step, you can touch one willing creature within 5 feet of you. That creature then teleports instead of you, appearing in an unoccupied space of your choice that you can see within 30 feet of you."
+						}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
+						}
+					}
+				}
+			}
+		}
+		option "Summer" {
+			mutator "by_level" {
+				level 1 {
+					mutator "feature" name="Fey Step" {
+						description {
+							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
+							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
+						}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
+						}
+					}
+				}
+				level 3 {
+					mutator "feature" name="Fey Step" {
+						description {
+							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see. After you teleport, all creatures you choose within 5 feet of you take {dmg} fire damage."
+							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
+							section "Immediately after you use your Fey Step, each creature of your choice that you can see within 5 feet of you takes fire damage equal to your Charisma modifier (minimum of 1 damage)."
+							format-arg "dmg" "int" (Evaluator)"math" "Add" min=1 {
+								value (Evaluator)"get_ability_modifier" (Ability)"Charisma"
 							}
+						}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
 						}
 					}
 				}
@@ -50,10 +111,10 @@ bundle category="Lineage" name="Eladrin" {
 						description {
 							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
 							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
-							}
+						}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
 						}
 					}
 				}
@@ -68,71 +129,10 @@ bundle category="Lineage" name="Eladrin" {
 								value (Evaluator)"get_proficiency_bonus"
 								value (Evaluator)"get_ability_modifier" (Ability)"Charisma"
 							}
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
-							}
 						}
-					}
-				}
-			}
-		}
-		option "Spring" {
-			mutator "by_level" {
-				level 1 {
-					mutator "feature" name="Fey Step" {
-						description {
-							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
-							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
-							}
-						}
-					}
-				}
-				level 3 {
-					mutator "feature" name="Fey Step" {
-						description {
-							short "Magically teleport yourself, or a willing creature you can touch within 5 feet of you, up to 30 feet to an unoccupied space you can see."
-							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
-							section "When you use your Fey Step, you can touch one willing creature within 5 feet of you. That creature then teleports instead of you, appearing in an unoccupied space of your choice that you can see within 30 feet of you."
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
-							}
-						}
-					}
-				}
-			}
-		}
-		option "Summer" {
-			mutator "by_level" {
-				level 1 {
-					mutator "feature" name="Fey Step" {
-						description {
-							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
-							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
-							}
-						}
-					}
-				}
-				level 3 {
-					mutator "feature" name="Fey Step" {
-						description {
-							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see. After you teleport, all creatures you choose within 5 feet of you take {dmg} fire damage."
-							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
-							section "Immediately after you use your Fey Step, each creature of your choice that you can see within 5 feet of you takes fire damage equal to your Charisma modifier (minimum of 1 damage)."
-							format-arg "dmg" "int" (Evaluator)"math" "Add" min=1 {
-								value (Evaluator)"get_ability_modifier" (Ability)"Charisma"
-							}
-							limited_uses {
-								max_uses 1
-								reset_on "Long"
-							}
+						limited_uses {
+							max_uses 1
+							reset_on "Long"
 						}
 					}
 				}
