@@ -17,9 +17,11 @@ bundle category="Lineage" name="Eladrin" {
 							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
 							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
@@ -35,9 +37,11 @@ bundle category="Lineage" name="Eladrin" {
 								value (Evaluator)"get_ability_modifier" (Ability)"Charisma"
 							}
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
@@ -51,9 +55,11 @@ bundle category="Lineage" name="Eladrin" {
 							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
 							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
@@ -64,9 +70,11 @@ bundle category="Lineage" name="Eladrin" {
 							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 							section "When you use your Fey Step, you can touch one willing creature within 5 feet of you. That creature then teleports instead of you, appearing in an unoccupied space of your choice that you can see within 30 feet of you."
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
@@ -80,9 +88,11 @@ bundle category="Lineage" name="Eladrin" {
 							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
 							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
@@ -96,9 +106,11 @@ bundle category="Lineage" name="Eladrin" {
 								value (Evaluator)"get_ability_modifier" (Ability)"Charisma"
 							}
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
@@ -112,9 +124,11 @@ bundle category="Lineage" name="Eladrin" {
 							short "Magically teleport yourself up to 30 feet to an unoccupied space you can see."
 							section "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
@@ -130,9 +144,11 @@ bundle category="Lineage" name="Eladrin" {
 								value (Evaluator)"get_ability_modifier" (Ability)"Charisma"
 							}
 						}
-						limited_uses {
-							max_uses 1
-							reset_on "Long"
+						action "Bonus" {
+							limited_uses {
+								max_uses 1
+								reset_on "Long"
+							}
 						}
 					}
 				}
