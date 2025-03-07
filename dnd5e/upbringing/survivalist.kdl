@@ -11,7 +11,7 @@ bundle category="Upbringing" name="Survivalist" {
 	mutator "add_proficiency" (Language)"Specific" "Common"
 	mutator "add_proficiency" (Language)"Any" id="lang"
 	mutator "add_proficiency" (Skill)"AnyOf" id="skillA" {
-		mutator "skillB"
+		cannot_match "skillB"
 		option "AnimalHandling"
 		option "Nature"
 		option "Perception"
@@ -19,7 +19,7 @@ bundle category="Upbringing" name="Survivalist" {
 		option "Survival"
 	}
 	mutator "add_proficiency" (Skill)"AnyOf" id="skillB" {
-		mutator "skillA"
+		cannot_match "skillA"
 		option "AnimalHandling"
 		option "Nature"
 		option "Perception"
