@@ -12,8 +12,11 @@ bundle category="Upbringing" name="Dis" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	mutator "feature" name="Legacy of Dis" {
 		description "You know the thaumaturgy cantrip. Charisma is your spellcasting ability for this spell."
-		mutator "spellcasting" "add_prepared" ability="Charisma" {
-			spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/thaumaturgy.kdl"
+		mutator "spellcasting2" "innate" {
+			method "AtWill"
+			spells ability="Charisma" {
+				spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/thaumaturgy.kdl"
+			}
 		}
 	}
 }
