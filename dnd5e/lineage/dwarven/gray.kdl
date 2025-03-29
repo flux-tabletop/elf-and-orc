@@ -22,7 +22,7 @@ bundle category="Lineage" name="Gray Dwarven" {
 		description "When you reach 3rd level, you can cast the enlarge/reduce spell on yourself once with this trait, using only the spell's enlarge option. When you reach 5th level, you can cast the invisibility spell on yourself once with this trait. You don't need material components for either spell, and you can't cast them while you're in direct sunlight, although sunlight has no effect on them once cast. You regain the ability to cast these spells with this trait when you finish a long rest. Intelligence is your spellcasting ability for these spells."
 		mutator "by_level" {
 			level 3 {
-				mutator "spellcasting2" "innate" {
+				mutator "spellcasting" "innate" {
 					method "Uses" {
 						limited_uses {
 							max_uses 1
@@ -35,7 +35,7 @@ bundle category="Lineage" name="Gray Dwarven" {
 				}
 			}
 			level 5 {
-				mutator "spellcasting2" "innate" {
+				mutator "spellcasting" "innate" {
 					method "Uses" {
 						limited_uses {
 							max_uses 1

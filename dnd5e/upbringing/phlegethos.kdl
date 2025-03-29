@@ -12,7 +12,7 @@ bundle category="Upbringing" name="Phlegethos" {
 	mutator "add_proficiency" (Language)"Specific" "Infernal"
 	mutator "feature" name="Legacy of Phlegethos" {
 		description "You know the friends cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
-		mutator "spellcasting2" "innate" {
+		mutator "spellcasting" "innate" {
 			method "AtWill"
 			spells ability="Charisma" {
 				spell "github://flux-tabletop:wotc-phb-2014@dnd5e/spells/friends.kdl"
@@ -20,7 +20,7 @@ bundle category="Upbringing" name="Phlegethos" {
 		}
 		mutator "by_level" {
 			level 3 {
-				mutator "spellcasting2" "innate" {
+				mutator "spellcasting" "innate" {
 					method "Uses" {
 						limited_uses {
 							max_uses 1

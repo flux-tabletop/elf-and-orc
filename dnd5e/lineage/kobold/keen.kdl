@@ -16,7 +16,7 @@ bundle category="Lineage" name="Kobold III" {
 		description "You know the fire bolt cantrip. When you reach 3rd level, you can cast the chromatic orb spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the scorching ray spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
 		mutator "by_level" {
 			level 1 {
-				mutator "spellcasting2" "innate" {
+				mutator "spellcasting" "innate" {
 					method "AtWill"
 					spells ability="Charisma" {
 						spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/fireBolt.kdl"
@@ -24,7 +24,7 @@ bundle category="Lineage" name="Kobold III" {
 				}
 			}
 			level 3 {
-				mutator "spellcasting2" "innate" {
+				mutator "spellcasting" "innate" {
 					method "Uses" {
 						limited_uses {
 							max_uses 1
@@ -37,7 +37,7 @@ bundle category="Lineage" name="Kobold III" {
 				}
 			}
 			level 5 {
-				mutator "spellcasting2" "innate" {
+				mutator "spellcasting" "innate" {
 					method "Uses" {
 						limited_uses {
 							max_uses 1

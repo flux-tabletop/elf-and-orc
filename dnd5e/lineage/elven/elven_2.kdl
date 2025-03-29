@@ -13,7 +13,7 @@ bundle category="Lineage" name="Elven II" {
 		description "When you reach 5th level, you can cast the pass without trace spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Wisdom is your spellcasting ability for this spell."
 		mutator "by_level" {
 			level 5 {
-				mutator "spellcasting2" "innate" {
+				mutator "spellcasting" "innate" {
 					method "Uses" {
 						limited_uses {
 							max_uses 1

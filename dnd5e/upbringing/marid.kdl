@@ -12,7 +12,7 @@ bundle category="Upbringing" name="Marid" {
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	mutator "feature" name="Call to the Wave" {
 		description "You know the shape water cantrip. Constitution is your spellcasting ability for this spell."
-		mutator "spellcasting2" "innate" {
+		mutator "spellcasting" "innate" {
 			method "AtWill"
 			spells ability="Constitution" {
 				spell "github://flux-tabletop:wotc-pota@dnd5e/spells/shapeWater.kdl"

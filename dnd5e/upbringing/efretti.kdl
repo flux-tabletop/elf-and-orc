@@ -12,7 +12,7 @@ bundle category="Upbringing" name="Efretti" {
 	mutator "add_proficiency" (Language)"Specific" "Primordial"
 	mutator "feature" name="Reach to the Blaze" {
 		description "You know the produce flame cantrip. Constitution is your spellcasting ability for this spell."
-		mutator "spellcasting2" "innate" {
+		mutator "spellcasting" "innate" {
 			method "AtWill"
 			spells ability="Constitution" {
 				spell "github://flux-tabletop:dnd5e-basic-rules-2014@dnd5e/spells/produceFlame.kdl"
